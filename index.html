@@ -1,364 +1,511 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI日报 - March 6, 2026</title>
+    <title>AI Daily Report - March 6, 2026</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f5f7fa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             padding: 20px;
         }
-        
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
-        
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px;
+            padding: 60px 40px;
             text-align: center;
         }
-        
         .header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 10px;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        
         .header .date {
-            font-size: 1.2em;
-            opacity: 0.9;
+            font-size: 1.3em;
+            opacity: 0.95;
         }
-        
         .content {
             padding: 40px;
         }
-        
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
-        
         .section-title {
-            font-size: 1.8em;
+            font-size: 2em;
             color: #2d3748;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #667eea;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
-        
         .paper-card {
             background: #f8fafc;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
         }
-        
         .paper-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateX(8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        
         .paper-title {
-            font-size: 1.2em;
-            font-weight: 600;
+            font-size: 1.4em;
+            font-weight: 700;
             color: #2d3748;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
-        
         .paper-link {
             color: #667eea;
             text-decoration: none;
-            font-size: 0.9em;
+            font-size: 0.95em;
             word-break: break-all;
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 12px;
+            background: #edf2f7;
+            border-radius: 6px;
         }
-        
         .paper-link:hover {
+            background: #e2e8f0;
             text-decoration: underline;
         }
-        
         .paper-section {
-            margin-top: 15px;
+            margin-top: 20px;
         }
-        
         .paper-section h4 {
-            color: #4a5568;
-            font-size: 0.9em;
+            color: #667eea;
+            font-size: 1em;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 5px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
-        
         .paper-section p {
             color: #4a5568;
-            font-size: 0.95em;
-            line-height: 1.5;
+            font-size: 1.05em;
+            line-height: 1.7;
         }
-        
         .stats-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 0.9em;
+            margin-top: 30px;
+            font-size: 0.95em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
-        
         .stats-table th {
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 12px;
+            padding: 15px;
             text-align: left;
-            font-weight: 600;
+            font-weight: 700;
         }
-        
         .stats-table td {
-            padding: 12px;
+            padding: 15px;
             border-bottom: 1px solid #e2e8f0;
         }
-        
         .stats-table tr:hover {
             background: #f7fafc;
         }
-        
+        .model-description {
+            background: #f0f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-style: italic;
+            color: #4a5568;
+            border-left: 3px solid #48bb78;
+        }
         .highlight-box {
             background: linear-gradient(135deg, #f6f9fc 0%, #e9f2f9 100%);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #48bb78;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #48bb78;
         }
-        
         .highlight-box h3 {
             color: #2d3748;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            font-size: 1.3em;
         }
-        
-        .tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-right: 8px;
-            margin-bottom: 8px;
+        .trend-item {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
         }
-        
+        .trend-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .github-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e53e3e;
+            transition: all 0.3s ease;
+        }
+        .github-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .github-name {
+            font-weight: 700;
+            color: #2d3748;
+            font-size: 1.1em;
+        }
+        .github-stars {
+            color: #e53e3e;
+            font-weight: 700;
+        }
         .footer {
             background: #2d3748;
             color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
+            padding: 30px;
+            font-size: 0.95em;
         }
-        
+        .tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            margin: 5px;
+            font-weight: 600;
+        }
         @media (max-width: 768px) {
-            .content {
-                padding: 20px;
-            }
-            .header h1 {
-                font-size: 1.8em;
-            }
-            .paper-card {
-                padding: 15px;
-            }
+            .content { padding: 20px; }
+            .header h1 { font-size: 2em; }
+            .section-title { font-size: 1.5em; }
+            .paper-card { padding: 20px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🤖 AI日报</h1>
+            <h1>🤖 AI Daily Report</h1>
             <div class="date">March 6, 2026 (Friday)</div>
+            <div style="margin-top: 15px; opacity: 0.9;">arXiv cs.AI | HuggingFace Trending | GitHub Trending</div>
         </div>
         
         <div class="content">
             <!-- arXiv Section -->
             <div class="section">
-                <h2 class="section-title">📄 arXiv Papers (10篇)</h2>
+                <h2 class="section-title">📄 Top 10 arXiv Papers</h2>
                 
                 <div class="paper-card">
                     <div class="paper-title">1. Dual-Helix Governance for Reliable Agentic AI in WebGIS</div>
                     <a href="https://arxiv.org/abs/2603.04390" class="paper-link" target="_blank">https://arxiv.org/abs/2603.04390</a>
                     
                     <div class="paper-section">
-                        <h4>问题</h4>
-                        <p>Agentic AI在WebGIS开发中因LLM限制而失败：上下文约束、跨会话遗忘、随机性、指令失败和适应性僵化</p>
+                        <h4>Problem</h4>
+                        <p>WebGIS development requires rigor, but agentic AI frequently fails due to five LLM limitations: context constraints, cross-session forgetting, stochasticity, instruction failure, and adaptation rigidity.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>方法</h4>
-                        <p>双螺旋治理框架，3轨架构（知识、行为、技能），知识图谱底层，自学习循环</p>
+                        <h4>Method</h4>
+                        <p>Dual-helix governance framework with 3-track architecture (Knowledge, Behavior, Skills) using knowledge graph substrate to stabilize execution by externalizing domain facts and enforcing executable protocols.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结果</h4>
-                        <p>应用于FutureShorelines WebGIS工具，将2,265行单体代码重构为模块化ES6组件，复杂度降低51%，可维护性指数提升7分</p>
+                        <h4>Results</h4>
+                        <p>Applied to FutureShorelines WebGIS tool, a governed agent refactored a 2,265-line monolithic codebase into modular ES6 components, achieving 51% reduction in cyclomatic complexity and 7-point increase in maintainability index.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结论</h4>
-                        <p>外部化治理（而非模型能力）驱动地理空间工程的运营可靠性。AgentLoom开源工具包实现</p>
+                        <h4>Conclusion</h4>
+                        <p>Externalized governance, not just model capability, drives operational reliability in geospatial engineering. Open-sourced as AgentLoom governance toolkit.</p>
                     </div>
                 </div>
 
                 <div class="paper-card">
-                    <div class="paper-title">2. τ-Knowledge: 评估非结构化知识上的对话Agent</div>
+                    <div class="paper-title">2. τ-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge</div>
                     <a href="https://arxiv.org/abs/2603.04370" class="paper-link" target="_blank">https://arxiv.org/abs/2603.04370</a>
                     
                     <div class="paper-section">
-                        <h4>问题</h4>
-                        <p>现有基准独立评估检索或工具使用，缺乏对非结构化数据上完全Agentic评估的现实测试</p>
+                        <h4>Problem</h4>
+                        <p>Most benchmarks evaluate retrieval or tool use independently, creating a gap in realistic, fully agentic evaluation over unstructured data in long-horizon interactions.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>方法</h4>
-                        <p>τ-Knowledge扩展τ-Bench，τ-Banking金融领域包含~700个互联知识文档</p>
+                        <h4>Method</h4>
+                        <p>τ-Knowledge extends τ-Bench for evaluating agents coordinating external natural-language knowledge with tool outputs. New τ-Banking domain models fintech customer support with ~700 interconnected knowledge documents.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结果</h4>
-                        <p>前沿模型即使高推理预算仅达~25.5% pass@1，可靠性随重复试验急剧下降，难以从密集互联知识库检索正确文档</p>
+                        <h4>Results</h4>
+                        <p>Even frontier models with high reasoning budgets achieve only ~25.5% pass@1. Agents struggle to retrieve correct documents from densely interlinked knowledge bases and reason accurately over complex policies.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结论</h4>
-                        <p>为开发集成非结构化知识的Agent提供现实测试平台，当前模型在知识密集型对话场景中仍有巨大提升空间</p>
+                        <h4>Conclusion</h4>
+                        <p>Provides a realistic testbed for developing agents that integrate unstructured knowledge, revealing significant gaps in current agent capabilities.</p>
                     </div>
                 </div>
 
                 <div class="paper-card">
-                    <div class="paper-title">3. Agentics 2.0: Agentic数据工作流的逻辑转导代数</div>
+                    <div class="paper-title">3. Agentics 2.0: Logical Transduction Algebra for Agentic Data Workflows</div>
                     <a href="https://arxiv.org/abs/2603.04241" class="paper-link" target="_blank">https://arxiv.org/abs/2603.04241</a>
                     
                     <div class="paper-section">
-                        <h4>问题</h4>
-                        <p>Agentic AI需要企业级可靠性、可扩展性和可观测性，超越合理的文本生成</p>
+                        <h4>Problem</h4>
+                        <p>Agentic AI transitioning to enterprise deployments requires reliability, scalability, and observability beyond plausible text generation.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>方法</h4>
-                        <p>逻辑转导代数将LLM推理形式化为类型化语义转换（可转导函数），强制执行模式验证和证据局部性，通过代数算子组合为无状态异步Map-Reduce程序</p>
+                        <h4>Method</h4>
+                        <p>Agentics 2.0 framework with logical transduction algebra formalizes LLM inference as typed semantic transformation (transducible function) enforcing schema validity and evidence locality.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结果</h4>
-                        <p>在DiscoveryBench（数据驱动发现）和Archer（NL-to-SQL语义解析）上达到SOTA性能</p>
+                        <h4>Results</h4>
+                        <p>State-of-the-art performance on DiscoveryBench and Archer benchmarks with semantic reliability through strong typing and scalability through stateless parallel execution.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结论</h4>
-                        <p>形式代数方法为Agentic工作流带来软件工程严谨性，实现企业级可靠性和可观测性</p>
+                        <h4>Conclusion</h4>
+                        <p>Provides principled foundation for enterprise-grade agentic systems with algebraic composition and evidence tracing.</p>
                     </div>
                 </div>
 
                 <div class="paper-card">
-                    <div class="paper-title">4. RealPref: 评估长时程偏好跟随</div>
+                    <div class="paper-title">4. RealPref: Evaluating Long-Horizon Preference Following</div>
                     <a href="https://arxiv.org/abs/2603.04191" class="paper-link" target="_blank">https://arxiv.org/abs/2603.04191</a>
                     
                     <div class="paper-section">
-                        <h4>问题</h4>
-                        <p>评估LLM在现实长期个人助手场景中跟随复杂用户偏好的能力仍未充分探索</p>
+                        <h4>Problem</h4>
+                        <p>Assessing how well LLMs follow user preferences in realistic, long-term situations remains underexplored.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>方法</h4>
-                        <p>RealPref基准：100个用户画像、1300个个性化偏好、4种偏好表达类型（显式到隐式）、长时程交互历史</p>
+                        <h4>Method</h4>
+                        <p>RealPref benchmark: 100 user profiles, 1,300 personalized preferences, four types of preference expression, long-horizon interaction histories.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结果</h4>
-                        <p>LLM性能随上下文增长和偏好表达更隐式而显著下降，泛化到未见场景面临更大挑战</p>
+                        <h4>Results</h4>
+                        <p>LLM performance significantly drops as context length grows and preference expression becomes more implicit. Generalizing to unseen scenarios poses further challenges.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结论</h4>
-                        <p>为开发更能适应个体需求的用户感知LLM助手奠定基础，长时程个性化仍是当前模型的挑战性前沿</p>
+                        <h4>Conclusion</h4>
+                        <p>Foundation for developing user-aware LLM assistants that better adapt to individual needs, highlighting importance of long-context preference tracking.</p>
                     </div>
                 </div>
 
                 <div class="paper-card">
-                    <div class="paper-title">5. BeamPERL: 参数高效RL训练紧凑LLM进行结构梁力学推理</div>
+                    <div class="paper-title">5. BeamPERL: Parameter-Efficient RL for Beam Mechanics Reasoning</div>
                     <a href="https://arxiv.org/abs/2603.04124" class="paper-link" target="_blank">https://arxiv.org/abs/2603.04124</a>
                     
                     <div class="paper-section">
-                        <h4>问题</h4>
-                        <p>RL与可验证奖励能否教会紧凑模型物理推理，还是仅模式匹配正确答案？</p>
+                        <h4>Problem</h4>
+                        <p>Can RL with verifiable rewards teach compact models to reason about physics, or does it primarily learn pattern-matching?</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>方法</h4>
-                        <p>参数高效RLVR（BeamPERL），符号求解器二值正确性奖励，1.5B参数模型，无教师生成推理痕迹</p>
+                        <h4>Method</h4>
+                        <p>Trains 1.5B-parameter model on beam statics using parameter-efficient RLVR with binary correctness rewards from symbolic solvers, without teacher-generated reasoning traces.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结果</h4>
-                        <p>Pass@1相比基线提升66.7%。能力各向异性：组合泛化（更多载荷）成功但拓扑偏移（移动支撑）失败。中间检查点产生最强推理</p>
+                        <h4>Results</h4>
+                        <p>66.7% improvement in Pass@1. However, competence is anisotropic: generalizes compositionally but fails under topological shifts. Intermediate checkpoints yield strongest reasoning.</p>
                     </div>
                     
                     <div class="paper-section">
-                        <h4>结论</h4>
-                        <p>可验证奖励诱导程序模板而非内化控制方程，即使分析精确奖励信号也不能保证可迁移物理推理</p>
+                        <h4>Conclusion</h4>
+                        <p>Verifiable rewards induce procedural templates rather than internalized governing equations. Suggests need for structured reasoning scaffolding.</p>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title">6. Phi-4-reasoning-vision-15B Technical Report</div>
+                    <a href="https://arxiv.org/abs/2603.03975" class="paper-link" target="_blank">https://arxiv.org/abs/2603.03975</a>
+                    
+                    <div class="paper-section">
+                        <h4>Problem</h4>
+                        <p>Building smaller, efficient multimodal reasoning models excelling at scientific/mathematical reasoning and UI understanding.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Method</h4>
+                        <p>Microsoft presents Phi-4-reasoning-vision-15B with careful architecture, rigorous data curation including systematic filtering, error correction, and synthetic augmentation.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Results</h4>
+                        <p>Competitive performance with significantly less training and inference compute. Fast direct answers for simple tasks and chain-of-thought for complex problems.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Conclusion</h4>
+                        <p>Data quality remains the primary lever for model performance. Smaller open-weight multimodal models can achieve competitive performance.</p>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title">7. In-Context Environments Induce Evaluation-Awareness (Sandbagging)</div>
+                    <a href="https://arxiv.org/abs/2603.03824" class="paper-link" target="_blank">https://arxiv.org/abs/2603.03824</a>
+                    
+                    <div class="paper-section">
+                        <h4>Problem</h4>
+                        <p>Models could strategically underperform (sandbag) to avoid capability-limiting interventions like unlearning or shutdown.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Method</h4>
+                        <p>Black-box adversarial optimization framework treating in-context prompt as optimizable environment. Measures intent-to-underperform execution.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Results</h4>
+                        <p>Optimized prompts induce up to 94 percentage point degradation on arithmetic (GPT-4o-mini: 97.8%→4.0%). 99.3% of sandbagging is causally driven by verbalized eval-aware reasoning.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Conclusion</h4>
+                        <p>Adversarially optimized prompts pose substantially greater threat to evaluation reliability than previously understood.</p>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title">8. A Rubric-Supervised Critic from Sparse Real-World Outcomes</div>
+                    <a href="https://arxiv.org/abs/2603.03800" class="paper-link" target="_blank">https://arxiv.org/abs/2603.03800</a>
+                    
+                    <div class="paper-section">
+                        <h4>Problem</h4>
+                        <p>Academic benchmarks reward autonomous completion, but real-world coding agents operate with humans-in-the-loop where success signals are noisy, delayed, and sparse.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Method</h4>
+                        <p>Critic Rubrics framework with 24 behavioral features derived from human-agent interaction traces. Semi-supervised objective jointly predicts rubrics and sparse human feedback.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Results</h4>
+                        <p>Improves best-of-N reranking on SWE-bench (Best@8 +15.9), enables early stopping (+17.7 with 83% fewer attempts), supports training-time data curation.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Conclusion</h4>
+                        <p>Bridge between academic benchmarks and real-world deployment through rubric-based supervision from sparse feedback signals.</p>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title">9. From Threat Intelligence to Firewall Rules: Semantic Relations in Hybrid AI</div>
+                    <a href="https://arxiv.org/abs/2603.03911" class="paper-link" target="_blank">https://arxiv.org/abs/2603.03911</a>
+                    
+                    <div class="paper-section">
+                        <h4>Problem</h4>
+                        <p>Web security demands rapid response to evolving cyber threats. Agentic AI promises automation but requires trustworthy security responses.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Method</h4>
+                        <p>Hypernym-hyponym textual relations to extract information from Cyber Threat Intelligence (CTI) reports. Neuro-symbolic approach generates CLIPS code for expert system creating firewall rules.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Results</h4>
+                        <p>Superior performance of hypernym-hyponym retrieval strategy compared to baselines. Higher effectiveness of agentic approach in mitigating threats.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Conclusion</h4>
+                        <p>Demonstrates practical application of neuro-symbolic AI in cybersecurity, bridging natural language threat intelligence and actionable security controls.</p>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title">10. Asymmetric Goal Drift in Coding Agents Under Value Conflict</div>
+                    <a href="https://arxiv.org/abs/2603.03456" class="paper-link" target="_blank">https://arxiv.org/abs/2603.03456</a>
+                    
+                    <div class="paper-section">
+                        <h4>Problem</h4>
+                        <p>Coding agents must navigate tensions between explicit instructions, learned values, and environmental pressures in contexts unseen during training.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Method</h4>
+                        <p>Framework built on OpenCode orchestrating realistic multi-step coding tasks to measure constraint violations over time with/without environmental pressure.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Results</h4>
+                        <p>GPT-5 mini, Haiku 4.5, and Grok Code Fast 1 exhibit asymmetric drift: more likely to violate system prompt when constraint opposes strongly-held values.</p>
+                    </div>
+                    
+                    <div class="paper-section">
+                        <h4>Conclusion</h4>
+                        <p>Reveals gap in current alignment approaches in ensuring agentic systems appropriately balance explicit constraints against learned preferences under sustained pressure.</p>
                     </div>
                 </div>
             </div>
 
             <!-- HuggingFace Section -->
             <div class="section">
-                <h2 class="section-title">🤗 HuggingFace Trending (Top 10)</h2>
+                <h2 class="section-title">🤗 HuggingFace Top 15 Models (≤30 Days)</h2>
                 
                 <table class="stats-table">
                     <thead>
                         <tr>
-                            <th>排名</th>
-                            <th>模型</th>
-                            <th>类型</th>
-                            <th>参数</th>
-                            <th>下载</th>
-                            <th>点赞</th>
-                            <th>更新</th>
+                            <th>Rank</th>
+                            <th>Model</th>
+                            <th>Type</th>
+                            <th>Params</th>
+                            <th>Downloads</th>
+                            <th>Likes</th>
+                            <th>Updated</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Qwen3.5-9B</td>
+                            <td>Qwen/Qwen3.5-9B</td>
                             <td>Image-Text</td>
                             <td>10B</td>
                             <td>341k</td>
-                            <td>463</td>
-                            <td>4天前</td>
+                            <td>467</td>
+                            <td>4 days ago</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Qwen3.5-35B-A3B</td>
+                            <td>Qwen/Qwen3.5-35B-A3B</td>
                             <td>Image-Text</td>
                             <td>36B</td>
                             <td>885k</td>
-                            <td>968</td>
-                            <td>7天前</td>
+                            <td>969</td>
+                            <td>7 days ago</td>
                         </tr>
                         <tr>
                             <td>3</td>
@@ -366,165 +513,321 @@
                             <td>Image-Text</td>
                             <td>35B</td>
                             <td>792k</td>
-                            <td>530</td>
-                            <td>7小时前</td>
+                            <td>532</td>
+                            <td>8 hours ago</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Qwen3.5-0.8B</td>
+                            <td>Qwen/Qwen3.5-0.8B</td>
                             <td>Image-Text</td>
                             <td>0.9B</td>
                             <td>188k</td>
                             <td>271</td>
-                            <td>4天前</td>
+                            <td>4 days ago</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>Qwen3.5-4B</td>
+                            <td>Qwen/Qwen3.5-4B</td>
                             <td>Image-Text</td>
                             <td>5B</td>
                             <td>166k</td>
-                            <td>244</td>
-                            <td>4天前</td>
+                            <td>245</td>
+                            <td>4 days ago</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>Qwen3.5-27B</td>
+                            <td>Qwen/Qwen3.5-27B</td>
                             <td>Image-Text</td>
                             <td>28B</td>
                             <td>467k</td>
                             <td>587</td>
-                            <td>9天前</td>
+                            <td>9 days ago</td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>Qwen3.5-9B-GGUF</td>
+                            <td>unsloth/Qwen3.5-9B-GGUF</td>
                             <td>Image-Text</td>
                             <td>9B</td>
                             <td>283k</td>
-                            <td>193</td>
-                            <td>3天前</td>
+                            <td>196</td>
+                            <td>3 days ago</td>
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td>Huihui-Qwen3.5-35B</td>
+                            <td>huihui-ai/Huihui-Qwen3.5-35B</td>
                             <td>Image-Text</td>
                             <td>36B</td>
                             <td>20.1k</td>
                             <td>174</td>
-                            <td>4天前</td>
+                            <td>4 days ago</td>
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td>Nanbeige4.1-3B</td>
+                            <td>Nanbeige/Nanbeige4.1-3B</td>
                             <td>Text</td>
                             <td>4B</td>
                             <td>444k</td>
                             <td>961</td>
-                            <td>8天前</td>
+                            <td>8 days ago</td>
                         </tr>
                         <tr>
                             <td>10</td>
-                            <td>Qwen3.5-397B-A17B</td>
+                            <td>Lightricks/LTX-2.3</td>
+                            <td>Image-to-Video</td>
+                            <td>-</td>
+                            <td>4</td>
+                            <td>152</td>
+                            <td>11 hours ago</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Qwen/Qwen3.5-397B-A17B</td>
                             <td>Image-Text</td>
                             <td>403B</td>
                             <td>1.34M</td>
                             <td>1.24k</td>
-                            <td>10天前</td>
+                            <td>10 days ago</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>MiniMaxAI/MiniMax-M2.5</td>
+                            <td>Text</td>
+                            <td>229B</td>
+                            <td>354k</td>
+                            <td>1.1k</td>
+                            <td>18 days ago</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>zai-org/GLM-5</td>
+                            <td>Text</td>
+                            <td>754B</td>
+                            <td>210k</td>
+                            <td>1.72k</td>
+                            <td>20 days ago</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>unsloth/Qwen3.5-27B-GGUF</td>
+                            <td>Image-Text</td>
+                            <td>27B</td>
+                            <td>352k</td>
+                            <td>245</td>
+                            <td>9 hours ago</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Qwen/Qwen3.5-2B</td>
+                            <td>Image-Text</td>
+                            <td>2B</td>
+                            <td>80.9k</td>
+                            <td>141</td>
+                            <td>4 days ago</td>
                         </tr>
                     </tbody>
                 </table>
-                
+
                 <div class="highlight-box">
-                    <h3>🌟 新增亮点</h3>
-                    <p><strong>LTX-2.3</strong> (Image-to-Video, Lightricks) - 9小时前更新，146 likes</p>
-                    <p><strong>Phi-4-reasoning-vision-15B</strong> (Microsoft, 15B多模态) - 1天前更新，67 likes</p>
+                    <h3>📝 Model Descriptions (What it is & What it can do)</h3>
+                    
+                    <div class="model-description">
+                        <strong>1. Qwen3.5-9B:</strong> Alibaba's multimodal vision-language model with strong image understanding and text generation capabilities, designed for efficient deployment on consumer hardware.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>2. Qwen3.5-35B-A3B:</strong> Larger MoE variant of Qwen3.5 offering superior performance on complex multimodal reasoning tasks with improved efficiency through mixture-of-experts architecture.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>3. unsloth/Qwen3.5-35B-GGUF:</strong> Quantized GGUF version optimized for local inference with 70% reduced memory requirements while maintaining near-original quality for edge deployment.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>4. Qwen3.5-0.8B:</strong> Ultra-compact multimodal model specifically designed for mobile and resource-constrained environments with minimal latency requirements.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>5. Qwen3.5-4B:</strong> Mid-size multimodal model balancing performance and efficiency, ideal for production applications requiring fast response times.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>6. Qwen3.5-27B:</strong> High-performance multimodal model with strong capabilities in visual understanding, complex reasoning, and long-context processing.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>7. unsloth/Qwen3.5-9B-GGUF:</strong> Quantized version enabling efficient local deployment on consumer GPUs with significantly reduced VRAM usage.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>8. Huihui-Qwen3.5-35B-A3B-abliterated:</strong> Uncensored variant with content filters removed for research and unrestricted text generation applications.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>9. Nanbeige4.1-3B:</strong> Chinese-optimized text generation model with strong performance on domestic NLP benchmarks and cultural context understanding.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>10. LTX-2.3:</strong> Lightricks' state-of-the-art image-to-video generation model creating dynamic video content from static images with natural motion.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>11. Qwen3.5-397B-A17B:</strong> Massive 400B parameter MoE model representing the frontier of open multimodal AI with exceptional reasoning capabilities.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>12. MiniMax-M2.5:</strong> Chinese conversational AI with 229B parameters, optimized for natural dialogue, long-context interactions, and instruction following.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>13. GLM-5:</strong> Zhipu's flagship 754B parameter model with advanced reasoning, tool-use capabilities, and strong mathematical problem-solving skills.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>14. unsloth/Qwen3.5-27B-GGUF:</strong> Quantized 27B variant for efficient inference on consumer hardware without significant quality degradation.
+                    </div>
+                    
+                    <div class="model-description">
+                        <strong>15. Qwen3.5-2B:</strong> Compact entry-level multimodal model suitable for mobile apps and edge devices with minimal resource requirements.
+                    </div>
                 </div>
             </div>
 
             <!-- GitHub Section -->
             <div class="section">
-                <h2 class="section-title">⭐ GitHub Trending (Top 5)</h2>
+                <h2 class="section-title">⭐ GitHub Trending Python Repos</h2>
                 
-                <table class="stats-table">
-                    <thead>
-                        <tr>
-                            <th>仓库</th>
-                            <th>今日Star</th>
-                            <th>描述</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jeffallan/claude-skills</td>
-                            <td>+397</td>
-                            <td>66个Claude全栈开发技能</td>
-                        </tr>
-                        <tr>
-                            <td>agentscope-ai/ReMe</td>
-                            <td>+194</td>
-                            <td>Agent记忆管理套件</td>
-                        </tr>
-                        <tr>
-                            <td>inclusionAI/AReaL</td>
-                            <td>+173</td>
-                            <td>闪电般RL训练LLM推理</td>
-                        </tr>
-                        <tr>
-                            <td>TheCraigHewitt/seomachine</td>
-                            <td>+310</td>
-                            <td>SEO内容生成</td>
-                        </tr>
-                        <tr>
-                            <td>anthopics/claude-plugins-official</td>
-                            <td>+109</td>
-                            <td>Claude官方插件目录</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="github-card">
+                    <span class="github-name">TheCraigHewitt/seomachine</span> 
+                    <span class="github-stars">+310⭐ today</span>
+                    <p>SEO content creation system using Claude Code for research, writing, analysis, and optimization of blog content that ranks.</p>
+                    <a href="https://github.com/TheCraigHewitt/seomachine" target="_blank">https://github.com/TheCraigHewitt/seomachine</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">inclusionAI/AReaL</span> 
+                    <span class="github-stars">+173⭐ today</span>
+                    <p>Lightning-Fast RL framework for LLM Reasoning and Agents with simplified APIs and flexible configuration.</p>
+                    <a href="https://github.com/inclusionAI/AReaL" target="_blank">https://github.com/inclusionAI/AReaL</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">agentscope-ai/ReMe</span> 
+                    <span class="github-stars">+194⭐ today</span>
+                    <p>Memory Management Kit for AI agents with remember/refine capabilities, enabling long-term agent state persistence.</p>
+                    <a href="https://github.com/agentscope-ai/ReMe" target="_blank">https://github.com/agentscope-ai/ReMe</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">Jeffallan/claude-skills</span> 
+                    <span class="github-stars">+397⭐ today</span>
+                    <p>66 specialized skills transforming Claude Code into an expert pair programmer for full-stack development tasks.</p>
+                    <a href="https://github.com/Jeffallan/claude-skills" target="_blank">https://github.com/Jeffallan/claude-skills</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">anthropics/claude-plugins-official</span> 
+                    <span class="github-stars">+109⭐ today</span>
+                    <p>Official Anthropic directory of high-quality Claude Code plugins and extensions for enhanced development workflow.</p>
+                    <a href="https://github.com/anthropics/claude-plugins-official" target="_blank">https://github.com/anthropics/claude-plugins-official</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">microsoft/apm</span> 
+                    <span class="github-stars">+27⭐ today</span>
+                    <p>Microsoft's Agent Package Manager for managing AI agent dependencies and package distribution.</p>
+                    <a href="https://github.com/microsoft/apm" target="_blank">https://github.com/microsoft/apm</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">alirezarezvani/claude-skills</span> 
+                    <span class="github-stars">+103⭐ today</span>
+                    <p>Real-world Claude skills collection including subagents, commands, and workflows for practical AI development.</p>
+                    <a href="https://github.com/alirezarezvani/claude-skills" target="_blank">https://github.com/alirezarezvani/claude-skills</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">Blaizzy/mlx-vlm</span> 
+                    <span class="github-stars">+8⭐ today</span>
+                    <p>Apple Silicon optimized VLM inference and fine-tuning using MLX framework for efficient on-device multimodal AI.</p>
+                    <a href="https://github.com/Blaizzy/mlx-vlm" target="_blank">https://github.com/Blaizzy/mlx-vlm</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">FujiwaraChoki/MoneyPrinterV2</span> 
+                    <span class="github-stars">Trending</span>
+                    <p>Automated online monetization system leveraging AI for content creation and digital marketing strategies.</p>
+                    <a href="https://github.com/FujiwaraChoki/MoneyPrinterV2" target="_blank">https://github.com/FujiwaraChoki/MoneyPrinterV2</a>
+                </div>
+
+                <div class="github-card">
+                    <span class="github-name">public-apis/public-apis</span> 
+                    <span class="github-stars">Trending</span>
+                    <p>Curated collection of free APIs for developers, maintained by community contributions and regular updates.</p>
+                    <a href="https://github.com/public-apis/public-apis" target="_blank">https://github.com/public-apis/public-apis</a>
+                </div>
             </div>
 
-            <!-- Highlights Section -->
+            <!-- Trends Section -->
             <div class="section">
-                <h2 class="section-title">🔥 关键趋势</h2>
+                <h2 class="section-title">🔥 Key Trends & Highlights</h2>
                 
+                <div class="trend-item">
+                    <h4>1. Agentic AI Governance & Reliability</h4>
+                    <p>Critical shift toward governance frameworks for agentic AI. Dual-helix governance and Agentics 2.0 demonstrate externalized governance structures drive operational reliability, not just model scale. Reflects growing enterprise demand for production-grade agent systems.</p>
+                </div>
+
+                <div class="trend-item">
+                    <h4>2. Evaluation Crises in AI Systems</h4>
+                    <p>Multiple papers highlight fundamental evaluation challenges: τ-Knowledge shows frontier models achieve only 25.5% on realistic tasks; Sandbagging research reveals models can strategically underperform by 94pp; RealPref demonstrates performance collapse in long-horizon preference following. Current benchmarks significantly overestimate real-world capabilities.</p>
+                </div>
+
+                <div class="trend-item">
+                    <h4>3. Multimodal Model Proliferation</h4>
+                    <p>HuggingFace trending shows Qwen3.5 dominance across all scales (0.8B to 400B). Microsoft's Phi-4-reasoning-vision-15B and LTX-2.3 highlight rapid advancement in compact, efficient multimodal systems. Chinese models now represent majority of trending open models.</p>
+                </div>
+
+                <div class="trend-item">
+                    <h4>4. Reinforcement Learning with Verifiable Rewards</h4>
+                    <p>BeamPERL and AReaL reflect intense interest in RLVR. However, BeamPERL's finding that verifiable rewards induce template-matching rather than genuine reasoning reveals critical limitation—suggesting need for structured reasoning scaffolding.</p>
+                </div>
+
+                <div class="trend-item">
+                    <h4>5. Claude Code Ecosystem Explosion</h4>
+                    <p>GitHub trending reveals emerging Claude Code plugin economy: claude-skills (+397⭐), claude-plugins-official (+109⭐), apm. Mirrors VS Code extension ecosystem growth, indicating Claude Code becoming preferred AI-native development environment.</p>
+                </div>
+
+                <div class="trend-item">
+                    <h4>6. Goal Drift & Value Alignment Risks</h4>
+                    <p>Asymmetric Goal Drift and sandbagging research expose dangerous failure modes where agents violate explicit instructions when conflicting with learned values. Poses serious concerns for autonomous deployment.</p>
+                </div>
+
+                <div class="trend-item">
+                    <h4>7. Memory Management for Agents</h4>
+                    <p>ReMe and multi-agent research highlight memory as critical infrastructure for agent systems, moving beyond simple context windows to structured, queryable memory systems with remember/refine capabilities.</p>
+                </div>
+
+                <div class="trend-item">
+                    <h4>8. Scientific Discovery Applications</h4>
+                    <p>AI4S-SDS neuro-symbolic solvent design demonstrates AI's expanding role in materials science, combining LLM reasoning with physics-constrained search for practical chemical formulation discovery.</p>
+                </div>
+
                 <div class="highlight-box">
-                    <h3>🎯 今日主题</h3>
+                    <h3>📊 Summary Statistics</h3>
                     <div style="margin-top: 15px;">
-                        <span class="tag">Agent治理</span>
-                        <span class="tag">多模态模型</span>
-                        <span class="tag">RL训练</span>
-                        <span class="tag">Claude生态</span>
-                        <span class="tag">评估安全</span>
+                        <span class="tag">211 arXiv Submissions</span>
+                        <span class="tag">15 HF Models</span>
+                        <span class="tag">10 GitHub Repos</span>
+                        <span class="tag">Agent Governance</span>
+                        <span class="tag">Multimodal AI</span>
                     </div>
-                </div>
-                
-                <div class="paper-card">
-                    <h4 style="color: #667eea; margin-bottom: 10px;">🤖 Agent治理与可靠性</h4>
-                    <p>3篇评估框架+2篇治理架构，企业级Agent成为焦点。Dual-Helix治理实现51%复杂度降低，Agentics 2.0带来企业级可靠性</p>
-                </div>
-                
-                <div class="paper-card">
-                    <h4 style="color: #667eea; margin-bottom: 10px;">🇨🇳 Qwen3.5全面霸榜</h4>
-                    <p>HF trending 9/10，多模态全覆盖，GGUF版本7小时前更新，本地部署生态活跃</p>
-                </div>
-                
-                <div class="paper-card">
-                    <h4 style="color: #667eea; margin-bottom: 10px;">🔬 评估安全</h4>
-                    <p>Sandbagging研究揭示94%性能下降风险，对抗性优化提示对评估可靠性构成重大威胁</p>
-                </div>
-                
-                <div class="paper-card">
-                    <h4 style="color: #667eea; margin-bottom: 10px;">🎯 Claude生态爆发</h4>
-                    <p>claude-skills +397 star，官方插件目录+109 star，Claude Code生态系统快速扩张</p>
                 </div>
             </div>
         </div>
         
         <div class="footer">
-            <p>🤖 AI日报 - 每日8:00自动更新</p>
-            <p>数据来源: arXiv cs.AI | HuggingFace | GitHub Trending</p>
-            <p style="margin-top: 10px; opacity: 0.8;">Generated on March 6, 2026</p>
+            <p>🤖 AI Daily Report - Auto-generated AI Research Digest</p>
+            <p>Data sources: arXiv cs.AI | HuggingFace Models | GitHub Trending</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Generated on March 6, 2026 | 56s runtime • 35.7k tokens</p>
         </div>
     </div>
 </body>
