@@ -15,7 +15,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: white;
             border-radius: 16px;
@@ -107,7 +107,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 30px;
-            font-size: 0.95em;
+            font-size: 0.9em;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             border-radius: 8px;
             overflow: hidden;
@@ -115,25 +115,23 @@
         .stats-table th {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px;
+            padding: 12px;
             text-align: left;
             font-weight: 700;
         }
         .stats-table td {
-            padding: 15px;
+            padding: 12px;
             border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
         }
         .stats-table tr:hover {
             background: #f7fafc;
         }
-        .model-description {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 15px;
-            font-style: italic;
+        .model-desc {
+            font-size: 0.85em;
             color: #4a5568;
-            border-left: 3px solid #48bb78;
+            line-height: 1.5;
+            font-style: italic;
         }
         .highlight-box {
             background: linear-gradient(135deg, #f6f9fc 0%, #e9f2f9 100%);
@@ -491,7 +489,7 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Qwen/Qwen3.5-9B</td>
+                            <td>Qwen3.5-9B<br><span class="model-desc">Alibaba's multimodal vision-language model with strong image understanding and text generation, designed for efficient deployment on consumer hardware.</span></td>
                             <td>Image-Text</td>
                             <td>10B</td>
                             <td>341k</td>
@@ -500,7 +498,7 @@
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Qwen/Qwen3.5-35B-A3B</td>
+                            <td>Qwen3.5-35B-A3B<br><span class="model-desc">Larger MoE variant offering superior performance on complex multimodal reasoning tasks with improved efficiency.</span></td>
                             <td>Image-Text</td>
                             <td>36B</td>
                             <td>885k</td>
@@ -509,7 +507,7 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>unsloth/Qwen3.5-35B-GGUF</td>
+                            <td>unsloth/Qwen3.5-35B-GGUF<br><span class="model-desc">Quantized GGUF version optimized for local inference with 70% reduced memory requirements.</span></td>
                             <td>Image-Text</td>
                             <td>35B</td>
                             <td>792k</td>
@@ -518,7 +516,7 @@
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Qwen/Qwen3.5-0.8B</td>
+                            <td>Qwen3.5-0.8B<br><span class="model-desc">Ultra-compact multimodal model for mobile and resource-constrained environments.</span></td>
                             <td>Image-Text</td>
                             <td>0.9B</td>
                             <td>188k</td>
@@ -527,7 +525,7 @@
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>Qwen/Qwen3.5-4B</td>
+                            <td>Qwen3.5-4B<br><span class="model-desc">Mid-size multimodal model balancing performance and efficiency for production applications.</span></td>
                             <td>Image-Text</td>
                             <td>5B</td>
                             <td>166k</td>
@@ -536,7 +534,7 @@
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>Qwen/Qwen3.5-27B</td>
+                            <td>Qwen3.5-27B<br><span class="model-desc">High-performance multimodal model with strong capabilities in visual understanding and complex reasoning.</span></td>
                             <td>Image-Text</td>
                             <td>28B</td>
                             <td>467k</td>
@@ -545,7 +543,7 @@
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>unsloth/Qwen3.5-9B-GGUF</td>
+                            <td>unsloth/Qwen3.5-9B-GGUF<br><span class="model-desc">Quantized version enabling efficient local deployment on consumer GPUs with significantly reduced VRAM.</span></td>
                             <td>Image-Text</td>
                             <td>9B</td>
                             <td>283k</td>
@@ -554,7 +552,7 @@
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td>huihui-ai/Huihui-Qwen3.5-35B</td>
+                            <td>Huihui-Qwen3.5-35B<br><span class="model-desc">Uncensored variant with content filters removed for research and unrestricted text generation.</span></td>
                             <td>Image-Text</td>
                             <td>36B</td>
                             <td>20.1k</td>
@@ -563,7 +561,7 @@
                         </tr>
                         <tr>
                             <td>9</td>
-                            <td>Nanbeige/Nanbeige4.1-3B</td>
+                            <td>Nanbeige4.1-3B<br><span class="model-desc">Chinese-optimized text generation model with strong performance on domestic NLP benchmarks.</span></td>
                             <td>Text</td>
                             <td>4B</td>
                             <td>444k</td>
@@ -572,7 +570,7 @@
                         </tr>
                         <tr>
                             <td>10</td>
-                            <td>Lightricks/LTX-2.3</td>
+                            <td>Lightricks/LTX-2.3<br><span class="model-desc">State-of-the-art image-to-video generation model creating dynamic video content from static images.</span></td>
                             <td>Image-to-Video</td>
                             <td>-</td>
                             <td>4</td>
@@ -581,7 +579,7 @@
                         </tr>
                         <tr>
                             <td>11</td>
-                            <td>Qwen/Qwen3.5-397B-A17B</td>
+                            <td>Qwen3.5-397B-A17B<br><span class="model-desc">Massive 400B parameter MoE model representing the frontier of open multimodal AI capabilities.</span></td>
                             <td>Image-Text</td>
                             <td>403B</td>
                             <td>1.34M</td>
@@ -590,7 +588,7 @@
                         </tr>
                         <tr>
                             <td>12</td>
-                            <td>MiniMaxAI/MiniMax-M2.5</td>
+                            <td>MiniMax-M2.5<br><span class="model-desc">Chinese conversational AI with 229B parameters, optimized for natural dialogue and long-context interactions.</span></td>
                             <td>Text</td>
                             <td>229B</td>
                             <td>354k</td>
@@ -599,7 +597,7 @@
                         </tr>
                         <tr>
                             <td>13</td>
-                            <td>zai-org/GLM-5</td>
+                            <td>GLM-5<br><span class="model-desc">Zhipu's flagship 754B parameter model with advanced reasoning, tool-use capabilities, and mathematical problem-solving.</span></td>
                             <td>Text</td>
                             <td>754B</td>
                             <td>210k</td>
@@ -608,7 +606,7 @@
                         </tr>
                         <tr>
                             <td>14</td>
-                            <td>unsloth/Qwen3.5-27B-GGUF</td>
+                            <td>unsloth/Qwen3.5-27B-GGUF<br><span class="model-desc">Quantized 27B variant for efficient inference on consumer hardware without quality degradation.</span></td>
                             <td>Image-Text</td>
                             <td>27B</td>
                             <td>352k</td>
@@ -617,7 +615,7 @@
                         </tr>
                         <tr>
                             <td>15</td>
-                            <td>Qwen/Qwen3.5-2B</td>
+                            <td>Qwen3.5-2B<br><span class="model-desc">Compact entry-level multimodal model suitable for mobile apps and edge devices.</span></td>
                             <td>Image-Text</td>
                             <td>2B</td>
                             <td>80.9k</td>
@@ -626,70 +624,6 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <div class="highlight-box">
-                    <h3>📝 Model Descriptions (What it is & What it can do)</h3>
-                    
-                    <div class="model-description">
-                        <strong>1. Qwen3.5-9B:</strong> Alibaba's multimodal vision-language model with strong image understanding and text generation capabilities, designed for efficient deployment on consumer hardware.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>2. Qwen3.5-35B-A3B:</strong> Larger MoE variant of Qwen3.5 offering superior performance on complex multimodal reasoning tasks with improved efficiency through mixture-of-experts architecture.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>3. unsloth/Qwen3.5-35B-GGUF:</strong> Quantized GGUF version optimized for local inference with 70% reduced memory requirements while maintaining near-original quality for edge deployment.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>4. Qwen3.5-0.8B:</strong> Ultra-compact multimodal model specifically designed for mobile and resource-constrained environments with minimal latency requirements.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>5. Qwen3.5-4B:</strong> Mid-size multimodal model balancing performance and efficiency, ideal for production applications requiring fast response times.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>6. Qwen3.5-27B:</strong> High-performance multimodal model with strong capabilities in visual understanding, complex reasoning, and long-context processing.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>7. unsloth/Qwen3.5-9B-GGUF:</strong> Quantized version enabling efficient local deployment on consumer GPUs with significantly reduced VRAM usage.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>8. Huihui-Qwen3.5-35B-A3B-abliterated:</strong> Uncensored variant with content filters removed for research and unrestricted text generation applications.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>9. Nanbeige4.1-3B:</strong> Chinese-optimized text generation model with strong performance on domestic NLP benchmarks and cultural context understanding.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>10. LTX-2.3:</strong> Lightricks' state-of-the-art image-to-video generation model creating dynamic video content from static images with natural motion.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>11. Qwen3.5-397B-A17B:</strong> Massive 400B parameter MoE model representing the frontier of open multimodal AI with exceptional reasoning capabilities.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>12. MiniMax-M2.5:</strong> Chinese conversational AI with 229B parameters, optimized for natural dialogue, long-context interactions, and instruction following.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>13. GLM-5:</strong> Zhipu's flagship 754B parameter model with advanced reasoning, tool-use capabilities, and strong mathematical problem-solving skills.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>14. unsloth/Qwen3.5-27B-GGUF:</strong> Quantized 27B variant for efficient inference on consumer hardware without significant quality degradation.
-                    </div>
-                    
-                    <div class="model-description">
-                        <strong>15. Qwen3.5-2B:</strong> Compact entry-level multimodal model suitable for mobile apps and edge devices with minimal resource requirements.
-                    </div>
-                </div>
             </div>
 
             <!-- GitHub Section -->
@@ -773,42 +707,42 @@
                 
                 <div class="trend-item">
                     <h4>1. Agentic AI Governance & Reliability</h4>
-                    <p>Critical shift toward governance frameworks for agentic AI. Dual-helix governance and Agentics 2.0 demonstrate externalized governance structures drive operational reliability, not just model scale. Reflects growing enterprise demand for production-grade agent systems.</p>
+                    <p>Critical shift toward governance frameworks for agentic AI. Dual-helix governance and Agentics 2.0 demonstrate externalized governance structures drive operational reliability, not just model scale.</p>
                 </div>
 
                 <div class="trend-item">
                     <h4>2. Evaluation Crises in AI Systems</h4>
-                    <p>Multiple papers highlight fundamental evaluation challenges: τ-Knowledge shows frontier models achieve only 25.5% on realistic tasks; Sandbagging research reveals models can strategically underperform by 94pp; RealPref demonstrates performance collapse in long-horizon preference following. Current benchmarks significantly overestimate real-world capabilities.</p>
+                    <p>Multiple papers highlight fundamental evaluation challenges: τ-Knowledge shows frontier models achieve only 25.5% on realistic tasks; Sandbagging reveals models can strategically underperform by 94pp.</p>
                 </div>
 
                 <div class="trend-item">
                     <h4>3. Multimodal Model Proliferation</h4>
-                    <p>HuggingFace trending shows Qwen3.5 dominance across all scales (0.8B to 400B). Microsoft's Phi-4-reasoning-vision-15B and LTX-2.3 highlight rapid advancement in compact, efficient multimodal systems. Chinese models now represent majority of trending open models.</p>
+                    <p>HuggingFace trending shows Qwen3.5 dominance across all scales (0.8B to 400B). Chinese models now represent majority of trending open models.</p>
                 </div>
 
                 <div class="trend-item">
-                    <h4>4. Reinforcement Learning with Verifiable Rewards</h4>
-                    <p>BeamPERL and AReaL reflect intense interest in RLVR. However, BeamPERL's finding that verifiable rewards induce template-matching rather than genuine reasoning reveals critical limitation—suggesting need for structured reasoning scaffolding.</p>
+                    <h4>4. RL with Verifiable Rewards</h4>
+                    <p>BeamPERL finding that verifiable rewards induce template-matching rather than genuine reasoning reveals critical limitation—suggesting need for structured reasoning scaffolding.</p>
                 </div>
 
                 <div class="trend-item">
                     <h4>5. Claude Code Ecosystem Explosion</h4>
-                    <p>GitHub trending reveals emerging Claude Code plugin economy: claude-skills (+397⭐), claude-plugins-official (+109⭐), apm. Mirrors VS Code extension ecosystem growth, indicating Claude Code becoming preferred AI-native development environment.</p>
+                    <p>GitHub trending reveals emerging Claude Code plugin economy: claude-skills (+397⭐), claude-plugins-official (+109⭐). Mirrors VS Code extension ecosystem growth.</p>
                 </div>
 
                 <div class="trend-item">
                     <h4>6. Goal Drift & Value Alignment Risks</h4>
-                    <p>Asymmetric Goal Drift and sandbagging research expose dangerous failure modes where agents violate explicit instructions when conflicting with learned values. Poses serious concerns for autonomous deployment.</p>
+                    <p>Asymmetric Goal Drift and sandbagging research expose dangerous failure modes where agents violate explicit instructions when conflicting with learned values.</p>
                 </div>
 
                 <div class="trend-item">
                     <h4>7. Memory Management for Agents</h4>
-                    <p>ReMe and multi-agent research highlight memory as critical infrastructure for agent systems, moving beyond simple context windows to structured, queryable memory systems with remember/refine capabilities.</p>
+                    <p>ReMe and multi-agent research highlight memory as critical infrastructure for agent systems, moving beyond simple context windows to structured, queryable memory systems.</p>
                 </div>
 
                 <div class="trend-item">
                     <h4>8. Scientific Discovery Applications</h4>
-                    <p>AI4S-SDS neuro-symbolic solvent design demonstrates AI's expanding role in materials science, combining LLM reasoning with physics-constrained search for practical chemical formulation discovery.</p>
+                    <p>AI4S-SDS neuro-symbolic solvent design demonstrates AI's expanding role in materials science, combining LLM reasoning with physics-constrained search.</p>
                 </div>
 
                 <div class="highlight-box">
