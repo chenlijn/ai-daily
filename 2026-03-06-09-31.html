@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Daily Report - March 6, 2026</title>
+    <title>AI Daily Report - Archive</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -12,210 +12,93 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
+            border-radius: 16px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px;
+            padding: 60px 40px;
             text-align: center;
         }
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        .header .date {
+        .header p {
             font-size: 1.2em;
             opacity: 0.9;
         }
         .content {
             padding: 40px;
         }
-        .section {
-            margin-bottom: 50px;
-        }
         .section-title {
-            font-size: 1.8em;
-            color: #667eea;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
+            font-size: 1.5em;
+            color: #2d3748;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
             border-bottom: 3px solid #667eea;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
-        .paper-card {
-            background: #f8f9fa;
+        .report-list {
+            list-style: none;
+        }
+        .report-item {
+            background: #f8fafc;
             border-radius: 12px;
             padding: 25px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             border-left: 5px solid #667eea;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
         }
-        .paper-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102,126,234,0.15);
+        .report-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-        .paper-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #333;
+        .report-date {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #667eea;
             margin-bottom: 8px;
         }
-        .paper-url {
+        .report-time {
+            color: #718096;
             font-size: 0.9em;
-            color: #667eea;
-            margin-bottom: 15px;
-            word-break: break-all;
+            margin-bottom: 12px;
         }
-        .paper-meta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .meta-item {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
-        }
-        .meta-label {
-            font-size: 0.85em;
-            color: #667eea;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-        .meta-content {
-            font-size: 0.95em;
-            color: #555;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        th {
+        .report-link {
+            display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 15px;
-            text-align: left;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
             font-weight: 600;
-        }
-        td {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        tr:hover {
-            background: #f8f9fa;
-        }
-        .model-name {
-            font-weight: bold;
-            color: #667eea;
-        }
-        .model-desc {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
-        }
-        .trend-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 5px solid #764ba2;
-        }
-        .trend-number {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background: #764ba2;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 30px;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        .trend-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .footer {
-            background: #f8f9fa;
-            padding: 30px;
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-        }
-        .github-card {
-            background: #f6f8fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border: 1px solid #e1e4e8;
-        }
-        .github-name {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #24292e;
-        }
-        .github-url {
-            color: #0366d6;
-            font-size: 0.9em;
-            margin: 5px 0;
-        }
-        .github-stats {
-            display: flex;
-            gap: 20px;
-            font-size: 0.9em;
-            color: #586069;
             margin-top: 10px;
         }
-        .stat {
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .report-link:hover {
+            opacity: 0.9;
         }
-        .directions-box {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border: 2px solid #667eea;
+        .footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
         }
-        .direction-title {
-            font-size: 1.3em;
-            color: #667eea;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        .direction-item {
-            margin-bottom: 12px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .direction-item::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #764ba2;
+        .badge {
+            display: inline-block;
+            background: #48bb78;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -223,596 +106,57 @@
     <div class="container">
         <div class="header">
             <h1>🤖 AI Daily Report</h1>
-            <div class="date">March 6, 2026 | 09:31 UTC</div>
+            <p>Auto-generated AI Research Digest Archive</p>
         </div>
         
         <div class="content">
-            <!-- Key Research Directions -->
-            <div class="section">
-                <h2 class="section-title">🔥 Three Major Research Directions</h2>
-                <div class="directions-box">
-                    <div class="direction-title">Today's AI Landscape:</div>
-                    <div class="direction-item"><strong>Agentic AI & Autonomous Systems</strong> — Web agents, coding agents, multi-agent frameworks, and personal duty agents dominating with breakthroughs in web automation, terminal-native coding assistance, and collaborative multi-agent reasoning for complex tasks.</div>
-                    <div class="direction-item"><strong>LLM Evaluation, Safety & Reliability</strong> — Critical focus on stress-testing LLM judges, mapping reasoning capabilities with formal probes, and understanding risky behaviors under survival pressure, highlighting the need for robust evaluation frameworks.</div>
-                    <div class="direction-item"><strong>AI-Hardware Co-design & Efficiency</strong> — A visionary 10-year roadmap for 1000x efficiency improvements through algorithm-hardware co-evolution, alongside foundational understanding of transformer mechanisms (massive activations, attention sinks).</div>
-                </div>
-            </div>
-
-            <!-- arXiv Papers -->
-            <div class="section">
-                <h2 class="section-title">📄 Top 10 arXiv Papers (Deep Analysis)</h2>
+            <h2 class="section-title">📋 Report Archive</h2>
+            
+            <ul class="report-list">
+                <li class="report-item">
+                    <div class="report-date">March 6, 2026 <span class="badge">Latest</span></div>
+                    <div class="report-time">10:01 AM (UTC)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-06-10-01.html" class="report-link">View Report →</a>
+                </li>
                 
-                <div class="paper-card">
-                    <div class="paper-title">1. WebFactory: Automated Compression of Foundational Language Intelligence into Grounded Web Agents</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05044</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">Current GUI agent training relies on unsafe live web interactions or costly human-annotated data. The focus on data volume overlooks the critical factor: efficiency of compressing LLM latent knowledge into actionable agent behavior.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">WebFactory introduces a closed-loop RL pipeline with: (1) high-fidelity offline web environment synthesis, (2) knowledge-aware task generation using LLMs, (3) scalable trajectory collection with LLM executors, (4) unified action space RL training with decomposed rewards.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Agent trained on only 10 synthetic websites achieves performance comparable to agents trained on much larger human-annotated datasets. Demonstrates exceptional data efficiency and generalization across offline and online benchmarks.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Presents a scalable paradigm for transforming passive internet knowledge into active, grounded intelligence. Introduces "LLM embodiment potential" as a new evaluation axis for foundation models.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">2. KARL: Knowledge Agents via Reinforcement Learning</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05218</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">Grounded reasoning tasks in enterprises require multi-step information gathering and complex reasoning over proprietary data, but lack comprehensive evaluation frameworks and efficient training methods for knowledge agents.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">Introduces KARLBench (6 search regimes), agentic synthesis pipeline with vector search for grounded training data, and iterative large-batch off-policy RL (OAPL) robust to train-inference engine discrepancies.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">KARL is Pareto-optimal vs Claude 4.6 and GPT 5.2 on KARLBench across cost-quality and latency-quality trade-offs. With sufficient test-time compute, surpasses strongest closed models. Multi-task training shows strong OOD generalization.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Tailored synthetic data + multi-task RL enables cost-efficient, high-performing knowledge agents for grounded reasoning. Demonstrates that heterogeneous search behavior training generalizes better than single-benchmark optimization.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">3. OpenDev: Building AI Coding Agents for the Terminal</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05344</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">Terminal-native coding agents face three fundamental challenges: managing finite context windows over long sessions, preventing destructive operations from arbitrary shell commands, and extending capabilities without overwhelming prompt budgets.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">Compound AI system with: per-workflow LLM configurability, dual-agent architecture (planning vs execution), lazy tool discovery, adaptive context compaction, automated memory system, and event-driven system reminders to counteract instruction fade-out.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">First comprehensive technical report for open-source terminal-native interactive coding agent. Enables fine-grained model selection across cost, latency, and capability dimensions. Provides secure, extensible foundation for terminal-first AI assistance.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Bridges gap between closed-source industrial practice and open academic discourse. Demonstrates that explicit reasoning phases and context efficiency prioritization are critical for long-horizon autonomous software engineering.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">4. WebChain: Large-Scale Human-Annotated Web Interaction Dataset</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05295</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">Web agent research is constrained by lack of large-scale, high-quality, reproducible datasets. Synthetic methods fail on authenticated tasks; proprietary datasets impede community consensus.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">WebChain contains 31,725 trajectories and 318k steps with Triple Alignment (visual, structural, action). Introduces Dual Mid-Training recipe that decouples spatial grounding from planning. Scalable pipeline with constraint-based task synthesis and human verification.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Achieves state-of-the-art performance on WebChainBench and public GUI benchmarks. Demonstrates positive correlation between long-horizon task performance and scale of human-verified data. Dual Mid-Training significantly boosts performance.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Democratizes web agent research with fully open-source ecosystem. Decoupling spatial perception from planning enables superior training outcomes. Human-annotated real-world data remains essential for complex authenticated workflows.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">5. Judge Reliability Harness: Stress Testing LLM Judges</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05399</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">LLM judges are widely deployed in AI benchmarks but their reliability is rarely evaluated systematically. Point estimates on small validation sets provide limited assurance about responses to realistic input variations.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">Open-source library generating reliability tests for any LLM judge: label flip detection, format invariance, semantic paraphrase consistency, verbosity bias testing, stochastic stability, and synthetic ordinal calibration.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Evaluated 4 state-of-the-art judges across 4 benchmarks (safety, persuasion, misuse, agentic). Found meaningful variation across models and perturbation types. No judge is uniformly reliable. Consistency issues revealed with formatting changes, paraphrasing, verbosity changes.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Makes reliability testing configurable, reproducible, and inexpensive. Supports transparent and trustworthy use of LLM judges in research and deployment. Human-in-the-loop review ensures test quality.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">6. X-RAY: Mapping LLM Reasoning via Formalized Probes</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05290</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">LLM reasoning capability remains poorly understood. Existing evaluations conflate pattern matching with reasoning. Benchmarks suffer from annotation noise, ambiguities, uncontrolled surface cues, and contamination.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">X-RAY uses calibrated, formally verified probes with controlled structural variations. Models reasoning as extractable structure via formal properties (constraint interaction, reasoning depth, solution-space geometry). Generates probes via formal tools with automatic verification.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Reveals systematic asymmetry: models robust to constraint refinement (shrinking solution space) but degrade sharply under solution-space restructuring (modifying solution manifold geometry). Differentiates models indistinguishable on standard benchmarks.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Framework is contamination-free and supports reasoning model training/testing. Failure modes are structurally interpretable rather than opaque. Enables fine-tuning with curricula progressively expanding extractable structure.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">7. AI+HW 2035: Shaping the Next Decade</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05225</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">AI and hardware trajectories are inseparably intertwined but lack cohesive long-term vision. Today's algorithms designed around yesterday's systems; tomorrow's chips optimized for today's workloads. AI's energy footprint has reached unsustainable levels.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">10-year roadmap for AI+HW co-design spanning algorithms, architectures, systems, sustainability. Defines success: 1000x efficiency improvement, energy-aware self-optimizing systems, democratized AI infrastructure, human-centric design principles.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Articulates key insights: computation immersed in memory via 3D integration, low-complexity high-quality models, hardware-aware model adaptation, cross-layer optimization, AI-in-the-loop design workflows, physics-informed AI for scientific discovery.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Calls for coordinated national initiatives, shared infrastructure, workforce development, cross-agency collaboration, sustained public-private partnerships. Success requires rethinking entire computing stack with intelligence per joule as key metric.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">8. The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05498</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">Two phenomena in Transformers: massive activations (extreme outliers in few channels) and attention sinks (certain tokens attract disproportionate attention). Their functional roles and causal relationship remain unclear despite significant practical implications for quantization, pruning, KV-cache management.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">Systematic experiments across model families. Identifies pre-norm configuration as key architectural component enabling co-occurrence. Shows massive activations operate globally (near-constant hidden representations as implicit parameters) while attention sinks operate locally (modulate attention outputs, bias toward short-range dependencies).</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Co-occurrence is architectural artifact of modern Transformer design, not inherent property. Ablating pre-norm causes phenomena to decouple. Each phenomenon can be independently suppressed without degrading LM performance. Attention sinks driven by attention space dimensionality and training context-length distribution.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Clarifies causal relationship between massive activations and attention sinks. Alternative design choices can mitigate either phenomenon. Findings enable better quantization, pruning, and long-context inference strategies.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">9. MedCoRAG: Interpretable Hepatology Diagnosis via Hybrid RAG and Multi-Agent Consensus</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05129</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">Hepatic disease diagnosis from EHRs is challenging with vague, overlapping symptoms. Existing AI lacks transparency, structured reasoning, deployability. RAG approaches retrieve from single source; multi-agent systems use static teams without evidence integration.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">MedCoRAG: (1) generates diagnostic hypotheses from abnormal findings, (2) retrieves and prunes UMLS KG paths + clinical guidelines, (3) Router Agent dispatches specialists based on case complexity, (4) specialists iteratively reason with targeted re-retrieval, (5) Generalist synthesizes traceable consensus.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Outperforms existing methods and closed-source models on MIMIC-IV hepatic cases in both diagnostic performance and reasoning interpretability. Dynamic routing and evidence-pruning suppress spurious associations and redundant deliberation.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Demonstrates practical blueprint for extending LLM-based agents to multi-party clinical scenarios. Hybrid KG + guideline retrieval with complexity-aware specialist dispatch enables evidence-grounded, interpretable, hallucination-resistant diagnosis.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="paper-card">
-                    <div class="paper-title">10. StructuredAgent: Planning with AND/OR Trees for Long-Horizon Web Tasks</div>
-                    <div class="paper-url">https://arxiv.org/abs/2603.05294</div>
-                    <div class="paper-meta">
-                        <div class="meta-item">
-                            <div class="meta-label">Problem</div>
-                            <div class="meta-content">Web agents struggle on complex long-horizon tasks due to: limited in-context memory for tracking alternatives, inability to construct/execute complex plans, lack of error recovery, greedy decision-making leading to premature termination.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Method</div>
-                            <div class="meta-content">Hierarchical planning framework with: (1) online hierarchical planner using dynamic AND/OR trees for efficient search, (2) structured memory module tracking candidate solutions and constraints. Interleaves planning and execution with dynamic plan revision and error back-propagation.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Results</div>
-                            <div class="meta-content">Improves performance on WebVoyager, WebArena, and custom shopping benchmarks vs standard LLM-based agents. Produces interpretable hierarchical plans enabling easier debugging and human intervention.</div>
-                        </div>
-                        <div class="meta-item">
-                            <div class="meta-label">Conclusion</div>
-                            <div class="meta-content">Separates planning tree management from LLM operations (only local tree operations). Modified greedy DFS with dynamic revision enables efficient exploration of large search spaces. Structured memory improves constraint satisfaction for information-seeking tasks.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HuggingFace Models -->
-            <div class="section">
-                <h2 class="section-title">🤗 Top 15 HuggingFace Trending Models (≤30 days)</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Model</th>
-                            <th>Type</th>
-                            <th>Parameters</th>
-                            <th>Downloads</th>
-                            <th>Likes</th>
-                            <th>Updated</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>
-                                <div class="model-name">mistralai/Mistral-Small-24B-Instruct-2501</div>
-                                <div class="model-desc">A 24B parameter instruction-tuned language model optimized for efficient inference and strong performance on reasoning tasks.</div>
-                            </td>
-                            <td>Text Generation</td>
-                            <td>24B</td>
-                            <td>1.2M</td>
-                            <td>1,847</td>
-                            <td>Jan 30, 2025</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>
-                                <div class="model-name">Qwen/Qwen2.5-VL-7B-Instruct</div>
-                                <div class="model-desc">Vision-language model capable of understanding images, documents, and videos with strong OCR and visual reasoning abilities.</div>
-                            </td>
-                            <td>Multimodal (VLM)</td>
-                            <td>7B</td>
-                            <td>892K</td>
-                            <td>1,523</td>
-                            <td>Jan 28, 2025</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>
-                                <div class="model-name">stabilityai/stable-diffusion-3.5-large</div>
-                                <div class="model-desc">State-of-the-art text-to-image diffusion model with 8B parameters, offering exceptional image quality and prompt adherence.</div>
-                            </td>
-                            <td>Diffusion (T2I)</td>
-                            <td>8B</td>
-                            <td>756K</td>
-                            <td>2,104</td>
-                            <td>Oct 22, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>
-                                <div class="model-name">google/gemma-2-27b-it</div>
-                                <div class="model-desc">Google's open 27B instruction-tuned model from the Gemma 2 family, designed for responsible AI deployment.</div>
-                            </td>
-                            <td>Text Generation</td>
-                            <td>27B</td>
-                            <td>654K</td>
-                            <td>1,892</td>
-                            <td>Jun 27, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>
-                                <div class="model-name">black-forest-labs/FLUX.1-dev</div>
-                                <div class="model-desc">Advanced open-source text-to-image model with 12B parameters, rivaling commercial solutions in image quality and versatility.</div>
-                            </td>
-                            <td>Diffusion (T2I)</td>
-                            <td>12B</td>
-                            <td>2.3M</td>
-                            <td>3,456</td>
-                            <td>Aug 1, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>
-                                <div class="model-name">meta-llama/Llama-3.2-11B-Vision-Instruct</div>
-                                <div class="model-desc">Meta's multimodal model combining vision and language understanding for image analysis, captioning, and visual Q&A.</div>
-                            </td>
-                            <td>Multimodal (VLM)</td>
-                            <td>11B</td>
-                            <td>1.1M</td>
-                            <td>2,234</td>
-                            <td>Sep 25, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>
-                                <div class="model-name">microsoft/Phi-4-multimodal-instruct</div>
-                                <div class="model-desc">Phi-4's multimodal variant capable of processing text, images, and audio in a unified architecture for versatile AI applications.</div>
-                            </td>
-                            <td>Multimodal</td>
-                            <td>5.6B</td>
-                            <td>445K</td>
-                            <td>987</td>
-                            <td>Feb 28, 2025</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>
-                                <div class="model-name">nVIDIA/Llama-3.1-Nemotron-70B-Instruct-HF</div>
-                                <div class="model-desc">NVIDIA's instruction-tuned variant of Llama 3.1 optimized for helpfulness and safety in conversational AI applications.</div>
-                            </td>
-                            <td>Text Generation</td>
-                            <td>70B</td>
-                            <td>523K</td>
-                            <td>1,445</td>
-                            <td>Oct 21, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>
-                                <div class="model-name">stabilityai/stable-video-diffusion-img2vid-xt</div>
-                                <div class="model-desc">High-quality image-to-video generation model capable of creating smooth, temporally coherent videos from static images.</div>
-                            </td>
-                            <td>Video Diffusion</td>
-                            <td>-</td>
-                            <td>387K</td>
-                            <td>1,678</td>
-                            <td>Nov 21, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>
-                                <div class="model-name">openai/whisper-large-v3-turbo</div>
-                                <div class="model-desc">Faster, more efficient variant of Whisper large-v3 for speech recognition and translation with reduced computational requirements.</div>
-                            </td>
-                            <td>Speech Recognition</td>
-                            <td>-</td>
-                            <td>2.8M</td>
-                            <td>2,901</td>
-                            <td>Oct 2, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>
-                                <div class="model-name">Qwen/Qwen2.5-Coder-32B-Instruct</div>
-                                <div class="model-desc">Code-specialized 32B parameter model from Qwen 2.5 series, excelling at code generation, completion, and programming tasks.</div>
-                            </td>
-                            <td>Code Generation</td>
-                            <td>32B</td>
-                            <td>678K</td>
-                            <td>1,234</td>
-                            <td>Nov 12, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>
-                                <div class="model-name">meta-llama/Llama-3.1-8B-Instruct</div>
-                                <div class="model-desc">Efficient 8B parameter instruction-tuned model from Llama 3.1 series, ideal for deployment with strong reasoning capabilities.</div>
-                            </td>
-                            <td>Text Generation</td>
-                            <td>8B</td>
-                            <td>4.2M</td>
-                            <td>3,567</td>
-                            <td>Jul 23, 2024</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td>
-                                <div class="model-name">stabilityai/stable-diffusion-xl-base-1.0</div>
-                                <div class="model-desc">Widely adopted text-to-image model with 3.5B UNet parameters, known for high-quality image generation and broad compatibility.</div>
-                            </td>
-                            <td>Diffusion (T2I)</td>
-                            <td>3.5B</td>
-                            <td>8.9M</td>
-                            <td>5,234</td>
-                            <td>Jul 26, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td>
-                                <div class="model-name">sentence-transformers/all-MiniLM-L6-v2</div>
-                                <div class="model-desc">Lightweight sentence embedding model for semantic search, clustering, and sentence similarity tasks with fast inference.</div>
-                            </td>
-                            <td>Embeddings</td>
-                            <td>22M</td>
-                            <td>12.4M</td>
-                            <td>2,876</td>
-                            <td>Aug 29, 2021</td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td>
-                                <div class="model-name">BAAI/bge-large-zh-v1.5</div>
-                                <div class="model-desc">Chinese text embedding model optimized for semantic search and retrieval, achieving strong performance on Chinese benchmarks.</div>
-                            </td>
-                            <td>Embeddings</td>
-                            <td>326M</td>
-                            <td>1.9M</td>
-                            <td>1,567</td>
-                            <td>Sep 6, 2023</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- GitHub Trending -->
-            <div class="section">
-                <h2 class="section-title">⭐ Top 10 GitHub Trending Python Repositories</h2>
+                <li class="report-item">
+                    <div class="report-date">March 6, 2026</div>
+                    <div class="report-time">09:46 AM (UTC)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-06-09-46.html" class="report-link">View Report →</a>
+                </li>
                 
-                <div class="github-card">
-                    <div class="github-name">1. Shubhamsaboo/awesome-llm-apps</div>
-                    <div class="github-url">https://github.com/Shubhamsaboo/awesome-llm-apps</div>
-                    <div>Collection of awesome LLM apps with RAG and AI agents that can be run locally.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 1,247 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">2. soulteary/amazing-DeepSeek</div>
-                    <div class="github-url">https://github.com/soulteary/amazing-DeepSeek</div>
-                    <div>Amazing DeepSeek resources and applications showcasing the power of DeepSeek models.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 892 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">3. python-poetry/poetry</div>
-                    <div class="github-url">https://github.com/python-poetry/poetry</div>
-                    <div>Python packaging and dependency management made easy with modern tooling.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 756 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">4. donnemartin/system-design-primer</div>
-                    <div class="github-url">https://github.com/donnemartin/system-design-primer</div>
-                    <div>Learn how to design large-scale systems. Prep for the system design interview.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 623 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">5. public-apis/public-apis</div>
-                    <div class="github-url">https://github.com/public-apis/public-apis</div>
-                    <div>A collective list of free APIs for use in software and web development.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 578 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">6. dlt-hub/dlt</div>
-                    <div class="github-url">https://github.com/dlt-hub/dlt</div>
-                    <div>data load tool (dlt) is an open-source Python library for data loading.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 534 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">7. PrefectHQ/prefect</div>
-                    <div class="github-url">https://github.com/PrefectHQ/prefect</div>
-                    <div>Prefect is a workflow orchestration tool empowering developers to build, observe, and react to async workflows.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 487 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">8. openai/openai-python</div>
-                    <div class="github-url">https://github.com/openai/openai-python</div>
-                    <div>The official Python library for the OpenAI API with support for GPT-4, embeddings, and fine-tuning.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 445 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">9. Azure-Samples/azure-search-openai-demo</div>
-                    <div class="github-url">https://github.com/Azure-Samples/azure-search-openai-demo</div>
-                    <div>A sample app for the Retrieval-Augmented Generation pattern running in Azure, using Azure AI Search.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 398 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-
-                <div class="github-card">
-                    <div class="github-name">10. huggingface/transformers</div>
-                    <div class="github-url">https://github.com/huggingface/transformers</div>
-                    <div>🤗 Transformers: State-of-the-art Machine Learning for PyTorch, TensorFlow, and JAX.</div>
-                    <div class="github-stats">
-                        <span class="stat">⭐ 367 stars today</span>
-                        <span class="stat">🔧 Python</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Key Trends -->
-            <div class="section">
-                <h2 class="section-title">🔥 5 Key Trends & Highlights</h2>
+                <li class="report-item">
+                    <div class="report-date">March 6, 2026</div>
+                    <div class="report-time">09:31 AM (UTC)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-06-09-31.html" class="report-link">View Report →</a>
+                </li>
                 
-                <div class="trend-card">
-                    <div class="trend-title"><span class="trend-number">1</span>Agentic AI Revolution</div>
-                    <p>Web agents and coding agents are undergoing a paradigm shift from IDE plugins to terminal-native autonomy. Papers like WebFactory and OpenDev demonstrate that compressing LLM intelligence into grounded agents through RL and specialized architectures is the new frontier. Multi-agent frameworks (MedCoRAG, StructuredAgent) show promise for complex reasoning tasks requiring collaborative deliberation.</p>
-                </div>
-
-                <div class="trend-card">
-                    <div class="trend-title"><span class="trend-number">2</span>LLM Evaluation Crisis</div>
-                    <p>The Judge Reliability Harness and X-RAY papers reveal that LLM evaluation is in crisis—judges are unreliable across benchmarks, and reasoning capabilities are poorly understood. The research community is urgently developing formal verification frameworks, stress-testing methodologies, and contamination-free evaluation substrates to establish trustworthy assessment practices.</p>
-                </div>
-
-                <div class="trend-card">
-                    <div class="trend-title"><span class="trend-number">3</span>AI-Hardware Co-evolution Imperative</div>
-                    <p>The AI+HW 2035 vision paper articulates an urgent need for 1000x efficiency improvements through algorithm-hardware co-design. With AI datacenters rivaling nations in power demand, the focus is shifting from raw compute scaling to "intelligence per joule," requiring fundamental rethinking of the entire computing stack from memory-centric architectures to self-optimizing systems.</p>
-                </div>
-
-                <div class="trend-card">
-                    <div class="trend-title"><span class="trend-number">4</span>Multimodal Models Mature</div>
-                    <p>HuggingFace trending data shows vision-language models (Qwen2.5-VL, Llama-3.2-Vision) and video generation models gaining significant traction. The shift from text-only to multimodal capabilities is accelerating, with models like Phi-4-multimodal processing text, images, and audio in unified architectures for versatile enterprise applications.</p>
-                </div>
-
-                <div class="trend-card">
-                    <div class="trend-title"><span class="trend-number">5</span>Democratization of AI Tools</div>
-                    <p>GitHub trending shows explosive interest in practical LLM applications (awesome-llm-apps), local deployment options (DeepSeek resources), and workflow orchestration tools (Prefect, dlt). The developer community is actively building accessible, open-source infrastructure to democratize access to advanced AI capabilities beyond major tech companies.</p>
-                </div>
+                <li class="report-item">
+                    <div class="report-date">March 6, 2026</div>
+                    <div class="report-time">01:45 AM (UTC)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-06-01-45.html" class="report-link">View Report →</a>
+                </li>
+            </ul>
+            
+            <div style="margin-top: 40px; padding: 20px; background: #f0f4f8; border-radius: 8px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">📊 Report Format</h3>
+                <ul style="margin-left: 20px; color: #4a5568;">
+                    <li>10 selected arXiv papers with Problem/Method/Results/Conclusion</li>
+                    <li>15 HuggingFace trending models (30 days, with direct URLs)</li>
+                    <li>10 GitHub trending Python repositories (with direct URLs)</li>
+                    <li>5 key trends and insights (3 from arXiv + 2 from HF/GitHub)</li>
+                    <li>All links are clickable plain URLs</li>
+                </ul>
             </div>
         </div>
-
+        
         <div class="footer">
-            <p>AI Daily Report | Generated on March 6, 2026 at 09:31 UTC</p>
-            <p>🌐 Full blog version: <a href="https://chenlijn.github.io/ai-daily/2026-03-06-09-31.html">https://chenlijn.github.io/ai-daily/2026-03-06-09-31.html</a></p>
-            <p>Data sources: arXiv, HuggingFace, GitHub | Report compiled by AI</p>
+            <p>© 2026 Charlie | AI Algorithm Engineer</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Generated automatically every morning at 8:00 AM (Beijing Time)</p>
         </div>
     </div>
 </body>
