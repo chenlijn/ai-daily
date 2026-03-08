@@ -3,182 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Daily Report - March 7, 2026</title>
+    <title>AI Daily Report - March 8, 2026</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6; 
-            color: #333; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container { background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-        h1 { color: #2d3748; border-bottom: 4px solid #667eea; padding-bottom: 15px; margin-bottom: 30px; font-size: 2.5em; }
-        h2 { color: #4a5568; margin-top: 40px; margin-bottom: 20px; font-size: 1.8em; border-left: 5px solid #667eea; padding-left: 15px; }
-        h3 { color: #553c9a; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em; }
-        .date { color: #718096; font-size: 1.1em; margin-bottom: 30px; font-style: italic; }
-        .paper { background: #f7fafc; border-radius: 12px; padding: 25px; margin-bottom: 25px; border-left: 4px solid #667eea; }
-        .paper h3 { margin-top: 0; color: #2d3748; }
-        .paper .meta { color: #718096; font-size: 0.9em; margin-bottom: 15px; }
-        .paper .url { background: #edf2f7; padding: 8px 12px; border-radius: 6px; font-family: monospace; font-size: 0.9em; word-break: break-all; margin: 10px 0; display: inline-block; }
-        .section { margin-bottom: 15px; }
-        .section strong { color: #553c9a; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 12px; margin-bottom: 30px; text-align: center; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header .date { font-size: 1.2em; opacity: 0.9; }
+        .section { background: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .section h2 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-bottom: 20px; font-size: 1.8em; }
+        .section h3 { color: #764ba2; margin: 25px 0 15px 0; font-size: 1.3em; }
+        .paper { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #667eea; }
+        .paper h4 { color: #333; margin-bottom: 10px; font-size: 1.1em; }
+        .paper .url { color: #667eea; font-size: 0.9em; margin-bottom: 10px; word-break: break-all; }
+        .paper .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 15px; }
+        .paper .meta-item { background: white; padding: 10px; border-radius: 6px; }
+        .paper .meta-item strong { color: #764ba2; display: block; margin-bottom: 5px; }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9em; }
         th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
-        td { padding: 12px; border-bottom: 1px solid #e2e8f0; }
-        tr:hover { background: #f7fafc; }
-        .trend-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
-        .trend-box h3 { color: white; margin-top: 0; }
-        .highlight { background: #fef3c7; padding: 2px 6px; border-radius: 4px; }
-        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
-        .stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 12px; text-align: center; }
-        .stat-card .number { font-size: 2.5em; font-weight: bold; }
-        .footer { margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0; color: #718096; text-align: center; }
-        .model-type { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.8em; font-weight: 600; }
-        .type-multimodal { background: #c6f6d5; color: #22543d; }
-        .type-llm { background: #bee3f8; color: #2a4365; }
-        .type-video { background: #fed7e2; color: #702459; }
-        .type-diffusion { background: #feebc8; color: #744210; }
-        .type-embedding { background: #e9d8fd; color: #553c9a; }
-        @media (max-width: 768px) {
-            .container { padding: 20px; }
-            table { font-size: 0.8em; }
-            th, td { padding: 8px; }
-        }
+        td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        tr:hover { background: #f5f5f5; }
+        .trends { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 30px; }
+        .trends h2 { color: white; border-bottom: 3px solid rgba(255,255,255,0.5); padding-bottom: 10px; margin-bottom: 20px; }
+        .trend-item { background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; margin-bottom: 15px; backdrop-filter: blur(10px); }
+        .trend-item strong { display: block; margin-bottom: 8px; font-size: 1.1em; }
+        .github-repo { background: #f6f8fa; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #28a745; }
+        .github-repo h4 { color: #24292e; margin-bottom: 8px; }
+        .github-repo .stars { color: #586069; font-size: 0.9em; }
+        .footer { text-align: center; padding: 20px; color: #666; font-size: 0.9em; }
+        .tag { display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.75em; margin-right: 5px; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <h1>🤖 AI Daily Report</h1>
-        <div class="date">Saturday, March 7, 2026 — 8:00 AM (Beijing Time / UTC+8)</div>
+        <div class="date">March 8, 2026 | Sunday Morning Edition</div>
+    </div>
 
-        <div class="stats">
-            <div class="stat-card">
-                <div class="number">50</div>
-                <div>arXiv Papers</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">15</div>
-                <div>HF Models</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">10</div>
-                <div>GitHub Repos</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">3</div>
-                <div>Major Trends</div>
-            </div>
+    <div class="trends">
+        <h2>🔥 Key Trends & Highlights</h2>
+        
+        <div class="trend-item">
+            <strong>1. LLM Evaluation & Judge Reliability</strong>
+            Multiple breakthrough papers address the critical challenge of making LLM-as-a-Judge systems more reliable and bias-bounded. New frameworks like A-BB (Average Bias-Boundedness) provide formal guarantees for reducing harm from judge bias, while the Judge Reliability Harness offers systematic stress testing tools. This represents a maturation of the field toward verifiable, production-ready evaluation systems.
         </div>
+        
+        <div class="trend-item">
+            <strong>2. Web Agent Architectures & Long-Horizon Planning</strong>
+            Significant advances in web agent capabilities with STRUCTUREDAGENT introducing AND/OR tree planning for complex tasks, and WebChain providing the largest open-source dataset (31,725 trajectories) for training robust web agents. The field is moving from simple single-step interactions to sophisticated multi-step planning with structured memory.
+        </div>
+        
+        <div class="trend-item">
+            <strong>3. Transformer Mechanistic Understanding</strong>
+            Deep architectural insights continue with "The Spike, the Sparse and the Sink" dissecting massive activations and attention sinks, revealing that these phenomena serve distinct functions - massive activations operate globally as implicit parameters while attention sinks modulate local attention outputs. This understanding is crucial for model compression and efficient inference.
+        </div>
+        
+        <div class="trend-item">
+            <strong>4. Multimodal Model Dominance on HuggingFace</strong>
+            Qwen3.5 family continues its explosive growth with 9B, 35B-A3B, and 27B variants topping the trending charts. The shift toward Image-Text-to-Text architectures is evident, with models like LTX-2.3 for video generation and FireRed-OCR for document understanding gaining rapid adoption. Chinese models are increasingly competitive globally.
+        </div>
+        
+        <div class="trend-item">
+            <strong>5. Terminal-Native AI Coding Agents</strong>
+            A fundamental paradigm shift from IDE plugins to CLI-based agents is underway. OPENDEV and similar projects demonstrate that effective autonomous coding assistance requires strict safety controls, compound AI system architectures with workload-specialized model routing, and efficient context management to prevent reasoning degradation in long-horizon tasks.
+        </div>
+    </div>
 
-        <h2>📄 Top 10 arXiv Papers (Deep Dive)</h2>
-        <p><em>Papers from March 6, 8:00 AM to March 7, 8:00 AM Beijing Time</em></p>
+    <div class="section">
+        <h2>📄 arXiv Papers - Top 10 Deep Dive</h2>
+        <p><em>Time window: March 7, 8:00 AM - March 8, 8:00 AM (Beijing Time)</em></p>
 
         <div class="paper">
-            <h3>1. The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks</h3>
-            <div class="meta">arXiv:2603.05498 | Mar 5, 2026</div>
+            <h4>1. The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks</h4>
             <div class="url">https://arxiv.org/abs/2603.05498</div>
-            <div class="section"><strong>Problem:</strong> Transformer language models exhibit two puzzling phenomena: massive activations (extreme outliers in token representations) and attention sinks (certain tokens attract disproportionate attention). Their functional roles and relationship remain unclear.</div>
-            <div class="section"><strong>Method:</strong> Systematic experiments analyzing the co-occurrence of massive activations and attention sinks. Identified pre-norm configuration as the key architectural choice enabling this co-occurrence. Massive activations function as implicit global parameters, while attention sinks modulate local attention outputs.</div>
-            <div class="section"><strong>Results:</strong> Shows that co-occurrence is largely an architectural artifact. Ablating pre-norm causes the two phenomena to decouple. Massive activations induce near-constant hidden representations across layers.</div>
-            <div class="section"><strong>Conclusion:</strong> These phenomena serve related but distinct functions. Understanding their architectural origins provides insights into Transformer design and could inform more efficient model architectures.</div>
+            <p><span class="tag">Architecture</span> <span class="tag">Mechanistic Interpretability</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    Understanding two recurring phenomena in Transformers: massive activations (extreme outliers in few channels) and attention sinks (tokens attracting disproportionate attention) - their relationship and functional roles were unclear.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    Systematic experiments analyzing the co-occurrence patterns, identifying pre-norm configuration as the key architectural choice enabling co-occurrence. Showed the phenomena serve related but distinct functions through ablation studies.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Massive activations function as implicit parameters (global, near-constant hidden representations), while attention sinks modulate outputs locally (bias toward short-range dependencies). Ablating pre-norm causes decoupling of these phenomena.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    The co-occurrence is largely an architectural artifact of modern Transformer design, not a functional necessity. This insight enables more targeted model compression and optimization strategies.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>2. Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation</h3>
-            <div class="meta">arXiv:2603.05485 | Mar 5, 2026</div>
+            <h4>2. Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation</h4>
             <div class="url">https://arxiv.org/abs/2603.05485</div>
-            <div class="section"><strong>Problem:</strong> As AI systems move toward autonomous feedback loops, we need LLM judges with strong guarantees against bias, particularly when bias vectors are unknown or adversarially discovered. Current LLM judges lack formal guarantees.</div>
-            <div class="section"><strong>Method:</strong> Proposed average bias-boundedness (A-BB), an algorithmic framework that formally guarantees reductions of harm from any measurable bias in an LLM judge. Evaluated on Arena-Hard-Auto with four LLM judges.</div>
-            <div class="section"><strong>Results:</strong> Achieved (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings. Most judge-bias combinations exceeded 80% correlation retention.</div>
-            <div class="section"><strong>Conclusion:</strong> First framework to provide formal bias-bounded guarantees for LLM judges. Critical for building trustworthy autonomous AI systems that depend on automated, verifiable rewards and feedback.</div>
+            <p><span class="tag">Evaluation</span> <span class="tag">LLM-as-Judge</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    As AI systems move toward autonomous self-maintaining feedback loops, we need automated verifiable rewards. LLM judges lack systems capable of enforcing standards with strong guarantees, especially when bias vectors are unknown or adversarial.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    Proposed A-BB (Average Bias-Boundedness), an algorithmic framework formally guaranteeing reductions of harm from any measurable bias in LLM judges. Tested on Arena-Hard-Auto with four LLM judges.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Achieved (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings. Most judge-bias combinations exceeded 80% correlation retention across formatting and schematic bias settings.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    Formal bias-bounded guarantees are achievable without sacrificing ranking fidelity. This framework enables safer deployment of LLM judges in high-stakes autonomous systems requiring verifiable feedback.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>3. Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering, and Lessons Learned</h3>
-            <div class="meta">arXiv:2603.05344 | Mar 5, 2026</div>
+            <h4>3. Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering</h4>
             <div class="url">https://arxiv.org/abs/2603.05344</div>
-            <div class="section"><strong>Problem:</strong> AI coding assistance is shifting from IDE plugins to terminal-native agents, but these agents need strict safety controls and efficient context management to prevent context bloat and reasoning degradation.</div>
-            <div class="section"><strong>Method:</strong> Introduced OPENDEV, a CLI-based coding agent with compound AI system architecture. Features: workload-specialized model routing, dual-agent architecture (planning vs execution), lazy tool discovery, adaptive context compaction, and automated memory system.</div>
-            <div class="section"><strong>Results:</strong> Successfully addresses long-horizon development tasks with context efficiency. Prevents instruction fade-out through event-driven system reminders. Provides secure, extensible foundation for terminal-first AI assistance.</div>
-            <div class="section"><strong>Conclusion:</strong> Terminal-native agents represent a fundamental shift in AI coding assistance. The paper provides a blueprint for robust autonomous software engineering with explicit reasoning phases and context efficiency.</div>
+            <p><span class="tag">Code Agents</span> <span class="tag">CLI</span> <span class="tag">OPENDEV</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    AI coding assistance is shifting from IDE plugins to terminal-native agents, but effective autonomous assistance requires strict safety controls and efficient context management to prevent bloat and reasoning degradation in long-horizon tasks.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    OPENDEV uses compound AI system architecture with workload-specialized model routing, dual-agent architecture (planning vs execution separation), lazy tool discovery, adaptive context compaction, and automated memory system for project knowledge accumulation.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Enforces explicit reasoning phases and context efficiency. The system provides secure, extensible foundation for terminal-first AI assistance with event-driven system reminders to counteract instruction fade-out.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    Terminal-native agents represent a paradigm shift offering unprecedented autonomy. Success requires architectural innovations in context management, safety controls, and memory systems - providing a blueprint for robust autonomous software engineering.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>4. Judge Reliability Harness: Stress Testing the Reliability of LLM Judges</h3>
-            <div class="meta">arXiv:2603.05399 | Mar 5, 2026 | ICLR 2026 Workshop</div>
+            <h4>4. Judge Reliability Harness: Stress Testing the Reliability of LLM Judges</h4>
             <div class="url">https://arxiv.org/abs/2603.05399</div>
-            <div class="section"><strong>Problem:</strong> LLM-based scoring is widely deployed in AI benchmarks, but insufficient tooling exists to assess the reliability of these methods. Simple perturbations like formatting changes can affect judgment consistency.</div>
-            <div class="section"><strong>Method:</strong> Open-source library for constructing validation suites testing LLM judge reliability. Generates reliability tests evaluating binary judgment accuracy and ordinal grading for free-response and agentic tasks. Tested across safety, persuasion, misuse, and agentic behavior benchmarks.</div>
-            <div class="section"><strong>Results:</strong> No evaluated judge is uniformly reliable across benchmarks. Found meaningful variation in performance across models and perturbation types (text formatting changes, paraphrasing, verbosity changes, ground truth label flipping).</div>
-            <div class="section"><strong>Conclusion:</strong> Highlights critical need for improved robustness in LLM judges. Provides practical tool for researchers to evaluate and improve judge reliability before deployment in autonomous systems.</div>
+            <p><span class="tag">Evaluation</span> <span class="tag">Reliability Testing</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    As LLM-based scoring is widely deployed in AI benchmarks, more tooling is needed to efficiently assess the reliability of these methods. Judges show consistency issues due to simple text formatting changes, paraphrasing, verbosity changes, and ground truth label flipping.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    Open-source library for constructing validation suites testing LLM judge reliability. Evaluates binary judgment accuracy and ordinal grading for free-response and agentic tasks. Tested four state-of-the-art judges across four benchmarks (safety, persuasion, misuse, agentic behavior).
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Found meaningful variation across models and perturbation types. No judge evaluated was uniformly reliable across benchmarks using the harness. Consistency issues persist even with simple formatting perturbations.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    Systematic stress testing reveals that current LLM judges have significant robustness gaps. The harness provides practical tooling for researchers and practitioners to evaluate and improve judge reliability before production deployment.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>5. Knowledge Agents via Reinforcement Learning</h3>
-            <div class="meta">arXiv:2603.05218 | Mar 5, 2026</div>
-            <div class="url">https://arxiv.org/abs/2603.05218</div>
-            <div class="section"><strong>Problem:</strong> Enterprise search requires agents capable of complex, hard-to-verify agentic search tasks across diverse information sources. Traditional approaches lack generalization across heterogeneous search behaviors.</div>
-            <div class="section"><strong>Method:</strong> Introduced KARLBench (multi-capability evaluation suite across 6 search regimes), agentic synthesis pipeline with long-horizon reasoning, and iterative large-batch off-policy RL paradigm. Models trained across heterogeneous behaviors for better generalization.</div>
-            <div class="section"><strong>Results:</strong> KARL is Pareto-optimal on KARLBench across cost-quality and latency-quality trade-offs vs Claude 4.6 and GPT 5.2. Surpasses strongest closed models with sufficient test-time compute, including on out-of-distribution tasks.</div>
-            <div class="section"><strong>Conclusion:</strong> Tailored synthetic data combined with multi-task reinforcement learning enables cost-efficient, high-performing knowledge agents. Shows path toward grounded reasoning for enterprise applications.</div>
-        </div>
-
-        <div class="paper">
-            <h3>6. WebChain: A Large-Scale Human-Annotated Dataset of Real-World Web Interaction Traces</h3>
-            <div class="meta">arXiv:2603.05295 | Mar 5, 2026</div>
+            <h4>5. WebChain: A Large-Scale Human-Annotated Dataset of Real-World Web Interaction Traces</h4>
             <div class="url">https://arxiv.org/abs/2603.05295</div>
-            <div class="section"><strong>Problem:</strong> Web agent research lacks large-scale, human-annotated datasets of real-world web interactions. Synthetic methods often miss complex, high-value tasks needed for practical web agents.</div>
-            <div class="section"><strong>Method:</strong> Introduced WebChain - largest open-source dataset with 31,725 trajectories and 318k steps. Features Triple Alignment of visual, structural, and action data. Proposed Dual Mid-Training recipe decoupling spatial grounding from planning.</div>
-            <div class="section"><strong>Results:</strong> Achieved state-of-the-art performance on WebChainBench and other public GUI benchmarks. Scalable pipeline ensures coverage of complex tasks often missed by synthetic methods.</div>
-            <div class="section"><strong>Conclusion:</strong> Provides necessary data and insights for building next-generation scalable web agents. Rich multi-modal supervision enables more capable autonomous web navigation systems.</div>
+            <p><span class="tag">Web Agents</span> <span class="tag">Dataset</span> <span class="tag">Multimodal</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    Web agent research lacks large-scale, reproducible datasets of real-world web interactions. Synthetic methods often miss complex, high-value tasks critical for training robust agents.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    WebChain contains 31,725 trajectories and 318k steps with Triple Alignment of visual, structural, and action data. Scalable pipeline ensures coverage of complex tasks. Proposed Dual Mid-Training recipe decoupling spatial grounding from planning.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Achieved state-of-the-art performance on WebChainBench and other public GUI benchmarks. Largest open-source dataset of its kind designed for reproducible web agent research.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    High-quality, diverse real-world interaction data is essential for next-generation web agents. The Dual Mid-Training approach of separating grounding from planning provides a recipe for building more capable agents.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>7. STRUCTUREDAGENT: Planning with AND/OR Trees for Long-Horizon Web Tasks</h3>
-            <div class="meta">arXiv:2603.05294 | Mar 5, 2026</div>
+            <h4>6. STRUCTUREDAGENT: Planning with AND/OR Trees for Long-Horizon Web Tasks</h4>
             <div class="url">https://arxiv.org/abs/2603.05294</div>
-            <div class="section"><strong>Problem:</strong> Existing web agents struggle on complex, long-horizon tasks due to limited in-context memory, weak planning abilities, and greedy behaviors leading to premature termination.</div>
-            <div class="section"><strong>Method:</strong> Hierarchical planning framework with: (1) online hierarchical planner using dynamic AND/OR trees for efficient search, and (2) structured memory module tracking candidate solutions to improve constraint satisfaction in information-seeking tasks.</div>
-            <div class="section"><strong>Results:</strong> Improved performance on long-horizon web-browsing tasks on WebVoyager, WebArena, and custom shopping benchmarks. Produces interpretable hierarchical plans enabling easier debugging and human intervention.</div>
-            <div class="section"><strong>Conclusion:</strong> Structured planning with explicit AND/OR trees significantly improves agent performance on complex web tasks. Demonstrates importance of hierarchical reasoning for autonomous web agents.</div>
+            <p><span class="tag">Web Agents</span> <span class="tag">Planning</span> <span class="tag">Hierarchical</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    Existing web agents struggle on complex, long-horizon tasks due to limited in-context memory for tracking history, weak planning abilities, and greedy behaviors leading to premature termination.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    Hierarchical planning framework with: (1) online hierarchical planner using dynamic AND/OR trees for efficient search, (2) structured memory module tracking candidate solutions for constraint satisfaction in information-seeking tasks. Produces interpretable hierarchical plans.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Improved performance on WebVoyager, WebArena, and custom shopping benchmarks compared to standard LLM-based agents. Enables easier debugging and human intervention through interpretable plans.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    Explicit hierarchical planning with structured memory addresses the core limitations of current web agents. AND/OR tree representations provide both efficiency and interpretability for long-horizon task completion.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>8. X-RAY: Mapping LLM Reasoning Capability via Formalized and Calibrated Probes</h3>
-            <div class="meta">arXiv:2603.05290 | Mar 5, 2026</div>
+            <h4>7. Mapping LLM Reasoning Capability via Formalized and Calibrated Probes (X-RAY)</h4>
             <div class="url">https://arxiv.org/abs/2603.05290</div>
-            <div class="section"><strong>Problem:</strong> Existing evaluations conflate pattern matching with true reasoning capability. Need to understand how LLMs reason at a structural level, not just task-level accuracy.</div>
-            <div class="section"><strong>Method:</strong> Explainable reasoning analysis system using calibrated, formally verified probes. Models reasoning as function of extractable structure through formal properties: constraint interaction, reasoning depth, solution-space geometry. Generates probes via formal tools with controlled structural variations.</div>
-            <div class="section"><strong>Results:</strong> Reveals systematic asymmetry: models robust to constraint refinement but degrade sharply under solution-space restructuring. Calibrated formal probes differentiate models indistinguishable on standard benchmarks and reveal structurally interpretable failure modes.</div>
-            <div class="section"><strong>Conclusion:</strong> Provides contamination-free framework supporting training and testing of reasoning models. Enables deeper understanding of LLM reasoning limitations and capabilities beyond surface-level accuracy metrics.</div>
+            <p><span class="tag">Reasoning</span> <span class="tag">Evaluation</span> <span class="tag">Formal Methods</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    LLM reasoning capability remains poorly understood. Existing evaluations emphasize task-level accuracy, often conflating pattern matching with true reasoning. Need contamination-free evaluation supporting training and testing.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    X-RAY system maps reasoning via calibrated, formally verified probes. Models reasoning as function of extractable structure through formal properties (constraint interaction, reasoning depth, solution-space geometry). Generates probes via formal tools with controlled structural variations.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Revealed systematic asymmetry: models robust to constraint refinement (additional conditions shrink solution space) but degrade sharply under solution-space restructuring. Differentiated models indistinguishable on standard benchmarks. Revealed structurally interpretable failure modes.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    Formal, calibrated probes reveal fundamental reasoning limitations invisible to standard benchmarks. The framework enables precise isolation of structural information and contamination-free training/testing of reasoning models.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>9. A Psyche-Driven Chess Engine with Dynamic Emotional Modulation</h3>
-            <div class="meta">arXiv:2603.05352 | Mar 5, 2026</div>
+            <h4>8. PACE: A Personalized Adaptive Curriculum Engine for 9-1-1 Call-taker Training</h4>
+            <div class="url">https://arxiv.org/abs/2603.05361</div>
+            <p><span class="tag">Education</span> <span class="tag">Personalization</span> <span class="tag">Adaptive Systems</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    9-1-1 call-taking requires mastery of 1000+ interdependent skills. Nationwide labor shortage strains training capacity, but effective instruction requires personalization to each trainee's evolving competencies - a burden current practice cannot scale.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    PACE co-pilot system: (1) maintains probabilistic beliefs over trainee skill states, (2) models individual learning/forgetting dynamics, (3) recommends scenarios balancing new competency acquisition with retention. Uses skill graph for diagnostic coverage and contextual bandits for scenario selection.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    19.50% faster time-to-competence and 10.95% higher terminal mastery vs state-of-the-art. 95.45% alignment between PACE and expert pedagogical judgments. Reduced turnaround time from 11.58 minutes to 34 seconds (95.08% reduction).
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    AI-driven adaptive curriculum engines can dramatically accelerate training while maintaining quality. Probabilistic skill modeling combined with contextual bandits provides an effective framework for personalized education at scale.
+                </div>
+            </div>
+        </div>
+
+        <div class="paper">
+            <h4>9. A Psyche-Driven Chess Engine with Dynamic Emotional Modulation</h4>
             <div class="url">https://arxiv.org/abs/2603.05352</div>
-            <div class="section"><strong>Problem:</strong> Chess engines surpass human strength but don't play like humans. Human players exhibit behavioral variability under pressure (tilt, overconfidence) that conventional engines cannot capture.</div>
-            <div class="section"><strong>Method:</strong> Personality × psyche decomposition for behavioral variability. Personality is static preset; psyche is dynamic scalar ψ_t ∈ [-100, +100] recomputed from five positional factors after every move. Audio-inspired signal chain (noise gate, compressor/expander, equalizer, limiter) reshapes move probability distributions.</div>
-            <div class="section"><strong>Results:</strong> Tested across 12,414 games. Same monotonic gradient in top-move agreement (~20-25 pp spread from stress to overconfidence) across engines differing ~2,800x in training data. Under stress, competitive score fell from 50.8% to 30.1%. Overconfident mode showed 66% agreement with vanilla engine.</div>
-            <div class="section"><strong>Conclusion:</strong> Behavioral variation comes from signal chain, not underlying model. Framework produces human-like playing patterns reminiscent of tilt and overconfidence. Interesting exploration of affective computing in game AI.</div>
+            <p><span class="tag">Game AI</span> <span class="tag">Human-like Behavior</span> <span class="tag">Psychology</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    Chess engines surpassed human strength but don't play like humans. Grandmasters under pressure blunder differently than club players on streaks. Conventional engines capture none of this behavioral variability.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    Personality x Psyche decomposition: Personality is static preset; Psyche is dynamic scalar ψ_t ∈ [-100, +100] recomputed from five positional factors after every move. Audio-inspired signal chain (noise gate, compressor, equalizer, limiter) reshapes move probabilities on the fly.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Tested across 12,414 games. Both probability sources showed same monotonic gradient in top-move agreement (~20-25 pp spread from stress to overconfidence). Overconfident: 66% agreement with vanilla Maia2. Under stress: competitive score fell from 50.8% to 30.1%.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    Behavioral variation comes from the signal chain, not the underlying model. The framework successfully mimics human-like tilt and overconfidence patterns. Engine-agnostic approach works with any probability-outputting system.
+                </div>
+            </div>
         </div>
 
         <div class="paper">
-            <h3>10. AI+HW 2035: Shaping the Next Decade</h3>
-            <div class="meta">arXiv:2603.05225 | Mar 5, 2026</div>
-            <div class="url">https://arxiv.org/abs/2603.05225</div>
-            <div class="section"><strong>Problem:</strong> AI and hardware trajectories have become inseparably intertwined, but the research community lacks cohesive long-term vision. Fragmentation constrains progress toward holistic, sustainable, adaptive AI systems.</div>
-            <div class="section"><strong>Method:</strong> 10-year roadmap for AI+HW co-design spanning algorithms, architectures, systems, and sustainability. Identifies key challenges and opportunities, assesses potential obstacles, proposes integrated solutions grounded in algorithmic innovation, hardware advances, and software abstraction.</div>
-            <div class="section"><strong>Results:</strong> Defines success in 2035: 1000x improvement in AI training/inference efficiency; energy-aware, self-optimizing systems spanning cloud, edge, and physical AI; democratized access to advanced AI infrastructure; human-centric principles embedded in intelligent systems.</div>
-            <div class="section"><strong>Conclusion:</strong> Calls for coordinated national initiatives, shared infrastructure, workforce development, and sustained public-private partnerships. Future of AI depends on scaling efficiency (intelligence per joule), not unbounded compute consumption.</div>
+            <h4>10. Reclaiming Lost Text Layers for Source-Free Cross-Domain Few-Shot Learning</h4>
+            <div class="url">https://arxiv.org/abs/2603.05235</div>
+            <p><span class="tag">Computer Vision</span> <span class="tag">CLIP</span> <span class="tag">CVPR 2026</span></p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Problem</strong>
+                    SF-CDFSL (Source-Free Cross-Domain Few-Shot Learning) focuses on fine-tuning with limited target domain data. CLIP shows promise but removing certain middle text encoder layers improves performance - these "Lost Layers" seem redundant but their information is actually beneficial.
+                </div>
+                <div class="meta-item">
+                    <strong>Method</strong>
+                    Discovered visual gaps prevent useful layer information from being fully utilized. Proposed method to re-utilize lost layer information at layer and encoder levels, guiding visual branch re-learning under domain shifts. Addresses underutilized text encoder information.
+                </div>
+                <div class="meta-item">
+                    <strong>Results</strong>
+                    Extensive experiments across CLIP, SigLip, PE-Core backbones and 4 CDFSL datasets + 10 Meta-dataset datasets. Method effectively addresses underutilized information issue, outperforming simple layer removal approaches.
+                </div>
+                <div class="meta-item">
+                    <strong>Conclusion</strong>
+                    Text encoder layers deemed "lost" actually contain valuable information blocked by visual gaps. Teaching the model to reclaim this information enables better cross-domain few-shot learning without requiring source data access.
+                </div>
+            </div>
         </div>
+    </div>
 
-        <h2>🤗 HuggingFace Top 15 Trending Models (≤30 days)</h2>
+    <div class="section">
+        <h2>🤗 HuggingFace Top 15 Trending Models (Updated ≤30 Days)</h2>
         <table>
             <thead>
                 <tr>
@@ -197,287 +334,250 @@
                 <tr>
                     <td>1</td>
                     <td>Qwen/Qwen3.5-9B</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
+                    <td>Image-Text-to-Text</td>
                     <td>10B</td>
-                    <td>516k</td>
-                    <td>530</td>
-                    <td>5 days ago</td>
+                    <td>693k</td>
+                    <td>565</td>
+                    <td>6 days ago</td>
                     <td>https://huggingface.co/Qwen/Qwen3.5-9B</td>
-                    <td>Compact multimodal model combining vision and language understanding for efficient deployment across vision-language tasks.</td>
+                    <td>Compact multimodal model from Alibaba's Qwen series, excelling at visual understanding and reasoning tasks with efficient parameter usage.</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Qwen/Qwen3.5-35B-A3B</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
+                    <td>Image-Text-to-Text</td>
                     <td>36B</td>
-                    <td>1M</td>
-                    <td>997</td>
-                    <td>8 days ago</td>
+                    <td>1.09M</td>
+                    <td>1.02k</td>
+                    <td>9 days ago</td>
                     <td>https://huggingface.co/Qwen/Qwen3.5-35B-A3B</td>
-                    <td>Large-scale multimodal MoE model with 3B active parameters, delivering powerful vision-language capabilities with efficient inference.</td>
+                    <td>Large-scale multimodal model with MoE architecture (36B total, 3B active), delivering high performance across vision-language benchmarks.</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Qwen/Qwen3.5-0.8B</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>0.9B</td>
-                    <td>265k</td>
-                    <td>293</td>
-                    <td>5 days ago</td>
-                    <td>https://huggingface.co/Qwen/Qwen3.5-0.8B</td>
-                    <td>Ultra-lightweight multimodal model designed for edge devices and mobile applications with minimal resource requirements.</td>
+                    <td>Lightricks/LTX-2.3</td>
+                    <td>Image-to-Video</td>
+                    <td>-</td>
+                    <td>119k</td>
+                    <td>322</td>
+                    <td>2 days ago</td>
+                    <td>https://huggingface.co/Lightricks/LTX-2.3</td>
+                    <td>Advanced video generation model from Lightricks, converting static images into high-quality dynamic videos with temporal consistency.</td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>Qwen/Qwen3.5-4B</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>5B</td>
-                    <td>233k</td>
-                    <td>263</td>
-                    <td>5 days ago</td>
-                    <td>https://huggingface.co/Qwen/Qwen3.5-4B</td>
-                    <td>Balanced mid-sized multimodal model offering strong performance on visual question answering and image understanding tasks.</td>
+                    <td>Qwen/Qwen3.5-0.8B</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>0.9B</td>
+                    <td>346k</td>
+                    <td>314</td>
+                    <td>6 days ago</td>
+                    <td>https://huggingface.co/Qwen/Qwen3.5-0.8B</td>
+                    <td>Ultra-compact multimodal model designed for edge deployment and mobile applications while maintaining strong visual reasoning capabilities.</td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>Lightricks/LTX-2.3</td>
-                    <td><span class="model-type type-video">Image-to-Video</span></td>
-                    <td>-</td>
-                    <td>35k</td>
-                    <td>261</td>
-                    <td>1 day ago</td>
-                    <td>https://huggingface.co/Lightricks/LTX-2.3</td>
-                    <td>State-of-the-art image-to-video generation model from Lightricks, producing high-quality temporal consistent videos from still images.</td>
+                    <td>Qwen/Qwen3.5-4B</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>5B</td>
+                    <td>283k</td>
+                    <td>285</td>
+                    <td>6 days ago</td>
+                    <td>https://huggingface.co/Qwen/Qwen3.5-4B</td>
+                    <td>Mid-size multimodal model balancing performance and efficiency, suitable for production applications requiring visual understanding.</td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td>unsloth/Qwen3.5-35B-A3B-GGUF</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>35B</td>
-                    <td>919k</td>
-                    <td>552</td>
-                    <td>1 day ago</td>
-                    <td>https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF</td>
-                    <td>GGUF quantized version of Qwen3.5-35B-A3B for efficient local inference on consumer hardware with llama.cpp compatibility.</td>
+                    <td>unsloth/Qwen3.5-9B-GGUF</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>9B</td>
+                    <td>436k</td>
+                    <td>243</td>
+                    <td>5 days ago</td>
+                    <td>https://huggingface.co/unsloth/Qwen3.5-9B-GGUF</td>
+                    <td>GGUF-quantized version enabling efficient local inference on consumer hardware while preserving the full model's capabilities.</td>
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td>unsloth/Qwen3.5-9B-GGUF</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>9B</td>
-                    <td>380k</td>
-                    <td>220</td>
-                    <td>4 days ago</td>
-                    <td>https://huggingface.co/unsloth/Qwen3.5-9B-GGUF</td>
-                    <td>Quantized multimodal model enabling vision-language capabilities on edge devices with reduced memory footprint.</td>
+                    <td>unsloth/Qwen3.5-35B-A3B-GGUF</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>35B</td>
+                    <td>1.01M</td>
+                    <td>570</td>
+                    <td>2 days ago</td>
+                    <td>https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF</td>
+                    <td>Quantized MoE variant allowing local deployment of large multimodal models through GGUF format optimization.</td>
                 </tr>
                 <tr>
                     <td>8</td>
-                    <td>Qwen/Qwen3.5-27B</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>28B</td>
-                    <td>562k</td>
-                    <td>600</td>
-                    <td>10 days ago</td>
-                    <td>https://huggingface.co/Qwen/Qwen3.5-27B</td>
-                    <td>High-performance multimodal model balancing capability and efficiency for production vision-language applications.</td>
+                    <td>HauhauCS/Qwen3.5-9B-Uncensored</td>
+                    <td>Text Generation</td>
+                    <td>9B</td>
+                    <td>52.8k</td>
+                    <td>179</td>
+                    <td>4 days ago</td>
+                    <td>https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive</td>
+                    <td>Uncensored variant of Qwen3.5-9B with reduced safety alignment, suitable for research into model behavior and capability boundaries.</td>
                 </tr>
                 <tr>
                     <td>9</td>
-                    <td>huihui-ai/Huihui-Qwen3.5-35B-A3B-abliterated</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>36B</td>
-                    <td>21.1k</td>
+                    <td>Jackrong/Qwen3.5-27B-Claude-4.6-Opus</td>
+                    <td>Text Generation</td>
+                    <td>28B</td>
+                    <td>4.21k</td>
                     <td>184</td>
-                    <td>5 days ago</td>
-                    <td>https://huggingface.co/huihui-ai/Huihui-Qwen3.5-35B-A3B-abliterated</td>
-                    <td>Uncensored variant of Qwen3.5 with reduced safety filters for research purposes and unrestricted content generation.</td>
+                    <td>~1 hour ago</td>
+                    <td>https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</td>
+                    <td>Reasoning-distilled variant incorporating Claude-4.6 Opus reasoning patterns through knowledge distillation techniques.</td>
                 </tr>
                 <tr>
                     <td>10</td>
-                    <td>MiniMaxAI/MiniMax-M2.5</td>
-                    <td><span class="model-type type-llm">Text Generation</span></td>
-                    <td>229B</td>
-                    <td>371k</td>
-                    <td>1.11k</td>
-                    <td>14 hours ago</td>
-                    <td>https://huggingface.co/MiniMaxAI/MiniMax-M2.5</td>
-                    <td>MiniMax's latest massive language model with strong performance on reasoning, coding, and multilingual tasks.</td>
+                    <td>Qwen/Qwen3.5-27B</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>28B</td>
+                    <td>630k</td>
+                    <td>606</td>
+                    <td>11 days ago</td>
+                    <td>https://huggingface.co/Qwen/Qwen3.5-27B</td>
+                    <td>Large multimodal model offering strong performance across vision-language tasks with comprehensive visual understanding capabilities.</td>
                 </tr>
                 <tr>
                     <td>11</td>
                     <td>Qwen/Qwen3.5-2B</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
+                    <td>Image-Text-to-Text</td>
                     <td>2B</td>
-                    <td>144k</td>
-                    <td>146</td>
-                    <td>5 days ago</td>
+                    <td>195k</td>
+                    <td>150</td>
+                    <td>6 days ago</td>
                     <td>https://huggingface.co/Qwen/Qwen3.5-2B</td>
-                    <td>Tiny yet capable multimodal model perfect for mobile apps and IoT devices requiring vision-language understanding.</td>
+                    <td>Small yet capable multimodal model optimized for latency-sensitive applications and resource-constrained environments.</td>
                 </tr>
                 <tr>
                     <td>12</td>
-                    <td>Qwen/Qwen3.5-397B-A17B</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>403B</td>
-                    <td>1.38M</td>
-                    <td>1.25k</td>
-                    <td>11 days ago</td>
-                    <td>https://huggingface.co/Qwen/Qwen3.5-397B-A17B</td>
-                    <td>Massive 400B parameter MoE model with 17B active parameters, pushing the frontier of multimodal AI capabilities.</td>
+                    <td>huihui-ai/Huihui-Qwen3.5-35B</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>36B</td>
+                    <td>21.7k</td>
+                    <td>192</td>
+                    <td>6 days ago</td>
+                    <td>https://huggingface.co/huihui-ai/Huihui-Qwen3.5-35B-A3B-abliterated</td>
+                    <td>Community fine-tuned variant with abliterated (refusal-removed) behavior patterns for research purposes.</td>
                 </tr>
                 <tr>
                     <td>13</td>
-                    <td>Nanbeige/Nanbeige4.1-3B</td>
-                    <td><span class="model-type type-llm">Text Generation</span></td>
-                    <td>4B</td>
-                    <td>470k</td>
-                    <td>964</td>
-                    <td>9 days ago</td>
-                    <td>https://huggingface.co/Nanbeige/Nanbeige4.1-3B</td>
-                    <td>Efficient Chinese-English bilingual language model optimized for dialogue and instruction following in Asian markets.</td>
+                    <td>sarvamai/sarvam-105b</td>
+                    <td>Text Generation</td>
+                    <td>106B</td>
+                    <td>111</td>
+                    <td>143</td>
+                    <td>1 day ago</td>
+                    <td>https://huggingface.co/sarvamai/sarvam-105b</td>
+                    <td>Large multilingual language model from Sarvam AI supporting Indic languages with 106B parameters for diverse NLP tasks.</td>
                 </tr>
                 <tr>
                     <td>14</td>
-                    <td>unsloth/Qwen3.5-27B-GGUF</td>
-                    <td><span class="model-type type-multimodal">Image-Text-to-Text</span></td>
-                    <td>27B</td>
-                    <td>393k</td>
-                    <td>256</td>
-                    <td>1 day ago</td>
-                    <td>https://huggingface.co/unsloth/Qwen3.5-27B-GGUF</td>
-                    <td>Quantized version enabling deployment of powerful 27B multimodal model on consumer GPUs with 4-bit precision.</td>
+                    <td>Qwen/Qwen3.5-397B-A17B</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>403B</td>
+                    <td>1.41M</td>
+                    <td>1.26k</td>
+                    <td>12 days ago</td>
+                    <td>https://huggingface.co/Qwen/Qwen3.5-397B-A17B</td>
+                    <td>Massive MoE model (403B total, 17B active) pushing the boundaries of multimodal AI capabilities with unprecedented scale.</td>
                 </tr>
                 <tr>
                     <td>15</td>
-                    <td>FireRedTeam/FireRed-OCR</td>
-                    <td><span class="model-type type-multimodal">Image-to-Text</span></td>
-                    <td>2B</td>
-                    <td>4.18k</td>
-                    <td>97</td>
-                    <td>3 days ago</td>
-                    <td>https://huggingface.co/FireRedTeam/FireRed-OCR</td>
-                    <td>High-accuracy OCR model specifically designed for extracting text from complex document layouts and scanned images.</td>
+                    <td>unsloth/Qwen3.5-27B-GGUF</td>
+                    <td>Image-Text-to-Text</td>
+                    <td>27B</td>
+                    <td>427k</td>
+                    <td>260</td>
+                    <td>2 days ago</td>
+                    <td>https://huggingface.co/unsloth/Qwen3.5-27B-GGUF</td>
+                    <td>Efficient quantized version of Qwen3.5-27B enabling high-quality multimodal inference on consumer-grade hardware.</td>
                 </tr>
             </tbody>
         </table>
+    </div>
 
-        <h2>⭐ GitHub Trending Python Repositories (Top 10)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Repository</th>
-                    <th>Stars Today</th>
-                    <th>Total Stars</th>
-                    <th>Description</th>
-                    <th>URL</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>openai/skills</td>
-                    <td>595</td>
-                    <td>11.9k</td>
-                    <td>Skills Catalog for Codex - Official skills library for OpenAI Codex coding agent</td>
-                    <td>https://github.com/openai/skills</td>
-                </tr>
-                <tr>
-                    <td>TheCraigHewitt/seomachine</td>
-                    <td>690</td>
-                    <td>2.1k</td>
-                    <td>Claude Code workspace for creating long-form, SEO-optimized blog content with research and analysis tools</td>
-                    <td>https://github.com/TheCraigHewitt/seomachine</td>
-                </tr>
-                <tr>
-                    <td>QwenLM/Qwen-Agent</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Agent framework built on Qwen>=3.0 with Function Calling, MCP, Code Interpreter, RAG, Chrome extension</td>
-                    <td>https://github.com/QwenLM/Qwen-Agent</td>
-                </tr>
-                <tr>
-                    <td>inclusionAI/AReaL</td>
-                    <td>347</td>
-                    <td>4.4k</td>
-                    <td>Lightning-Fast RL for LLM Reasoning and Agents - Simple and flexible reinforcement learning framework</td>
-                    <td>https://github.com/inclusionAI/AReaL</td>
-                </tr>
-                <tr>
-                    <td>lingfengQAQ/webnovel-writer</td>
-                    <td>90</td>
-                    <td>765</td>
-                    <td>Web novel creation system based on Claude Code solving AI writing memory and hallucination issues</td>
-                    <td>https://github.com/lingfengQAQ/webnovel-writer</td>
-                </tr>
-                <tr>
-                    <td>virattt/ai-hedge-fund</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>An AI Hedge Fund Team - Multi-agent system for automated trading and financial analysis</td>
-                    <td>https://github.com/virattt/ai-hedge-fund</td>
-                </tr>
-                <tr>
-                    <td>p-e-w/heretic</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Fully automatic censorship removal for language models - Uncensoring tool for LLMs</td>
-                    <td>https://github.com/p-e-w/heretic</td>
-                </tr>
-                <tr>
-                    <td>apache/airflow</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Apache Airflow - Platform to programmatically author, schedule, and monitor workflows</td>
-                    <td>https://github.com/apache/airflow</td>
-                </tr>
-                <tr>
-                    <td>FujiwaraChoki/MoneyPrinterV2</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Automate the process of making money online through various digital strategies</td>
-                    <td>https://github.com/FujiwaraChoki/MoneyPrinterV2</td>
-                </tr>
-                <tr>
-                    <td>BerriAI/litellm</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Python SDK and Proxy Server to call 100+ LLM APIs in OpenAI format with cost tracking and guardrails</td>
-                    <td>https://github.com/BerriAI/litellm</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>🔥 Key Trends & Highlights</h2>
-
-        <div class="trend-box">
-            <h3>1. LLM Judges, Evaluation & Reliability</h3>
-            <p>Multiple breakthrough papers focus on ensuring LLM judges are reliable, unbiased, and formally verified. The "Bias-Bounded Evaluation" framework provides mathematical guarantees against bias, while the "Judge Reliability Harness" exposes vulnerabilities in current evaluation systems. This reflects growing concern about AI systems that evaluate other AI systems in autonomous feedback loops.</p>
+    <div class="section">
+        <h2>⭐ GitHub Trending Python Repositories (Daily)</h2>
+        
+        <div class="github-repo">
+            <h4>1. openai/skills</h4>
+            <div class="stars">⭐ 12,693 total | 🔥 948 stars today</div>
+            <p>Skills Catalog for Codex - Official repository containing skills and capabilities for OpenAI's Codex coding agent.</p>
+            <div class="url">https://github.com/openai/skills</div>
         </div>
 
-        <div class="trend-box">
-            <h3>2. Terminal-Native & Autonomous Coding Agents</h3>
-            <p>OPENDEV represents a fundamental shift from IDE plugins to terminal-native agents operating directly where developers manage source control and deployments. The GitHub trending repos reinforce this - Codex skills catalog, AI hedge funds, and automated SEO content systems all point to AI agents moving from assistants to autonomous workers.</p>
+        <div class="github-repo">
+            <h4>2. lingfengQAQ/webnovel-writer</h4>
+            <div class="stars">⭐ 977 total | 🔥 292 stars today</div>
+            <p>基于 Claude Code 的长篇网文辅助创作系统，解决 AI 写作中的「遗忘」和「幻觉」问题，支持 200 万字量级连载创作。</p>
+            <div class="url">https://github.com/lingfengQAQ/webnovel-writer</div>
         </div>
 
-        <div class="trend-box">
-            <h3>3. Mechanistic Understanding of Transformers</h3>
-            <p>Deep analysis of massive activations and attention sinks reveals these phenomena serve related but distinct architectural functions. This mechanistic understanding, combined with X-RAY's formal probing of reasoning capabilities, shows the field maturing beyond empirical success toward principled understanding of how these models actually work.</p>
+        <div class="github-repo">
+            <h4>3. inclusionAI/AReaL</h4>
+            <div class="stars">⭐ 4,523 total | 🔥 239 stars today</div>
+            <p>Lightning-Fast RL for LLM Reasoning and Agents. Made Simple & Flexible. High-performance reinforcement learning framework for training reasoning models.</p>
+            <div class="url">https://github.com/inclusionAI/AReaL</div>
         </div>
 
-        <div class="trend-box">
-            <h3>4. Qwen 3.5 Ecosystem Dominance</h3>
-            <p>The HuggingFace trending list is overwhelmingly dominated by Qwen 3.5 models across all sizes (0.8B to 400B), with multiple quantization variants from Unsloth. This represents Alibaba's most successful multimodal model release, offering vision-language capabilities at every scale from edge devices to data centers. MiniMax M2.5 also shows Chinese labs competing at the frontier.</p>
+        <div class="github-repo">
+            <h4>4. teng-lin/notebooklm-py</h4>
+            <div class="stars">⭐ 3,431 total | 🔥 190 stars today</div>
+            <p>Unofficial Python API for Google NotebookLM - Enables programmatic access to Google's AI-powered research and note-taking tool.</p>
+            <div class="url">https://github.com/teng-lin/notebooklm-py</div>
         </div>
 
-        <div class="trend-box">
-            <h3>5. AI-Hardware Co-Design Imperative</h3>
-            <p>The "AI+HW 2035" vision paper from leading researchers (including Yann LeCun) signals a strategic pivot from scaling compute to scaling efficiency. The goal of 1000x efficiency improvement by 2035 reflects growing recognition that unbounded compute consumption is unsustainable. Energy-aware, self-optimizing systems spanning cloud-edge-physical environments will define the next decade.</p>
+        <div class="github-repo">
+            <h4>5. 666ghj/MiroFish</h4>
+            <div class="stars">⭐ 5,625 total | 🔥 399 stars today</div>
+            <p>A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物。</p>
+            <div class="url">https://github.com/666ghj/MiroFish</div>
         </div>
 
-        <div class="footer">
-            <p>📊 AI Daily Report | Generated: March 7, 2026</p>
-            <p>🌐 Full blog version: https://chenlijn.github.io/ai-daily/2026-03-07-08-00.html</p>
+        <div class="github-repo">
+            <h4>6. AIDC-AI/Pixelle-Video</h4>
+            <div class="stars">⭐ 2,923 total | 🔥 108 stars today</div>
+            <p>AI 全自动短视频引擎 | AI Fully Automated Short Video Engine - Complete pipeline for automated short video generation.</p>
+            <div class="url">https://github.com/AIDC-AI/Pixelle-Video</div>
         </div>
+
+        <div class="github-repo">
+            <h4>7. 666ghj/BettaFish</h4>
+            <div class="stars">⭐ - | 🔥 trending</div>
+            <p>微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。</p>
+            <div class="url">https://github.com/666ghj/BettaFish</div>
+        </div>
+
+        <div class="github-repo">
+            <h4>8. fastino-ai/GLiNER2</h4>
+            <div class="stars">⭐ 1,074 total | 🔥 8 stars today</div>
+            <p>Unified Schema-Based Information Extraction - Zero-shot named entity recognition and relation extraction with schema-based prompting.</p>
+            <div class="url">https://github.com/fastino-ai/GLiNER2</div>
+        </div>
+
+        <div class="github-repo">
+            <h4>9. donnemartin/system-design-primer</h4>
+            <div class="stars">⭐ 280k+ total | 🔥 trending</div>
+            <p>Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards. The definitive resource for system design interview preparation.</p>
+            <div class="url">https://github.com/donnemartin/system-design-primer</div>
+        </div>
+
+        <div class="github-repo">
+            <h4>10. QwenLM/Qwen-Agent</h4>
+            <div class="stars">⭐ trending | 🔥 trending</div>
+            <p>Agent framework and applications built upon Qwen>=3.0, featuring Function Calling, MCP, Code Interpreter, RAG, Chrome extension, etc.</p>
+            <div class="url">https://github.com/QwenLM/Qwen-Agent</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>📊 AI Daily Report | Generated on March 8, 2026 at 08:00 AM (Beijing Time)</p>
+        <p>Data sources: arXiv cs.AI, HuggingFace Models, GitHub Trending</p>
+        <p>🌐 Full blog version: <a href="https://chenlijn.github.io/ai-daily/2026-03-08-08-00.html">https://chenlijn.github.io/ai-daily/2026-03-08-08-00.html</a></p>
     </div>
 </body>
 </html>
