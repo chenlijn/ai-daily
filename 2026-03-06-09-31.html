@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Daily Report - March 9, 2026</title>
+    <title>AI Daily Report - Archive</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
+            min-height: 100vh;
+            padding: 40px 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
             border-radius: 16px;
@@ -22,532 +23,72 @@
             overflow: hidden;
         }
         .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px;
+            padding: 60px 40px;
             text-align: center;
         }
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .header .date {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        .content {
-            padding: 40px;
-        }
-        .section {
-            margin-bottom: 50px;
-        }
-        .section h2 {
-            color: #1e3c72;
-            font-size: 1.8em;
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        .content { padding: 40px; }
+        .section-title {
+            font-size: 1.5em;
+            color: #2d3748;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 3px solid #667eea;
         }
-        .paper {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-        .paper h3 {
-            color: #1e3c72;
-            margin-bottom: 10px;
-        }
-        .paper .url {
-            color: #667eea;
-            font-size: 0.9em;
+        .report-list { list-style: none; }
+        .report-item {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 25px;
             margin-bottom: 15px;
-            word-break: break-all;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
         }
-        .paper .details {
-            margin-top: 15px;
-        }
-        .paper .details p {
-            margin-bottom: 8px;
-        }
-        .paper .details strong {
-            color: #2a5298;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 0.9em;
-        }
-        th {
+        .report-item:hover { transform: translateX(8px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .report-date { font-size: 1.2em; font-weight: 700; color: #667eea; margin-bottom: 8px; }
+        .report-link {
+            display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 12px;
-            text-align: left;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
             font-weight: 600;
-        }
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        tr:hover {
-            background: #f5f5f5;
-        }
-        .rank {
-            font-weight: bold;
-            color: #667eea;
-        }
-        .trends {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-            padding: 30px;
-            border-radius: 12px;
-        }
-        .trend-item {
-            margin-bottom: 20px;
-            padding-left: 20px;
-            border-left: 3px solid #667eea;
-        }
-        .trend-item h4 {
-            color: #1e3c72;
-            margin-bottom: 8px;
+            margin-top: 10px;
         }
         .footer {
+            background: #2d3748;
+            color: white;
             text-align: center;
             padding: 30px;
-            background: #f8f9fa;
-            color: #666;
         }
-        .highlight {
-            background: #fff3cd;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
+        .badge { display: inline-block; background: #48bb78; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8em; margin-left: 10px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>🤖 AI Daily Report</h1>
-            <div class="date">Monday, March 9, 2026 | Morning Edition</div>
+            <p>Auto-generated AI Research Digest Archive</p>
         </div>
-        
         <div class="content">
-            <!-- arXiv Papers Section -->
-            <div class="section">
-                <h2>📄 Top 10 arXiv AI Papers (March 6, 2026)</h2>
-                
-                <div class="paper">
-                    <h3>1. The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05498</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> Understanding two recurring phenomena in Transformer language models - massive activations (extreme outliers in token channels) and attention sinks (tokens attracting disproportionate attention) - and their functional relationship.</p>
-                        <p><strong>Method:</strong> Systematic experiments to study co-occurrence patterns and identify that pre-norm configuration enables co-occurrence. Analyzed how massive activations function as global implicit parameters while attention sinks operate locally across heads.</p>
-                        <p><strong>Results:</strong> Discovered that the co-occurrence is largely an architectural artifact of modern Transformer design. Massive activations induce near-constant hidden representations persisting across layers, while attention sinks bias individual heads toward short-range dependencies.</p>
-                        <p><strong>Conclusion:</strong> The two phenomena serve related but distinct functions and can be decoupled by ablating pre-norm configuration, providing insights for Transformer architecture optimization.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>2. Towards Provably Unbiased LLM Judges via Bias-Bounded Evaluation</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05485</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> LLM-as-a-Judge systems lack strong guarantees for enforcing standards, especially when bias vectors are unknown or adversarially discovered, which is critical for autonomous AI feedback loops.</p>
-                        <p><strong>Method:</strong> Proposed average bias-boundedness (A-BB), an algorithmic framework that formally guarantees reductions of harm from any measurable bias in LLM judges.</p>
-                        <p><strong>Results:</strong> Evaluated on Arena-Hard-Auto with four LLM judges, achieved (tau=0.5, delta=0.01) bias-bounded guarantees while retaining 61-99% correlation with original rankings. Most judge-bias combinations exceeded 80% correlation.</p>
-                        <p><strong>Conclusion:</strong> Provides a mathematically grounded approach to creating more reliable LLM judges for autonomous AI systems, addressing critical safety concerns in automated evaluation.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>3. Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05450</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> AI systems struggle to establish common ground (shared beliefs and mutually recognized facts) in multimodal, multiparty settings where collaborators bring different information.</p>
-                        <p><strong>Method:</strong> Introduced Distributed Partial Information Puzzle (DPIP), a collaborative construction task with multimodal dataset annotated across speech, gesture, and action. Evaluated LLMs and Dynamic Epistemic Logic (DEL) pipeline for modeling common ground.</p>
-                        <p><strong>Results:</strong> DPIP data indicates modern LLMs face challenges tracking both task progression and belief state under epistemic asymmetry, revealing limitations in collaborative AI scenarios.</p>
-                        <p><strong>Conclusion:</strong> Establishes a benchmark for evaluating collaborative AI capabilities and demonstrates that current LLMs need improvement for effective multiparty collaboration with information asymmetry.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>4. Dissociating Direct Access from Inference in AI Introspection</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05414</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> Understanding the mechanism of introspection in AI models - whether they use direct access to internal states or inference from probability patterns.</p>
-                        <p><strong>Method:</strong> Replicated thought injection detection paradigm across large open-source models. Identified two separable mechanisms: probability-matching (inferring from perceived anomaly) and direct access to internal states.</p>
-                        <p><strong>Results:</strong> Showed that direct access mechanism is content-agnostic - models detect anomalies but cannot reliably identify semantic content. Correct concept guesses require significantly more tokens for high-frequency concrete concepts.</p>
-                        <p><strong>Conclusion:</strong> The content-agnostic introspective mechanism aligns with leading theories in philosophy and psychology, advancing our understanding of AI self-awareness capabilities.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>5. Judge Reliability Harness: Stress Testing the Reliability of LLM Judges</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05399</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> LLM-based scoring is widely deployed in AI benchmarks, but tooling to assess judge reliability is insufficient. Consistency issues exist across formatting changes, paraphrasing, and verbosity variations.</p>
-                        <p><strong>Method:</strong> Developed Judge Reliability Harness - an open-source library for constructing validation suites testing binary judgment accuracy and ordinal grading performance.</p>
-                        <p><strong>Results:</strong> Evaluated four state-of-the-art judges across safety, persuasion, misuse, and agentic benchmarks. Found meaningful variation in performance with no judge being uniformly reliable. Consistency issues revealed for simple text formatting changes.</p>
-                        <p><strong>Conclusion:</strong> Provides essential tooling for improving LLM judge robustness, highlighting critical gaps in current evaluation methods that need addressing for reliable AI assessment.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>6. Legal Interpretation and AI: From Expert Systems to Argumentation and LLMs</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05392</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> AI and Law research has evolved through different approaches to legal interpretation, requiring understanding of how various methodologies handle legal knowledge and reasoning.</p>
-                        <p><strong>Method:</strong> Analyzed three research paradigms: expert systems focusing on legal knowledge engineering, argumentation research on interpretive argument structures, and machine learning on automated generation of interpretive suggestions.</p>
-                        <p><strong>Results:</strong> Demonstrated evolution from human-generated interpretations in knowledge-bases to dialectical assessment frameworks and now to specialized language models increasingly deployed in legal practice.</p>
-                        <p><strong>Conclusion:</strong> Provides comprehensive overview of AI legal interpretation evolution, valuable for understanding current capabilities and limitations of LLMs in legal applications.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>7. PACE: A Personalized Adaptive Curriculum Engine for 9-1-1 Call-taker Training</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05361</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> 9-1-1 call-taking requires mastery of 1000+ interdependent skills. Nationwide labor shortage strains training capacity, and personalization burden cannot scale with current practices.</p>
-                        <p><strong>Method:</strong> Developed PACE (Personalized Adaptive Curriculum Engine) - a co-pilot system using probabilistic beliefs over trainee skill states, learning/forgetting dynamics modeling, and contextual bandits for scenario selection.</p>
-                        <p><strong>Results:</strong> Achieved 19.50% faster time-to-competence and 10.95% higher terminal mastery vs state-of-the-art. 95.45% alignment with experts' pedagogical judgments. Cut turnaround time from 11.58 minutes to 34 seconds (95.08% reduction).</p>
-                        <p><strong>Conclusion:</strong> Demonstrates significant potential for AI-assisted training in high-stakes emergency response scenarios, offering scalable personalization previously impossible.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>8. A Psyche-Driven Chess Engine with Dynamic Emotional Modulation</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05352</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> Chess engines surpass human strength but don't play like humans. Current engines cannot capture human-like behavioral variability under different psychological states (pressure, confidence).</p>
-                        <p><strong>Method:</strong> Proposed personality x psyche decomposition with audio-inspired signal chain (noise gate, compressor/expander, equalizer, limiter) that reshapes move probability distributions. Psyche is dynamic scalar recomputed from positional factors after every move.</p>
-                        <p><strong>Results:</strong> Tested across 12,414 games showing monotonic gradient in top-move agreement (~20-25 pp spread from stress to overconfidence). Under stress, competitive score fell from 50.8% to 30.1%, mimicking human tilt and overconfidence patterns.</p>
-                        <p><strong>Conclusion:</strong> Novel approach to humanizing AI gameplay through emotional modulation, with applications for more realistic AI opponents and psychological modeling in competitive games.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>9. OPENDEV: Building AI Coding Agents for the Terminal</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05344</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> AI coding assistance is shifting from IDE plugins to terminal-native agents, but autonomous assistance requires strict safety controls and efficient context management to prevent context bloat and reasoning degradation.</p>
-                        <p><strong>Method:</strong> OPENDEV uses compound AI system architecture with workload-specialized model routing, dual-agent architecture (planning/execution separation), lazy tool discovery, adaptive context compaction, and automated memory system.</p>
-                        <p><strong>Results:</strong> Addresses long-horizon development tasks with unprecedented autonomy while maintaining safety. Event-driven system reminders counteract instruction fade-out.</p>
-                        <p><strong>Conclusion:</strong> Provides secure, extensible foundation for terminal-first AI assistance, offering blueprint for robust autonomous software engineering directly in developers' terminal environments.</p>
-                    </div>
-                </div>
-
-                <div class="paper">
-                    <h3>10. UniSTOK: Uniform Inductive Spatio-Temporal Kriging</h3>
-                    <div class="url">https://arxiv.org/abs/2603.05301</div>
-                    <div class="details">
-                        <p><strong>Problem:</strong> Spatio-temporal kriging for transportation and environmental monitoring faces challenges from heterogeneous sensor missingness - unclear true signals vs artifacts, highly heterogeneous missingness patterns, and distorted local structure.</p>
-                        <p><strong>Method:</strong> Proposed UniSTOK framework with dual-branch input (original observations + jigsaw-augmented counterpart), shared spatio-temporal backbone with explicit missingness mask modulation, and dual-channel attention fusion.</p>
-                        <p><strong>Results:</strong> Consistent and significant improvements on multiple real-world datasets under diverse missing patterns. Plug-and-play enhancement for existing inductive kriging backbones.</p>
-                        <p><strong>Conclusion:</strong> Advances spatio-temporal inference reliability under real-world conditions with missing data, critical for IoT sensor networks and environmental monitoring applications.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HuggingFace Models Section -->
-            <div class="section">
-                <h2>🤗 Top 15 HuggingFace Trending Models (Updated ≤30 Days)</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Model ID</th>
-                            <th>Type</th>
-                            <th>Params</th>
-                            <th>Downloads</th>
-                            <th>Likes</th>
-                            <th>Updated</th>
-                            <th>URL</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rank">1</td>
-                            <td>Qwen/Qwen3.5-9B</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>10B</td>
-                            <td>868k</td>
-                            <td>602</td>
-                            <td>7 days ago</td>
-                            <td>https://huggingface.co/Qwen/Qwen3.5-9B</td>
-                            <td>Multimodal vision-language model capable of understanding images and text for complex reasoning and generation tasks.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">2</td>
-                            <td>Lightricks/LTX-2.3</td>
-                            <td>Image-to-Video</td>
-                            <td>-</td>
-                            <td>175k</td>
-                            <td>359</td>
-                            <td>3 days ago</td>
-                            <td>https://huggingface.co/Lightricks/LTX-2.3</td>
-                            <td>State-of-the-art image-to-video generation model for creating high-quality video content from static images.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">3</td>
-                            <td>Qwen/Qwen3.5-0.8B</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>0.9B</td>
-                            <td>406k</td>
-                            <td>318</td>
-                            <td>7 days ago</td>
-                            <td>https://huggingface.co/Qwen/Qwen3.5-0.8B</td>
-                            <td>Lightweight multimodal model optimized for edge deployment with vision understanding capabilities.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">4</td>
-                            <td>Qwen/Qwen3.5-4B</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>5B</td>
-                            <td>349k</td>
-                            <td>300</td>
-                            <td>7 days ago</td>
-                            <td>https://huggingface.co/Qwen/Qwen3.5-4B</td>
-                            <td>Balanced multimodal model offering strong performance with reasonable computational requirements.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">5</td>
-                            <td>Qwen/Qwen3.5-35B-A3B</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>36B</td>
-                            <td>1.14M</td>
-                            <td>1.04k</td>
-                            <td>10 days ago</td>
-                            <td>https://huggingface.co/Qwen/Qwen3.5-35B-A3B</td>
-                            <td>Large-scale multimodal model with advanced reasoning and vision understanding for complex applications.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">6</td>
-                            <td>unsloth/Qwen3.5-9B-GGUF</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>9B</td>
-                            <td>505k</td>
-                            <td>263</td>
-                            <td>6 days ago</td>
-                            <td>https://huggingface.co/unsloth/Qwen3.5-9B-GGUF</td>
-                            <td>Quantized GGUF version of Qwen3.5-9B for efficient local inference with reduced memory footprint.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">7</td>
-                            <td>Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</td>
-                            <td>Text Generation</td>
-                            <td>28B</td>
-                            <td>9.21k</td>
-                            <td>259</td>
-                            <td>1 day ago</td>
-                            <td>https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</td>
-                            <td>Reasoning-distilled model combining Qwen3.5 with Claude's reasoning capabilities for advanced problem-solving.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">8</td>
-                            <td>HauhauCS/Qwen3.5-9B-Uncensored</td>
-                            <td>9B</td>
-                            <td>-</td>
-                            <td>75.5k</td>
-                            <td>208</td>
-                            <td>5 days ago</td>
-                            <td>https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive</td>
-                            <td>Uncensored variant of Qwen3.5-9B with fewer content restrictions for research applications.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">9</td>
-                            <td>unsloth/Qwen3.5-35B-A3B-GGUF</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>35B</td>
-                            <td>1.08M</td>
-                            <td>581</td>
-                            <td>3 days ago</td>
-                            <td>https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF</td>
-                            <td>Quantized version of the large Qwen3.5-35B model enabling local deployment of powerful multimodal AI.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">10</td>
-                            <td>sarvamai/sarvam-105b</td>
-                            <td>Text Generation</td>
-                            <td>106B</td>
-                            <td>644</td>
-                            <td>171</td>
-                            <td>2 days ago</td>
-                            <td>https://huggingface.co/sarvamai/sarvam-105b</td>
-                            <td>Large-scale language model from Sarvam AI with strong multilingual capabilities for Indian languages.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">11</td>
-                            <td>Qwen/Qwen3.5-2B</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>2B</td>
-                            <td>227k</td>
-                            <td>154</td>
-                            <td>7 days ago</td>
-                            <td>https://huggingface.co/Qwen/Qwen3.5-2B</td>
-                            <td>Ultra-lightweight multimodal model designed for mobile and embedded devices with vision capabilities.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">12</td>
-                            <td>Qwen/Qwen3.5-27B</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>28B</td>
-                            <td>698k</td>
-                            <td>618</td>
-                            <td>12 days ago</td>
-                            <td>https://huggingface.co/Qwen/Qwen3.5-27B</td>
-                            <td>High-performance multimodal model balancing capability and efficiency for production deployments.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">13</td>
-                            <td>Jackrong/Qwen3.5-27B-GGUF</td>
-                            <td>Text Generation</td>
-                            <td>27B</td>
-                            <td>36.4k</td>
-                            <td>127</td>
-                            <td>1 day ago</td>
-                            <td>https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF</td>
-                            <td>GGUF quantized version of the reasoning-distilled model for efficient local inference.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">14</td>
-                            <td>sarvamai/sarvam-30b</td>
-                            <td>Text Generation</td>
-                            <td>32B</td>
-                            <td>1.55k</td>
-                            <td>119</td>
-                            <td>2 days ago</td>
-                            <td>https://huggingface.co/sarvamai/sarvam-30b</td>
-                            <td>Mid-size multilingual language model optimized for Indian language understanding and generation.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">15</td>
-                            <td>Qwen/Qwen3.5-397B-A17B</td>
-                            <td>Image-Text-to-Text</td>
-                            <td>403B</td>
-                            <td>1.44M</td>
-                            <td>1.27k</td>
-                            <td>13 days ago</td>
-                            <td>https://huggingface.co/Qwen/Qwen3.5-397B-A17B</td>
-                            <td>Ultra-large multimodal foundation model with state-of-the-art vision-language reasoning capabilities.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- GitHub Section -->
-            <div class="section">
-                <h2>⭐ Top 10 GitHub Trending Python Repositories (Daily)</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Repository</th>
-                            <th>Stars Today</th>
-                            <th>Description</th>
-                            <th>URL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>666ghj/MiroFish</td>
-                            <td>1,104</td>
-                            <td>Simple and universal swarm intelligence engine for predicting anything using collective intelligence.</td>
-                            <td>https://github.com/666ghj/MiroFish</td>
-                        </tr>
-                        <tr>
-                            <td>openai/skills</td>
-                            <td>612</td>
-                            <td>Official Skills Catalog for OpenAI Codex - curated skill library for AI coding assistance.</td>
-                            <td>https://github.com/openai/skills</td>
-                        </tr>
-                        <tr>
-                            <td>virattt/ai-hedge-fund</td>
-                            <td>-</td>
-                            <td>AI Hedge Fund Team - multi-agent system for financial analysis and trading decisions.</td>
-                            <td>https://github.com/virattt/ai-hedge-fund</td>
-                        </tr>
-                        <tr>
-                            <td>teng-lin/notebooklm-py</td>
-                            <td>196</td>
-                            <td>Unofficial Python API for Google NotebookLM - programmatic access to NotebookLM features.</td>
-                            <td>https://github.com/teng-lin/notebooklm-py</td>
-                        </tr>
-                        <tr>
-                            <td>lingfengQAQ/webnovel-writer</td>
-                            <td>94</td>
-                            <td>Claude Code-based long-form web novel writing system solving AI memory and hallucination issues.</td>
-                            <td>https://github.com/lingfengQAQ/webnovel-writer</td>
-                        </tr>
-                        <tr>
-                            <td>Lightricks/ComfyUI-LTXVideo</td>
-                            <td>9</td>
-                            <td>LTX-Video Support for ComfyUI - integration of LTX video generation in ComfyUI workflow.</td>
-                            <td>https://github.com/Lightricks/ComfyUI-LTXVideo</td>
-                        </tr>
-                        <tr>
-                            <td>QwenLM/Qwen-Agent</td>
-                            <td>-</td>
-                            <td>Agent framework built on Qwen>=3.0 with Function Calling, MCP, Code Interpreter, RAG, Chrome extension.</td>
-                            <td>https://github.com/QwenLM/Qwen-Agent</td>
-                        </tr>
-                        <tr>
-                            <td>p-e-w/heretic</td>
-                            <td>-</td>
-                            <td>Fully automatic censorship removal for language models - uncensoring tool for LLMs.</td>
-                            <td>https://github.com/p-e-w/heretic</td>
-                        </tr>
-                        <tr>
-                            <td>the-momentum/open-wearables</td>
-                            <td>48</td>
-                            <td>Self-hosted platform unifying wearable health data through one AI-ready API.</td>
-                            <td>https://github.com/the-momentum/open-wearables</td>
-                        </tr>
-                        <tr>
-                            <td>Jeffallan/claude-skills</td>
-                            <td>235</td>
-                            <td>66 Specialized Skills for Full-Stack Developers - transform Claude Code into expert pair programmer.</td>
-                            <td>https://github.com/Jeffallan/claude-skills</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Key Trends Section -->
-            <div class="section">
-                <h2>🔥 Key Trends & Highlights</h2>
-                <div class="trends">
-                    <div class="trend-item">
-                        <h4>1. LLM Judge Reliability and Bias Mitigation</h4>
-                        <p>Research is intensifying on making LLM-as-a-Judge systems more reliable and unbiased. Multiple papers (Feuer et al., Sandler et al.) introduced formal frameworks for bias-bounded evaluation and stress testing methodologies. This addresses a critical bottleneck for autonomous AI systems that depend on automated feedback loops without ground truth.</p>
-                    </div>
-                    
-                    <div class="trend-item">
-                        <h4>2. Transformer Architecture Deep Dive</h4>
-                        <p>Zhu et al.'s comprehensive study on massive activations and attention sinks reveals these phenomena serve distinct but related functions in Transformer design. The pre-norm configuration enables their co-occurrence, providing actionable insights for architecture optimization and understanding model internals.</p>
-                    </div>
-                    
-                    <div class="trend-item">
-                        <h4>3. AI Introspection Mechanisms</h4>
-                        <p>Mahowald et al. dissociated direct access from inference in AI introspection, finding that current models use content-agnostic mechanisms consistent with philosophy and psychology theories. This advances our understanding of AI self-awareness and limitations in detecting internal states.</p>
-                    </div>
-                    
-                    <div class="trend-item">
-                        <h4>4. Qwen3.5 Ecosystem Dominance</h4>
-                        <p>HuggingFace trending is dominated by Qwen3.5 variants across all parameter sizes (0.8B to 397B), with both official releases and community fine-tunes (Uncensored, Reasoning-Distilled, GGUF). This reflects the model's versatility and the community's rapid adoption for diverse use cases.</p>
-                    </div>
-                    
-                    <div class="trend-item">
-                        <h4>5. AI Coding Agents Go Terminal-Native</h5>
-                        <p>The GitHub trending list shows major momentum for CLI-first AI coding tools (OPENDEV, claude-skills, OpenAI skills catalog). This represents a fundamental shift from IDE plugins to terminal-native agents offering unprecedented autonomy for long-horizon development tasks directly where developers manage source control.</p>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title">📋 Report Archive (7 reports)</h2>
+            <ul class="report-list">
+<li class="report-item"><div class="report-date">2026/03/09/08/00 <span class="badge">Latest</span></div><a href="2026-03-09-08-00.html" class="report-link">View Report →</a></li>
+<li class="report-item"><div class="report-date">2026/03/08/08/00 </div><a href="2026-03-08-08-00.html" class="report-link">View Report →</a></li>
+<li class="report-item"><div class="report-date">2026/03/07/08/00 </div><a href="2026-03-07-08-00.html" class="report-link">View Report →</a></li>
+<li class="report-item"><div class="report-date">2026/03/06/10/01 </div><a href="2026-03-06-10-01.html" class="report-link">View Report →</a></li>
+<li class="report-item"><div class="report-date">2026/03/06/09/46 </div><a href="2026-03-06-09-46.html" class="report-link">View Report →</a></li>
+<li class="report-item"><div class="report-date">2026/03/06/09/31 </div><a href="2026-03-06-09-31.html" class="report-link">View Report →</a></li>
+<li class="report-item"><div class="report-date">2026/03/06/01/45 </div><a href="2026-03-06-01-45.html" class="report-link">View Report →</a></li>
+</ul>
         </div>
-
         <div class="footer">
-            <p>🤖 AI Daily Report | Generated on March 9, 2026 at 08:00 CST</p>
-            <p>Auto-generated from arXiv, HuggingFace, and GitHub trending sources</p>
+            <p>© 2026 Charlie | AI Algorithm Engineer</p>
+            <p style="margin-top: 10px; opacity: 0.8;">Generated automatically every morning at 8:00 AM (Beijing Time)</p>
         </div>
     </div>
 </body>
