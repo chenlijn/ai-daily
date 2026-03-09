@@ -7,7 +7,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -49,6 +49,7 @@
         }
         .report-item:hover { transform: translateX(8px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
         .report-date { font-size: 1.2em; font-weight: 700; color: #667eea; margin-bottom: 8px; }
+        .report-time { color: #718096; font-size: 0.9em; margin-bottom: 12px; }
         .report-link {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -75,16 +76,55 @@
             <p>Auto-generated AI Research Digest Archive</p>
         </div>
         <div class="content">
-            <h2 class="section-title">📋 Report Archive (7 reports)</h2>
+            <h2 class="section-title">📋 Report Archive</h2>
             <ul class="report-list">
-<li class="report-item"><div class="report-date">2026/03/09/08/00 <span class="badge">Latest</span></div><a href="2026-03-09-08-00.html" class="report-link">View Report →</a></li>
-<li class="report-item"><div class="report-date">2026/03/08/08/00 </div><a href="2026-03-08-08-00.html" class="report-link">View Report →</a></li>
-<li class="report-item"><div class="report-date">2026/03/07/08/00 </div><a href="2026-03-07-08-00.html" class="report-link">View Report →</a></li>
-<li class="report-item"><div class="report-date">2026/03/06/10/01 </div><a href="2026-03-06-10-01.html" class="report-link">View Report →</a></li>
-<li class="report-item"><div class="report-date">2026/03/06/09/46 </div><a href="2026-03-06-09-46.html" class="report-link">View Report →</a></li>
-<li class="report-item"><div class="report-date">2026/03/06/09/31 </div><a href="2026-03-06-09-31.html" class="report-link">View Report →</a></li>
-<li class="report-item"><div class="report-date">2026/03/06/01/45 </div><a href="2026-03-06-01-45.html" class="report-link">View Report →</a></li>
-</ul>
+                <li class="report-item">
+                    <div class="report-date">March 9, 2026 <span class="badge">Latest</span></div>
+                    <div class="report-time">08:00 AM (Beijing Time)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-09-08-00.html" class="report-link">View Report →</a>
+                </li>
+                <li class="report-item">
+                    <div class="report-date">March 8, 2026</div>
+                    <div class="report-time">08:00 AM (Beijing Time)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-08-08-00.html" class="report-link">View Report →</a>
+                </li>
+                <li class="report-item">
+                    <div class="report-date">March 7, 2026</div>
+                    <div class="report-time">08:00 AM (Beijing Time)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-07-08-00.html" class="report-link">View Report →</a>
+                </li>
+                <li class="report-item">
+                    <div class="report-date">March 6, 2026</div>
+                    <div class="report-time">10:01 AM (Beijing Time)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-06-10-01.html" class="report-link">View Report →</a>
+                </li>
+                <li class="report-item">
+                    <div class="report-date">March 6, 2026</div>
+                    <div class="report-time">09:46 AM (Beijing Time)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-06-09-46.html" class="report-link">View Report →</a>
+                </li>
+                <li class="report-item">
+                    <div class="report-date">March 6, 2026</div>
+                    <div class="report-time">09:31 AM (Beijing Time)</div>
+                    <div>10 arXiv papers • 15 HF models • 10 GitHub repos • 5 key trends</div>
+                    <a href="2026-03-06-09-31.html" class="report-link">View Report →</a>
+                </li>
+            </ul>
+            <div style="margin-top: 40px; padding: 20px; background: #f0f4f8; border-radius: 8px;">
+                <h3 style="color: #667eea; margin-bottom: 10px;">📊 Report Format</h3>
+                <ul style="margin-left: 20px; color: #4a5568;">
+                    <li>10 selected arXiv papers with Problem/Method/Results/Conclusion</li>
+                    <li>15 HuggingFace trending models (30 days, with direct URLs)</li>
+                    <li>10 GitHub trending Python repositories (with direct URLs)</li>
+                    <li>5 key trends and insights (3 from arXiv + 2 from HF/GitHub)</li>
+                    <li>All links are clickable plain URLs</li>
+                </ul>
+            </div>
         </div>
         <div class="footer">
             <p>© 2026 Charlie | AI Algorithm Engineer</p>
