@@ -50,92 +50,180 @@
             <div class="news-title">Agents that run while I sleep</div>
             <div class="news-meta">182 points • https://www.claudecodecamp.com/p/i-m-building-agents-that-run-while-i-sleep</div>
         </div>
+        
+        <div class="news-item">
+            <div class="news-title">Launch HN: RunAnywhere (YC W26) – Faster AI Inference on Apple Silicon</div>
+            <div class="news-meta">173 points • https://github.com/RunanywhereAI/rcli</div>
+        </div>
 
         <h3>💡 Quick Insights</h3>
         <p>Today's tech buzz centers on autonomous agents with discussions about always-on AI systems and significant funding for world-model AI. The passing of Tony Hoare reminds us of foundational computing principles.</p>
 
         <h2>📄 Top 10 arXiv Papers</h2>
+        <p><em>Time window: March 10, 2026 | 10 selected papers with Problem/Method/Results/Conclusion</em></p>
         
         <div class="paper">
             <div class="paper-title">1. Agentic Critical Training (ACT)</div>
+            <div class="paper-meta">arXiv:2603.08706</div>
             <a class="paper-url" href="https://arxiv.org/abs/2603.08706">https://arxiv.org/abs/2603.08706</a>
-            <div class="paper-meta"><strong>Problem:</strong> Traditional imitation learning for LLM agents only teaches "what to do" without understanding "why."</div>
-            <div class="paper-meta"><strong>Method:</strong> ACT introduces RL paradigm training agents to identify the better action among alternatives.</div>
-            <div class="paper-meta"><strong>Results:</strong> Average improvements of 5.07 points over imitation learning and 4.62 over RL.</div>
-            <div class="paper-meta"><strong>Conclusion:</strong> Genuine self-reflection can be trained through RL rather than injected via distillation.</div>
+            <div class="paper-meta"><strong>Problem:</strong> Traditional imitation learning for LLM agents only teaches "what to do" without understanding "why." Agents lack awareness of action quality.</div>
+            <div class="paper-meta"><strong>Method:</strong> ACT introduces RL paradigm training agents to identify the better action among alternatives. Rewards correct judgment rather than imitation.</div>
+            <div class="paper-meta"><strong>Results:</strong> Average improvements of 5.07 points over imitation learning and 4.62 over standard RL. Strong out-of-distribution generalization.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Genuine self-reflection can be trained through RL, enabling agents to autonomously reason about action quality.</div>
         </div>
 
         <div class="paper">
             <div class="paper-title">2. RetroAgent: From Solving to Evolving via Retrospective Dual Intrinsic Feedback</div>
+            <div class="paper-meta">arXiv:2603.08561</div>
             <a class="paper-url" href="https://arxiv.org/abs/2603.08561">https://arxiv.org/abs/2603.08561</a>
-            <div class="paper-meta"><strong>Problem:</strong> Standard RL paradigms favor static problem-solving over continuous adaptation.</div>
-            <div class="paper-meta"><strong>Method:</strong> Hindsight self-reflection with dual intrinsic feedback tracking subtask completion and language feedback.</div>
-            <div class="paper-meta"><strong>Results:</strong> Surpasses GRPO by +18.3% on ALFWorld, +15.4% on WebShop, +27.1% on Sokoban.</div>
-            <div class="paper-meta"><strong>Conclusion:</strong> Retrospective self-reflection enables agent evolution beyond static problem-solving.</div>
+            <div class="paper-meta"><strong>Problem:</strong> Standard RL paradigms favor static problem-solving over continuous adaptation. Agents converge to suboptimal strategies.</div>
+            <div class="paper-meta"><strong>Method:</strong> Hindsight self-reflection with dual intrinsic feedback: numerical feedback tracking subtask completion and language feedback distilling lessons into memory.</div>
+            <div class="paper-meta"><strong>Results:</strong> Surpasses GRPO by +18.3% on ALFWorld, +15.4% on WebShop, +27.1% on Sokoban, +8.9% on MineSweeper.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Retrospective self-reflection enables agent evolution beyond static problem-solving with strong test-time adaptation.</div>
         </div>
 
-        <h2>🤗 HuggingFace Top 15 Models</h2>
+        <div class="paper">
+            <div class="paper-title">3. CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation</div>
+            <div class="paper-meta">arXiv:2603.08652</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08652">https://arxiv.org/abs/2603.08652</a>
+            <div class="paper-meta"><strong>Problem:</strong> Existing CoT methods for T2I rely on abstract natural language planning, lacking precision for complex spatial layouts.</div>
+            <div class="paper-meta"><strong>Method:</strong> CoCo represents reasoning as executable code specifying structural layouts. Generates deterministic draft images from code execution.</div>
+            <div class="paper-meta"><strong>Results:</strong> Improvements of +68.83% on StructT2IBench, +54.8% on OneIG-Bench, +41.23% over direct generation.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Executable code is superior to natural language for precise, controllable text-to-image generation.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">4. OfficeQA Pro: Enterprise Benchmark for End-to-End Grounded Reasoning</div>
+            <div class="paper-meta">arXiv:2603.08655</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08655">https://arxiv.org/abs/2603.08655</a>
+            <div class="paper-meta"><strong>Problem:</strong> AI agents struggle with grounded multi-document reasoning over heterogeneous enterprise corpora. Frontier LLMs achieve less than 5% accuracy.</div>
+            <div class="paper-meta"><strong>Method:</strong> Benchmark using U.S. Treasury Bulletins spanning 100 years (89,000 pages, 26M values). Evaluated Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro.</div>
+            <div class="paper-meta"><strong>Results:</strong> With direct document access, frontier agents score 34.1% average. Structured document representation yields 16.1% relative gain.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Significant headroom remains before agents can be considered reliable at enterprise-grade grounded reasoning.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">5. FinToolBench: Evaluating LLM Agents for Real-World Financial Tool Use</div>
+            <div class="paper-meta">arXiv:2603.08262</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08262">https://arxiv.org/abs/2603.08262</a>
+            <div class="paper-meta"><strong>Problem:</strong> Financial AI evaluation focuses on static textual analysis, ignoring complex tool execution reality.</div>
+            <div class="paper-meta"><strong>Method:</strong> First real-world benchmark with 760 executable financial tools and 295 tool-required queries.</div>
+            <div class="paper-meta"><strong>Results:</strong> FATR baseline enhances stability and compliance through finance-aware retrieval and reasoning.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Sets new standard for trustworthy AI in finance with auditable agentic execution.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">6. M3-ACE: Rectifying Visual Perception in Multimodal Math Reasoning</div>
+            <div class="paper-meta">arXiv:2603.08369</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08369">https://arxiv.org/abs/2603.08369</a>
+            <div class="paper-meta"><strong>Problem:</strong> Multimodal LLM performance limited by inaccurate visual perception. Most failures from incorrect visual evidence extraction.</div>
+            <div class="paper-meta"><strong>Method:</strong> Decouples perception and reasoning via shared context on visual evidence lists. Multi-agent collaboration exposes inconsistencies.</div>
+            <div class="paper-meta"><strong>Results:</strong> New SOTA of 89.1 on MathVision with consistent improvements on MathVista and MathVerse.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Perception-centric multi-agent collaboration is essential for multimodal reasoning advancement.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">7. Trust via Reputation of Conviction</div>
+            <div class="paper-meta">arXiv:2603.08575</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08575">https://arxiv.org/abs/2603.08575</a>
+            <div class="paper-meta"><strong>Problem:</strong> AI agents are capable but error-prone requiring robust trust frameworks.</div>
+            <div class="paper-meta"><strong>Method:</strong> Defines truth as reproducibly perceived knowledge. Reputation grounded in "conviction"—likelihood source's stance is vindicated by consensus.</div>
+            <div class="paper-meta"><strong>Results:</strong> Verifiable conviction and continuously accrued reputation constitute the only robust foundation for trust.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Conviction rather than correctness is principled basis for trust—regime-independent and rewarding genuine contribution.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">8. IronEngine: Towards General AI Assistant</div>
+            <div class="paper-meta">arXiv:2603.08425</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08425">https://arxiv.org/abs/2603.08425</a>
+            <div class="paper-meta"><strong>Problem:</strong> General AI assistants require integration of UI, APIs, memory, scheduling, skills without compromising planning or execution.</div>
+            <div class="paper-meta"><strong>Method:</strong> Three-phase pipeline (Discussion, Model Switch, Execution) separating planning from execution. Hierarchical memory, ChromaDB skills, 92 model profiles.</div>
+            <div class="paper-meta"><strong>Results:</strong> 100% task completion in 1541s mean time across four heterogeneous file operation tasks.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> System-oriented foundation for general-purpose assistants through architectural decomposition.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">9. In-Context Reinforcement Learning for Tool Use in LLMs</div>
+            <div class="paper-meta">arXiv:2603.08068</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08068">https://arxiv.org/abs/2603.08068</a>
+            <div class="paper-meta"><strong>Problem:</strong> Enabling LLM tool use typically requires expensive SFT followed by RL with substantial labeled data.</div>
+            <div class="paper-meta"><strong>Method:</strong> ICRL is RL-only framework eliminating SFT need via few-shot prompting during rollout. Gradual reduction to zero-shot tool calling.</div>
+            <div class="paper-meta"><strong>Results:</strong> State-of-the-art performance across reasoning and tool-use benchmarks as scalable, data-efficient alternative.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Tool use can be learned purely through in-context RL without expensive supervised pre-training.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">10. The Struggle Between Continuation and Refusal: Mechanistic Analysis of Jailbreak</div>
+            <div class="paper-meta">arXiv:2603.08234</div>
+            <a class="paper-url" href="https://arxiv.org/abs/2603.08234">https://arxiv.org/abs/2603.08234</a>
+            <div class="paper-meta"><strong>Problem:</strong> LLMs remain vulnerable to jailbreaking; root causes poorly understood at mechanistic level.</div>
+            <div class="paper-meta"><strong>Method:</strong> Comprehensive mechanistic interpretability at attention head level. Causal interventions and activation scaling.</div>
+            <div class="paper-meta"><strong>Results:</strong> Jailbreaks arise from competition between intrinsic continuation drive and safety defenses.</div>
+            <div class="paper-meta"><strong>Conclusion:</strong> Novel mechanistic perspective for understanding jailbreak behaviors with implications for safety improvements.</div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Models (Updated ≤30 Days)</h2>
         
         <table>
-            <tr><th>Rank</th><th>Model</th><th>Type</th><th>URL</th></tr>
-            <tr><td>1</td><td>Lightricks/LTX-2.3</td><td>Image-to-Video</td><td>https://huggingface.co/Lightricks/LTX-2.3</td></tr>
-            <tr><td>2</td><td>Qwen/Qwen3.5-9B</td><td>Image-Text-to-Text</td><td>https://huggingface.co/Qwen/Qwen3.5-9B</td></tr>
-            <tr><td>3</td><td>Qwen3.5-27B-Claude-4.6-Opus</td><td>Text Generation</td><td>https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</td></tr>
-            <tr><td>4</td><td>Qwen3.5-9B-Uncensored</td><td>Text Generation</td><td>https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive</td></tr>
-            <tr><td>5</td><td>Sarvam-105B</td><td>Text Generation</td><td>https://huggingface.co/sarvamai/sarvam-105b</td></tr>
-            <tr><td>6</td><td>Qwen3.5-35B-A3B</td><td>Image-Text-to-Text</td><td>https://huggingface.co/Qwen/Qwen3.5-35B-A3B</td></tr>
-            <tr><td>7</td><td>Qwen3.5-0.8B</td><td>Image-Text-to-Text</td><td>https://huggingface.co/Qwen/Qwen3.5-0.8B</td></tr>
-            <tr><td>8</td><td>Qwen3.5-9B-GGUF</td><td>Image-Text-to-Text</td><td>https://huggingface.co/unsloth/Qwen3.5-9B-GGUF</td></tr>
-            <tr><td>9</td><td>Qwen3.5-4B</td><td>Image-Text-to-Text</td><td>https://huggingface.co/Qwen/Qwen3.5-4B</td></tr>
-            <tr><td>10</td><td>Sarvam-30B</td><td>Text Generation</td><td>https://huggingface.co/sarvamai/sarvam-30b</td></tr>
-            <tr><td>11</td><td>Qwen3.5-35B-GGUF</td><td>Image-Text-to-Text</td><td>https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF</td></tr>
-            <tr><td>12</td><td>Phi-4-reasoning-vision</td><td>Image-Text-to-Text</td><td>https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B</td></tr>
-            <tr><td>13</td><td>Qwen3.5-27B-GGUF</td><td>Text Generation</td><td>https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF</td></tr>
-            <tr><td>14</td><td>FireRed-Image-Edit</td><td>Image-to-Image</td><td>https://huggingface.co/FireRedTeam/FireRed-Image-Edit-1.1</td></tr>
-            <tr><td>15</td><td>LTX-2.3-GGUF</td><td>Image-to-Video</td><td>https://huggingface.co/unsloth/LTX-2.3-GGUF</td></tr>
+            <tr><th>Rank</th><th>Model</th><th>Type</th><th>Downloads</th><th>URL</th></tr>
+            <tr><td>1</td><td>Lightricks/LTX-2.3</td><td>Image-to-Video</td><td>276k</td><td>https://huggingface.co/Lightricks/LTX-2.3</td></tr>
+            <tr><td>2</td><td>Qwen/Qwen3.5-9B</td><td>Image-Text-to-Text</td><td>1.22M</td><td>https://huggingface.co/Qwen/Qwen3.5-9B</td></tr>
+            <tr><td>3</td><td>Qwen3.5-27B-Claude-4.6-Opus</td><td>Text Gen</td><td>23k</td><td>https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</td></tr>
+            <tr><td>4</td><td>Qwen3.5-9B-Uncensored</td><td>Text Gen</td><td>105k</td><td>https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive</td></tr>
+            <tr><td>5</td><td>Sarvam-105B</td><td>Text Gen</td><td>2.05k</td><td>https://huggingface.co/sarvamai/sarvam-105b</td></tr>
+            <tr><td>6</td><td>Qwen3.5-35B-A3B</td><td>Image-Text-to-Text</td><td>1.27M</td><td>https://huggingface.co/Qwen/Qwen3.5-35B-A3B</td></tr>
+            <tr><td>7</td><td>Qwen3.5-0.8B</td><td>Image-Text-to-Text</td><td>519k</td><td>https://huggingface.co/Qwen/Qwen3.5-0.8B</td></tr>
+            <tr><td>8</td><td>Qwen3.5-9B-GGUF</td><td>Image-Text-to-Text</td><td>615k</td><td>https://huggingface.co/unsloth/Qwen3.5-9B-GGUF</td></tr>
+            <tr><td>9</td><td>Qwen3.5-4B</td><td>Image-Text-to-Text</td><td>560k</td><td>https://huggingface.co/Qwen/Qwen3.5-4B</td></tr>
+            <tr><td>10</td><td>Sarvam-30B</td><td>Text Gen</td><td>4.22k</td><td>https://huggingface.co/sarvamai/sarvam-30b</td></tr>
+            <tr><td>11</td><td>Qwen3.5-35B-GGUF</td><td>Image-Text-to-Text</td><td>1.21M</td><td>https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF</td></tr>
+            <tr><td>12</td><td>Phi-4-reasoning-vision</td><td>Image-Text-to-Text</td><td>15.4k</td><td>https://huggingface.co/microsoft/Phi-4-reasoning-vision-15B</td></tr>
+            <tr><td>13</td><td>Qwen3.5-27B-GGUF</td><td>Text Gen</td><td>70.5k</td><td>https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF</td></tr>
+            <tr><td>14</td><td>FireRed-Image-Edit</td><td>Image-to-Image</td><td>1.35k</td><td>https://huggingface.co/FireRedTeam/FireRed-Image-Edit-1.1</td></tr>
+            <tr><td>15</td><td>LTX-2.3-GGUF</td><td>Image-to-Video</td><td>39.7k</td><td>https://huggingface.co/unsloth/LTX-2.3-GGUF</td></tr>
         </table>
 
-        <h2>⭐ GitHub Trending Python Repositories</h2>
+        <h2>⭐ GitHub Trending Python Repositories (Daily)</h2>
         
         <table>
-            <tr><th>Repository</th><th>Stars Today</th><th>URL</th></tr>
-            <tr><td>MiroFish</td><td>4,504</td><td>https://github.com/666ghj/MiroFish</td></tr>
-            <tr><td>hermes-agent</td><td>781</td><td>https://github.com/NousResearch/hermes-agent</td></tr>
-            <tr><td>ai-hedge-fund</td><td>1,200+</td><td>https://github.com/virattt/ai-hedge-fund</td></tr>
-            <tr><td>nanochat</td><td>950+</td><td>https://github.com/karpathy/nanochat</td></tr>
-            <tr><td>deer-flow</td><td>1,413</td><td>https://github.com/bytedance/deer-flow</td></tr>
-            <tr><td>Fast-F1</td><td>38</td><td>https://github.com/theOehrly/Fast-F1</td></tr>
-            <tr><td>BettaFish</td><td>520+</td><td>https://github.com/666ghj/BettaFish</td></tr>
-            <tr><td>AstrBot</td><td>380+</td><td>https://github.com/AstrBotDevs/AstrBot</td></tr>
-            <tr><td>sirchmunk</td><td>70</td><td>https://github.com/modelscope/sirchmunk</td></tr>
-            <tr><td>OpenViking</td><td>296</td><td>https://github.com/volcengine/OpenViking</td></tr>
+            <tr><th>Repository</th><th>Stars Today</th><th>Description</th><th>URL</th></tr>
+            <tr><td>MiroFish</td><td>4,504</td><td>Swarm intelligence engine for prediction</td><td>https://github.com/666ghj/MiroFish</td></tr>
+            <tr><td>hermes-agent</td><td>781</td><td>The agent that grows with you</td><td>https://github.com/NousResearch/hermes-agent</td></tr>
+            <tr><td>ai-hedge-fund</td><td>1,200+</td><td>AI Hedge Fund Team</td><td>https://github.com/virattt/ai-hedge-fund</td></tr>
+            <tr><td>nanochat</td><td>950+</td><td>The best ChatGPT that $100 can buy (Karpathy)</td><td>https://github.com/karpathy/nanochat</td></tr>
+            <tr><td>deer-flow</td><td>1,413</td><td>ByteDance open-source SuperAgent</td><td>https://github.com/bytedance/deer-flow</td></tr>
+            <tr><td>Fast-F1</td><td>38</td><td>Python package for F1 data analysis</td><td>https://github.com/theOehrly/Fast-F1</td></tr>
+            <tr><td>BettaFish</td><td>520+</td><td>Multi-Agent sentiment analysis assistant</td><td>https://github.com/666ghj/BettaFish</td></tr>
+            <tr><td>AstrBot</td><td>380+</td><td>Agentic IM Chatbot infrastructure</td><td>https://github.com/AstrBotDevs/AstrBot</td></tr>
+            <tr><td>sirchmunk</td><td>70</td><td>Raw data to self-evolving intelligence</td><td>https://github.com/modelscope/sirchmunk</td></tr>
+            <tr><td>OpenViking</td><td>296</td><td>Context database for AI Agents</td><td>https://github.com/volcengine/OpenViking</td></tr>
         </table>
 
         <h2>🔥 Key Trends & Highlights</h2>
         
         <div class="trend">
-            <strong>1. Self-Reflective Agent Training Paradigms</strong> — ACT and RetroAgent demonstrate that training agents to critically evaluate their own actions yields superior performance (+18.3% over GRPO).
+            <strong>1. Self-Reflective Agent Training Paradigms</strong> — ACT and RetroAgent demonstrate that training agents to critically evaluate their own actions yields superior performance (+18.3% over GRPO), representing a shift from "what to do" to "understanding why."
         </div>
         
         <div class="trend">
-            <strong>2. Code-as-Reasoning for Multimodal Generation</strong> — The CoCo framework shows executable code is superior to natural language Chain-of-Thought for text-to-image generation, achieving +68.83% improvements.
+            <strong>2. Code-as-Reasoning for Multimodal Generation</strong> — The CoCo framework shows executable code is superior to natural language Chain-of-Thought for text-to-image generation, achieving +68.83% improvements on structured generation benchmarks.
         </div>
         
         <div class="trend">
-            <strong>3. Enterprise-Grade Agent Evaluation & Safety</strong> — OfficeQA Pro reveals frontier LLMs achieve less than 5% accuracy on grounded multi-document reasoning.
+            <strong>3. Enterprise-Grade Agent Evaluation & Safety</strong> — OfficeQA Pro reveals frontier LLMs achieve less than 5% accuracy on grounded multi-document reasoning over 89,000-page corpora. FinToolBench establishes first real-world benchmark with 760 executable financial tools.
         </div>
         
         <div class="trend">
-            <strong>4. Multimodal Math Reasoning</strong> — M3-ACE establishes new SOTA (89.1%) on MathVision by addressing inaccurate visual perception.
+            <strong>4. Multimodal Math Reasoning & Perception Correction</strong> — M3-ACE establishes new SOTA (89.1%) on MathVision by addressing inaccurate visual perception, highlighting that perception quality—not just reasoning—limits multimodal AI.
         </div>
         
         <div class="trend">
-            <strong>5. Qwen 3.5 Ecosystem Dominance</strong> — HuggingFace trending shows Qwen3.5 variants dominating top positions with multimodal capabilities.
+            <strong>5. Qwen 3.5 Ecosystem Dominance</strong> — HuggingFace trending shows Qwen3.5 variants (9B to 397B) dominating top positions with multimodal capabilities, alongside LTX-2.3 image-to-video models. MiniMax-M2.5 and GLM-5 signal continued scaling in Chinese LLM ecosystems.
         </div>
 
         <div class="footer">
-            <p>🤖 AI Daily Report | March 11, 2026</p>
-            <p>Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-03-11-08-00.html">https://chenlijn.github.io/ai-daily/2026-03-11-08-00.html</a></p>
+            <p>🤖 AI Daily Report | Generated on March 11, 2026</p>
+            <p>Full blog version: <a href="https://chenlijn.github.io/ai-daily/2026-03-11-08-00.html">https://chenlijn.github.io/ai-daily/2026-03-11-08-00.html</a></p>
         </div>
     </div>
 </body>
