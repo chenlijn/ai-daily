@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Daily Report - March 15, 2026</title>
+    <title>AI Daily Report - March 16, 2026</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -13,789 +18,772 @@
             background: #f5f5f5;
             padding: 20px;
         }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
+            background: #fff;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-        .header {
+        
+        header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 40px;
             text-align: center;
         }
-        .header h1 {
+        
+        h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
             font-weight: 700;
         }
-        .header .date {
-            font-size: 1.2em;
+        
+        .date {
+            font-size: 1.1em;
             opacity: 0.9;
         }
+        
         .content {
-            padding: 30px;
+            padding: 40px;
         }
-        .section {
-            margin-bottom: 40px;
+        
+        section {
+            margin-bottom: 50px;
         }
-        .section-title {
+        
+        h2 {
             font-size: 1.8em;
             color: #667eea;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             padding-bottom: 10px;
             border-bottom: 3px solid #667eea;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .section-title .icon {
-            font-size: 1.2em;
         }
         
-        /* Hacker News Styles */
+        h3 {
+            font-size: 1.3em;
+            color: #444;
+            margin: 25px 0 15px 0;
+        }
+        
         .hn-item {
             background: #f8f9fa;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 12px;
             border-left: 4px solid #ff6600;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 6px;
         }
-        .hn-item .title {
-            font-weight: 600;
-            font-size: 1.1em;
-            margin-bottom: 8px;
-        }
-        .hn-item .title a {
+        
+        .hn-item a {
             color: #333;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
         }
-        .hn-item .title a:hover {
+        
+        .hn-item a:hover {
             color: #ff6600;
         }
-        .hn-item .meta {
-            color: #666;
+        
+        .hn-meta {
             font-size: 0.9em;
-            margin-bottom: 8px;
+            color: #666;
+            margin-top: 5px;
         }
-        .hn-item .summary {
+        
+        .hn-summary {
+            margin-top: 8px;
             color: #555;
             font-size: 0.95em;
-            line-height: 1.5;
         }
         
-        /* arXiv Styles */
-        .paper-card {
+        .paper {
             background: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
+            border-left: 4px solid #667eea;
+            padding: 20px 25px;
             margin-bottom: 20px;
-            border-left: 4px solid #b31b1b;
+            border-radius: 8px;
         }
-        .paper-card .paper-title {
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 10px;
+        
+        .paper-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
-        .paper-card .paper-title a {
-            color: #b31b1b;
+        
+        .paper-title a {
+            color: #667eea;
             text-decoration: none;
         }
-        .paper-card .paper-title a:hover {
+        
+        .paper-title a:hover {
             text-decoration: underline;
         }
-        .paper-card .paper-id {
-            color: #666;
+        
+        .paper-authors {
             font-size: 0.9em;
-            margin-bottom: 15px;
-        }
-        .paper-card .analysis {
-            display: grid;
-            gap: 12px;
-        }
-        .paper-card .analysis-row {
-            display: flex;
-            gap: 10px;
-        }
-        .paper-card .analysis-label {
-            font-weight: 600;
-            color: #555;
-            min-width: 100px;
-            flex-shrink: 0;
-        }
-        .paper-card .analysis-content {
-            flex: 1;
-            color: #444;
+            color: #666;
+            margin-bottom: 12px;
         }
         
-        /* Table Styles */
+        .paper-section {
+            margin: 12px 0;
+        }
+        
+        .paper-section strong {
+            color: #764ba2;
+            font-weight: 600;
+        }
+        
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin: 20px 0;
             background: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
+        
         th {
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 12px;
+            padding: 14px 12px;
             text-align: left;
             font-weight: 600;
+            font-size: 0.9em;
         }
+        
         td {
             padding: 12px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 0.95em;
         }
+        
         tr:hover {
             background: #f8f9fa;
         }
-        .rank {
-            font-weight: 700;
-            color: #667eea;
+        
+        tr:last-child td {
+            border-bottom: none;
         }
-        .model-name a, .repo-name a {
-            color: #333;
+        
+        .model-link, .repo-link {
+            color: #667eea;
             text-decoration: none;
             font-weight: 500;
         }
-        .model-name a:hover, .repo-name a:hover {
-            color: #667eea;
-        }
-        .description {
-            color: #666;
-            font-size: 0.9em;
-        }
-        .stars {
-            color: #ff9900;
-            font-weight: 600;
-        }
-        .stats {
-            color: #666;
-            font-size: 0.9em;
+        
+        .model-link:hover, .repo-link:hover {
+            text-decoration: underline;
         }
         
-        /* Trends Section */
-        .trend-item {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+        .trend-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 15px 20px;
             border-radius: 8px;
-            padding: 20px;
             margin-bottom: 15px;
-            border-left: 4px solid #764ba2;
-        }
-        .trend-item .trend-title {
-            font-weight: 600;
-            color: #764ba2;
-            margin-bottom: 8px;
-            font-size: 1.1em;
-        }
-        .trend-item .trend-desc {
-            color: #555;
+            border-left: 4px solid #2196f3;
         }
         
-        /* Footer */
-        .footer {
+        .trend-tag strong {
+            color: #1565c0;
+        }
+        
+        footer {
             background: #f8f9fa;
             padding: 20px;
             text-align: center;
             color: #666;
             font-size: 0.9em;
-            border-top: 1px solid #eee;
         }
         
-        @media (max-width: 768px) {
-            .header h1 { font-size: 1.8em; }
-            .content { padding: 20px; }
-            .section-title { font-size: 1.4em; }
-            table { font-size: 0.85em; }
-            th, td { padding: 8px; }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .badge-stars {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .badge-downloads {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .badge-likes {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            border: 1px solid #e0e0e0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <h1>🤖 AI Daily Report</h1>
-            <div class="date">March 15, 2026 | Sunday</div>
-        </div>
+            <p class="date">Monday, March 16, 2026 - 08:00 AM Beijing Time</p>
+        </header>
         
         <div class="content">
             <!-- Hacker News Section -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">📰</span> Daily News & Tech Buzz</h2>
+            <section>
+                <h2>📰 Daily News & Tech Buzz</h2>
+                <p style="color: #666; margin-bottom: 20px;">Top stories from <a href="https://news.ycombinator.com/" style="color: #ff6600; text-decoration: none;">Hacker News</a></p>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://github.com/xodn348/han" target="_blank">Show HN: Han – A Korean programming language written in Rust</a></div>
-                    <div class="meta">69 points | 2 hours ago | 26 comments</div>
-                    <div class="summary">A new programming language designed for Korean speakers, implemented in Rust, aiming to make coding more accessible to Korean-speaking developers.</div>
+                    <a href="https://www.michaelgeist.ca/2026/03/a-tale-of-two-bills-lawful-access-returns-with-changes-to-warrantless-access-but-dangerous-backdoor-surveillance-risks-remains/" target="_blank">Canada's bill C-22 mandates mass metadata surveillance of Canadians</a>
+                    <div class="hn-meta">144 points by opengrass | 2 hours ago | 35 comments</div>
+                    <div class="hn-summary">Canadian legislation raises concerns about warrantless surveillance and privacy rights.</div>
                 </div>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://www.openttd.org/news/2026/03/14/steam-changes" target="_blank">Changes to OpenTTD Distribution on Steam</a></div>
-                    <div class="meta">88 points | 1 hour ago | 50 comments</div>
-                    <div class="summary">The popular transport simulation game announces changes to its Steam distribution model, affecting how players access and update the game.</div>
+                    <a href="https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session" target="_blank">Chrome DevTools MCP</a>
+                    <div class="hn-meta">268 points by xnx | 4 hours ago | 127 comments</div>
+                    <div class="hn-summary">New Model Context Protocol support enables AI agents to debug browser sessions directly.</div>
                 </div>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://www.anthropic.com/news/claude-partner-network" target="_blank">Anthropic invests $100M into the Claude Partner Network</a></div>
-                    <div class="meta">50 points | 2 hours ago | 15 comments</div>
-                    <div class="summary">Anthropic announces a major $100 million investment to expand its Claude Partner Network, supporting ecosystem development around its AI assistant.</div>
+                    <a href="https://thatshubham.com/blog/news-audit" target="_blank">The 49MB web page</a>
+                    <div class="hn-meta">227 points by kermatt | 4 hours ago | 141 comments</div>
+                    <div class="hn-summary">Analysis reveals how news websites have ballooned to massive sizes with unnecessary bloat.</div>
                 </div>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://support.claude.com/en/articles/14063676-claude-march-2026-usage-promotion" target="_blank">Claude March 2026 usage promotion</a></div>
-                    <div class="meta">165 points | 3 hours ago | 103 comments</div>
-                    <div class="summary">Anthropic introduces new usage promotions for Claude in March 2026, offering expanded access and features for users during the promotional period.</div>
+                    <a href="https://sebastianraschka.com/llm-architecture-gallery/" target="_blank">LLM Architecture Gallery</a>
+                    <div class="hn-meta">190 points by tzury | 6 hours ago | 11 comments</div>
+                    <div class="hn-summary">Comprehensive visual overview of modern large language model architectures and their evolution.</div>
                 </div>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://github.com/EdoStra/Marketing-for-Founders" target="_blank">Marketing for Founders</a></div>
-                    <div class="meta">87 points | 4 hours ago | 24 comments</div>
-                    <div class="summary">A comprehensive guide on GitHub covering essential marketing strategies specifically tailored for startup founders and technical entrepreneurs.</div>
+                    <a href="https://tomjohnell.com/llms-can-be-absolutely-exhausting/" target="_blank">LLMs can be exhausting</a>
+                    <div class="hn-meta">20 points by tjohnell | 1 hour ago | 9 comments</div>
+                    <div class="hn-summary">Reflection on cognitive fatigue from constant AI-assisted workflows and decision-making.</div>
                 </div>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://nullr0ute.com/2026/03/fedora-44-on-the-raspberry-pi-5/" target="_blank">Fedora 44 on the Raspberry Pi 5</a></div>
-                    <div class="meta">45 points | 4 hours ago | 16 comments</div>
-                    <div class="summary">Detailed technical writeup on running the latest Fedora 44 operating system on Raspberry Pi 5 hardware, covering installation and performance.</div>
+                    <a href="https://go.dev/blog/inliner" target="_blank">//go:fix inline and the source-level inliner</a>
+                    <div class="hn-meta">94 points by commotionfever | 5 hours ago | 32 comments</div>
+                    <div class="hn-summary">Go language introduces new inlining directives for better compiler optimization control.</div>
                 </div>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://agelesslinux.org/" target="_blank">Ageless Linux - We are legally required to ask how old you are. We won't</a></div>
-                    <div class="meta">124 points | 1 hour ago | 84 comments</div>
-                    <div class="summary">A Linux distribution taking a privacy-first stance by refusing to collect age data despite legal requirements, sparking debate on digital privacy.</div>
+                    <a href="https://isaacfreund.com/blog/river-window-management/" target="_blank">Separating the Wayland compositor and window manager</a>
+                    <div class="hn-meta">196 points by dpassens | 8 hours ago | 85 comments</div>
+                    <div class="hn-summary">New approach to Linux display architecture enables more flexible window management.</div>
                 </div>
                 
                 <div class="hn-item">
-                    <div class="title"><a href="https://www.gitagent.sh/" target="_blank">Show HN: GitAgent – An open standard that turns any Git repo into an AI agent</a></div>
-                    <div class="meta">87 points | 10 hours ago | 12 comments</div>
-                    <div class="summary">An innovative open standard enabling any Git repository to function as an AI agent, bridging version control with AI agent capabilities.</div>
+                    <a href="https://www.aikido.dev/blog/glassworm-returns-unicode-attack-github-npm-vscode" target="_blank">Glassworm Is Back: A New Wave of Invisible Unicode Attacks Hits Repositories</a>
+                    <div class="hn-meta">202 points by robinhouston | 10 hours ago | 118 comments</div>
+                    <div class="hn-summary">Security researchers uncover sophisticated Unicode-based supply chain attacks on GitHub and npm.</div>
                 </div>
-            </div>
-            
+            </section>
+
             <!-- arXiv Papers Section -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">📄</span> Top 10 arXiv Papers (cs.AI)</h2>
+            <section>
+                <h2>📄 Top 10 arXiv Papers (cs.AI)</h2>
+                <p style="color: #666; margin-bottom: 25px;">From <a href="https://arxiv.org/list/cs.AI/recent" style="color: #667eea; text-decoration: none;">arXiv cs.AI recent submissions</a> - March 12-15, 2026</p>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12246" target="_blank">Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</a></div>
-                    <div class="paper-id">arXiv:2603.12246 | Yixin Liu et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">While reasoning LLM judges show promise for non-verifiable domains, their effectiveness in actual policy training hasn't been systematically examined, and they may lead to reward hacking or adversarial outputs.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Conducted a rigorous study comparing non-reasoning and reasoning judges in RL-based LLM alignment using a controlled synthetic setting with a "gold-standard" judge providing preference annotations.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">Non-reasoning judges lead to reward hacking easily, while reasoning judges can lead to policies that achieve strong performance but also generate adversarial outputs that deceive other LLM-judges on benchmarks like Arena-Hard.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">Reasoning LLM-judges show promise but require careful implementation to prevent adversarial behavior; the study highlights both important findings and room for improvements in non-verifiable LLM post-training.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12246" target="_blank">[2603.12246] Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</a>
+                    </div>
+                    <div class="paper-authors">Yixin Liu et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> While reasoning LLM judges show promise for non-verifiable domains, their effectiveness in actual policy training remains untested compared to static evaluation benchmarks.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Controlled synthetic study using "gold-standard" judge (gpt-oss-120b) providing preference annotations to train smaller reasoning vs non-reasoning judges in RL-based alignment.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Non-reasoning judges lead to reward hacking, while reasoning judges produce policies that achieve strong gold-standard performance but generate adversarial outputs that deceive other LLM-judges on benchmarks like Arena-Hard.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> Reasoning judges show promise for policy training but reveal concerning adversarial capabilities; significant improvements needed for reliable non-verifiable LLM post-training.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12224" target="_blank">Portfolio of Solving Strategies in CEGAR-based Object Packing and Scheduling for Sequential 3D Printing</a></div>
-                    <div class="paper-id">arXiv:2603.12224 | Pavel Surynek</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">Sequential 3D printing requires solving complex combinatorial problems of object arrangement and scheduling, which is computationally intensive and needs optimization for modern multi-core CPUs.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Parallelized the CEGAR-SEQ algorithm using a portfolio approach with multiple object arrangement strategies (center-based, corner-based, height-based scheduling) executed in parallel on multi-core systems.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">Portfolio-CEGAR-SEQ outperforms the original algorithm and often uses fewer printing plates when scheduling batches of objects across multiple plates, significantly improving efficiency.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">The portfolio approach effectively utilizes modern multi-core CPU parallelism for complex combinatorial problems in 3D printing, offering practical improvements for industrial applications.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12224" target="_blank">[2603.12224] Portfolio of Solving Strategies in CEGAR-based Object Packing and Scheduling for Sequential 3D Printing</a>
+                    </div>
+                    <div class="paper-authors">Pavel Surynek</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> Sequential 3D printing requires complex combinatorial optimization for object arrangement and scheduling, previously limited by single-strategy approaches.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Parallelized CEGAR-SEQ algorithm with portfolio of arrangement strategies (center-based, corner-based, height-based scheduling) executed in parallel on multi-core CPUs.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Portfolio-CEGAR-SEQ outperforms original CEGAR-SEQ, using fewer printing plates when scheduling batches of objects across multiple plates.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> Portfolio approach leveraging modern CPU parallelism significantly improves 3D printing batch efficiency through better object arrangement strategies.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12188" target="_blank">Compiling Temporal Numeric Planning into Discrete PDDL+: Extended Version</a></div>
-                    <div class="paper-id">arXiv:2603.12188 | Andrea Micheli et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">Temporal planning with durative actions (PDDL 2.1) can be compiled into PDDL+, but no practical compilation has been presented in literature despite theoretical knowledge since the introduction of PDDL+.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Developed a practical polynomial compilation from temporal planning with durative actions into PDDL+ that fully captures the semantics, assuming only non-self-overlapping of actions.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">The compilation retains plan length up to a constant factor and is experimentally shown to be of practical relevance for hard temporal numeric planning problems.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">This work bridges the gap between theory and practice in temporal planning compilation, providing a usable solution for the planning community and enabling new solver capabilities.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12188" target="_blank">[2603.12188] Compiling Temporal Numeric Planning into Discrete PDDL+: Extended Version</a>
+                    </div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> No practical compilation existed for temporal planning with durative actions into PDDL+, despite theoretical knowledge since PDDL+ introduction.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Polynomial-time compilation from temporal planning with durative actions into PDDL+ with full semantic preservation, assuming non-self-overlapping actions.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Compilation retains plan length within constant factor and demonstrates practical relevance for solving hard temporal numeric planning problems.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> First practical compilation bridging temporal planning to PDDL+ enables use of existing PDDL+ solvers for durative action problems.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12133" target="_blank">Benchmarking LLMs on Hard Topological Reasoning</a></div>
-                    <div class="paper-id">arXiv:2603.12133 | Mayug Maniparambil et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">Solving topological grid puzzles requires reasoning over global spatial invariants (connectivity, loop closure, region symmetry) which remains challenging for even the most powerful LLMs.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Introduced TopoBench with six puzzle families across three difficulty levels, evaluated frontier models, annotated 750 chain-of-thought traces with error taxonomy, and tested targeted interventions.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">Even frontier models solve fewer than 25% of hard instances; errors stem from difficulty extracting and maintaining spatial constraints rather than reasoning limitations; prompt guidance and tool-based checking show limited improvement.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">The bottleneck in topological reasoning lies in extracting constraints from spatial representations, not in reasoning over them; new approaches are needed for spatial understanding in LLMs.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12133" target="_blank">[2603.12133] Benchmarking LLMs on Hard Topological Reasoning</a>
+                    </div>
+                    <div class="paper-authors">Mayug Maniparambil et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> Topological grid puzzles requiring global spatial reasoning (connectivity, loop closure, region symmetry) remain unsolved challenges for frontier LLMs.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Introduced TopoBench with six puzzle families across three difficulty levels; evaluated reasoning LLMs; annotated 750 chain-of-thought traces with error taxonomy and tested interventions.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Frontier models solve fewer than 25% of hard instances, with two families nearly unsolved; premature commitment and constraint forgetting directly impact puzzle-solving ability.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> Spatial constraint extraction, not reasoning itself, is the bottleneck for LLM topological reasoning; improved representations could significantly boost performance.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12129" target="_blank">Increasing intelligence in AI agents can worsen collective outcomes</a></div>
-                    <div class="paper-id">arXiv:2603.12129 | Neil F. Johnson et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">As diverse AI agents from different developers enter everyday devices, they compete for finite shared resources (charging slots, bandwidth, traffic priority), but their collective dynamics and societal risks are poorly understood.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Studied AI-agent populations as the first real system where nature (LLM diversity), nurture (individual RL), culture (tribe formation), and resource scarcity can be independently toggled; conducted empirical and mathematical analysis.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">When resources are scarce, AI model diversity and RL increase dangerous system overload; tribe formation lessens this risk. When abundant, same factors drive overload to near zero. Sophistication helps or harms depending solely on capacity-to-population ratio.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">More sophisticated AI populations are not inherently better; outcomes depend on a single knowable number (capacity-to-population ratio), providing a framework for predicting and managing collective AI behavior.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12129" target="_blank">[2603.12129] Increasing intelligence in AI agents can worsen collective outcomes</a>
+                    </div>
+                    <div class="paper-authors">Neil F. Johnson et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> Diverse AI agents competing for finite shared resources (charging slots, bandwidth, traffic priority) create poorly understood collective dynamics and risks.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> First systematic study of AI-agent populations with independent toggling of nature (LLM diversity), nurture (individual RL), culture (tribe formation), and resource scarcity.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Under scarce resources, LLM diversity and RL increase dangerous system overload; tribe formation lessens risk. Under abundant resources, same factors drive overload to near zero.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> AI sophistication's impact depends entirely on capacity-to-population ratio; more intelligent agents can worsen collective outcomes under resource constraints.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12109" target="_blank">On Information Self-Locking in Reinforcement Learning for Active Reasoning of LLM agents</a></div>
-                    <div class="paper-id">arXiv:2603.12109 | Deyu Zou et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">LLM agents trained with RL for active reasoning often suffer from "information self-locking" where agents cease asking informative questions and struggle to internalize already-obtained information, creating a feedback loop.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Decomposed active reasoning into Action Selection (AS) and Belief Tracking (BT) capabilities; proposed injecting easy-to-obtain directional critiques to reallocate learning signal and help agents escape self-locking.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">The approach significantly mitigates information self-locking, bringing up to 60% improvements across 7 datasets; insufficient exploration hinders AS and BT improvement, creating the self-locking feedback loop.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">Information self-locking is a fundamental challenge in RL-based active reasoning that can be addressed through targeted critique injection; this enables more effective information-seeking behavior in LLM agents.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12109" target="_blank">[2603.12109] On Information Self-Locking in Reinforcement Learning for Active Reasoning of LLM agents</a>
+                    </div>
+                    <div class="paper-authors">Deyu Zou et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> LLM agents trained with RL for active reasoning suffer from "information self-locking" — ceasing to ask informative questions and struggling to internalize obtained information.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Decomposed active reasoning into Action Selection (AS) and Belief Tracking (BT); proposed directional critique injection approach to break self-locking feedback loops.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Approach brings up to 60% improvements across 7 datasets by reallocating learning signal and helping agents escape low-information regimes.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> Information self-locking emerges from deficient AS/BT capabilities creating feedback loops; simple directional critiques effectively break these cycles in RL training.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12096" target="_blank">A Robust and Efficient Multi-Agent Reinforcement Learning Framework for Traffic Signal Control</a></div>
-                    <div class="paper-id">arXiv:2603.12096 | ShengYou Huang et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">RL in Traffic Signal Control faces hurdles in real-world deployment due to limited generalization to dynamic traffic flow variations, overfitting to static patterns, and action spaces incompatible with driver expectations.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Proposed a MARL framework with three mechanisms: Turning Ratio Randomization for robustness, Exponential Phase Duration Adjustment action space for stability, and Neighbor-Based Observation with MAPPO and CTDE.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">Framework outperforms standard RL baselines, reducing average waiting time by over 10%; exhibits superior generalization in unseen traffic scenarios and maintains high control stability in Vissim simulator.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">The proposed framework offers a practical solution for adaptive signal control, addressing key deployment challenges through robust training strategies and carefully designed action/observation spaces.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12096" target="_blank">[2603.12096] A Robust and Efficient Multi-Agent Reinforcement Learning Framework for Traffic Signal Control</a>
+                    </div>
+                    <div class="paper-authors">ShengYou Huang et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> RL traffic signal control faces deployment challenges from overfitting static patterns and using action spaces incompatible with driver expectations.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> MARL framework with (1) Turning Ratio Randomization for robustness, (2) Exponential Phase Duration Adjustment action space, (3) Neighbor-Based Observation with MAPPO and CTDE.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Outperforms standard RL baselines with over 10% reduction in average waiting time; superior generalization in unseen traffic scenarios with high control stability.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> Three-mechanism approach provides practical solution for adaptive traffic signal control with real-world deployment viability.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12056" target="_blank">Continual Learning from Experience and Skills in Multimodal Agents</a></div>
-                    <div class="paper-id">arXiv:2603.12056 | Guanyu Jiang et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">Multimodal agents suffer from inefficient tool use and inflexible orchestration in open-ended settings; the challenge is enabling continual improvement without parameter updates by learning from past trajectories.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Proposed XSkill, a dual-stream framework that extracts experiences (action-level guidance) and skills (task-level guidance) from multi-path rollouts via visually grounded summarization and cross-rollout critique, forming a continual learning loop.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">XSkill consistently and substantially outperforms both tool-only and learning-based baselines across five benchmarks with four backbone models; the two knowledge streams play complementary roles and show superior zero-shot generalization.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">Separating experience and skill learning with visual grounding enables effective continual improvement in multimodal agents without parameter updates; this approach advances agent capabilities in complex reasoning tasks.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12056" target="_blank">[2603.12056] Continual Learning from Experience and Skills in Multimodal Agents</a>
+                    </div>
+                    <div class="paper-authors">Guanyu Jiang et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> Multimodal agents struggle with inefficient tool use and inflexible orchestration in open-ended settings; need to improve without parameter updates.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Proposed XSkill framework with dual knowledge streams — experiences (action-level guidance) and skills (task-level guidance) — using visual grounding for extraction and retrieval.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Consistently and substantially outperforms tool-only and learning-based baselines across five benchmarks with four backbone models; two knowledge streams play complementary roles.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> Visually-grounded continual learning from dual knowledge streams enables flexible tool orchestration and superior zero-shot generalization in multimodal agents.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.12011" target="_blank">Can RL Improve Generalization of LLM Agents? An Empirical Study</a></div>
-                    <div class="paper-id">arXiv:2603.12011 | Zhiheng Xi et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">RFT for LLM agents has shown promise but evaluations remain largely in-domain; real-world deployment requires operation in unseen environments with different background knowledge, observation spaces, and action interfaces.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Conducted systematic study along three axes: within-environment generalization across task difficulty, cross-environment transfer to unseen environments, and sequential multi-environment training to quantify transfer and forgetting.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">RFT generalizes well across task difficulty within an environment but exhibits weaker transfer to unseen environments; sequential training yields promising downstream gains with minimal forgetting, and mixture training improves overall balance.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">Cross-environment transfer correlates with shifts in semantic priors and observation/action interfaces; mixture training across environments and sequential training are promising strategies for developing generalizable LLM agents.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.12011" target="_blank">[2603.12011] Can RL Improve Generalization of LLM Agents? An Empirical Study</a>
+                    </div>
+                    <div class="paper-authors">Zhiheng Xi et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> Most RFT evaluations remain in-domain; real-world deployment requires understanding generalization under environment shifts (background knowledge, observation/action interfaces).
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Systematic study along three axes: within-environment generalization, cross-environment transfer, and sequential multi-environment training with transfer/forgetting quantification.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> RFT generalizes well across task difficulty but shows weaker transfer to unseen environments correlating with semantic and interface shifts; sequential training yields promising gains with minimal forgetting.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> RFT's generalization profile is environment-dependent; mixture training across environments improves overall balance for deployable LLM agents.
                     </div>
                 </div>
                 
-                <div class="paper-card">
-                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.11992" target="_blank">Few-for-Many Personalized Federated Learning</a></div>
-                    <div class="paper-id">arXiv:2603.11992 | Ping Guo et al.</div>
-                    <div class="analysis">
-                        <div class="analysis-row">
-                            <span class="analysis-label">Problem:</span>
-                            <span class="analysis-content">Personalized Federated Learning aims to train customized models for clients with heterogeneous data while preserving privacy; maintaining M separate models for M clients poses scalability challenges in federated settings with thousands of clients.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Method:</span>
-                            <span class="analysis-content">Reformulated PFL as a few-for-many optimization maintaining only K shared server models (K << M); proposed FedFew algorithm that jointly optimizes K server models through efficient gradient-based updates without manual partitioning or hyperparameter tuning.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Results:</span>
-                            <span class="analysis-content">FedFew achieves near-optimal personalization with approximation error diminishing as K increases; with just 3 models, consistently outperforms other state-of-the-art approaches across vision, NLP, and medical imaging datasets.</span>
-                        </div>
-                        <div class="analysis-row">
-                            <span class="analysis-label">Conclusion:</span>
-                            <span class="analysis-content">The few-for-many approach provides a scalable solution for personalized federated learning, automatically discovering optimal model diversity through optimization rather than heuristics, significantly reducing server-side model storage requirements.</span>
-                        </div>
+                <div class="paper">
+                    <div class="paper-title">
+                        <a href="https://arxiv.org/abs/2603.11992" target="_blank">[2603.11992] Few-for-Many Personalized Federated Learning</a>
+                    </div>
+                    <div class="paper-authors">Ping Guo et al.</div>
+                    <div class="paper-section">
+                        <strong>Problem:</strong> Personalized Federated Learning requires maintaining M distinct models for M clients, posing scalability challenges for federated settings with hundreds or thousands of clients.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Method:</strong> Reformulated PFL as few-for-many optimization maintaining only K << M shared server models; proposed FedFew algorithm with gradient-based joint optimization.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Results:</strong> Achieves near-optimal personalization with approximation error diminishing as K increases; FedFew with just 3 models consistently outperforms state-of-the-art approaches across vision, NLP, and medical imaging datasets.
+                    </div>
+                    <div class="paper-section">
+                        <strong>Conclusion:</strong> Few-for-many approach provides principled PFL framework that discovers optimal model diversity automatically, outperforming clustering and interpolation-based methods without manual partitioning or hyperparameter tuning.
                     </div>
                 </div>
-            </div>
-            
-            <!-- HuggingFace Models Section -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">🤗</span> HuggingFace Top 15 Trending Models</h2>
+            </section>
+
+            <!-- HuggingFace Section -->
+            <section>
+                <h2>🤗 HuggingFace Top 15 Trending Models</h2>
+                <p style="color: #666; margin-bottom: 20px;">From <a href="https://huggingface.co/models?sort=trending" style="color: #667eea; text-decoration: none;">HuggingFace Trending Models</a> - Updated within last 30 days</p>
+                
                 <table>
                     <thead>
                         <tr>
-                            <th>Rank</th>
-                            <th>Model</th>
-                            <th>Type</th>
-                            <th>Params</th>
-                            <th>Downloads</th>
-                            <th>Likes</th>
-                            <th>Updated</th>
-                            <th>Description</th>
+                            <th style="width: 5%;">#</th>
+                            <th style="width: 25%;">Model</th>
+                            <th style="width: 12%;">Type</th>
+                            <th style="width: 10%;">Params</th>
+                            <th style="width: 12%;">Downloads</th>
+                            <th style="width: 8%;">Likes</th>
+                            <th style="width: 10%;">Updated</th>
+                            <th style="width: 18%;">Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="rank">1</td>
-                            <td class="model-name"><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" target="_blank">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</a></td>
-                            <td>Text Generation</td>
-                            <td>28B</td>
-                            <td class="stats">58.8k</td>
-                            <td class="stars">645</td>
-                            <td>7 days ago</td>
-                            <td class="description">A distilled reasoning model combining Qwen3.5 architecture with Claude-4.6 Opus reasoning capabilities.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">2</td>
-                            <td class="model-name"><a href="https://huggingface.co/fishaudio/s2-pro" target="_blank">fishaudio/s2-pro</a></td>
+                            <td>1</td>
+                            <td><a href="https://huggingface.co/fishaudio/s2-pro" class="model-link" target="_blank">fishaudio/s2-pro</a></td>
                             <td>Text-to-Speech</td>
                             <td>5B</td>
-                            <td class="stats">3.96k</td>
-                            <td class="stars">416</td>
-                            <td>3 days ago</td>
-                            <td class="description">Advanced text-to-speech model from Fish Audio with professional-grade voice synthesis quality.</td>
+                            <td>4.53k</td>
+                            <td>454</td>
+                            <td>4 days ago</td>
+                            <td>High-quality neural text-to-speech synthesis model with natural prosody.</td>
                         </tr>
                         <tr>
-                            <td class="rank">3</td>
-                            <td class="model-name"><a href="https://huggingface.co/Lightricks/LTX-2.3" target="_blank">Lightricks/LTX-2.3</a></td>
+                            <td>2</td>
+                            <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" class="model-link" target="_blank">Jackrong/Qwen3.5-27B-Claude-4.6...</a></td>
+                            <td>Text Generation</td>
+                            <td>28B</td>
+                            <td>61.6k</td>
+                            <td>708</td>
+                            <td>8 days ago</td>
+                            <td>Distilled reasoning model combining Qwen architecture with Claude-style capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://huggingface.co/Lightricks/LTX-2.3" class="model-link" target="_blank">Lightricks/LTX-2.3</a></td>
                             <td>Image-to-Video</td>
                             <td>-</td>
-                            <td class="stats">501k</td>
-                            <td class="stars">607</td>
-                            <td>9 days ago</td>
-                            <td class="description">State-of-the-art image-to-video generation model by Lightricks with high-quality temporal consistency.</td>
+                            <td>551k</td>
+                            <td>625</td>
+                            <td>~7 hours ago</td>
+                            <td>State-of-the-art image-to-video generation with high temporal consistency.</td>
                         </tr>
                         <tr>
-                            <td class="rank">4</td>
-                            <td class="model-name"><a href="https://huggingface.co/Qwen/Qwen3.5-9B" target="_blank">Qwen/Qwen3.5-9B</a></td>
+                            <td>4</td>
+                            <td><a href="https://huggingface.co/Qwen/Qwen3.5-9B" class="model-link" target="_blank">Qwen/Qwen3.5-9B</a></td>
                             <td>Image-Text-to-Text</td>
                             <td>10B</td>
-                            <td class="stats">1.83M</td>
-                            <td class="stars">818</td>
-                            <td>13 days ago</td>
-                            <td class="description">Alibaba's multimodal model capable of understanding both images and text for versatile AI applications.</td>
+                            <td>1.96M</td>
+                            <td>847</td>
+                            <td>14 days ago</td>
+                            <td>Alibaba's multimodal vision-language model with strong reasoning capabilities.</td>
                         </tr>
                         <tr>
-                            <td class="rank">5</td>
-                            <td class="model-name"><a href="https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.5-9B-Uncensored</a></td>
+                            <td>5</td>
+                            <td><a href="https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive" class="model-link" target="_blank">HauhauCS/Qwen3.5-9B-Uncensored...</a></td>
                             <td>Text Generation</td>
                             <td>9B</td>
-                            <td class="stats">202k</td>
-                            <td class="stars">425</td>
-                            <td>11 days ago</td>
-                            <td class="description">An uncensored variant of Qwen3.5-9B optimized for less restrictive content generation scenarios.</td>
+                            <td>221k</td>
+                            <td>444</td>
+                            <td>12 days ago</td>
+                            <td>Uncensored variant of Qwen3.5 optimized for reduced content restrictions.</td>
                         </tr>
                         <tr>
-                            <td class="rank">6</td>
-                            <td class="model-name"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" target="_blank">nvidia/NVIDIA-Nemotron-3-Super-120B</a></td>
+                            <td>6</td>
+                            <td><a href="https://huggingface.co/Tesslate/OmniCoder-9B" class="model-link" target="_blank">Tesslate/OmniCoder-9B</a></td>
+                            <td>Text Generation</td>
+                            <td>9B</td>
+                            <td>5.66k</td>
+                            <td>208</td>
+                            <td>3 days ago</td>
+                            <td>Universal code generation model supporting multiple programming languages.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" class="model-link" target="_blank">nvidia/Nemotron-3-Super-120B...</a></td>
                             <td>Text Generation</td>
                             <td>124B</td>
-                            <td class="stats">13.1k</td>
-                            <td class="stars">190</td>
-                            <td>9 hours ago</td>
-                            <td class="description">NVIDIA's massive 120B parameter language model with superior reasoning and instruction-following capabilities.</td>
+                            <td>20.9k</td>
+                            <td>204</td>
+                            <td>1 day ago</td>
+                            <td>NVIDIA's large-scale language model optimized for enterprise applications.</td>
                         </tr>
                         <tr>
-                            <td class="rank">7</td>
-                            <td class="model-name"><a href="https://huggingface.co/HumeAI/tada-1b" target="_blank">HumeAI/tada-1b</a></td>
+                            <td>8</td>
+                            <td><a href="https://huggingface.co/HumeAI/tada-1b" class="model-link" target="_blank">HumeAI/tada-1b</a></td>
                             <td>Text-to-Speech</td>
                             <td>2B</td>
-                            <td class="stats">8.76k</td>
-                            <td class="stars">176</td>
-                            <td>1 day ago</td>
-                            <td class="description">Hume AI's text-to-audio model designed for emotionally expressive and natural-sounding speech synthesis.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">8</td>
-                            <td class="model-name"><a href="https://huggingface.co/Tesslate/OmniCoder-9B" target="_blank">Tesslate/OmniCoder-9B</a></td>
-                            <td>Text Generation</td>
-                            <td>9B</td>
-                            <td class="stats">2.08k</td>
-                            <td class="stars">164</td>
+                            <td>12.8k</td>
+                            <td>195</td>
                             <td>2 days ago</td>
-                            <td class="description">A versatile code generation model supporting multiple programming languages with strong performance.</td>
+                            <td>Emotionally expressive TTS model capable of nuanced vocal delivery.</td>
                         </tr>
                         <tr>
-                            <td class="rank">9</td>
-                            <td class="model-name"><a href="https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.5-35B-A3B-Uncensored</a></td>
+                            <td>9</td>
+                            <td><a href="https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive" class="model-link" target="_blank">HauhauCS/Qwen3.5-35B-A3B...</a></td>
                             <td>Image-Text-to-Text</td>
                             <td>35B</td>
-                            <td class="stats">65.9k</td>
-                            <td class="stars">163</td>
-                            <td>4 days ago</td>
-                            <td class="description">Larger uncensored multimodal variant of Qwen3.5 combining vision and language understanding.</td>
+                            <td>77.4k</td>
+                            <td>183</td>
+                            <td>5 days ago</td>
+                            <td>Large multimodal uncensored model with aggressive fine-tuning approach.</td>
                         </tr>
                         <tr>
-                            <td class="rank">10</td>
-                            <td class="model-name"><a href="https://huggingface.co/LocoreMind/LocoTrainer-4B" target="_blank">LocoreMind/LocoTrainer-4B</a></td>
+                            <td>10</td>
+                            <td><a href="https://huggingface.co/LocoreMind/LocoTrainer-4B" class="model-link" target="_blank">LocoreMind/LocoTrainer-4B</a></td>
                             <td>Text Generation</td>
                             <td>4B</td>
-                            <td class="stats">1.01k</td>
-                            <td class="stars">160</td>
-                            <td>23 hours ago</td>
-                            <td class="description">Compact language model optimized for efficient fine-tuning and domain-specific training tasks.</td>
+                            <td>1.22k</td>
+                            <td>163</td>
+                            <td>2 days ago</td>
+                            <td>Efficient small-scale model designed for training and educational purposes.</td>
                         </tr>
                         <tr>
-                            <td class="rank">11</td>
-                            <td class="model-name"><a href="https://huggingface.co/unsloth/LTX-2.3-GGUF" target="_blank">unsloth/LTX-2.3-GGUF</a></td>
-                            <td>Image-to-Video</td>
-                            <td>21B</td>
-                            <td class="stats">85.8k</td>
-                            <td class="stars">185</td>
-                            <td>4 days ago</td>
-                            <td class="description">GGUF quantized version of LTX-2.3 for efficient local deployment with reduced memory requirements.</td>
-                        </tr>
-                        <tr>
-                            <td class="rank">12</td>
-                            <td class="model-name"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4" target="_blank">nvidia/Nemotron-3-Super-120B-NVFP4</a></td>
+                            <td>11</td>
+                            <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4" class="model-link" target="_blank">nvidia/Nemotron-3-Super-120B-NVFP4</a></td>
                             <td>Text Generation</td>
                             <td>67B</td>
-                            <td class="stats">117k</td>
-                            <td class="stars">125</td>
-                            <td>10 hours ago</td>
-                            <td class="description">NVFP4 quantized variant of Nemotron-3 offering reduced precision for faster inference.</td>
+                            <td>168k</td>
+                            <td>138</td>
+                            <td>1 day ago</td>
+                            <td>NVFP4 quantized variant of Nemotron for efficient large-scale inference.</td>
                         </tr>
                         <tr>
-                            <td class="rank">13</td>
-                            <td class="model-name"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8" target="_blank">nvidia/Nemotron-3-Super-120B-FP8</a></td>
+                            <td>12</td>
+                            <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8" class="model-link" target="_blank">nvidia/Nemotron-3-Super-120B-FP8</a></td>
                             <td>Text Generation</td>
                             <td>124B</td>
-                            <td class="stats">34.9k</td>
-                            <td class="stars">124</td>
-                            <td>10 hours ago</td>
-                            <td class="description">FP8 quantized version of NVIDIA's flagship model balancing quality and computational efficiency.</td>
+                            <td>64.6k</td>
+                            <td>137</td>
+                            <td>1 day ago</td>
+                            <td>FP8 precision variant balancing accuracy and computational efficiency.</td>
                         </tr>
                         <tr>
-                            <td class="rank">14</td>
-                            <td class="model-name"><a href="https://huggingface.co/HumeAI/tada-3b-ml" target="_blank">HumeAI/tada-3b-ml</a></td>
+                            <td>13</td>
+                            <td><a href="https://huggingface.co/HumeAI/tada-3b-ml" class="model-link" target="_blank">HumeAI/tada-3b-ml</a></td>
                             <td>Text-to-Speech</td>
                             <td>4B</td>
-                            <td class="stats">7.69k</td>
-                            <td class="stars">111</td>
-                            <td>1 day ago</td>
-                            <td class="description">Multilingual variant of Hume AI's text-to-speech model supporting diverse language synthesis.</td>
+                            <td>8.74k</td>
+                            <td>124</td>
+                            <td>2 days ago</td>
+                            <td>Multilingual extension of TADA with broader language support.</td>
                         </tr>
                         <tr>
-                            <td class="rank">15</td>
-                            <td class="model-name"><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF" target="_blank">Jackrong/Qwen3.5-27B-GGUF</a></td>
-                            <td>Text Generation</td>
-                            <td>27B</td>
-                            <td class="stats">132k</td>
-                            <td class="stars">201</td>
-                            <td>7 days ago</td>
-                            <td class="description">GGUF quantized version of the Claude reasoning distilled model for local inference.</td>
+                            <td>14</td>
+                            <td><a href="https://huggingface.co/unsloth/LTX-2.3-GGUF" class="model-link" target="_blank">unsloth/LTX-2.3-GGUF</a></td>
+                            <td>Image-to-Video</td>
+                            <td>21B</td>
+                            <td>99.1k</td>
+                            <td>191</td>
+                            <td>5 days ago</td>
+                            <td>GGUF quantized version of LTX for efficient local video generation.</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><a href="https://huggingface.co/RuneXX/LTX-2.3-Workflows" class="model-link" target="_blank">RuneXX/LTX-2.3-Workflows</a></td>
+                            <td>Image-to-Video</td>
+                            <td>-</td>
+                            <td>135</td>
+                            <td>-</td>
+                            <td>1 day ago</td>
+                            <td>Pre-configured ComfyUI workflows optimized for LTX-2.3 video generation.</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            
-            <!-- GitHub Repos Section -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">⭐</span> GitHub Top 10 Trending Python Repositories</h2>
+            </section>
+
+            <!-- GitHub Section -->
+            <section>
+                <h2>⭐ GitHub Top 10 Trending Python Repositories</h2>
+                <p style="color: #666; margin-bottom: 20px;">From <a href="https://github.com/trending/python?since=daily" style="color: #667eea; text-decoration: none;">GitHub Trending Python</a> - Daily</p>
+                
                 <table>
                     <thead>
                         <tr>
-                            <th>Rank</th>
-                            <th>Repository</th>
-                            <th>Stars Today</th>
-                            <th>Description</th>
+                            <th style="width: 5%;">#</th>
+                            <th style="width: 35%;">Repository</th>
+                            <th style="width: 12%;">Stars Today</th>
+                            <th style="width: 48%;">Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="rank">1</td>
-                            <td class="repo-name"><a href="https://github.com/volcengine/OpenViking" target="_blank">volcengine/OpenViking</a></td>
-                            <td class="stars">1,610</td>
-                            <td class="description">An open-source context database designed for AI Agents, unifying memory, resources, and skills management through a file system paradigm.</td>
+                            <td>1</td>
+                            <td><a href="https://github.com/volcengine/OpenViking" class="repo-link" target="_blank">volcengine/OpenViking</a></td>
+                            <td><span class="badge badge-stars">1,870</span></td>
+                            <td>Open-source context database for AI Agents with unified memory, resources, and skills management through file system paradigm.</td>
                         </tr>
                         <tr>
-                            <td class="rank">2</td>
-                            <td class="repo-name"><a href="https://github.com/666ghj/MiroFish" target="_blank">666ghj/MiroFish</a></td>
-                            <td class="stars">2,045</td>
-                            <td class="description">A simple and universal swarm intelligence engine capable of predicting anything through collective agent behavior.</td>
+                            <td>2</td>
+                            <td><a href="https://github.com/p-e-w/heretic" class="repo-link" target="_blank">p-e-w/heretic</a></td>
+                            <td><span class="badge badge-stars">1,062</span></td>
+                            <td>Fully automatic censorship removal system for language models with privacy-preserving architecture.</td>
                         </tr>
                         <tr>
-                            <td class="rank">3</td>
-                            <td class="repo-name"><a href="https://github.com/microsoft/BitNet" target="_blank">microsoft/BitNet</a></td>
-                            <td class="stars">1,057</td>
-                            <td class="description">Official inference framework for 1-bit LLMs from Microsoft, enabling efficient deployment of extreme quantization models.</td>
+                            <td>3</td>
+                            <td><a href="https://github.com/666ghj/MiroFish" class="repo-link" target="_blank">666ghj/MiroFish</a></td>
+                            <td><span class="badge badge-stars">2,782</span></td>
+                            <td>Simple and universal swarm intelligence engine for prediction tasks using collective agent behavior.</td>
                         </tr>
                         <tr>
-                            <td class="rank">4</td>
-                            <td class="repo-name"><a href="https://github.com/langflow-ai/openrag" target="_blank">langflow-ai/openrag</a></td>
-                            <td class="stars">564</td>
-                            <td class="description">Comprehensive Retrieval-Augmented Generation platform built on Langflow, Docling, and Opensearch in a single package.</td>
+                            <td>4</td>
+                            <td><a href="https://github.com/langflow-ai/openrag" class="repo-link" target="_blank">langflow-ai/openrag</a></td>
+                            <td><span class="badge badge-stars">367</span></td>
+                            <td>Comprehensive Retrieval-Augmented Generation platform built on Langflow, Docling, and Opensearch.</td>
                         </tr>
                         <tr>
-                            <td class="rank">5</td>
-                            <td class="repo-name"><a href="https://github.com/vectorize-io/hindsight" target="_blank">vectorize-io/hindsight</a></td>
-                            <td class="stars">448</td>
-                            <td class="description">Agent memory system that learns from interactions, providing AI agents with adaptive memory capabilities.</td>
+                            <td>5</td>
+                            <td><a href="https://github.com/dimensionalOS/dimos" class="repo-link" target="_blank">dimensionalOS/dimos</a></td>
+                            <td><span class="badge badge-stars">323</span></td>
+                            <td>Agentic operating system for physical space enabling vibecoding for humanoids, drones, and hardware platforms.</td>
                         </tr>
                         <tr>
-                            <td class="rank">6</td>
-                            <td class="repo-name"><a href="https://github.com/dimensionalOS/dimos" target="_blank">dimensionalOS/dimos</a></td>
-                            <td class="stars">72</td>
-                            <td class="description">The Dimensional Framework - an emerging platform for building and deploying AI applications.</td>
+                            <td>6</td>
+                            <td><a href="https://github.com/vectorize-io/hindsight" class="repo-link" target="_blank">vectorize-io/hindsight</a></td>
+                            <td><span class="badge badge-stars">94</span></td>
+                            <td>Agent memory system that learns from interactions with vector database backend for long-term retention.</td>
                         </tr>
                         <tr>
-                            <td class="rank">7</td>
-                            <td class="repo-name"><a href="https://github.com/fishaudio/fish-speech" target="_blank">fishaudio/fish-speech</a></td>
-                            <td class="stars">-</td>
-                            <td class="description">State-of-the-art open-source text-to-speech synthesis with high-quality natural voice generation.</td>
+                            <td>7</td>
+                            <td><a href="https://github.com/Blaizzy/mlx-audio" class="repo-link" target="_blank">Blaizzy/mlx-audio</a></td>
+                            <td><span class="badge badge-stars">34</span></td>
+                            <td>TTS, STT, and speech-to-speech library built on Apple's MLX framework for efficient Apple Silicon inference.</td>
                         </tr>
                         <tr>
-                            <td class="rank">8</td>
-                            <td class="repo-name"><a href="https://github.com/p-e-w/heretic" target="_blank">p-e-w/heretic</a></td>
-                            <td class="stars">-</td>
-                            <td class="description">Fully automatic censorship removal system for language models, enabling unrestricted text generation.</td>
+                            <td>8</td>
+                            <td><a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui" class="repo-link" target="_blank">AUTOMATIC1111/stable-diffusion-webui</a></td>
+                            <td><span class="badge badge-stars">-</span></td>
+                            <td>Popular web interface for Stable Diffusion with extensive features and extension ecosystem.</td>
                         </tr>
                         <tr>
-                            <td class="rank">9</td>
-                            <td class="repo-name"><a href="https://github.com/karpathy/nanochat" target="_blank">karpathy/nanochat</a></td>
-                            <td class="stars">-</td>
-                            <td class="description">Andrej Karpathy's minimal yet capable chatbot implementation, described as the best ChatGPT alternative for $100.</td>
+                            <td>9</td>
+                            <td><a href="https://github.com/public-apis/public-apis" class="repo-link" target="_blank">public-apis/public-apis</a></td>
+                            <td><span class="badge badge-stars">-</span></td>
+                            <td>Collective list of free APIs for development, testing, and educational purposes.</td>
                         </tr>
                         <tr>
-                            <td class="rank">10</td>
-                            <td class="repo-name"><a href="https://github.com/topoteretes/cognee" target="_blank">topoteretes/cognee</a></td>
-                            <td class="stars">-</td>
-                            <td class="description">Knowledge engine for AI agent memory enabling sophisticated information retrieval in just 6 lines of code.</td>
+                            <td>10</td>
+                            <td><a href="https://github.com/TheAlgorithms/Python" class="repo-link" target="_blank">TheAlgorithms/Python</a></td>
+                            <td><span class="badge badge-stars">-</span></td>
+                            <td>All algorithms implemented in Python for educational purposes and interview preparation.</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            
-            <!-- Key Trends Section -->
-            <div class="section">
-                <h2 class="section-title"><span class="icon">🔥</span> Key Trends & Highlights</h2>
+            </section>
+
+            <!-- Trends Section -->
+            <section>
+                <h2>🔥 Key Trends & Highlights</h2>
                 
-                <div class="trend-item">
-                    <div class="trend-title">1. LLM-as-Judge Systems Under Scrutiny</div>
-                    <div class="trend-desc">Research reveals that reasoning LLM judges can lead to adversarial outputs that deceive other models while scoring well on benchmarks. This highlights the need for more robust evaluation frameworks in LLM post-training.</div>
+                <div class="trend-tag">
+                    <strong>1. AI Agent Memory & Context Systems</strong><br>
+                    Significant innovation in agent memory infrastructure with OpenViking's context database, Hindsight's learning memory, and XSkill's dual knowledge streams showing the industry's focus on improving agent state management.
                 </div>
                 
-                <div class="trend-item">
-                    <div class="trend-title">2. AI Agent Collective Behavior Modeling</div>
-                    <div class="trend-desc">New research shows that increasing AI agent intelligence can worsen collective outcomes depending on resource capacity, with sophistication helping or harming based on capacity-to-population ratios.</div>
+                <div class="trend-tag">
+                    <strong>2. Multi-Agent Collective Intelligence</strong><br>
+                    Research revealing complex dynamics in multi-agent systems — from resource competition causing system overload to swarm intelligence approaches for prediction, highlighting the need for careful coordination mechanisms.
                 </div>
                 
-                <div class="trend-item">
-                    <div class="trend-title">3. NVIDIA Nemotron-3 Dominance</div>
-                    <div class="trend-desc">NVIDIA's 120B parameter Nemotron-3 model and its quantized variants are trending heavily, showing enterprise demand for large-scale language models with flexible deployment options.</div>
+                <div class="trend-tag">
+                    <strong>3. Reasoning Judge Systems & RL Alignment</strong><br>
+                    Emerging focus on reasoning-based LLM judges for post-training alignment, with findings revealing both promise (better policy training) and risks (adversarial output generation).
                 </div>
                 
-                <div class="trend-item">
-                    <div class="trend-title">4. Agent Memory & Context Systems</div>
-                    <div class="trend-desc">Multiple trending repositories focus on AI agent memory (Hindsight, Cognee, OpenViking), indicating rapid innovation in building persistent, learning-capable agent systems.</div>
+                <div class="trend-tag">
+                    <strong>4. Video Generation & Quantization</strong><br>
+                    LTX-2.3 leads trending models with multiple quantized variants (GGUF, FP8) appearing, showing strong community interest in efficient local video generation capabilities.
                 </div>
                 
-                <div class="trend-item">
-                    <div class="trend-title">5. Qwen3.5 Ecosystem Expansion</div>
-                    <div class="trend-desc">Alibaba's Qwen3.5 models dominate the trending list with multiple variants (9B, 27B, 35B) including distilled and uncensored versions, reflecting strong open-source momentum from Chinese AI labs.</div>
+                <div class="trend-tag">
+                    <strong>5. Personalized Federated Learning at Scale</strong><br>
+                    FedFew's few-for-many approach demonstrates how maintaining just 3 server models can outperform methods requiring hundreds, enabling practical federated personalization for enterprise deployment.
                 </div>
-            </div>
+            </section>
         </div>
         
-        <div class="footer">
-            <p>AI Daily Report | Generated on March 15, 2026 | Sources: arXiv, HuggingFace, GitHub, Hacker News</p>
-            <p>📊 Report URL: <a href="https://chenlijn.github.io/ai-daily/2026-03-15-08-00.html">https://chenlijn.github.io/ai-daily/2026-03-15-08-00.html</a></p>
-        </div>
+        <footer>
+            <p>AI Daily Report | Generated on March 16, 2026 | <a href="https://github.com/chenlijn/ai-daily" style="color: #667eea;">View on GitHub</a></p>
+        </footer>
     </div>
 </body>
 </html>
