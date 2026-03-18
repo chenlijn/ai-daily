@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - March 18, 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header .date { font-size: 1.2em; opacity: 0.9; }
+        .content { padding: 40px; }
+        .section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .paper {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        .paper-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .paper-title a { color: #667eea; text-decoration: none; }
+        .paper-title a:hover { text-decoration: underline; }
+        .paper-meta { color: #666; font-size: 0.9em; margin-bottom: 15px; }
+        .analysis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
+        .analysis-item {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+        .analysis-label {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .analysis-content { font-size: 0.95em; color: #555; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #667eea;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+        tr:hover { background: #f8f9fa; }
+        .rank { font-weight: bold; color: #667eea; }
+        .model-name a, .repo-name a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .model-name a:hover, .repo-name a:hover { text-decoration: underline; }
+        .stats { color: #666; font-size: 0.9em; }
+        .description { color: #555; font-size: 0.9em; }
+        .story {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-left: 4px solid #764ba2;
+        }
+        .story-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .story-title a { color: #333; text-decoration: none; }
+        .story-title a:hover { color: #667eea; }
+        .story-meta { color: #888; font-size: 0.85em; margin-bottom: 8px; }
+        .story-summary { color: #555; font-size: 0.95em; }
+        .trends {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .trend-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .trend-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .trend-content h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .trend-content p { color: #666; font-size: 0.95em; }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9em;
+            border-top: 1px solid #e0e0e0;
+        }
+        .emoji { font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Daily Report</h1>
+            <div class="date">March 18, 2026 | Wednesday</div>
+        </div>
+
+        <div class="content">
+            <!-- Hacker News Section -->
+            <div class="section">
+                <h2 class="section-title"><span class="emoji">📰</span> Daily News & Tech Buzz</h2>
+                
+                <div class="story">
+                    <div class="story-title"><a href="https://terathon.com/blog/decade-slug.html">A Decade of Slug</a></div>
+                    <div class="story-meta">359 points | 4 hours ago | terathon.com</div>
+                    <div class="story-summary">A retrospective on ten years of developing Slug, a graphics engine middleware, sharing lessons learned in long-term software architecture and maintenance.</div>
+                </div>
+
+                <div class="story">
+                    <div class="story-title"><a href="https://fidget-spinner.github.io/posts/jit-on-track.html">Python 3.15's JIT is now back on track</a></div>
+                    <div class="story-meta">224 points | 5 hours ago | fidget-spinner.github.io</div>
+                    <div class="story-summary">The just-in-time compilation feature for Python 3.15 has resumed development after addressing previous blockers, promising significant performance improvements.</div>
+                </div>
+
+                <div class="story">
+                    <div class="story-title"><a href="https://github.com/gsd-build/get-shit-done">Get Shit Done: A Meta-Prompting, Context Engineering and Spec-Driven Dev System</a></div>
+                    <div class="story-meta">147 points | 3 hours ago | github.com</div>
+                    <div class="story-summary">A new development methodology combining meta-prompting techniques with context engineering to improve AI-assisted software development workflows.</div>
+                </div>
+
+                <div class="story">
+                    <div class="story-title"><a href="https://www.tomshardware.com/video-games/console-gaming/microsofts-unhackable-xbox-one-has-been-hacked-by-bliss-the-2013-console-finally-fell-to-voltage-glitching-allowing-the-loading-of-unsigned-code-at-every-level">Microsoft's 'unhackable' Xbox One has been hacked by 'Bliss'</a></div>
+                    <div class="story-meta">483 points | 8 hours ago | tomshardware.com</div>
+                    <div class="story-summary">The 2013 Xbox One console has finally been compromised through voltage glitching techniques, enabling unsigned code execution at all system levels.</div>
+                </div>
+
+                <div class="story">
+                    <div class="story-title"><a href="https://kagi.com/smallweb/">Kagi Small Web</a></div>
+                    <div class="story-meta">679 points | 14 hours ago | kagi.com</div>
+                    <div class="story-summary">Kagi search engine introduces a new feature highlighting content from small, independent websites and personal blogs, promoting web diversity beyond major platforms.</div>
+                </div>
+
+                <div class="story">
+                    <div class="story-title"><a href="https://mistral.ai/news/forge">Mistral AI Releases Forge</a></div>
+                    <div class="story-meta">54 points | 2 hours ago | mistral.ai</div>
+                    <div class="story-summary">Mistral AI launches Forge, a new developer platform and API framework designed to simplify building applications with their language models.</div>
+                </div>
+
+                <div class="story">
+                    <div class="story-title"><a href="https://unsloth.ai/docs/new/studio">Unsloth Studio</a></div>
+                    <div class="story-meta">123 points | 8 hours ago | unsloth.ai</div>
+                    <div class="story-summary">Unsloth releases Studio, a new visual interface for fine-tuning large language models with 2x faster training and 80% less memory usage.</div>
+                </div>
+
+                <div class="story">
+                    <div class="story-title"><a href="https://wasmer.io/posts/edgejs-safe-nodejs-using-wasm-sandbox">Edge.js: Run Node apps inside a WebAssembly sandbox</a></div>
+                    <div class="story-meta">82 points | 5 hours ago | wasmer.io</div>
+                    <div class="story-summary">Wasmer introduces Edge.js, enabling secure execution of Node.js applications within WebAssembly sandboxes for enhanced isolation and security.</div>
+                </div>
+            </div>
+
+            <!-- arXiv Papers Section -->
+            <div class="section">
+                <h2 class="section-title"><span class="emoji">📄</span> Top 10 arXiv Papers (cs.AI)</h2>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15607">Do Metrics for Counterfactual Explanations Align with User Perception?</a></div>
+                    <div class="paper-meta">arXiv:2603.15607 | Accepted at XAI 2026 | cs.AI, cs.HC</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">Current algorithmic metrics for evaluating counterfactual explanations in AI systems lack validation against actual human judgments of explanation quality.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">Empirical study comparing algorithmic metrics with human ratings across three datasets, analyzing correlations and predictive combinations.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">Correlations between algorithmic metrics and human ratings are weak and dataset-dependent; increasing metric count doesn't improve predictions.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Current counterfactual evaluation metrics fail to capture key aspects of explanation quality as perceived by users, requiring more human-centered approaches.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15594">Democratizing Frontier Search Agents by Fully Open-Sourcing Training Data</a></div>
+                    <div class="paper-meta">arXiv:2603.15594 | 15 pages, 6 figures | cs.AI, cs.CL</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">Development of high-performance search agents is dominated by industrial giants due to lack of transparent, high-quality training data.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">OpenSeeker introduces fact-grounded scalable QA synthesis and denoised trajectory synthesis to generate complex multi-hop reasoning tasks.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">Trained on only 11.7k samples, achieves SOTA on BrowseComp (29.5% vs 15.3%), BrowseComp-ZH (48.4%), xbench-DeepSearch, and WideSearch.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Fully open-sourcing training data and model weights democratizes frontier search agent research and enables broader community innovation.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15586">Computational Concept of the Psyche</a></div>
+                    <div class="paper-meta">arXiv:2603.15586 | 19 pages, 5 figures | cs.AI, eess.SY</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">Need for computational models of the human psyche as a foundation for constructing artificial general intelligence systems.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">Proposes cognitive architecture where psyche is the operating system comprising state space, needs determining meaning, and intelligence as decision-making.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">Formalizes AGI as optimal decision-making in agent needs space under uncertainty, with minimal experimental implementation demonstrated.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">The psyche-as-OS framework provides a computational foundation for AGI through experiential learning considering biological and existential significance.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15527">Are Dilemmas and Conflicts in LLM Alignment Solvable? A View from Priority Graph</a></div>
+                    <div class="paper-meta">arXiv:2603.15527 | cs.AI, cs.CY</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">LLMs increasingly face conflicts and dilemmas in diverse scenarios, but understanding and resolving these alignment conflicts remains challenging.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">Models LLM preferences as a priority graph with context-specific edges, revealing "priority hacking" vulnerability and proposing runtime verification.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">The priority graph reveals alignment is challenging because the graph is neither static nor consistent across contexts; many ethical dilemmas are philosophically irreducible.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Unified stable LLM alignment is very challenging; runtime verification can enhance robustness but fundamental ethical dilemmas remain open problems.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15500">Understanding Reasoning in LLMs through Strategic Information Allocation under Uncertainty</a></div>
+                    <div class="paper-meta">arXiv:2603.15500 | cs.AI, cs.LG</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">The mechanisms behind LLM "Aha moments" during reasoning (like self-correction following "Wait" tokens) remain unclear.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">Information-theoretic framework decomposing reasoning into procedural information and epistemic verbalization of uncertainty for downstream control.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">Strong reasoning performance is driven by uncertainty externalization rather than specific surface tokens; purely procedural reasoning can become informationally stagnant.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Epistemic verbalization enables continued information acquisition and is critical for achieving information sufficiency in LLM reasoning.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15483">Talk, Evaluate, Diagnose: User-aware Agent Evaluation with Automated Error Analysis</a></div>
+                    <div class="paper-meta">arXiv:2603.15483 | Accepted at ICLR 2026 | cs.AI</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">Agent evaluation lacks scalability across heterogeneous domains and doesn't systematically account for user role and expertise in interactions.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">TED framework: reusable user personas, LLM-as-judge with grading notes, automated error analysis tool revealing inconsistencies and common errors.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">TED reveals new insights on agent performance across models and user expertise; incorporating error remedies yields 8-10% gains on proposed metrics.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Effective agent evaluation requires metrics for conversation quality, efficiency, and systematic error diagnosis beyond correctness alone.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15473">Agent Lifecycle Toolkit (ALTK): Reusable Middleware Components for Robust AI Agents</a></div>
+                    <div class="paper-meta">arXiv:2603.15473 | Demonstration track | cs.AI</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">AI agent failure modes in enterprise (misinterpreted tool arguments, silent reasoning errors, policy violations) create consequential risks without systematic handling.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">ALTK provides modular middleware across full agent lifecycle: post-request, pre-LLM, post-LLM, pre-tool, post-tool, pre-response interventions.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">Detects, repairs, and mitigates common failure modes with consistent interfaces compatible with low-code tools like ContextForge MCP Gateway and Langflow.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">ALTK significantly reduces effort required to build reliable, production-grade agents through reusable, systematic middleware components.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15452">Unlocking the Value of Text: Event-Driven Reasoning and Multi-Level Alignment for Time Series Forecasting</a></div>
+                    <div class="paper-meta">arXiv:2603.15452 | Accepted at ICLR 2026 | cs.AI</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">Time series forecasting methods rely primarily on numerical data, missing complex patterns associated with multimodal information in real-world scenarios.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">VoT proposes Event-driven Reasoning combining exogenous text with LLM reasoning, Historical In-context Learning, and Multi-level Alignment at representation and prediction levels.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">Significant improvements over existing methods across 10 real-world domains, validating effective utilization of textual information for forecasting.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Event-driven reasoning with multi-level alignment successfully unlocks the value of text for time series forecasting, outperforming numerical-only approaches.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15434">User-Reaction Aware Policy Optimization via Scalar-Verbal Hybrid Reinforcement Learning</a></div>
+                    <div class="paper-meta">arXiv:2603.15434 | cs.AI</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">Emotional support dialogue systems relying on expert-defined scalar rewards suffer from information sparsity and diverge from facilitating positive emotional shifts.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">RAPO framework with Hindsight Dialogue Selection, Generative Hindsight Feedback, and Scalar-Verbal Hybrid Policy Optimization optimizing over interaction consequences.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">Significantly outperforms strong RL baselines on ESC and Sotopia benchmarks in driving positive interaction outcomes through reaction-aware optimization.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Treating dialogue as a reaction-driven process with dense natural-language feedback from simulated user responses improves emotional support dialogue systems.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.15411">A Hybrid Modeling Framework for Crop Prediction Tasks via Dynamic Parameter Calibration and Multi-Task Learning</a></div>
+                    <div class="paper-meta">arXiv:2603.15411 | cs.AI, cs.LG</div>
+                    <div class="analysis">
+                        <div class="analysis-item">
+                            <div class="analysis-label">Problem</div>
+                            <div class="analysis-content">Traditional biophysical models lack precision for site-specific crop management; deep learning produces biologically unrealistic predictions and requires large datasets.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Method</div>
+                            <div class="analysis-content">Hybrid modeling using neural network to parameterize differentiable biophysical model with multi-task learning for data sharing across cultivars.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Results</div>
+                            <div class="analysis-content">60% improvement for phenology prediction and 40% for cold hardiness compared to deployed biophysical models while preserving biological realism.</div>
+                        </div>
+                        <div class="analysis-item">
+                            <div class="analysis-label">Conclusion</div>
+                            <div class="analysis-content">Hybrid approach successfully combines neural network flexibility with biophysical model interpretability for accurate, realistic crop state predictions.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HuggingFace Models Section -->
+            <div class="section">
+                <h2 class="section-title"><span class="emoji">🤗</span> HuggingFace Top 15 Trending Models (Last 30 Days)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model ID</th>
+                            <th>Type</th>
+                            <th>Params</th>
+                            <th>Downloads</th>
+                            <th>Likes</th>
+                            <th>Updated</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="rank">1</td>
+                            <td class="model-name"><a href="https://huggingface.co/fishaudio/s2-pro">fishaudio/s2-pro</a></td>
+                            <td>Text-to-Speech</td>
+                            <td>5B</td>
+                            <td class="stats">7k</td>
+                            <td class="stats">585</td>
+                            <td>6 days ago</td>
+                            <td class="description">State-of-the-art text-to-speech model from Fish Audio with 5B parameters and high-quality voice synthesis.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">2</td>
+                            <td class="model-name"><a href="https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.5-35B-A3B-Uncensored</a></td>
+                            <td>Image-Text-to-Text</td>
+                            <td>35B</td>
+                            <td class="stats">112k</td>
+                            <td class="stats">479</td>
+                            <td>7 days ago</td>
+                            <td class="description">Uncensored variant of Qwen 3.5 with 35B parameters for multimodal vision-language tasks.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">3</td>
+                            <td class="model-name"><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning</a></td>
+                            <td>Text Generation</td>
+                            <td>28B</td>
+                            <td class="stats">78.8k</td>
+                            <td class="stats">826</td>
+                            <td>10 days ago</td>
+                            <td class="description">Reasoning-distilled Qwen 3.5 model with enhanced chain-of-thought capabilities and logical inference.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">4</td>
+                            <td class="model-name"><a href="https://huggingface.co/Tesslate/OmniCoder-9B">Tesslate/OmniCoder-9B</a></td>
+                            <td>Text Generation</td>
+                            <td>9B</td>
+                            <td class="stats">8.72k</td>
+                            <td class="stats">276</td>
+                            <td>5 days ago</td>
+                            <td class="description">Versatile code generation model supporting multiple programming languages with 9B parameters.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">5</td>
+                            <td class="model-name"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16">nvidia/Nemotron-3-Super-120B-A12B-BF16</a></td>
+                            <td>Text Generation</td>
+                            <td>124B</td>
+                            <td class="stats">36.8k</td>
+                            <td class="stats">238</td>
+                            <td>3 days ago</td>
+                            <td class="description">NVIDIA's flagship 120B parameter language model in BF16 precision for enterprise applications.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">6</td>
+                            <td class="model-name"><a href="https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.5-9B-Uncensored</a></td>
+                            <td>Text Generation</td>
+                            <td>9B</td>
+                            <td class="stats">255k</td>
+                            <td class="stats">519</td>
+                            <td>14 days ago</td>
+                            <td class="description">Compact uncensored variant of Qwen 3.5 with 9B parameters for general text generation tasks.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">7</td>
+                            <td class="model-name"><a href="https://huggingface.co/Lightricks/LTX-2.3">Lightricks/LTX-2.3</a></td>
+                            <td>Image-to-Video</td>
+                            <td>-</td>
+                            <td class="stats">644k</td>
+                            <td class="stats">661</td>
+                            <td>2 days ago</td>
+                            <td class="description">Latest version of Lightricks' LTX image-to-video generation model with improved temporal consistency.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">8</td>
+                            <td class="model-name"><a href="https://huggingface.co/Qwen/Qwen3.5-9B">Qwen/Qwen3.5-9B</a></td>
+                            <td>Image-Text-to-Text</td>
+                            <td>10B</td>
+                            <td class="stats">2.27M</td>
+                            <td class="stats">890</td>
+                            <td>16 days ago</td>
+                            <td class="description">Official Qwen 3.5 multimodal model combining vision and language understanding with 10B parameters.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">9</td>
+                            <td class="model-name"><a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603">mistralai/Mistral-Small-4-119B</a></td>
+                            <td>Text Generation</td>
+                            <td>119B</td>
+                            <td class="stats">1.87k</td>
+                            <td class="stats">198</td>
+                            <td>10 hours ago</td>
+                            <td class="description">Mistral's latest Small model variant with 119B parameters, released March 2026 for efficient inference.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">10</td>
+                            <td class="model-name"><a href="https://huggingface.co/HumeAI/tada-1b">HumeAI/tada-1b</a></td>
+                            <td>Text-to-Speech</td>
+                            <td>2B</td>
+                            <td class="stats">36.7k</td>
+                            <td class="stats">214</td>
+                            <td>6 hours ago</td>
+                            <td class="description">Hume AI's 2B parameter text-to-speech model with emotional expression and prosodic control.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">11</td>
+                            <td class="model-name"><a href="https://huggingface.co/LocoreMind/LocoTrainer-4B">LocoreMind/LocoTrainer-4B</a></td>
+                            <td>Text Generation</td>
+                            <td>4B</td>
+                            <td class="stats">1.58k</td>
+                            <td class="stats">176</td>
+                            <td>4 days ago</td>
+                            <td class="description">Compact 4B parameter training assistant model optimized for educational content generation.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">12</td>
+                            <td class="model-name"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4">nvidia/Nemotron-3-Super-120B-NVFP4</a></td>
+                            <td>Text Generation</td>
+                            <td>67B</td>
+                            <td class="stats">295k</td>
+                            <td class="stats">162</td>
+                            <td>3 days ago</td>
+                            <td class="description">NVIDIA Nemotron in NVFP4 precision format achieving 67B effective parameters with quantization.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">13</td>
+                            <td class="model-name"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8">nvidia/Nemotron-3-Super-120B-FP8</a></td>
+                            <td>Text Generation</td>
+                            <td>124B</td>
+                            <td class="stats">210k</td>
+                            <td class="stats">161</td>
+                            <td>3 days ago</td>
+                            <td class="description">NVIDIA Nemotron 120B parameter model in FP8 precision for optimal memory efficiency.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">14</td>
+                            <td class="model-name"><a href="https://huggingface.co/zai-org/GLM-OCR">zai-org/GLM-OCR</a></td>
+                            <td>Image-to-Text</td>
+                            <td>-</td>
+                            <td class="stats">2.74M</td>
+                            <td class="stats">1.33k</td>
+                            <td>6 days ago</td>
+                            <td class="description">GLM-based OCR model for accurate text extraction from images with multi-language support.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">15</td>
+                            <td class="model-name"><a href="https://huggingface.co/Tesslate/OmniCoder-9B-GGUF">Tesslate/OmniCoder-9B-GGUF</a></td>
+                            <td>Text Generation</td>
+                            <td>9B</td>
+                            <td class="stats">30.2k</td>
+                            <td class="stats">117</td>
+                            <td>6 days ago</td>
+                            <td class="description">GGUF quantized version of OmniCoder 9B for efficient local inference on consumer hardware.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GitHub Repositories Section -->
+            <div class="section">
+                <h2 class="section-title"><span class="emoji">⭐</span> GitHub Top 10 Trending Python Repositories</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Repository</th>
+                            <th>Stars Today</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="rank">1</td>
+                            <td class="repo-name"><a href="https://github.com/langchain-ai/deepagents">langchain-ai/deepagents</a></td>
+                            <td class="stats">1,415</td>
+                            <td class="description">Agent harness built with LangChain and LangGraph featuring planning tools, filesystem backend, and subagent spawning for complex agentic tasks.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">2</td>
+                            <td class="repo-name"><a href="https://github.com/resemble-ai/chatterbox">resemble-ai/chatterbox</a></td>
+                            <td class="stats">-</td>
+                            <td class="description">State-of-the-art open-source text-to-speech system from Resemble AI with high-quality voice cloning capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">3</td>
+                            <td class="repo-name"><a href="https://github.com/dimensionalOS/dimos">dimensionalOS/dimos</a></td>
+                            <td class="stats">154</td>
+                            <td class="description">Agentic operating system for physical space enabling natural language control of humanoids, quadrupeds, drones, and other hardware platforms.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">4</td>
+                            <td class="repo-name"><a href="https://github.com/TauricResearch/TradingAgents">TauricResearch/TradingAgents</a></td>
+                            <td class="stats">-</td>
+                            <td class="description">Multi-agent LLM financial trading framework leveraging coordinated AI agents for market analysis and trading decisions.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">5</td>
+                            <td class="repo-name"><a href="https://github.com/MiroMindAI/MiroThinker">MiroMindAI/MiroThinker</a></td>
+                            <td class="stats">146</td>
+                            <td class="description">Deep research agent optimized for complex research and prediction tasks, achieving 74.0 and 88.2 on BrowseComp benchmark.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">6</td>
+                            <td class="repo-name"><a href="https://github.com/financial-datasets/mcp-server">financial-datasets/mcp-server</a></td>
+                            <td class="stats">62</td>
+                            <td class="description">MCP server for interacting with Financial Datasets stock market API, enabling LLM access to financial data.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">7</td>
+                            <td class="repo-name"><a href="https://github.com/volcengine/OpenViking">volcengine/OpenViking</a></td>
+                            <td class="stats">1,295</td>
+                            <td class="description">Open-source context database for AI agents unifying memory, resources, and skills management through file system paradigm.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">8</td>
+                            <td class="repo-name"><a href="https://github.com/peters/horizon">peters/horizon</a></td>
+                            <td class="stats">46</td>
+                            <td class="description">GPU-accelerated infinite-canvas terminal written in Rust for high-performance terminal applications.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">9</td>
+                            <td class="repo-name"><a href="https://github.com/ywong137/speech-speed">ywong137/speech-speed</a></td>
+                            <td class="stats">71</td>
+                            <td class="description">Chrome extension that automatically adjusts video playback speed based on speaker's talking pace using speech recognition.</td>
+                        </tr>
+                        <tr>
+                            <td class="rank">10</td>
+                            <td class="repo-name"><a href="https://github.com/gsd-build/get-shit-done">gsd-build/get-shit-done</a></td>
+                            <td class="stats">-</td>
+                            <td class="description">Meta-prompting, context engineering and specification-driven development system for AI-assisted software development.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Key Trends Section -->
+            <div class="section">
+                <h2 class="section-title"><span class="emoji">🔥</span> Key Trends & Highlights</h2>
+                <div class="trends">
+                    <div class="trend-item">
+                        <div class="trend-number">1</div>
+                        <div class="trend-content">
+                            <h4>Open-Source Search Agents Democratization</h4>
+                            <p>OpenSeeker represents a major breakthrough in fully open-sourcing frontier search agent training data, achieving SOTA performance with just 11.7k samples and outperforming industrial competitors like Tongyi DeepResearch.</p>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-number">2</div>
+                        <div class="trend-content">
+                            <h4>Agent Middleware & Production Readiness</h4>
+                            <p>Multiple papers (ALTK, TED framework) focus on making AI agents production-ready through systematic error handling, user-aware evaluation, and reusable middleware components across the agent lifecycle.</p>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-number">3</div>
+                        <div class="trend-content">
+                            <h4>LLM Alignment & Safety Challenges</h4>
+                            <p>Research on priority graphs reveals fundamental challenges in LLM alignment, showing that ethical dilemmas may be philosophically irreducible and unified stable alignment remains an open problem.</p>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-number">4</div>
+                        <div class="trend-content">
+                            <h4>Multimodal Model Releases</h4>
+                            <p>Significant activity in multimodal AI with new releases from Qwen 3.5 series, Mistral Small 4, NVIDIA Nemotron 3, and specialized models for OCR (GLM-OCR) and video generation (LTX-2.3).</p>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-number">5</div>
+                        <div class="trend-content">
+                            <h4>Reasoning Mechanisms in LLMs</h4>
+                            <p>Information-theoretic frameworks are shedding light on "Aha moments" in LLM reasoning, showing that uncertainty externalization rather than specific tokens drives strong reasoning performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>AI Daily Report | Generated on March 18, 2026 | Data sources: arXiv, HuggingFace, GitHub, Hacker News</p>
+            <p><a href="https://chenlijn.github.io/ai-daily/">View Online</a> | <a href="https://github.com/chenlijn/ai-daily">GitHub Repository</a></p>
+        </div>
+    </div>
+</body>
+</html>
