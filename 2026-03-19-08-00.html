@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - March 19, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .trends-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        .trends-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .trend-item {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .trend-item::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+        .paper-card {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s;
+        }
+        .paper-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .paper-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #24292e;
+            margin-bottom: 10px;
+        }
+        .paper-title a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .paper-title a:hover {
+            text-decoration: underline;
+        }
+        .paper-meta {
+            color: #586069;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .paper-abstract {
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .analysis-box {
+            background: #f6f8fa;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        .analysis-box h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .analysis-item {
+            font-size: 0.9em;
+        }
+        .analysis-item strong {
+            color: #24292e;
+        }
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .model-card {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .model-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .model-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .model-name a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .model-name a:hover {
+            text-decoration: underline;
+        }
+        .model-type {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        .model-stats {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #586069;
+        }
+        .model-stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .model-desc {
+            color: #444;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .repo-card {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: box-shadow 0.3s;
+        }
+        .repo-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .repo-info {
+            flex: 1;
+        }
+        .repo-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .repo-name a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        .repo-name a:hover {
+            text-decoration: underline;
+        }
+        .repo-desc {
+            color: #586069;
+            font-size: 0.95em;
+        }
+        .repo-stars {
+            background: #fff3cd;
+            color: #856404;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .hn-story {
+            background: #fff;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            transition: box-shadow 0.3s;
+        }
+        .hn-story:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .hn-rank {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            min-width: 30px;
+        }
+        .hn-content {
+            flex: 1;
+        }
+        .hn-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .hn-title a {
+            color: #24292e;
+            text-decoration: none;
+        }
+        .hn-title a:hover {
+            color: #667eea;
+        }
+        .hn-meta {
+            color: #586069;
+            font-size: 0.85em;
+        }
+        .hn-points {
+            color: #ff6600;
+            font-weight: bold;
+        }
+        .hn-summary {
+            color: #444;
+            font-size: 0.9em;
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+        .footer {
+            background: #f6f8fa;
+            padding: 30px;
+            text-align: center;
+            color: #586069;
+            font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .model-grid {
+                grid-template-columns: 1fr;
+            }
+            .repo-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .repo-stars {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Daily Report</h1>
+            <div class="subtitle">March 19, 2026 | Thursday | Generated at 08:00 AM Beijing Time</div>
+        </div>
+
+        <div class="content">
+            <!-- ArXiv Section -->
+            <div class="section">
+                <h2 class="section-title">📚 arXiv cs.AI - Latest Papers</h2>
+                
+                <div class="trends-box">
+                    <h3>🔥 3 Major Trends Identified</h3>
+                    <div class="trend-item"><strong>Agentic AI & Autonomous Systems:</strong> Multiple papers focus on AI agents with enhanced planning, tool use, and self-correction capabilities. Notable works include anticipatory planning for multimodal agents, inverse specification for slide generation, and runtime governance frameworks.</div>
+                    <div class="trend-item"><strong>Multimodal Model Evaluation & Benchmarking:</strong> Strong emphasis on comprehensive benchmarking - from audio-visual social interactivity (SocialOmni) to surgical intelligence (SurgΣ) and time-sensitive knowledge in VLMs (V-DyKnow).</div>
+                    <div class="trend-item"><strong>Reasoning & Alignment Improvements:</strong> Research on learning from reflective experience (LEAFE), conformal factuality for RAG, and cultural alignment through prompt programming.</div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16859">Benchmarking Audio-Visual Social Interactivity in Omni Models</a></div>
+                    <div class="paper-meta">arXiv:2603.16859 | Authors: Tianyu Xie et al.</div>
+                    <div class="paper-abstract">Omni-modal large language models (OLMs) redefine human-machine interaction by natively integrating audio, vision, and text. This paper proposes SocialOmni, a comprehensive benchmark operationalizing evaluation of conversational interactivity across speaker separation, interruption timing control, and natural interruption generation. Benchmarked 12 leading OLMs, uncovering significant variance in social-interaction capabilities.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Existing OLM benchmarks remain anchored to static, accuracy-centric tasks, leaving a gap in assessing social interactivity for natural dialogues.</div>
+                            <div class="analysis-item"><strong>Method:</strong> SocialOmni features 2,000 perception samples and 209 interaction-generation instances with strict temporal and contextual constraints, complemented by controlled audio-visual inconsistency scenarios.</div>
+                            <div class="analysis-item"><strong>Results:</strong> Significant variance across 12 leading OLMs; pronounced decoupling between perceptual accuracy and ability to generate contextually appropriate interruptions.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Understanding-centric metrics alone are insufficient for conversational social competence; diagnostics yield actionable signals for bridging perception-interaction divide.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16843">Internalizing Agency from Reflective Experience</a></div>
+                    <div class="paper-meta">arXiv:2603.16843 | Submitted to ICML 2026</div>
+                    <div class="paper-abstract">Prevailing outcome-driven post-training methods primarily optimize final success signals, leaving rich environment feedback underutilized. The paper proposes LEAFE (Learning Feedback-Grounded Agency from Reflective Experience), a framework that internalizes recovery agency from reflective experience by summarizing environment feedback into actionable experience and exploring alternative branches.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Outcome-driven methods lead to distribution sharpening - the policy becomes better at reproducing narrow successful behaviors but fails to expand problem-solving capacity (Pass@k) in long-horizon settings.</div>
+                            <div class="analysis-item"><strong>Method:</strong> During exploration, the agent summarizes environment feedback into actionable experience, backtracks to earlier decision points, and explores alternative branches with revised actions, then distills through SFT.</div>
+                            <div class="analysis-item"><strong>Results:</strong> Consistently improves Pass@1 over base model; achieves higher Pass@k than outcome-driven baselines (GRPO) and experience-based methods, with gains up to 14% on Pass@128.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Rich environment feedback can be effectively internalized to build more capable autonomous agents.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16839">Learning to Present: Inverse Specification Rewards for Agentic Slide Generation</a></div>
+                    <div class="paper-meta">arXiv:2603.16839 | Code and Dataset Available</div>
+                    <div class="paper-abstract">Proposes an OpenEnv-compatible RL environment where LLM agents learn to research topics, plan content, and generate professional HTML slide presentations through tool use. Introduces inverse specification reward that measures how faithfully generated slides convey their intended purpose. Fine-tuned Qwen2.5-Coder-7B via GRPO achieves 91.2% of Claude Opus 4.6's quality.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Automated presentation generation requires coherent content creation, visual design, and audience-aware communication.</div>
+                            <div class="analysis-item"><strong>Method:</strong> Multi-component reward system combining structural validation, render quality assessment, LLM-based aesthetic scoring, content quality metrics, and inverse specification reward. Trained only 0.5% of parameters.</div>
+                            <div class="analysis-item"><strong>Results:</strong> Fine-tuned 7B model achieves 91.2% of Claude Opus 4.6's quality while improving 33.1% over base model. Instruction adherence and tool-use compliance determine agentic task performance more than parameter count.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Open-source SlideRL dataset of 288 multi-turn rollout trajectories released for community use.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16822">A Spectrum of Large-Scale Multimodal Data and Foundation Models for Surgical Intelligence</a></div>
+                    <div class="paper-meta">arXiv:2603.16822 | 16 authors including NVIDIA and university researchers</div>
+                    <div class="paper-abstract">Introduces SurgΣ, a spectrum of large-scale multimodal data and foundation models for surgical intelligence. SurgΣ-DB consolidates heterogeneous surgical data sources into a unified schema, spanning 6 clinical specialties and 18 surgical tasks covering understanding, reasoning, planning, and generation at unprecedented scale (over 5.98M conversations).</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Surgical AI frameworks remain task-specific and struggle to generalize across procedures and institutions due to lack of large-scale, systematically curated multimodal data.</div>
+                            <div class="analysis-item"><strong>Method:</strong> Unified schema for heterogeneous data including open-source datasets, curated in-house clinical collections and web-source data. Incorporates hierarchical reasoning annotations for deeper contextual understanding.</div>
+                            <div class="analysis-item"><strong>Results:</strong> Foundation models built on SurgΣ-DB show improved cross-task generalization and interpretability through large-scale multimodal annotations and structured reasoning.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Large-scale multimodal annotations with unified semantic design enable practical benefits for surgical AI systems.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16817">Is Conformal Factuality for RAG-based LLMs Robust?</a></div>
+                    <div class="paper-meta">arXiv:2603.16817 | 56 pages</div>
+                    <div class="paper-abstract">Systematically analyzes reliability and usefulness of conformal factuality for RAG-based LLMs across generation, scoring, calibration, robustness, and efficiency. Proposes novel informativeness-aware metrics. Finds that conformal filtering suffers from low usefulness at high factuality levels and is not robust to distribution shifts.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> While RAG grounds responses in retrieved evidence, it provides no statistical guarantee of correctness. Conformal factuality filtering offers distribution-free reliability but may produce vacuous outputs.</div>
+                            <div class="analysis-item"><strong>Method:</strong> Evaluation across three benchmarks and multiple model families with novel informativeness-aware metrics reflecting task utility.</div>
+                            <div class="analysis-item"><strong>Results:</strong> (i) Low usefulness at high factuality due to vacuous outputs, (ii) Conformal guarantee not robust to distribution shifts, (iii) Lightweight entailment-based verifiers match LLM-based scorers with 100x fewer FLOPs.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Exposes factuality-informativeness trade-offs and fragility under distribution shifts, providing guidance for building reliable RAG pipelines.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16777">Anticipatory Planning for Multimodal AI Agents</a></div>
+                    <div class="paper-meta">arXiv:2603.16777 | Published at CVPR 2026 Findings Track</div>
+                    <div class="paper-abstract">Most existing multimodal systems remain reactive, optimizing actions in isolation without reasoning about future states. Introduces TraceR1, a two-stage RL framework that explicitly trains anticipatory reasoning by forecasting short-horizon trajectories before execution. Achieves substantial improvements across seven benchmarks covering computer-use and multimodal tool-use reasoning.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Reactive systems lack planning coherence and cannot reliably solve high-level, multi-step tasks requiring long-term goal reasoning.</div>
+                            <div class="analysis-item"><strong>Method:</strong> Stage 1: Trajectory-level RL with rewards enforcing global consistency. Stage 2: Grounded RL fine-tuning using execution feedback from frozen tool agents.</div>
+                            <div class="analysis-item"><strong>Results:</strong> Substantial improvements in planning stability, execution robustness, and generalization over reactive and single-stage baselines across seven benchmarks.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Anticipatory trajectory reasoning is a key principle for building multimodal agents in complex real-world environments.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16659">Machines acquire scientific taste from institutional traces</a></div>
+                    <div class="paper-meta">arXiv:2603.16659 | Economics & AI</div>
+                    <div class="paper-abstract">Scientific taste—the ability to judge which untested ideas deserve pursuit—governs scientific advance but has never been successfully automated. This paper shows that fine-tuning language models on journal publication decisions recovers evaluative judgment inaccessible to both frontier models and human expertise. Best model achieves 59% accuracy vs. 42% for expert panels and 31% for frontier models.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Capacity that most governs scientific advance is not reasoning but taste, exercised daily by editors and funders but never successfully articulated, taught, or automated.</div>
+                            <div class="analysis-item"><strong>Method:</strong> Fine-tuning on years of publication records from management and economics journals, tested on held-out benchmark of research pitches spanning four quality tiers.</div>
+                            <div class="analysis-item"><strong>Results:</strong> Fine-tuned models surpass every frontier model and expert panel (59% vs 42% vs 31%), with calibrated confidence reaching 100% on highest-confidence predictions.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Scientific taste was deposited in institutional records, waiting to be extracted—providing a scalable mechanism to triage expanding scientific production.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16744">Nonstandard Errors in AI Agents</a></div>
+                    <div class="paper-meta">arXiv:2603.16744 | 45 pages</div>
+                    <div class="paper-abstract">Deploying 150 autonomous Claude Code agents to independently test six hypotheses about market quality trends, finds that AI agents exhibit sizable nonstandard errors (NSEs)—uncertainty from agent-to-agent variation in analytical choices. Different model families exhibit stable "empirical styles." AI peer review has minimal effect, but exposure to top-rated exemplars reduces interquartile range by 80-99%.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> AI agents may produce different empirical results given the same data and research question, analogous to variation among human researchers.</div>
+                            <div class="analysis-item"><strong>Method:</strong> 150 autonomous Claude Code agents test hypotheses on NYSE TAQ data; three-stage feedback protocol examining peer review and exemplar effects.</div>
+                            <div class="analysis-item"><strong>Results:</strong> AI agents diverge substantially on measure choice; written critiques have minimal effect but top-rated exemplars dramatically reduce dispersion.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Convergence reflects imitation rather than understanding—critical implications for automated policy evaluation and empirical research.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16642">When AI Navigates the Fog of War</a></div>
+                    <div class="paper-meta">arXiv:2603.16642 | AI & Geopolitics</div>
+                    <div class="paper-abstract">Temporally grounded case study of early stages of 2026 Middle East conflict, requiring models to reason only from information publicly available at each moment. First temporally grounded analysis of LLM reasoning in ongoing geopolitical conflict. Models display strategic realism but capability is uneven—more reliable in economically/logistically structured settings than politically ambiguous multi-actor environments.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Retrospective geopolitical prediction is heavily confounded by training-data leakage; need temporally grounded evaluation.</div>
+                            <div class="analysis-item"><strong>Method:</strong> 11 critical temporal nodes, 42 node-specific verifiable questions, 5 general exploratory questions; information strictly limited to public availability at each moment.</div>
+                            <div class="analysis-item"><strong>Results:</strong> (1) Models display strategic realism beyond surface rhetoric, (2) Capability uneven across domains, (3) Narratives evolve from containment expectations to systemic entrenchment accounts.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Serves as archival snapshot of model reasoning during unfolding crisis, enabling future studies without hindsight bias.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16197">Are Large Language Models Truly Smarter Than Humans?</a></div>
+                    <div class="paper-meta">arXiv:2603.16197 | 15 pages, 7 tables</div>
+                    <div class="paper-abstract">Three complementary experiments forming rigorous multi-method contamination audit of six frontier LLMs: GPT-4o, GPT-4o-mini, DeepSeek-R1, DeepSeek-V3, Llama-3.3-70B, and Qwen3-235B. Overall contamination rate of 13.8% (18.1% in STEM, up to 66.7% in Philosophy). Accuracy drops 7.0 percentage points under indirect reference, rising to 19.8 pp in Law and Ethics.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> Most benchmarks are fully public with questions widely mirrored across internet, creating systematic risk that models were trained on evaluation data.</div>
+                            <div class="analysis-item"><strong>Method:</strong> Experiment 1: Lexical contamination detection on 513 MMLU questions. Experiment 2: Paraphrase and indirect-reference diagnostic. Experiment 3: TS-Guessing behavioral probes.</div>
+                            <div class="analysis-item"><strong>Results:</strong> DeepSeek-R1 displays distributed memorization signature (76.6% partial reconstruction, 0% verbatim recall). Contamination ranking: STEM > Professional > Social Sciences > Humanities.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Public leaderboards may systematically overestimate true LLM capabilities due to benchmark contamination.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.16581">V-DyKnow: A Dynamic Benchmark for Time-Sensitive Knowledge in Vision Language Models</a></div>
+                    <div class="paper-meta">arXiv:2603.16581 | Dataset and Code Released</div>
+                    <div class="paper-abstract">Vision-Language Models treat factual knowledge as time-invariant, but real-world facts are time-sensitive. V-DyKnow evaluates time-sensitive factual knowledge in VLMs, analyzing reliability across modalities and efficacy of knowledge editing and multi-modal RAG. VLMs frequently output outdated facts; factual reliability degrades from textual to visual stimuli.</div>
+                    <div class="analysis-box">
+                        <h4>📊 Full Analysis</h4>
+                        <div class="analysis-grid">
+                            <div class="analysis-item"><strong>Problem:</strong> VLMs trained on data snapshots implicitly treat factual knowledge as time-invariant, causing outdated predictions.</div>
+                            <div class="analysis-item"><strong>Method:</strong> Dynamic benchmark evaluating time-sensitive factual knowledge across closed- and open-source VLMs, testing knowledge editing and multi-modal RAG methods.</div>
+                            <div class="analysis-item"><strong>Results:</strong> VLMs output outdated facts reflecting training snapshots; alignment approaches fail to consistently update knowledge across modalities.</div>
+                            <div class="analysis-item"><strong>Conclusion:</strong> Highlights fundamental limitations in how VLMs acquire and update time-sensitive knowledge across modalities.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HuggingFace Section -->
+            <div class="section">
+                <h2 class="section-title">🤗 HuggingFace Trending Models (Top 15)</h2>
+                <div class="model-grid">
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.5-35B-A3B-Uncensored</a></div>
+                        <span class="model-type">Image-Text-to-Text</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 35B params</span>
+                            <span class="model-stat">⬇️ 112k downloads</span>
+                            <span class="model-stat">❤️ 573 likes</span>
+                            <span class="model-stat">📅 Updated 8 days ago</span>
+                        </div>
+                        <div class="model-desc">Uncensored variant of Qwen3.5-35B-A3B with 0/465 refusals, MoE architecture with 256 experts, native multimodal support for text, image, and video processing.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</a></div>
+                        <span class="model-type">Text Generation</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 28B params</span>
+                            <span class="model-stat">⬇️ 78.8k downloads</span>
+                            <span class="model-stat">❤️ 879 likes</span>
+                            <span class="model-stat">📅 Updated 11 days ago</span>
+                        </div>
+                        <div class="model-desc">Reasoning model fine-tuned with Chain-of-Thought distillation from Claude-4.6 Opus interactions, demonstrating modular and structured thinking patterns for complex problem decomposition.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/fishaudio/s2-pro">fishaudio/s2-pro</a></div>
+                        <span class="model-type">Text-to-Speech</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 5B params</span>
+                            <span class="model-stat">⬇️ 7k downloads</span>
+                            <span class="model-stat">❤️ 630 likes</span>
+                            <span class="model-stat">📅 Updated 7 days ago</span>
+                        </div>
+                        <div class="model-desc">State-of-the-art TTS model with fine-grained inline prosody and emotion control, trained on 10M+ hours across 80+ languages with reinforcement learning alignment and dual-autoregressive architecture.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/Tesslate/OmniCoder-9B">Tesslate/OmniCoder-9B</a></div>
+                        <span class="model-type">Text Generation</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 9B params</span>
+                            <span class="model-stat">⬇️ 8.72k downloads</span>
+                            <span class="model-stat">❤️ 304 likes</span>
+                            <span class="model-stat">📅 Updated 6 days ago</span>
+                        </div>
+                        <div class="model-desc">Coding agent model fine-tuned on 425K+ agentic trajectories from Claude Opus 4.6 and GPT-5.3-Codex, featuring error recovery, LSP diagnostic response, and minimal edit diff patterns.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16">nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16</a></div>
+                        <span class="model-type">Text Generation</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 124B params (12B active)</span>
+                            <span class="model-stat">⬇️ 36.8k downloads</span>
+                            <span class="model-stat">❤️ 249 likes</span>
+                            <span class="model-stat">📅 Updated 4 days ago</span>
+                        </div>
+                        <div class="model-desc">NVIDIA's large language model with LatentMoE architecture combining Mamba-2, MoE, and Attention with 1M token context, designed for agentic workflows and long-context reasoning.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603">mistralai/Mistral-Small-4-119B-2603</a></div>
+                        <span class="model-type">Text Generation</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 119B params (6.5B active)</span>
+                            <span class="model-stat">⬇️ 1.87k downloads</span>
+                            <span class="model-stat">❤️ 225 likes</span>
+                            <span class="model-stat">📅 Updated 1 day ago</span>
+                        </div>
+                        <div class="model-desc">Hybrid model unifying Instruct, Reasoning, and Devstral capabilities with 256k context, multimodal input, and configurable reasoning effort—achieving 40% latency reduction vs Mistral Small 3.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/Qwen/Qwen3.5-9B">Qwen/Qwen3.5-9B</a></div>
+                        <span class="model-type">Image-Text-to-Text</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 10B params</span>
+                            <span class="model-stat">⬇️ 2.27M downloads</span>
+                            <span class="model-stat">❤️ 914 likes</span>
+                            <span class="model-stat">📅 Updated 17 days ago</span>
+                        </div>
+                        <div class="model-desc">Multimodal foundation model with Gated Delta Networks architecture, 262K native context extendable to 1M, supporting 201 languages with unified vision-language capabilities.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/Lightricks/LTX-2.3">Lightricks/LTX-2.3</a></div>
+                        <span class="model-type">Image-to-Video</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 22B params</span>
+                            <span class="model-stat">⬇️ 644k downloads</span>
+                            <span class="model-stat">❤️ 672 likes</span>
+                            <span class="model-stat">📅 Updated 3 days ago</span>
+                        </div>
+                        <div class="model-desc">DiT-based audio-video foundation model generating synchronized video and audio within single model, with improved audio/visual quality and enhanced prompt adherence over LTX-2.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/zai-org/GLM-OCR">zai-org/GLM-OCR</a></div>
+                        <span class="model-type">Image-to-Text</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 0.9B params</span>
+                            <span class="model-stat">⬇️ 2.74M downloads</span>
+                            <span class="model-stat">❤️ 1.35k likes</span>
+                            <span class="model-stat">📅 Updated 7 days ago</span>
+                        </div>
+                        <div class="model-desc">Multimodal OCR model for complex document understanding achieving #1 on OmniDocBench V1.5 (94.62 score), featuring Multi-Token Prediction loss and 1.86 pages/second PDF throughput.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/HumeAI/tada-1b">HumeAI/tada-1b</a></div>
+                        <span class="model-type">Text-to-Speech</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 2B params</span>
+                            <span class="model-stat">⬇️ 36.7k downloads</span>
+                            <span class="model-stat">❤️ 216 likes</span>
+                            <span class="model-stat">📅 Updated 1 day ago</span>
+                        </div>
+                        <div class="model-desc">TADA unified speech-language model with 1:1 text-acoustic token alignment, dynamic duration synthesis eliminating fixed frame rates, and dual-stream generation for simultaneous text and speech output.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/Qwen/Qwen3.5-35B-A3B">Qwen/Qwen3.5-35B-A3B</a></div>
+                        <span class="model-type">Image-Text-to-Text</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 36B params</span>
+                            <span class="model-stat">⬇️ 1.94M downloads</span>
+                            <span class="model-stat">❤️ 1.17k likes</span>
+                            <span class="model-stat">📅 Updated 20 days ago</span>
+                        </div>
+                        <div class="model-desc">Large multimodal MoE model with hybrid Gated DeltaNet + attention architecture, 256 experts with 8 routed per token, 262K native context extendable to 1M tokens.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/ibm-granite/granite-4.0-1b-speech">ibm-granite/granite-4.0-1b-speech</a></div>
+                        <span class="model-type">Automatic Speech Recognition</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 2B params</span>
+                            <span class="model-stat">⬇️ 20.3k downloads</span>
+                            <span class="model-stat">❤️ 150 likes</span>
+                            <span class="model-stat">📅 Updated 2 days ago</span>
+                        </div>
+                        <div class="model-desc">Compact multilingual speech-language model for ASR and bidirectional speech translation, supporting 6 languages with keyword biasing and 5.52 average WER on Open ASR leaderboard.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-kv">black-forest-labs/FLUX.2-klein-9b-kv</a></div>
+                        <span class="model-type">Image-to-Image</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 9B params</span>
+                            <span class="model-stat">⬇️ 4.21k downloads</span>
+                            <span class="model-stat">❤️ 97 likes</span>
+                            <span class="model-stat">📅 Updated 6 days ago</span>
+                        </div>
+                        <div class="model-desc">FLUX.2 [klein] with KV-cache optimization for accelerated multi-reference editing, caching key-value pairs to reduce computation and speed inference by up to 2.5x.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF">unsloth/Qwen3.5-35B-A3B-GGUF</a></div>
+                        <span class="model-type">Image-Text-to-Text</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 35B params</span>
+                            <span class="model-stat">⬇️ 1.68M downloads</span>
+                            <span class="model-stat">❤️ 694 likes</span>
+                            <span class="model-stat">📅 Updated 13 days ago</span>
+                        </div>
+                        <div class="model-desc">GGUF quantized version of Qwen3.5-35B-A3B using Unsloth Dynamic 2.0 methodology with important layers upcasted to higher precision for optimal quality preservation.</div>
+                    </div>
+
+                    <div class="model-card">
+                        <div class="model-name"><a href="https://huggingface.co/unsloth/LTX-2.3-GGUF">unsloth/LTX-2.3-GGUF</a></div>
+                        <span class="model-type">Image-to-Video</span>
+                        <div class="model-stats">
+                            <span class="model-stat">📊 21B params</span>
+                            <span class="model-stat">⬇️ 111k downloads</span>
+                            <span class="model-stat">❤️ 211 likes</span>
+                            <span class="model-stat">📅 Updated 8 days ago</span>
+                        </div>
+                        <div class="model-desc">GGUF quantized version of LTX-2.3 using Unsloth Dynamic 2.0 methodology, available in dev and distilled variants with KV-caching support for efficient ComfyUI workflows.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Section -->
+            <div class="section">
+                <h2 class="section-title">⭐ GitHub Trending Python Repositories (Daily)</h2>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/unslothai/unsloth">unslothai/unsloth</a></div>
+                        <div class="repo-desc">Unified web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally. A comprehensive framework for efficient LLM fine-tuning with significant memory and speed optimizations.</div>
+                    </div>
+                    <div class="repo-stars">⭐ 1,005 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/langchain-ai/deepagents">langchain-ai/deepagents</a></div>
+                        <div class="repo-desc">Agent harness built with LangChain and LangGraph, equipped with planning tools, filesystem backend, and ability to spawn subagents—well-equipped to handle complex agentic tasks requiring multi-step reasoning.</div>
+                    </div>
+                    <div class="repo-stars">⭐ 1,206 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/langchain-ai/open-swe">langchain-ai/open-swe</a></div>
+                        <div class="repo-desc">An Open-Source Asynchronous Coding Agent that enables AI-powered software engineering workflows with support for parallel task execution and intelligent code generation capabilities.</div>
+                    </div>
+                    <div class="repo-stars">⭐ 481 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/coleam00/context-engineering-intro">coleam00/context-engineering-intro</a></div>
+                        <div class="repo-desc">Context engineering is the new vibe coding—it's the way to actually make AI coding assistants work. Centered around Claude Code with strategies applicable to any AI coding assistant for better context management.</div>
+                    </div>
+                    <div class="repo-stars">⭐ ~400 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/am-will/codex-skills">am-will/codex-skills</a></div>
+                        <div class="repo-desc">Collection of skills and capabilities for enhancing AI coding agents, providing modular skill definitions that can be integrated into various coding assistant frameworks.</div>
+                    </div>
+                    <div class="repo-stars">⭐ 31 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/roboflow/trackers">roboflow/trackers</a></div>
+                        <div class="repo-desc">Clean, modular re-implementations of leading multi-object tracking algorithms under Apache 2.0 license. Combines with any detection model for flexible computer vision pipelines.</div>
+                    </div>
+                    <div class="repo-stars">⭐ 28 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/plastic-labs/honcho">plastic-labs/honcho</a></div>
+                        <div class="repo-desc">Memory library for building stateful agents, enabling persistent context and memory management for AI applications requiring long-term conversational and task state retention.</div>
+                    </div>
+                    <div class="repo-stars">⭐ 28 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/newton-physics/newton">newton-physics/newton</a></div>
+                        <div class="repo-desc">Open-source GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers with high-performance physics computation capabilities.</div>
+                    </div>
+                    <div class="repo-stars">⭐ 26 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/FujiwaraChoki/MoneyPrinterV2">FujiwaraChoki/MoneyPrinterV2</a></div>
+                        <div class="repo-desc">Automate the process of making money online through various digital strategies, offering tools and workflows for online monetization and passive income generation.</div>
+                    </div>
+                    <div class="repo-stars">⭐ ~150 today</div>
+                </div>
+
+                <div class="repo-card">
+                    <div class="repo-info">
+                        <div class="repo-name"><a href="https://github.com/resemble-ai/chatterbox">resemble-ai/chatterbox</a></div>
+                        <div class="repo-desc">State-of-the-art open-source TTS (Text-to-Speech) system providing high-quality voice synthesis with natural prosody and expressiveness for various applications.</div>
+                    </div>
+                    <div class="repo-stars">⭐ ~100 today</div>
+                </div>
+            </div>
+
+            <!-- Hacker News Section -->
+            <div class="section">
+                <h2 class="section-title">📰 Hacker News Top Stories</h2>
+
+                <div class="hn-story">
+                    <div class="hn-rank">1</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://www.cs.unc.edu/~stotts/COMP590-059-f24/robsrules.html">Rob Pike's Rules of Programming (1989)</a></div>
+                        <div class="hn-meta"><span class="hn-points">820 points</span> | posted 13 hours ago | 404 comments</div>
+                        <div class="hn-summary">Classic programming wisdom from Rob Pike featuring timeless principles for writing clear, maintainable code that remains relevant decades later.</div>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">2</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://www.propublica.org/article/microsoft-cloud-fedramp-cybersecurity-government">Despite Doubts, Federal Cyber Experts Approved Microsoft Cloud Service</a></div>
+                        <div class="hn-meta"><span class="hn-points">427 points</span> | posted 9 hours ago | 196 comments</div>
+                        <div class="hn-summary">Investigative report revealing federal cybersecurity concerns and approval processes surrounding Microsoft cloud services for government use.</div>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">3</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://nightingale.cafe/">Nightingale – Open-source karaoke app that works with any song on your computer</a></div>
+                        <div class="hn-meta"><span class="hn-points">478 points</span> | posted 15 hours ago | 144 comments</div>
+                        <div class="hn-summary">New open-source karaoke application enabling users to sing along with any audio file on their system, featuring real-time lyrics synchronization.</div>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">4</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://dbushell.com/2026/01/09/death-to-scroll-fade/">Death to Scroll Fade</a></div>
+                        <div class="hn-meta"><span class="hn-points">341 points</span> | posted 8 hours ago | 184 comments</div>
+                        <div class="hn-summary">Critique of modern UI patterns criticizing scroll-fade effects as user-hostile design that reduces content accessibility and readability.</div>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">5</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://techcrunch.com/2026/03/18/fbi-is-buying-location-data-to-track-us-citizens-kash-patel-wyden/">FBI is buying location data to track US citizens, director confirms</a></div>
+                        <div class="hn-meta"><span class="hn-points">338 points</span> | posted 3 hours ago | 106 comments</div>
+                        <div class="hn-summary">Confirmed reports of FBI purchasing commercial location data for surveillance purposes, raising privacy and Fourth Amendment concerns.</div>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">6</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://awards.acm.org/about/2025-turing">2025 Turing Award given for quantum information science</a></div>
+                        <div class="hn-meta"><span class="hn-points">86 points</span> | posted 6 hours ago | 21 comments</div>
+                        <div class="hn-summary">ACM announces prestigious Turing Award recognizing breakthrough contributions to quantum information science and computing.</div>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">7</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/measuring-agi-cognitive-framework/">Measuring progress toward AGI: A cognitive framework</a></div>
+                        <div class="hn-meta"><span class="hn-points">96 points</span> | posted 12 hours ago | 150 comments</div>
+                        <div class="hn-summary">Google DeepMind publishes cognitive framework for assessing progress toward Artificial General Intelligence with structured capability evaluation.</div>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">8</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://huggingface.co/datasets/open-index/hacker-news">Show HN: Hacker News archive (47M+ items, 11.6GB) as Parquet, updated every 5m</a></div>
+                        <div class="hn-meta"><span class="hn-points">271 points</span> | posted 9 hours ago | 124 comments</div>
+                        <div class="hn-summary">Comprehensive Hacker News dataset in efficient Parquet format enabling large-scale analysis of tech community discussions over time.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>AI Daily Report | Generated on March 19, 2026 at 08:00 AM Beijing Time (UTC+8)</p>
+            <p>Sources: arXiv cs.AI, HuggingFace Trending, GitHub Trending, Hacker News</p>
+            <p>🔗 <a href="https://chenlijn.github.io/ai-daily/">View Online</a> | 📧 Delivered via OpenClaw</p>
+        </div>
+    </div>
+</body>
+</html>
