@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - March 20, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        header .date {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .paper {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        .paper-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .paper-title a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .paper-title a:hover {
+            text-decoration: underline;
+        }
+        .paper-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+        .paper-analysis {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 12px;
+        }
+        .analysis-item {
+            margin-bottom: 10px;
+        }
+        .analysis-label {
+            font-weight: 600;
+            color: #764ba2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:hover {
+            background: #f5f5f5;
+        }
+        .hn-story {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .hn-rank {
+            background: #ff6600;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        .hn-content {
+            flex: 1;
+        }
+        .hn-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .hn-title a {
+            color: #333;
+            text-decoration: none;
+        }
+        .hn-title a:hover {
+            color: #667eea;
+        }
+        .hn-meta {
+            color: #666;
+            font-size: 0.85em;
+        }
+        .trend-highlight {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+        .trend-highlight h4 {
+            margin-bottom: 10px;
+        }
+        footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 500;
+            margin-right: 5px;
+        }
+        .badge-blue { background: #e3f2fd; color: #1976d2; }
+        .badge-green { background: #e8f5e9; color: #388e3c; }
+        .badge-purple { background: #f3e5f5; color: #7b1fa2; }
+        .badge-orange { background: #fff3e0; color: #e65100; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Daily Report</h1>
+            <div class="date">Friday, March 20, 2026 — 08:00 AM (Beijing Time)</div>
+        </header>
+        
+        <div class="content">
+            <!-- Hacker News Section -->
+            <section class="section">
+                <h2 class="section-title">📰 Daily News & Tech Buzz (Hacker News)</h2>
+                
+                <div class="hn-story">
+                    <div class="hn-rank">1</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://github.com/cockpit-project/cockpit">Cockpit is a web-based graphical interface for servers</a></div>
+                        <div class="hn-meta">144 points • 3 hours ago • 87 comments</div>
+                        <p style="margin-top: 8px; color: #555;">A user-friendly web interface for managing Linux servers, making system administration accessible through a browser-based dashboard.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">2</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://astral.sh/blog/openai">Astral to Join OpenAI</a></div>
+                        <div class="hn-meta">1,178 points • 10 hours ago • 726 comments</div>
+                        <p style="margin-top: 8px; color: #555;">The team behind Ruff and uv is joining OpenAI, signaling major consolidation in the Python tooling ecosystem around AI development.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">3</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://arstechnica.com/gadgets/2026/03/google-details-new-24-hour-process-to-sideload-unverified-android-apps/">Google details new 24-hour process to sideload unverified Android apps</a></div>
+                        <div class="hn-meta">423 points • 6 hours ago • 503 comments</div>
+                        <p style="margin-top: 8px; color: #555;">Google introduces a mandatory waiting period and verification process for sideloading apps, significantly tightening Android security policies.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">4</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://www.bristol.ac.uk/news/2026/march/bombarding-gamblers-with-offers-greatly-increases-betting-and-gambling-harm.html">Bombarding gamblers with offers greatly increases betting and gambling harm</a></div>
+                        <div class="hn-meta">20 points • 1 hour ago • 15 comments</div>
+                        <p style="margin-top: 8px; color: #555;">Research from University of Bristol demonstrates that promotional offers significantly exacerbate gambling addiction and financial harm.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">5</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://www.carryology.com/insights/how-the-turner-twins-are-mythbusting-modern-gear/">How the Turner twins are mythbusting modern technical apparel</a></div>
+                        <div class="hn-meta">87 points • 3 hours ago • 44 comments</div>
+                        <p style="margin-top: 8px; color: #555;">Adventurer twins conduct rigorous testing to challenge marketing claims in outdoor gear and technical clothing industry.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">6</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742">Return of the Obra Dinn: spherical mapped dithering for a 1bpp first-person game</a></div>
+                        <div class="hn-meta">222 points • 6 hours ago • 31 comments</div>
+                        <p style="margin-top: 8px; color: #555;">Technical deep dive into the unique 1-bit rendering technique used in the critically acclaimed detective game.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">7</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://github.com/KittenML/KittenTTS">Show HN: Three new Kitten TTS models – smallest less than 25MB</a></div>
+                        <div class="hn-meta">294 points • 8 hours ago • 97 comments</div>
+                        <p style="margin-top: 8px; color: #555;">Ultra-compact text-to-speech models achieving impressive quality with minimal footprint for edge deployment.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">8</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://aicode.swerdlow.dev">Be intentional about how AI changes your codebase</a></div>
+                        <div class="hn-meta">55 points • 2 hours ago • 23 comments</div>
+                        <p style="margin-top: 8px; color: #555;">A thoughtful exploration of best practices for integrating AI-generated code while maintaining code quality and team cohesion.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">9</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://esolang-bench.vercel.app/">EsoLang-Bench: Evaluating Genuine Reasoning in LLMs via Esoteric Languages</a></div>
+                        <div class="hn-meta">51 points • 2 hours ago • 17 comments</div>
+                        <p style="margin-top: 8px; color: #555;">A novel benchmark using esoteric programming languages to test LLMs' ability to learn and execute unfamiliar computational patterns.</p>
+                    </div>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-rank">10</div>
+                    <div class="hn-content">
+                        <div class="hn-title"><a href="https://www.iroh.computer/blog/noq-announcement">Noq: n0's new QUIC implementation in Rust</a></div>
+                        <div class="hn-meta">135 points • 5 hours ago • 17 comments</div>
+                        <p style="margin-top: 8px; color: #555;">A from-scratch QUIC protocol implementation focused on simplicity and embeddability for peer-to-peer networking applications.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- arXiv Section -->
+            <section class="section">
+                <h2 class="section-title">📄 Top 10 arXiv Papers (cs.AI)</h2>
+                
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.18000">A Self-Evolving Framework Through Executable Subagent Accumulation and Reuse</a></div>
+                    <div class="paper-meta">arXiv:2603.18000 • Wed, 18 Mar 2026</div>
+                    <p>Building LLM-based agents has become increasingly important. Recent works on LLM-based agent self-evolution primarily record successful experiences as textual prompts or reflections, which cannot reliably guarantee efficient task re-execution in complex scenarios.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> Traditional agent self-evolution stores experiences as text, which cannot reliably re-execute tasks efficiently in complex scenarios.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> AgentFactory proposes preserving successful task solutions as executable subagent code that continuously refines based on execution feedback.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> Subagents become increasingly robust and efficient over time, progressively reducing effort for similar tasks without manual intervention.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Executable subagents enable continuous capability accumulation with pure Python code that ensures portability across any Python-capable system.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17831">Enhancing LLM-Based Embodied Planning through Rule-Augmented Memory Synergy</a></div>
+                    <div class="paper-meta">arXiv:2603.17831 • Wed, 18 Mar 2026</div>
+                    <p>LLM agents often fail in closed-world embodied environments because actions must satisfy strict preconditions and failure feedback is sparse.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> LLM agents fail in embodied environments due to strict action preconditions and sparse feedback, causing invalid action generation and state drift.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> RPMS architecture enforces action feasibility via structured rule retrieval, gates memory applicability via belief state, and resolves conflicts via rules-first arbitration.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> Achieves 59.7% single-trial success with Llama 3.1 8B (+23.9 pp) and 98.5% with Claude Sonnet 4.5 (+11.9 pp); rule retrieval contributes +14.9 pp gain.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Episodic memory is conditionally useful—filtered by current state and constrained by explicit action rules, it becomes a stable net positive.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17787">Governed Memory: A Production Architecture for Multi-Agent Workflows</a></div>
+                    <div class="paper-meta">arXiv:2603.17787 • Wed, 18 Mar 2026</div>
+                    <p>Enterprise AI deploys dozens of autonomous agent nodes across workflows, each acting on the same entities with no shared memory and no common governance.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> Enterprise AI faces memory silos, governance fragmentation, unstructured memories, redundant context delivery, and silent quality degradation.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> Governed Memory provides dual memory model, tiered governance routing, reflection-bounded retrieval, and closed-loop schema lifecycle.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> 99.6% fact recall, 92% governance routing precision, 50% token reduction, zero cross-entity leakage, 74.8% LoCoMo accuracy.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Governance and schema enforcement impose no retrieval quality penalty, enabling production multi-agent deployments at scale.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17781">Facts as First Class Objects: Knowledge Objects for Persistent LLM Memory</a></div>
+                    <div class="paper-meta">arXiv:2603.17781 • Wed, 18 Mar 2026</div>
+                    <p>Large language models increasingly serve as persistent knowledge workers, with in-context memory as the default strategy.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> In-context memory faces capacity limits (overflow at 8,000 facts), compaction loss (60% facts destroyed), and goal drift (54% constraints eroded).</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> Knowledge Objects (KOs) are discrete hash-addressed tuples with O(1) retrieval, serving as first-class persistent memory objects.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> KOs achieve 100% accuracy across all conditions at 252x lower cost; 78.9% on multi-hop reasoning versus 31.6% for in-context.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Density-adaptive retrieval provides a switching mechanism between in-context and KO-based memory, outperforming embedding and neural alternatives.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17714">From Virtual Environments to Real-World Trials: Emerging Trends in Autonomous Driving</a></div>
+                    <div class="paper-meta">arXiv:2603.17714 • Wed, 18 Mar 2026</div>
+                    <p>Autonomous driving technologies have achieved significant advances, yet real-world deployment remains constrained by data scarcity, safety requirements, and generalization needs.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> Real-world autonomous driving deployment is constrained by data scarcity, safety requirements, and the need for generalization across diverse environments.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> Comprehensive review of synthetic data for perception/planning, digital twin simulation, domain adaptation, and vision-language models for scene understanding.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> Detailed taxonomy of datasets, tools, and simulation platforms with analysis of benchmark design trends.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Critical challenges include Sim2Real transfer, scalable safety validation, cooperative autonomy, and simulation-driven policy learning for deployable systems.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17694">A Multi-agent LLMs-based Economic Sandbox with Consumer Preference Alignment</a></div>
+                    <div class="paper-meta">arXiv:2603.17694 • Wed, 18 Mar 2026</div>
+                    <p>In the real economy, modern decision-making is fundamentally challenged by high-dimensional, multimodal environments with agent heterogeneity and combinatorial data sparsity.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> Economic decision-making faces challenges from high-dimensional environments, agent heterogeneity, and data sparsity across product categories.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> MALLES uses preference learning with LLMs aligned via post-training on transaction records, mean-field mechanisms, and multi-agent discussion frameworks.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> Significant improvements in product selection accuracy, purchase quantity prediction, and simulation stability compared to economic/financial LLM baselines.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> LLMs can serve as foundational pillars for high-fidelity, scalable decision simulation and analysis in real-world economic scenarios.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17683">Learn One Thing at a Time -- Curriculum-Based Test-Time Learning for LLM Game Agents</a></div>
+                    <div class="paper-meta">arXiv:2603.17683 • Wed, 18 Mar 2026</div>
+                    <p>LLM agents deployed in unknown environments must learn task structure at test time, but current approaches require thousands of interactions.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> LLM agents need thousands of interactions to form useful hypotheses in unknown environments at test time.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> Sensi introduces two-player architecture, curriculum-based learning via external state machine, database-as-control-plane, and LLM-as-judge with dynamic rubrics.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> Completes learning curriculum in ~32 action attempts, achieving 50-94x greater sample efficiency than comparable systems requiring 1600-3000 attempts.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Architectural bottleneck has shifted from learning efficiency to perceptual grounding—a more tractable problem for future improvement.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17639">VeriGrey: Greybox Agent Validation</a></div>
+                    <div class="paper-meta">arXiv:2603.17639 • Wed, 18 Mar 2026</div>
+                    <p>Agentic AI has been a topic of great interest recently. LLM agents conduct autonomous decision-making by combining LLM outputs with external tools.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> Autonomous interactions with external environments introduce critical security risks in LLM agents that need systematic testing approaches.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> VeriGrey uses grey-box approach with tool invocation sequences as feedback to drive testing, mutating prompts for pernicious injection prompts.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> 33% additional efficacy in finding indirect prompt injection vulnerabilities on AgentDojo; 100% success rate finding malicious skills in OpenClaw (Kimi-K2.5), 90% on Opus 4.6.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Dynamic grey-box testing approaches are essential for agent assurance frameworks and uncovering vulnerabilities black-box methods miss.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17544">Per-Domain Generalizing Policies: On Learning Efficient and Robust Q-Value Functions</a></div>
+                    <div class="paper-meta">arXiv:2603.17544 • Wed, 18 Mar 2026</div>
+                    <p>Learning per-domain generalizing policies is a key challenge in learning for planning using graph neural networks on optimal plans.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> Standard state-value function approaches process every successor state, making them expensive to evaluate during planning.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> Learning Q-value functions with regularization terms that distinguish between actions taken and not taken by the teacher planner.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> Q-value policies consistently outperform state-value policies across 10 domains and are competitive with the planner LAMA-first.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Q-value functions are drastically cheaper to evaluate while achieving superior planning performance through proper regularization.</div>
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.17534">Informative Semi-Factuals for XAI: The Elaborated Explanations that People Prefer</a></div>
+                    <div class="paper-meta">arXiv:2603.17534 • Wed, 18 Mar 2026</div>
+                    <p>In explainable AI, "even if" explanations (semi-factuals) explain how predicted outcomes can remain the same when certain input-features are altered.</p>
+                    <div class="paper-analysis">
+                        <div class="analysis-item"><span class="analysis-label">Problem:</span> Current semi-factual methods find value-changes but don't explain WHY these changes don't alter outcomes, leaving explanations incomplete.</div>
+                        <div class="analysis-item"><span class="analysis-label">Method:</span> Informative Semi-Factuals (ISF) method generates elaborated explanations supplementing semi-factuals with information about hidden features influencing decisions.</div>
+                        <div class="analysis-item"><span class="analysis-label">Results:</span> ISF computes semi-factuals that are both informative and high-quality on key metrics, with user studies showing people prefer these elaborated explanations.</div>
+                        <div class="analysis-item"><span class="analysis-label">Conclusion:</span> Users prefer explanations that reveal hidden decision factors, not just surface-level feature changes—advancing XAI toward more transparent AI systems.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HuggingFace Section -->
+            <section class="section">
+                <h2 class="section-title">🤗 HuggingFace Top 15 Trending Models (Last 30 Days)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model ID</th>
+                            <th>Type</th>
+                            <th>Params</th>
+                            <th>Downloads</th>
+                            <th>Likes</th>
+                            <th>Updated</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.5-35B-A3B-Uncensored</a></td>
+                            <td><span class="badge badge-blue">Image-Text-to-Text</span></td>
+                            <td>35B</td>
+                            <td>174k</td>
+                            <td>630</td>
+                            <td>9 days ago</td>
+                            <td>Uncensored variant of Qwen 3.5 with aggressive fine-tuning for multimodal understanding.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning</a></td>
+                            <td><span class="badge badge-green">Text Generation</span></td>
+                            <td>28B</td>
+                            <td>105k</td>
+                            <td>921</td>
+                            <td>12 days ago</td>
+                            <td>Reasoning-optimized Qwen model distilled from Claude 4.6 Opus capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://huggingface.co/fishaudio/s2-pro">fishaudio/s2-pro</a></td>
+                            <td><span class="badge badge-purple">Text-to-Speech</span></td>
+                            <td>5B</td>
+                            <td>9.91k</td>
+                            <td>653</td>
+                            <td>8 days ago</td>
+                            <td>Professional-grade text-to-speech model supporting multiple languages and voice cloning.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="https://huggingface.co/Tesslate/OmniCoder-9B">Tesslate/OmniCoder-9B</a></td>
+                            <td><span class="badge badge-green">Text Generation</span></td>
+                            <td>9B</td>
+                            <td>12.2k</td>
+                            <td>324</td>
+                            <td>7 days ago</td>
+                            <td>Compact code generation model designed for efficient deployment across multiple languages.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603">mistralai/Mistral-Small-4-119B-2603</a></td>
+                            <td><span class="badge badge-green">Text Generation</span></td>
+                            <td>119B</td>
+                            <td>5.36k</td>
+                            <td>247</td>
+                            <td>2 days ago</td>
+                            <td>Latest Mistral Small release with improved reasoning and instruction following capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="https://huggingface.co/baidu/Qianfan-OCR">baidu/Qianfan-OCR</a></td>
+                            <td><span class="badge badge-blue">Image-Text-to-Text</span></td>
+                            <td>5B</td>
+                            <td>704</td>
+                            <td>233</td>
+                            <td>14 hours ago</td>
+                            <td>Baidu's multimodal OCR model with strong document understanding and text extraction.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="https://huggingface.co/Qwen/Qwen3.5-9B">Qwen/Qwen3.5-9B</a></td>
+                            <td><span class="badge badge-blue">Image-Text-to-Text</span></td>
+                            <td>10B</td>
+                            <td>2.59M</td>
+                            <td>938</td>
+                            <td>18 days ago</td>
+                            <td>Efficient multimodal model from Alibaba's Qwen series balancing performance and resource usage.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.5-9B-Uncensored</a></td>
+                            <td><span class="badge badge-blue">Image-Text-to-Text</span></td>
+                            <td>9B</td>
+                            <td>306k</td>
+                            <td>558</td>
+                            <td>16 days ago</td>
+                            <td>Uncensored 9B variant optimized for research applications requiring unrestricted outputs.</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="https://huggingface.co/zai-org/GLM-OCR">zai-org/GLM-OCR</a></td>
+                            <td><span class="badge badge-orange">Image-to-Text</span></td>
+                            <td>-</td>
+                            <td>2.93M</td>
+                            <td>1.38k</td>
+                            <td>8 days ago</td>
+                            <td>GLM-powered OCR solution excelling at structured document parsing and layout understanding.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><a href="https://huggingface.co/Lightricks/LTX-2.3">Lightricks/LTX-2.3</a></td>
+                            <td><span class="badge badge-purple">Image-to-Video</span></td>
+                            <td>-</td>
+                            <td>752k</td>
+                            <td>687</td>
+                            <td>4 days ago</td>
+                            <td>Advanced video generation model from Lightricks producing high-quality cinematic content from images.</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><a href="https://huggingface.co/HumeAI/tada-1b">HumeAI/tada-1b</a></td>
+                            <td><span class="badge badge-purple">Text-to-Speech</span></td>
+                            <td>2B</td>
+                            <td>63.6k</td>
+                            <td>219</td>
+                            <td>2 days ago</td>
+                            <td>Hume AI's emotional TTS model generating expressive speech with prosody control.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><a href="https://huggingface.co/Tesslate/OmniCoder-9B-GGUF">Tesslate/OmniCoder-9B-GGUF</a></td>
+                            <td><span class="badge badge-green">Text Generation</span></td>
+                            <td>9B</td>
+                            <td>39.5k</td>
+                            <td>146</td>
+                            <td>8 days ago</td>
+                            <td>GGUF quantized version of OmniCoder enabling efficient CPU inference for code generation tasks.</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16">nvidia/Nemotron-3-Super-120B-A12B-BF16</a></td>
+                            <td><span class="badge badge-green">Text Generation</span></td>
+                            <td>124B</td>
+                            <td>58.3k</td>
+                            <td>268</td>
+                            <td>5 hours ago</td>
+                            <td>NVIDIA's enterprise-grade language model optimized for business applications and reasoning tasks.</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td><a href="https://huggingface.co/circlestone-labs/Anima">circlestone-labs/Anima</a></td>
+                            <td><span class="badge badge-green">Text Generation</span></td>
+                            <td>-</td>
+                            <td>248k</td>
+                            <td>888</td>
+                            <td>8 days ago</td>
+                            <td>Character-focused dialogue model designed for engaging long-form conversational interactions.</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF">Jackrong/Qwen3.5-27B-Claude-GGUF</a></td>
+                            <td><span class="badge badge-green">Text Generation</span></td>
+                            <td>27B</td>
+                            <td>322k</td>
+                            <td>279</td>
+                            <td>5 days ago</td>
+                            <td>Quantized GGUF version of the Claude-distilled reasoning model for local inference.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- GitHub Section -->
+            <section class="section">
+                <h2 class="section-title">⭐ GitHub Top 10 Trending Python Repositories</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Repository</th>
+                            <th>Stars Today</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://github.com/langchain-ai/open-swe">langchain-ai/open-swe</a></td>
+                            <td>965 ⭐</td>
+                            <td>Open-source asynchronous coding agent framework for autonomous software engineering tasks.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://github.com/unslothai/unsloth">unslothai/unsloth</a></td>
+                            <td>1,262 ⭐</td>
+                            <td>Unified web UI for training and running open models like Qwen, DeepSeek, and Gemma locally with optimized inference.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://github.com/newton-physics/newton">newton-physics/newton</a></td>
+                            <td>346 ⭐</td>
+                            <td>GPU-accelerated physics simulation engine built on NVIDIA Warp for robotics and simulation research.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="https://github.com/FujiwaraChoki/MoneyPrinterV2">FujiwaraChoki/MoneyPrinterV2</a></td>
+                            <td>-</td>
+                            <td>Automated system for generating and monetizing online content through algorithmic content creation pipelines.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="https://github.com/TauricResearch/TradingAgents">TauricResearch/TradingAgents</a></td>
+                            <td>-</td>
+                            <td>Multi-agent LLM framework for financial trading that coordinates specialized agents for market analysis and execution.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="https://github.com/alibaba/OpenSandbox">alibaba/OpenSandbox</a></td>
+                            <td>195 ⭐</td>
+                            <td>General-purpose sandbox platform for AI applications with Docker/Kubernetes runtimes for coding and GUI agents.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="https://github.com/MiroMindAI/MiroThinker">MiroMindAI/MiroThinker</a></td>
+                            <td>146 ⭐</td>
+                            <td>Deep research agent optimized for complex research and prediction tasks achieving state-of-the-art BrowseComp scores.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="https://github.com/HKUDS/LightRAG">HKUDS/LightRAG</a></td>
+                            <td>-</td>
+                            <td>Simple and fast retrieval-augmented generation system designed for efficient knowledge retrieval in LLM applications.</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="https://github.com/microsoft/qlib">microsoft/qlib</a></td>
+                            <td>-</td>
+                            <td>AI-oriented quantitative investment platform supporting diverse ML modeling paradigms including RL for trading strategies.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><a href="https://github.com/github/spec-kit">github/spec-kit</a></td>
+                            <td>-</td>
+                            <td>Toolkit for spec-driven development providing templates and utilities for API specification workflows.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Key Trends Section -->
+            <section class="section">
+                <h2 class="section-title">🔥 Key Trends & Highlights</h2>
+                
+                <div class="trend-highlight">
+                    <h4>🤖 Agent Memory & Governance</h4>
+                    <p>Multiple papers focus on production-ready agent architectures with shared memory and governance. Governed Memory and Knowledge Objects represent a shift from simple prompt-based memory to structured, persistent knowledge systems for multi-agent workflows.</p>
+                </div>
+
+                <div class="trend-highlight">
+                    <h4>🔒 Security & Validation</h4>
+                    <p>VeriGrey's grey-box testing approach highlights growing concerns about agent security. As LLM agents gain autonomous capabilities, systematic vulnerability discovery becomes critical for enterprise deployment.</p>
+                </div>
+
+                <div class="trend-highlight">
+                    <h4>📚 Sample-Efficient Learning</h4>
+                    <p>Sensi's curriculum-based learning achieving 50-94x sample efficiency demonstrates that architectural innovations can dramatically reduce the data requirements for LLM agents to learn new task structures.</p>
+                </div>
+
+                <div class="trend-highlight">
+                    <h4>🔧 Qwen Ecosystem Dominance</h4>
+                    <p>HuggingFace trending shows Alibaba's Qwen 3.5 series dominating with multiple fine-tuned variants, indicating strong community adoption for both research and production multimodal applications.</p>
+                </div>
+
+                <div class="trend-highlight">
+                    <h4>🎬 Multimodal Generation</h4>
+                    <p>LTX-2.3 for video generation and multiple OCR/vision models highlight continued investment in visual understanding and content generation beyond text-only applications.</p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Generated on March 20, 2026 at 08:00 AM (Beijing Time) | AI Daily Report</p>
+            <p>Sources: arXiv cs.AI, HuggingFace Trending, GitHub Trending Python, Hacker News</p>
+        </footer>
+    </div>
+</body>
+</html>
