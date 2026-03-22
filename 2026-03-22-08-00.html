@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - March 22, 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; line-height: 1.6; color: #333; background: #f5f7fa; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; text-align: center; border-radius: 12px; margin-bottom: 30px; }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        header p { font-size: 1.1em; opacity: 0.9; }
+        .section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .section h2 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-bottom: 25px; font-size: 1.8em; }
+        .trends { background: #f8f9fa; border-radius: 8px; padding: 20px; margin-bottom: 25px; }
+        .trends h3 { color: #764ba2; margin-bottom: 15px; }
+        .trend-item { padding: 10px 0; border-bottom: 1px solid #e0e0e0; }
+        .trend-item:last-child { border-bottom: none; }
+        .paper { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+        .paper h3 { color: #333; font-size: 1.2em; margin-bottom: 8px; }
+        .paper h3 a { color: #667eea; text-decoration: none; }
+        .paper h3 a:hover { text-decoration: underline; }
+        .paper .authors { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        .paper .abstract { color: #555; font-size: 0.95em; line-height: 1.5; }
+        .paper .meta { margin-top: 10px; font-size: 0.85em; color: #888; }
+        .hf-model { display: flex; align-items: center; padding: 15px; border-bottom: 1px solid #f0f0f0; }
+        .hf-model:last-child { border-bottom: none; }
+        .hf-model .rank { width: 40px; height: 40px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 15px; }
+        .hf-model .info { flex: 1; }
+        .hf-model .info h4 { margin-bottom: 5px; }
+        .hf-model .info h4 a { color: #333; text-decoration: none; }
+        .hf-model .info h4 a:hover { color: #667eea; }
+        .hf-model .meta { color: #666; font-size: 0.85em; }
+        .hf-model .stats { text-align: right; min-width: 150px; }
+        .hf-model .stats span { display: block; color: #888; font-size: 0.85em; }
+        .github-repo { padding: 15px; border-bottom: 1px solid #f0f0f0; }
+        .github-repo:last-child { border-bottom: none; }
+        .github-repo h4 { margin-bottom: 5px; }
+        .github-repo h4 a { color: #333; text-decoration: none; font-weight: 600; }
+        .github-repo h4 a:hover { color: #667eea; }
+        .github-repo .desc { color: #666; font-size: 0.9em; }
+        .github-repo .stars { color: #f1c40f; font-size: 0.85em; margin-top: 5px; }
+        .hn-story { padding: 15px; border-bottom: 1px solid #f0f0f0; }
+        .hn-story:last-child { border-bottom: none; }
+        .hn-story h4 { margin-bottom: 5px; }
+        .hn-story h4 a { color: #333; text-decoration: none; }
+        .hn-story h4 a:hover { color: #ff6600; }
+        .hn-story .meta { color: #666; font-size: 0.85em; }
+        .hn-story .points { color: #ff6600; font-weight: bold; }
+        footer { text-align: center; padding: 30px; color: #666; font-size: 0.9em; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: bold; margin-left: 8px; }
+        .badge-llm { background: #e3f2fd; color: #1976d2; }
+        .badge-vision { background: #f3e5f5; color: #7b1fa2; }
+        .badge-audio { background: #e8f5e9; color: #388e3c; }
+        .badge-multimodal { background: #fff3e0; color: #f57c00; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Daily Report</h1>
+            <p>March 22, 2026 | Curated Intelligence for AI Professionals</p>
+        </header>
+
+        <!-- ARXIV SECTION -->
+        <section class="section">
+            <h2>📚 arXiv AI Papers (cs.AI)</h2>
+            
+            <div class="trends">
+                <h3>🔥 Major Trends Identified</h3>
+                <div class="trend-item"><strong>1. GUI Agents & RL Training:</strong> Multi-agent critic frameworks for GUI rewards and reinforcement learning for agent robustness</div>
+                <div class="trend-item"><strong>2. LLM Safety & Process Control:</strong> Architectural approaches to reliable reasoning, uncertainty estimation, and hallucination prevention</div>
+                <div class="trend-item"><strong>3. Specialized Architectures:</strong> GPU-accelerated optimization, state-space models for biosignals, and discrete diffusion decoding</div>
+            </div>
+
+            <h3 style="color: #764ba2; margin: 25px 0 20px;">Top 10 Important Papers</h3>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19191" target="_blank">A Scalable Critic Framework for Generalist GUI Rewards</a> <span class="badge badge-llm">GUI Agents</span></h3>
+                <div class="authors">Zehao Li, Zhenyu Wu, Yibo Zhao, et al.</div>
+                <div class="abstract"><strong>Problem:</strong> RL training for GUI agents is sensitive to reward quality, and existing approaches struggle with scalability and performance.<br><br><strong>Method:</strong> OS-Themis - a multi-agent critic framework that decomposes trajectories into verifiable milestones and employs a review mechanism to audit evidence chains.<br><br><strong>Results:</strong> 10.3% improvement in online RL training on AndroidWorld; 6.9% gain in trajectory validation.<br><br><strong>Conclusion:</strong> Decomposed multi-agent criticism with evidence auditing drives agent evolution more effectively than single-judge approaches.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19191" target="_blank">PDF</a> | 🏷️ cs.AI</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19182" target="_blank">A Process-Control Architecture for Reliable LLM Reasoning</a> <span class="badge badge-llm">LLM Safety</span></h3>
+                <div class="authors">Qiang Zou et al.</div>
+                <div class="abstract"><strong>Problem:</strong> LLMs remain vulnerable to hallucination and unreliable reasoning under adversarial prompting despite RLHF and output filtering.<br><br><strong>Method:</strong> Box Maze framework - three-layer architecture with memory grounding, structured inference, and boundary enforcement across DeepSeek-V3, Doubao, and Qwen.<br><br><strong>Results:</strong> Boundary failure rates reduced from ~40% (baseline RLHF) to below 1% under adversarial conditions in 50 scenarios.<br><br><strong>Conclusion:</strong> Explicit cognitive control layers at the process level may offer a promising direction for improving LLM reliability.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19182" target="_blank">PDF</a> | 🏷️ cs.AI, cs.CL</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19163" target="_blank">cuGenOpt: GPU-Accelerated General-Purpose Metaheuristic Framework</a> <span class="badge badge-llm">Optimization</span></h3>
+                <div class="authors">Yuyang Liu et al.</div>
+                <div class="abstract"><strong>Problem:</strong> Combinatorial optimization faces trade-offs among generality, performance, and usability.<br><br><strong>Method:</strong> CUDA-based framework with "one block evolves one solution" architecture, unified encoding abstraction, adaptive operator selection, and JIT-compiled Python API with LLM assistant.<br><br><strong>Results:</strong> Outperforms MIP solvers by orders of magnitude; achieves 4.73% gap on TSP-442 within 30s; 75-81% VRPTW throughput improvement.<br><br><strong>Conclusion:</strong> GPU-accelerated metaheuristics with unified abstractions can match specialized solvers while maintaining generality.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19163" target="_blank">PDF</a> | 💻 <a href="https://github.com/L-yang-yang/cugenopt" target="_blank">Code</a> | 🏷️ cs.AI, cs.DC</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19146" target="_blank">D5P4: Partition Determinantal Point Process for Diversity in Parallel Discrete Diffusion Decoding</a> <span class="badge badge-llm">Diffusion</span></h3>
+                <div class="authors">Jonathan Lys et al.</div>
+                <div class="abstract"><strong>Problem:</strong> Discrete diffusion models lack effective decoding methods with controllable in-batch diversity.<br><br><strong>Method:</strong> Generalized beam-search framework with D5P4 instantiation that formulates selection as MAP inference over Determinantal Point Processes using scalable greedy solver.<br><br><strong>Results:</strong> Improved diversity over strong baselines while maintaining competitive generation quality on free-form generation and question answering.<br><br><strong>Conclusion:</strong> Determinantal Point Processes enable explicit probability-diversity trade-offs with near-zero compute overhead in diffusion decoding.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19146" target="_blank">PDF</a> | 🏷️ cs.AI, cs.LG</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19138" target="_blank">Implicit Patterns in LLM-Based Binary Analysis</a> <span class="badge badge-llm">Security</span></h3>
+                <div class="authors">Qiang Li et al.</div>
+                <div class="abstract"><strong>Problem:</strong> How multi-pass LLM-based vulnerability analysis organizes exploration over hundreds of reasoning steps is poorly understood.<br><br><strong>Method:</strong> Large-scale trace-level study analyzing 521 binaries with 99,563 reasoning steps to identify token-level implicit patterns.<br><br><strong>Results:</strong> Four dominant patterns identified: early pruning, path-dependent lock-in, targeted backtracking, and knowledge-guided prioritization.<br><br><strong>Conclusion:</strong> LLM reasoning in security analysis exhibits stable, structured implicit patterns that form a foundation for more reliable analysis systems.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19138" target="_blank">PDF</a> | 🏷️ cs.AI, cs.CR, cs.SE</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19118" target="_blank">How Uncertainty Estimation Scales with Sampling in Reasoning Models</a> <span class="badge badge-llm">Uncertainty</span></h3>
+                <div class="authors">Maksym Del et al.</div>
+                <div class="abstract"><strong>Problem:</strong> Uncertainty estimation for reasoning language models under extended chain-of-thought remains poorly understood.<br><br><strong>Method:</strong> Study of parallel sampling as black-box approach using verbalized confidence and self-consistency across 3 reasoning models and 17 tasks.<br><br><strong>Results:</strong> Hybrid estimator with just 2 samples improves AUROC by up to +12 points on average; mathematics shows stronger complementarity and faster scaling than STEM/humanities.<br><br><strong>Conclusion:</strong> Signal combination is more effective than scaling single signals; domain-dependent effects suggest RLVR post-training influences uncertainty quality.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19118" target="_blank">PDF</a> | 🏷️ cs.AI, cs.CL, cs.LG</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19100" target="_blank">LuMamba: Latent Unified Mamba for Electrode Topology-Invariant EEG Modeling</a> <span class="badge badge-vision">Bio AI</span></h3>
+                <div class="authors">Thorir Mar Ingolfsson et al.</div>
+                <div class="abstract"><strong>Problem:</strong> EEG foundation models face challenges from differing electrode topologies and computational scalability of Transformers.<br><br><strong>Method:</strong> LuMamba combines LUNA's learned-query cross-attention for channel unification with FEMBA's bidirectional Mamba blocks and LeJEPA self-supervised learning.<br><br><strong>Results:</strong> 80.99% balanced accuracy on TUAB; state-of-art on Alzheimer's detection (0.97 AUPR); 377× fewer FLOPs; scales to 12× longer sequences.<br><br><strong>Conclusion:</strong> State-space models with learned latent representations enable efficient, topology-invariant EEG foundation models with only 4.6M parameters.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19100" target="_blank">PDF</a> | 💻 <a href="https://github.com/pulp-bio/biofoundation" target="_blank">Code</a> | 🏷️ cs.AI</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19087" target="_blank">Serendipity by Design: Evaluating Cross-domain Mappings on Human and LLM Creativity</a> <span class="badge badge-llm">Creativity</span></h3>
+                <div class="authors">Qiawen Liu et al.</div>
+                <div class="abstract"><strong>Problem:</strong> Whether LLMs are creative like humans and respond to same interventions is unclear.<br><br><strong>Method:</strong> Comparative study of humans and LLMs generating product features under cross-domain mapping (random source) vs. user-need prompts.<br><br><strong>Results:</strong> Humans benefit reliably from cross-domain mappings; LLMs generate more original ideas on average but show no significant effect; impact increases with semantic distance in both.<br><br><strong>Conclusion:</strong> Remote associations enhance creativity, but humans and LLMs respond differently to the same interventions, highlighting systematic differences in creative processes.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19087" target="_blank">PDF</a> | 🏷️ cs.AI, cs.CL</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19042" target="_blank">Artificial Intelligence and Judicial Decision Making</a> <span class="badge badge-llm">AI Ethics</span></h3>
+                <div class="authors">Arthur Dyevre et al.</div>
+                <div class="abstract"><strong>Problem:</strong> AI integration into judicial decision-making raises concerns about transparency, reliability, and accountability.<br><br><strong>Method:</strong> Synthetic review connecting AI tool performance/fairness, human judge biases, and AI+human interactions across computer science, economics, law, criminology, and psychology.<br><br><strong>Results:</strong> Existing evidence shows modest or no impact of AI decision aids on pretrial and sentencing decisions; important gaps remain in understanding judge responses to AI advice.<br><br><strong>Conclusion:</strong> AI vs. Human comparisons can yield insights into both algorithmic tools and human decision-makers; greater interdisciplinary integration is needed.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19042" target="_blank">PDF</a> | 🏷️ cs.AI</div>
+            </div>
+
+            <div class="paper">
+                <h3><a href="https://arxiv.org/abs/2603.19022" target="_blank">Behavioral Fingerprints for LLM Endpoint Stability and Identity</a> <span class="badge badge-llm">MLOps</span></h3>
+                <div class="authors">Jonah Leshin et al.</div>
+                <div class="abstract"><strong>Problem:</strong> Traditional reliability metrics don't capture behavioral changes when model endpoints change due to updates, quantization, or infrastructure changes.<br><br><strong>Method:</strong> Stability Monitor - black-box system that fingerprints endpoints by sampling outputs from fixed prompts and comparing distributions over time using energy distance statistics.<br><br><strong>Results:</strong> Detects changes to model family, version, inference stack, quantization, and behavioral parameters; reveals substantial provider-to-provider and within-provider stability differences.<br><br><strong>Conclusion:</strong> Output distribution fingerprinting enables detection of silent behavioral changes that traditional monitoring misses.</div>
+                <div class="meta">📎 <a href="https://arxiv.org/pdf/2603.19022" target="_blank">PDF</a> | 🏷️ cs.AI</div>
+            </div>
+        </section>
+
+        <!-- HUGGINGFACE SECTION -->
+        <section class="section">
+            <h2>🤗 HuggingFace Trending Models (Last 30 Days)</h2>
+            
+            <div class="hf-model">
+                <div class="rank">1</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">Qwen3.5-35B-A3B-Uncensored</a> <span class="badge badge-multimodal">Image-Text-to-Text</span></h4>
+                    <div class="meta">35B parameters • Updated 11 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 250k downloads</span>
+                    <span>❤️ 736 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">2</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" target="_blank">Qwen3.5-27B Claude-4.6 Opus Reasoning Distilled</a> <span class="badge badge-llm">Text Generation</span></h4>
+                    <div class="meta">28B parameters • Updated 1 day ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 129k downloads</span>
+                    <span>❤️ 995 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">3</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/fishaudio/s2-pro" target="_blank">FishAudio S2 Pro</a> <span class="badge badge-audio">Text-to-Speech</span></h4>
+                    <div class="meta">5B parameters • Updated 10 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 11.7k downloads</span>
+                    <span>❤️ 691 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">4</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603" target="_blank">Mistral Small 4 119B</a> <span class="badge badge-llm">Text Generation</span></h4>
+                    <div class="meta">119B parameters • Updated 4 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 9.86k downloads</span>
+                    <span>❤️ 276 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">5</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/baidu/Qianfan-OCR" target="_blank">Baidu Qianfan OCR</a> <span class="badge badge-vision">Image-Text-to-Text</span></h4>
+                    <div class="meta">5B parameters • Updated 3 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 4.32k downloads</span>
+                    <span>❤️ 272 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">6</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/zai-org/GLM-OCR" target="_blank">Zhipu GLM-OCR</a> <span class="badge badge-vision">Image-to-Text</span></h4>
+                    <div class="meta">Updated 10 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 3.12M downloads</span>
+                    <span>❤️ 1.41k likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">7</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/Tesslate/OmniCoder-9B" target="_blank">Tesslate OmniCoder 9B</a> <span class="badge badge-llm">Text Generation</span></h4>
+                    <div class="meta">Updated 9 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 17.4k downloads</span>
+                    <span>❤️ 342 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">8</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/Qwen/Qwen3.5-9B" target="_blank">Qwen 3.5 9B</a> <span class="badge badge-multimodal">Image-Text-to-Text</span></h4>
+                    <div class="meta">10B parameters • Updated 20 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 3.02M downloads</span>
+                    <span>❤️ 967 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">9</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/nvidia/Nemotron-Cascade-2-30B-A3B" target="_blank">NVIDIA Nemotron Cascade 2 30B</a> <span class="badge badge-llm">Text Generation</span></h4>
+                    <div class="meta">32B parameters • Updated 11 minutes ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 1.56k downloads</span>
+                    <span>❤️ 144 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">10</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/circlestone-labs/Anima" target="_blank">CircleStone Labs Anima</a> <span class="badge badge-multimodal">Multimodal</span></h4>
+                    <div class="meta">Updated 10 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 252k downloads</span>
+                    <span>❤️ 908 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">11</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF" target="_blank">Qwen3.5-27B Claude-4.6 Opus GGUF</a> <span class="badge badge-llm">Text Generation</span></h4>
+                    <div class="meta">27B parameters • Updated 1 day ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 414k downloads</span>
+                    <span>❤️ 302 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">12</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/Lightricks/LTX-2.3" target="_blank">Lightricks LTX 2.3</a> <span class="badge badge-vision">Image-to-Video</span></h4>
+                    <div class="meta">Updated 6 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 839k downloads</span>
+                    <span>❤️ 705 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">13</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.5" target="_blank">MiniMax M2.5</a> <span class="badge badge-llm">Text Generation</span></h4>
+                    <div class="meta">229B parameters • Updated 11 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 526k downloads</span>
+                    <span>❤️ 1.25k likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">14</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" target="_blank">NVIDIA Nemotron 3 Super 120B</a> <span class="badge badge-llm">Text Generation</span></h4>
+                    <div class="meta">124B parameters • Updated 2 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 82.7k downloads</span>
+                    <span>❤️ 278 likes</span>
+                </div>
+            </div>
+
+            <div class="hf-model">
+                <div class="rank">15</div>
+                <div class="info">
+                    <h4><a href="https://huggingface.co/ibm-granite/granite-4.0-1b-speech" target="_blank">IBM Granite 4.0 1B Speech</a> <span class="badge badge-audio">Speech Recognition</span></h4>
+                    <div class="meta">2B parameters • Updated 5 days ago</div>
+                </div>
+                <div class="stats">
+                    <span>⬇️ 32.2k downloads</span>
+                    <span>❤️ 171 likes</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- GITHUB SECTION -->
+        <section class="section">
+            <h2>⭐ GitHub Trending Python Repositories (Daily)</h2>
+            
+            <div class="github-repo">
+                <h4><a href="https://github.com/TauricResearch/TradingAgents" target="_blank">TauricResearch / TradingAgents</a></h4>
+                <div class="desc">Multi-Agents LLM Financial Trading Framework enabling sophisticated algorithmic trading strategies using large language models.</div>
+                <div class="stars">⭐ 1,503 stars today | 35,502 total | 6,751 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/langchain-ai/open-swe" target="_blank">langchain-ai / open-swe</a></h4>
+                <div class="desc">An Open-Source Asynchronous Coding Agent for software engineering automation and code generation.</div>
+                <div class="stars">⭐ 428 stars today | 7,922 total | 940 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/vllm-project/vllm-omni" target="_blank">vllm-project / vllm-omni</a></h4>
+                <div class="desc">A framework for efficient model inference with omni-modality models supporting text, image, and audio.</div>
+                <div class="stars">⭐ 71 stars today | 3,500 total | 586 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/opengaming/osgameclones" target="_blank">opengaming / osgameclones</a></h4>
+                <div class="desc">Open Source Clones of Popular Games - a curated list of game engine reimplementations.</div>
+                <div class="stars">⭐ 160 stars today | 2,805 total | 414 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/meta-pytorch/OpenEnv" target="_blank">meta-pytorch / OpenEnv</a></h4>
+                <div class="desc">An interface library for RL post-training with environments supporting various reinforcement learning tasks.</div>
+                <div class="stars">⭐ 10 stars today | 1,286 total | 208 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/microsoft/apm" target="_blank">microsoft / apm</a></h4>
+                <div class="desc">Agent Package Manager - Microsoft's tool for managing AI agent dependencies and packages.</div>
+                <div class="stars">⭐ 54 stars today | 674 total | 49 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/unslothai/unsloth" target="_blank">unslothai / unsloth</a></h4>
+                <div class="desc">Unified web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.</div>
+                <div class="stars">⭐ Trending | 9,585 total | 579 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/simular-ai/Agent-S" target="_blank">simular-ai / Agent-S</a></h4>
+                <div class="desc">Agent S: an open agentic framework that uses computers like a human through GUI automation.</div>
+                <div class="stars">⭐ Trending | Popular repository</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/skypilot-org/skypilot" target="_blank">skypilot-org / skypilot</a></h4>
+                <div class="desc">Run, manage, and scale AI workloads on any AI infrastructure with unified access to Kubernetes, Slurm, and 20+ clouds.</div>
+                <div class="stars">⭐ 20 stars today | 9,658 total | 1,004 forks</div>
+            </div>
+
+            <div class="github-repo">
+                <h4><a href="https://github.com/facebookresearch/vjepa2" target="_blank">facebookresearch / vjepa2</a></h4>
+                <div class="desc">PyTorch code and models for VJEPA2 self-supervised learning from video using joint embedding predictive architecture.</div>
+                <div class="stars">⭐ 27 stars today | 3,333 total | 383 forks</div>
+            </div>
+        </section>
+
+        <!-- HACKER NEWS SECTION -->
+        <section class="section">
+            <h2>📰 Hacker News Top Stories</h2>
+            
+            <div class="hn-story">
+                <h4><a href="https://news.dyne.org/child-protection-is-not-access-control/" target="_blank">Do Not Turn Child Protection into Internet Access Control</a></h4>
+                <div class="meta"><span class="points">364 points</span> • 3 hours ago • 149 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://tinygrad.org/#tinybox" target="_blank">Tinybox - Offline AI device 120B parameters</a></h4>
+                <div class="meta"><span class="points">243 points</span> • 3 hours ago • 136 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://tooscut.app/" target="_blank">Professional video editing, right in the browser with WebGPU and WASM</a></h4>
+                <div class="meta"><span class="points">87 points</span> • 2 hours ago • 23 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time/" target="_blank">Some things just take time</a></h4>
+                <div class="meta"><span class="points">469 points</span> • 9 hours ago • 150 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://grafeo.dev/" target="_blank">Grafeo – A fast, lean, embeddable graph database built in Rust</a></h4>
+                <div class="meta"><span class="points">175 points</span> • 9 hours ago • 57 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://github.com/pagel-s/termcraft" target="_blank">Show HN: Termcraft – terminal-first 2D sandbox survival in Rust</a></h4>
+                <div class="meta"><span class="points">75 points</span> • 5 hours ago • 9 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://www.wired.com/story/how-invisalign-became-the-worlds-biggest-3d-printing-company/" target="_blank">How Invisalign became the biggest user of 3D printers</a></h4>
+                <div class="meta"><span class="points">128 points</span> • 8 hours ago • 93 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646" target="_blank">Thinking Fast, Slow, and Artificial: How AI Is Reshaping Human Reasoning</a></h4>
+                <div class="meta"><span class="points">83 points</span> • 8 hours ago • 48 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/" target="_blank">Meta's Omnilingual MT for 1,600 Languages</a></h4>
+                <div class="meta"><span class="points">112 points</span> • 13 hours ago • 31 comments</div>
+            </div>
+
+            <div class="hn-story">
+                <h4><a href="https://www.together.ai/blog/mamba-3" target="_blank">Mamba-3</a></h4>
+                <div class="meta"><span class="points">272 points</span> • 21 hours ago • 50 comments</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Generated on March 22, 2026 • AI Daily Report</p>
+            <p>Data sources: arXiv cs.AI, HuggingFace Trending, GitHub Trending, Hacker News</p>
+        </footer>
+    </div>
+</body>
+</html>
