@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - March 23, 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header .date { font-size: 1.2em; opacity: 0.9; }
+        .content { padding: 40px; }
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        .section h2 {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h3 {
+            color: #2a5298;
+            font-size: 1.3em;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .paper {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .paper-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #1e3c72;
+            margin-bottom: 8px;
+        }
+        .paper-title a { color: #1e3c72; text-decoration: none; }
+        .paper-title a:hover { text-decoration: underline; }
+        .paper-id { color: #666; font-size: 0.9em; margin-bottom: 12px; }
+        .paper-section {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f0f4f8;
+            border-radius: 6px;
+        }
+        .paper-section strong { color: #2a5298; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        tr:hover { background: #f5f5f5; }
+        tr:last-child td { border-bottom: none; }
+        a { color: #667eea; text-decoration: none; }
+        a:hover { text-decoration: underline; color: #764ba2; }
+        .hn-story {
+            background: white;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 3px solid #ff6600;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .hn-title { font-weight: 600; margin-bottom: 5px; }
+        .hn-title a { color: #1e3c72; }
+        .hn-meta { color: #666; font-size: 0.9em; }
+        .trend-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+        }
+        .trend-title {
+            font-weight: 600;
+            color: #1e3c72;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f0f4f8;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        .badge-new { background: #4caf50; color: white; }
+        .badge-trending { background: #ff9800; color: white; }
+        .badge-hot { background: #f44336; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Daily Report</h1>
+            <div class="date">Monday, March 23, 2026 — 08:00 AM (Beijing Time)</div>
+            <p style="margin-top: 15px; opacity: 0.9;">Your curated digest of AI research, models, and developer tools</p>
+        </div>
+
+        <div class="content">
+            <!-- Hacker News Section -->
+            <div class="section">
+                <h2>📰 Daily News & Tech Buzz</h2>
+                <p style="margin-bottom: 20px; color: #666;">Top stories from <a href="https://news.ycombinator.com/">Hacker News</a></p>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://bramcohen.com/p/manyana">The Future of Version Control</a></div>
+                    <div class="hn-meta">367 points • 8 hours ago by c17r • 215 comments</div>
+                    <p style="margin-top: 8px; color: #555;">Bram Cohen explores evolutionary approaches to version control systems, proposing new paradigms beyond Git's limitations.</p>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://www.projectnomad.us">Project Nomad – Knowledge That Never Goes Offline</a></div>
+                    <div class="hn-meta">344 points • 11 hours ago by jensgk • 97 comments</div>
+                    <p style="margin-top: 8px; color: #555;">An offline-first knowledge management system designed for digital nomads and areas with limited connectivity.</p>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://github.com/danveloper/flash-moe">Flash-MoE: Running a 397B Parameter Model on a Laptop</a></div>
+                    <div class="hn-meta">289 points • 12 hours ago by mft_ • 101 comments</div>
+                    <p style="margin-top: 8px; color: #555;">Revolutionary compression technique enables massive Mixture-of-Experts models to run on consumer hardware.</p>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://domenic.me/windows-native-dev/">Windows Native App Development Is a Mess</a></div>
+                    <div class="hn-meta">308 points • 14 hours ago by domenicd • 327 comments</div>
+                    <p style="margin-top: 8px; color: #555;">A critical analysis of the fragmented state of Windows development frameworks and Microsoft's platform strategy.</p>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://composio.dev/content/openclaw-security-and-vulnerabilities">OpenClaw Is a Security Nightmare Dressed Up as a Daydream</a></div>
+                    <div class="hn-meta">275 points • 6 hours ago by fs_software • 191 comments</div>
+                    <p style="margin-top: 8px; color: #555;">A security audit of AI agent frameworks raises concerns about permission models and sandboxing vulnerabilities.</p>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://radar.cloudflare.com/domains/domain/archive.today">Cloudflare Flags Archive.today as "C&C/Botnet"</a></div>
+                    <div class="hn-meta">363 points • 20 hours ago by winkelmann • 261 comments</div>
+                    <p style="margin-top: 8px; color: #555;">Cloudflare's DNS resolver 1.1.1.2 stops resolving archive.today, sparking debate on content archiving services.</p>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://stuartbreckenridge.net/2026-03-19-pc-gamer-recommends-rss-readers-in-a-37mb-article/">PC Gamer Recommends RSS Readers in a 37MB Article</a></div>
+                    <div class="hn-meta">249 points • 5 hours ago by JumpCrisscross • 118 comments</div>
+                    <p style="margin-top: 8px; color: #555;">Irony of a bloated webpage advocating for lightweight RSS readers highlights modern web bloat problems.</p>
+                </div>
+
+                <div class="hn-story">
+                    <div class="hn-title"><a href="https://www.birkey.co/2026-03-22-why-i-love-nixos.html">Why I Love NixOS</a></div>
+                    <div class="hn-meta">159 points • 6 hours ago by birkey • 126 comments</div>
+                    <p style="margin-top: 8px; color: #555;">A developer's journey with NixOS and its reproducible, declarative approach to system configuration.</p>
+                </div>
+            </div>
+
+            <!-- arXiv Papers Section -->
+            <div class="section">
+                <h2>📄 Top 10 arXiv Papers (cs.AI)</h2>
+                <p style="margin-bottom: 20px; color: #666;">Recent submissions with full analysis</p>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19191">A Scalable Critic Framework for Generalist GUI Rewards</a></div>
+                    <div class="paper-id">arXiv:2603.19191 • Zehao Li et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Reinforcement Learning training for GUI agents is highly sensitive to reward function quality. Existing reward approaches struggle to achieve both scalability and performance.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> OS-Themis - a multi-agent critic framework that decomposes trajectories into verifiable milestones and employs a review mechanism to audit evidence chains before final verdicts. Introduces OmniGUIRewardBench (OGRBench) for evaluation.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> 10.3% improvement in online RL training on AndroidWorld; 6.9% gain for trajectory validation in self-training loops. All models achieve best performance under OS-Themis framework.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Multi-agent critic frameworks with milestone decomposition offer a promising direction for improving GUI agent training through better reward modeling.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19182">A Process-Control Architecture for Reliable LLM Reasoning</a></div>
+                    <div class="paper-id">arXiv:2603.19182 • Qiang Zou et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> LLMs demonstrate strong generative capabilities but remain vulnerable to hallucination and unreliable reasoning under adversarial prompting. Existing safety approaches primarily operate at the behavioral level.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> Box Maze framework - decomposes LLM reasoning into three explicit layers: memory grounding, structured inference, and boundary enforcement. Evaluated on DeepSeek-V3, Doubao, and Qwen across 50 adversarial scenarios.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Architectural constraints reduce boundary failure rates from ~40% (baseline RLHF) to below 1% under adversarial conditions.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Process-level cognitive control layers offer a promising architectural approach for improving LLM reasoning reliability beyond behavioral-level interventions.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19163">A GPU-Accelerated General-Purpose Metaheuristic Framework for Combinatorial Optimization</a></div>
+                    <div class="paper-id">arXiv:2603.19163 • Yuyang Liu et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Combinatorial optimization problems face a fundamental trade-off among generality, performance, and usability. Existing approaches cannot address all three dimensions simultaneously.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> cuGenOpt - a GPU-accelerated metaheuristic framework with "one block evolves one solution" CUDA architecture, unified encoding abstraction, two-level adaptive operator selection, and LLM-based modeling assistant for natural-language problem descriptions.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Outperforms general MIP solvers by orders of magnitude; achieves 4.73% gap on TSP-442 within 30s; 12 problem types solved to optimality; VRPTW throughput improved by 75-81%.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> GPU-accelerated metaheuristics with unified abstractions and LLM-assisted modeling can democratize access to high-performance combinatorial optimization across diverse problem domains.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19146">Partition Determinantal Point Process for Diversity in Parallel Discrete Diffusion Decoding</a></div>
+                    <div class="paper-id">arXiv:2603.19146 • Jonathan Lys et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Discrete diffusion models show promise for text generation but their decoding methods remain under-studied. Standard autoregressive decoding methods don't apply to iterative denoising, and existing techniques provide limited in-batch diversity control.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> D5P4 - a generalized beam-search framework for discrete diffusion that generates candidates in parallel. Uses Determinantal Point Process for diversity-focused selection with a scalable greedy solver, enabling explicit probability-diversity trade-off with near-zero overhead.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Improves diversity over strong baselines while maintaining competitive generation quality on free-form generation and question answering tasks.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Diversity-aware decoding through DPP-based selection offers a practical solution for controlling output diversity in discrete diffusion models for text generation.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19138">Implicit Patterns in LLM-Based Binary Analysis</a></div>
+                    <div class="paper-id">arXiv:2603.19138 • Qiang Li et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Multi-pass LLM reasoning for binary vulnerability analysis is poorly understood due to limited context windows and implicit token-level behaviors spanning hundreds of reasoning steps.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> First large-scale trace-level study analyzing 521 binaries with 99,563 reasoning steps to identify token-level implicit patterns in LLM-driven binary analysis.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Identified four dominant patterns: early pruning, path-dependent lock-in, targeted backtracking, and knowledge-guided prioritization. These patterns form a stable, structured system with distinct temporal roles and measurable characteristics.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Token-level implicit patterns serve as a new abstraction for understanding LLM reasoning, organizing exploration through implicit decisions rather than explicit control-flow or heuristics.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19118">How Uncertainty Estimation Scales with Sampling in Reasoning Models</a></div>
+                    <div class="paper-id">arXiv:2603.19118 • Maksym Del et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Uncertainty estimation for reasoning language models remains poorly understood under extended chain-of-thought reasoning, critical for safe deployment.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> Study parallel sampling as a black-box approach using verbalized confidence and self-consistency across three reasoning models and 17 tasks spanning mathematics, STEM, and humanities.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Both signals scale in reasoning models; hybrid estimator improves AUROC by up to +12 with just two samples and outperforms either signal alone at larger budgets. Mathematics shows stronger complementarity than STEM or humanities.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Hybrid uncertainty estimation through signal combination offers significant gains over single-signal approaches, with domain-dependent scaling characteristics.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19100">Latent Unified Mamba for Electrode Topology-Invariant and Efficient EEG Modeling</a></div>
+                    <div class="paper-id">arXiv:2603.19100 • Thorir Mar Ingolfsson et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Building foundation models for EEG is challenging due to differing electrode topologies and computational scalability, as Transformers incur quadratic sequence complexity.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> LuMamba (Latent Unified Mamba) - combines topology-invariant encodings with linear-complexity state-space modeling using LUNA's learned-query cross-attention and FEMBA's bidirectional Mamba blocks. First systematic investigation of LeJEPA for biosignal learning.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> 80.99% balanced accuracy on TUAB; state-of-the-art on Alzheimer's detection (0.97 AUPR); 377× fewer FLOPs than state-of-the-art; scales to 12× longer sequences before GPU memory limits.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Combining masked reconstruction with LeJEPA objectives and Mamba-based architectures enables efficient, scalable foundation models for EEG with only 4.6M parameters.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19087">Serendipity by Design: Evaluating the Impact of Cross-domain Mappings on Human and LLM Creativity</a></div>
+                    <div class="paper-id">arXiv:2603.19087 • Qiawen Liu et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Are LLMs creative in the same way humans are, and can the same interventions increase creativity in both? Cross-domain mapping as a creativity intervention remains largely untested.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> Evaluated human participants and LLMs generating novel features for daily products under cross-domain mapping (random source domain) vs. user-need prompts.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Humans reliably benefit from randomly assigned cross-domain mappings; LLMs generate more original ideas on average but don't show significant effects from cross-domain mappings. Impact increases with semantic distance in both systems.
+                    </n                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Remote association plays a role in creative ideation, but humans and LLMs respond differently to identical creativity interventions, highlighting systematic differences in creative processes.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19042">Artificial Intelligence and Judicial Decision Making</a></div>
+                    <div class="paper-id">arXiv:2603.19042 • Arthur Dyevre et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Integration of AI into judicial decision-making raises concerns about transparency, reliability, and accountability, yet empirical evidence on AI's impact remains limited.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> Synthetic review connecting AI tool performance/fairness, human judge biases, and AI+human interactions across computer science, economics, law, criminology, and psychology literatures.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Existing evidence indicates modest or nonexistent impact of AI decision aids on pretrial and sentencing decisions. Significant gaps remain in understanding how judges navigate noisy environments and respond to AI advice.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> AI vs. human comparisons can yield insights into both algorithmic tools and human decision-makers; greater interdisciplinary integration is needed for judicial AI research.
+                    </div>
+                </div>
+
+                <div class="paper">
+                    <div class="paper-title"><a href="https://arxiv.org/abs/2603.19022">Behavioral Fingerprints for LLM Endpoint Stability and Identity</a></div>
+                    <div class="paper-id">arXiv:2603.19022 • Jonah Leshin et al.</div>
+                    <div class="paper-section">
+                        <strong>🎯 Problem:</strong> Traditional reliability metrics (uptime, latency, throughput) don't capture behavioral changes in AI-native applications. Endpoints can remain "healthy" while model identity changes due to updates.
+                    </div>
+                    <div class="paper-section">
+                        <strong>🔬 Method:</strong> Stability Monitor - black-box stability monitoring system that fingerprints endpoints by sampling outputs from fixed prompts and comparing output distributions over time using summed energy distance with sequential aggregation.
+                    </div>
+                    <div class="paper-section">
+                        <strong>📊 Results:</strong> Detects changes to model family, version, inference stack, quantization, and behavioral parameters. Substantial provider-to-provider and within-provider stability differences observed in real-world monitoring.
+                    </div>
+                    <div class="paper-section">
+                        <strong>💡 Conclusion:</strong> Behavioral fingerprinting enables detection of subtle model changes that traditional health checks miss, providing crucial stability monitoring for production AI systems.
+                    </div>
+                </div>
+            </div>
+
+            <!-- HuggingFace Models Section -->
+            <div class="section">
+                <h2>🤗 HuggingFace Top 15 Trending Models</h2>
+                <p style="margin-bottom: 20px; color: #666;">From <a href="https://huggingface.co/models?sort=trending">huggingface.co/models?sort=trending</a> • Filtered: Updated within last 30 days</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Model</th>
+                            <th>Type</th>
+                            <th>Params</th>
+                            <th>Downloads</th>
+                            <th>Likes</th>
+                            <th>Updated</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.5-35B-A3B-Uncensored</a></td>
+                            <td>Image-Text-to-Text</td>
+                            <td>35B</td>
+                            <td>276k</td>
+                            <td>799</td>
+                            <td>12 days ago</td>
+                            <td>An uncensored variant of Qwen3.5-35B-A3B vision-language model with aggressive fine-tuning for unrestricted responses.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning</a></td>
+                            <td>Text Generation</td>
+                            <td>28B</td>
+                            <td>141k</td>
+                            <td>1.03k</td>
+                            <td>2 days ago</td>
+                            <td>Reasoning-enhanced Qwen3.5 model distilled from Claude 4.6 Opus capabilities for advanced logical inference.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://huggingface.co/mistralai/Mistral-Small-4-119B-2603">mistralai/Mistral-Small-4-119B</a></td>
+                            <td>Text Generation</td>
+                            <td>119B</td>
+                            <td>10.3k</td>
+                            <td>291</td>
+                            <td>5 days ago</td>
+                            <td>Mistral's latest 119B parameter small model offering competitive performance with efficient inference.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="https://huggingface.co/baidu/Qianfan-OCR">baidu/Qianfan-OCR</a></td>
+                            <td>Image-Text-to-Text</td>
+                            <td>5B</td>
+                            <td>5.48k</td>
+                            <td>291</td>
+                            <td>4 days ago</td>
+                            <td>Baidu's Qianfan OCR model for accurate text extraction from images with multilingual support.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="https://huggingface.co/fishaudio/s2-pro">fishaudio/s2-pro</a></td>
+                            <td>Text-to-Speech</td>
+                            <td>5B</td>
+                            <td>12.3k</td>
+                            <td>707</td>
+                            <td>11 days ago</td>
+                            <td>Fish Audio's professional text-to-speech model delivering natural, expressive voice synthesis.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="https://huggingface.co/nvidia/Nemotron-Cascade-2-30B-A3B">nvidia/Nemotron-Cascade-2-30B-A3B</a></td>
+                            <td>Text Generation</td>
+                            <td>32B</td>
+                            <td>3.31k</td>
+                            <td>198</td>
+                            <td>1 day ago</td>
+                            <td>NVIDIA's cascade MoE model with 30B active parameters from 2 trillion total for efficient inference.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="https://huggingface.co/zai-org/GLM-OCR">zai-org/GLM-OCR</a></td>
+                            <td>Image-to-Text</td>
+                            <td>-</td>
+                            <td>3.2M</td>
+                            <td>1.42k</td>
+                            <td>11 days ago</td>
+                            <td>GLM-based OCR model achieving high accuracy on document understanding and text recognition tasks.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="https://huggingface.co/HauhauCS/Qwen3.5-9B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.5-9B-Uncensored</a></td>
+                            <td>Text Generation</td>
+                            <td>9B</td>
+                            <td>350k</td>
+                            <td>606</td>
+                            <td>19 days ago</td>
+                            <td>Compact uncensored Qwen3.5 9B variant optimized for local deployment with minimal restrictions.</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="https://huggingface.co/Tesslate/OmniCoder-9B">Tesslate/OmniCoder-9B</a></td>
+                            <td>Text Generation</td>
+                            <td>9B</td>
+                            <td>18.4k</td>
+                            <td>357</td>
+                            <td>10 days ago</td>
+                            <td>Versatile code generation model supporting multiple programming languages and software engineering tasks.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><a href="https://huggingface.co/Qwen/Qwen3.5-9B">Qwen/Qwen3.5-9B</a></td>
+                            <td>Image-Text-to-Text</td>
+                            <td>10B</td>
+                            <td>3.15M</td>
+                            <td>976</td>
+                            <td>21 days ago</td>
+                            <td>Official Qwen3.5 9B multimodal model from Alibaba Cloud with strong vision-language capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td><a href="https://huggingface.co/mistralai/Leanstral-2603">mistralai/Leanstral-2603</a></td>
+                            <td>Text Generation</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>187</td>
+                            <td>6 days ago</td>
+                            <td>Mistral's lean, efficient transformer architecture optimized for resource-constrained environments.</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF">Jackrong/Qwen3.5-27B-GGUF</a></td>
+                            <td>Text Generation</td>
+                            <td>27B</td>
+                            <td>437k</td>
+                            <td>313</td>
+                            <td>2 days ago</td>
+                            <td>GGUF quantized version of the Claude-distilled reasoning model for efficient local inference.</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td><a href="https://huggingface.co/Jackrong/Qwen3.5-9B-Claude-4.6-Opus-Reasoning-Distilled-v2">Jackrong/Qwen3.5-9B-Claude-4.6-v2</a></td>
+                            <td>Image-Text-to-Text</td>
+                            <td>10B</td>
+                            <td>20.3k</td>
+                            <td>97</td>
+                            <td>5 days ago</td>
+                            <td>Updated version of the 9B Claude reasoning distillation with improved multimodal capabilities.</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td><a href="https://huggingface.co/Qwen/Qwen3.5-35B-A3B">Qwen/Qwen3.5-35B-A3B</a></td>
+                            <td>Image-Text-to-Text</td>
+                            <td>36B</td>
+                            <td>2.42M</td>
+                            <td>1.22k</td>
+                            <td>24 days ago</td>
+                            <td>Official Qwen3.5 35B-A3B flagship multimodal model with state-of-the-art vision understanding.</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><a href="https://huggingface.co/Lightricks/LTX-2.3">Lightricks/LTX-2.3</a></td>
+                            <td>Image-to-Video</td>
+                            <td>-</td>
+                            <td>887k</td>
+                            <td>714</td>
+                            <td>7 days ago</td>
+                            <td>Lightricks' LTX video generation model version 2.3 for high-quality video synthesis from images.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- GitHub Repositories Section -->
+            <div class="section">
+                <h2>⭐ GitHub Top 10 Trending Python Repositories</h2>
+                <p style="margin-bottom: 20px; color: #666;">From <a href="https://github.com/trending/python?since=daily">github.com/trending/python?since=daily</a></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Repository</th>
+                            <th>Stars Today</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="https://github.com/bytedance/deer-flow">bytedance/deer-flow</a></td>
+                            <td><span class="badge badge-hot">1,690</span></td>
+                            <td>An open-source SuperAgent harness that researches, codes, and creates with sandboxes, memories, tools, skills and subagents for tasks ranging from minutes to hours.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="https://github.com/FujiwaraChoki/MoneyPrinterV2">FujiwaraChoki/MoneyPrinterV2</a></td>
+                            <td><span class="badge badge-hot">1,787</span></td>
+                            <td>Automate the process of making money online through various digital revenue streams and automated workflows.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="https://github.com/TauricResearch/TradingAgents">TauricResearch/TradingAgents</a></td>
+                            <td><span class="badge badge-hot">1,051</span></td>
+                            <td>Multi-agent LLM financial trading framework that leverages collaborative AI agents for market analysis and trading decisions.</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="https://github.com/teng-lin/notebooklm-py">teng-lin/notebooklm-py</a></td>
+                            <td><span class="badge badge-trending">259</span></td>
+                            <td>Unofficial Python API and agentic skill for Google NotebookLM providing full programmatic access to all features.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="https://github.com/jamwithai/production-agentic-rag-course">jamwithai/production-agentic-rag-course</a></td>
+                            <td><span class="badge badge-trending">237</span></td>
+                            <td>Educational course on building production-ready agentic RAG systems with practical implementations and best practices.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="https://github.com/jiji262/douyin-downloader">jiji262/douyin-downloader</a></td>
+                            <td><span class="badge badge-trending">43</span></td>
+                            <td>Practical Douyin downloader for single-item and profile batch downloads with progress display, retries, and SQLite deduplication.</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="https://github.com/langchain-ai/local-deep-researcher">langchain-ai/local-deep-researcher</a></td>
+                            <td><span class="badge badge-new">28</span></td>
+                            <td>Fully local web research and report writing assistant that runs entirely on your machine without external APIs.</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="https://github.com/plastic-labs/honcho">plastic-labs/honcho</a></td>
+                            <td><span class="badge badge-trending">129</span></td>
+                            <td>Memory library for building stateful AI agents with persistent context across conversations.</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="https://github.com/meta-pytorch/OpenEnv">meta-pytorch/OpenEnv</a></td>
+                            <td><span class="badge badge-new">11</span></td>
+                            <td>Interface library for reinforcement learning post-training with diverse environments and standardized APIs.</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><a href="https://github.com/home-assistant/core">home-assistant/core</a></td>
+                            <td>-</td>
+                            <td>Open source home automation platform that puts local control and privacy first with extensive device integrations.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Key Trends Section -->
+            <div class="section">
+                <h2>🔥 Key Trends & Highlights</h2>
+
+                <div class="trend-item">
+                    <div class="trend-title">1. 🎨 GUI Agent Reward Frameworks</div>
+                    <p>Multi-agent critic systems like OS-Themis are emerging as critical infrastructure for training robust GUI agents, with milestone-based decomposition showing 10%+ improvements in RL training for Android automation tasks.</p>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-title">2. 🧠 Process-Level LLM Control Architectures</div>
+                    <p>The Box Maze framework demonstrates that architectural constraints at the cognitive layer (memory grounding, structured inference, boundary enforcement) can reduce adversarial failure rates from 40% to below 1%, suggesting a shift from behavioral to process-level safety mechanisms.</p>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-title">3. ⚡ GPU-Accelerated Combinatorial Optimization</div>
+                    <p>cuGenOpt and similar frameworks are democratizing access to high-performance optimization through CUDA-accelerated metaheuristics, achieving orders-of-magnitude speedups over traditional MIP solvers with LLM-assisted problem modeling interfaces.</p>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-title">4. 🏥 Efficient Biosignal Foundation Models</div>
+                    <p>LuMamba's combination of state-space models (Mamba) with JEPA objectives achieves SOTA EEG performance with 377× fewer FLOPs than Transformers, highlighting the potential of linear-complexity architectures for medical AI applications.</p>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-title">5. 🔍 Black-Box LLM Endpoint Monitoring</div>
+                    <p>Behavioral fingerprinting approaches like Stability Monitor are addressing the critical production need to detect subtle model changes (quantization, version updates, inference stack changes) that traditional health checks miss entirely.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>AI Daily Report • Generated on March 23, 2026 • 08:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Sources: arXiv cs.AI, HuggingFace Trending, GitHub Trending, Hacker News</p>
+            <p style="margin-top: 10px;">Published to <a href="https://chenlijn.github.io/ai-daily/">chenlijn.github.io/ai-daily</a></p>
+        </div>
+    </div>
+</body>
+</html>
