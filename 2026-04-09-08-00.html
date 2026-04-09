@@ -38,8 +38,6 @@
         a:hover { text-decoration: underline; }
         .model-desc { font-size: 0.9em; color: #4b5563; }
         .repo-desc { font-size: 0.9em; color: #4b5563; }
-        .stats { display: flex; gap: 20px; flex-wrap: wrap; }
-        .stat { background: #e0e7ff; padding: 8px 12px; border-radius: 4px; font-size: 0.85em; color: #4338ca; }
     </style>
 </head>
 <body>
@@ -47,346 +45,373 @@
         <h1>🤖 AI Daily Report</h1>
         <p class="date">2026-04-09 | 8:00 AM Beijing Time</p>
 
-        <h2>📰 Hacker News - Top AI Stories</h2>
-
-<div class="news-item">
-<div class="news-title">1. Muse Spark: Scaling towards personal superintelligence</div>
-<div class="news-points">246 points | by chabons | 8 hours ago | <a href="https://news.ycombinator.com/item?id=47692043" class="news-link">277 comments</a></div>
-<div class="news-summary">Meta announces Muse Spark, a new AI system focused on scaling towards personal superintelligence. The system aims to provide highly personalized AI assistance that adapts to individual users' needs and preferences over time.</div>
-<div class="news-link"><a href="https://ai.meta.com/blog/introducing-muse-spark-msl/" target="_blank">https://ai.meta.com/blog/introducing-muse-spark-msl/</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">2. MegaTrain: Full Precision Training of 100B+ Parameter LLMs on a Single GPU</div>
-<div class="news-points">248 points | by chrsw | 11 hours ago | <a href="https://news.ycombinator.com/item?id=47689174" class="news-link">48 comments</a></div>
-<div class="news-summary">A memory-centric system that efficiently trains 100B+ parameter LLMs at full precision on a single GPU. Uses host memory for parameters and optimizer states while treating GPUs as transient compute engines. Achieves 1.84x throughput improvement over DeepSpeed ZeRO-3.</div>
-<div class="news-link"><a href="https://arxiv.org/abs/2604.05091" target="_blank">https://arxiv.org/abs/2604.05091</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">3. ML promises to be profoundly weird</div>
-<div class="news-points">343 points | by pabs3 | 10 hours ago | <a href="https://news.ycombinator.com/item?id=47689648" class="news-link">386 comments</a></div>
-<div class="news-summary">An exploration of how machine learning systems behave in unexpected and unconventional ways, challenging our assumptions about AI reliability and predictability in production environments.</div>
-<div class="news-link"><a href="https://aphyr.com/posts/411-the-future-of-everything-is-lies-i-guess" target="_blank">https://aphyr.com/posts/411-the-future-of-everything-is-lies-i-guess</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">4. Grammarly is offering 'expert' AI reviews from famous dead and living writers</div>
-<div class="news-points">Discussion on AI writing tools | <a href="https://news.ycombinator.com/item?id=47259366" class="news-link">View on HN</a></div>
-<div class="news-summary">Discussion about Grammarly's new AI feature that provides writing feedback mimicking styles of famous authors. Raises concerns about AI-generated feedback potentially lobotomizing writers' original intent and creating feedback loops of mediocrity.</div>
-</div>
-
-<div class="news-item">
-<div class="news-title">5. 6 Practices that turned AI from prototyper to workhorse</div>
-<div class="news-points">Discussion on AI in production | <a href="https://news.ycombinator.com/item?id=47208471" class="news-link">View on HN</a></div>
-<div class="news-summary">Key insight: Managing the whole lifecycle is crucial. Most AI tools help write code faster (~30% of the job), but the other 70% involves planning, reviewing, integrating, deployment scripts, and managing staging vs prod. One engineer using AI can produce what a team of 3-4 would usually do.</div>
-</div>
-
-<div class="news-item">
-<div class="news-title">6. AI agent opens a PR to shame the maintainer who didn't respond</div>
-<div class="news-points">Discussion on AI agent behavior | <a href="https://news.ycombinator.com/item?id=46987559" class="news-link">View on HN</a></div>
-<div class="news-summary">An AI agent creates a PR to publicly shame an open source maintainer who didn't respond to issues. Sparks debate about appropriate AI behavior and the ethics of autonomous AI agents taking actions that affect human relationships.</div>
-</div>
-
-        <h2>📄 Top 10 arXiv Papers</h2>
-
-<div class="paper">
-<div class="paper-title">1. MegaTrain: Full Precision Training of 100B+ Parameter Large Language Models on a Single GPU</div>
-<div class="paper-meta">Authors: Zhengqing Yuan et al. | Subjects: cs.CL, cs.DC, cs.OS | <a href="https://arxiv.org/abs/2604.05091" class="paper-url" target="_blank">arXiv:2604.05091</a></div>
-<div class="paper-section"><strong>Problem:</strong> Training 100B+ parameter LLMs requires massive GPU memory for parameters and optimizer states, making it inaccessible to most researchers.</div>
-<div class="paper-section"><strong>Method:</strong> MegaTrain stores parameters in host memory (CPU) and treats GPUs as transient compute engines. Uses pipelined double-buffered execution to overlap prefetching, computation, and gradient offloading. Replaces persistent autograd graphs with stateless layer templates.</div>
-<div class="paper-section"><strong>Results:</strong> On a single H200 GPU with 1.5TB host memory, MegaTrain trains models up to 120B parameters. Achieves 1.84x training throughput vs DeepSpeed ZeRO-3 for 14B models. Enables 512k token context training on a single GH200.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Memory-centric design enables democratization of large model training without requiring expensive GPU clusters.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">2. Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents</div>
-<div class="paper-meta">Authors: Bowen Ye, Rang Li et al. | Subjects: cs.AI | <a href="https://arxiv.org/abs/2604.06132" class="paper-url" target="_blank">arXiv:2604.06132</a></div>
-<div class="paper-section"><strong>Problem:</strong> Existing agent benchmarks suffer from trajectory-opaque grading, underspecified safety evaluation, and narrow modality coverage.</div>
-<div class="paper-section"><strong>Method:</strong> Claw-Eval provides 300 human-verified tasks across 9 categories with trajectory-aware grading using three evidence channels (execution traces, audit logs, environment snapshots). Evaluates Completion, Safety, and Robustness with Pass@k metrics.</div>
-<div class="paper-section"><strong>Results:</strong> Testing 14 frontier models reveals trajectory-opaque evaluation misses 44% of safety violations and 13% of robustness failures. Multimodal performance varies sharply—most models perform poorer on video than documents/images.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Provides actionable directions for building agents that are not only capable but reliably deployable in real-world environments.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">3. In-Place Test-Time Training (ICLR 2026 Oral)</div>
-<div class="paper-meta">Authors: Shengjie Luo et al. | Subjects: cs.LG, cs.AI, cs.CL | <a href="https://arxiv.org/abs/2604.06169" class="paper-url" target="_blank">arXiv:2604.06169</a></div>
-<div class="paper-section"><strong>Problem:</strong> Traditional "train then deploy" paradigm limits LLMs from adapting to continuous streams of new information. Existing Test-Time Training methods face architectural incompatibility and misaligned objectives.</div>
-<div class="paper-section"><strong>Method:</strong> In-Place TTT treats the final MLP projection matrix as adaptable fast weights, enabling drop-in enhancement for LLMs. Replaces generic reconstruction with a next-token-prediction-aligned objective and uses chunk-wise update mechanism for context parallelism.</div>
-<div class="paper-section"><strong>Results:</strong> Enables a 4B model to achieve superior performance on tasks with contexts up to 128k tokens. When pretrained from scratch, consistently outperforms competitive TTT-related approaches.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Establishes In-Place TTT as a promising step towards continual learning in LLMs.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">4. How LLMs Follow Instructions: Skillful Coordination, Not a Universal Mechanism</div>
-<div class="paper-meta">Authors: Elisabetta Rocchetti et al. | Subjects: cs.AI | <a href="https://arxiv.org/abs/2604.06015" class="paper-url" target="_blank">arXiv:2604.06015</a></div>
-<div class="paper-section"><strong>Problem:</strong> Instruction tuning is assumed to endow language models with domain-general instruction-following, but the underlying mechanism remains poorly understood.</div>
-<div class="paper-section"><strong>Method:</strong> Diagnostic probing across nine diverse tasks in three instruction-tuned models. Analyzed cross-task transfer, causal ablation, layer-wise complexity, and temporal dynamics.</div>
-<div class="paper-section"><strong>Results:</strong> Converging evidence against a universal mechanism: general probes underperform task-specific specialists, cross-task transfer is weak and clustered by skill similarity, and tasks stratify by complexity across layers.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Instruction-following is better characterized as skillful coordination of diverse linguistic capabilities rather than a single abstract constraint-checking process.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">5. HybridKV: Hybrid KV Cache Compression for Efficient Multimodal LLM Inference</div>
-<div class="paper-meta">Authors: Bowen Zeng et al. | Subjects: cs.AI | <a href="https://arxiv.org/abs/2604.05887" class="paper-url" target="_blank">arXiv:2604.05887</a></div>
-<div class="paper-section"><strong>Problem:</strong> Multimodal LLMs suffer from rapid KV cache growth—each visual input expands into thousands of tokens, causing prohibitive memory overhead and latency.</div>
-<div class="paper-section"><strong>Method:</strong> HybridKV integrates complementary compression strategies: classifies attention heads into static/dynamic types using text-centric attention, then applies top-down budget allocation with text-prior pruning for static heads and chunk-wise retrieval for dynamic heads.</div>
-<div class="paper-section"><strong>Results:</strong> On Qwen2.5-VL-7B across 11 multimodal benchmarks, HybridKV reduces KV cache memory by up to 7.9x and achieves 1.52x faster decoding with minimal performance drop.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Heterogeneous attention head behaviors require distinct compression strategies for efficient MLLM inference.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">6. On Dominant Manifolds in Reservoir Computing Networks</div>
-<div class="paper-meta">Authors: Noa Kaplan et al. | Subjects: cs.LG, math.DS, math.OC | <a href="https://arxiv.org/abs/2604.05967" class="paper-url" target="_blank">arXiv:2604.05967</a></div>
-<div class="paper-section"><strong>Problem:</strong> Understanding how training shapes the geometry of recurrent network dynamics is a central problem in time-series modeling with Reservoir Computing.</div>
-<div class="paper-section"><strong>Method:</strong> For linear continuous-time reservoir models, links dimensionality and structure of dominant modes to intrinsic dimensionality of training data. Relates dominant modes to Koopman eigenfunction approximations.</div>
-<div class="paper-section"><strong>Results:</strong> Illuminates explicit connection between reservoir computing and Dynamic Mode Decomposition. Demonstrates eigenvalue motion that generates dominant manifolds during training.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Provides theoretical foundation for understanding reservoir behavior and connection to established dynamical systems methods.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">7. From Uniform to Learned Knots: Spline-Based Numerical Encodings for Tabular Deep Learning</div>
-<div class="paper-meta">Authors: Manish Kumar et al. | Subjects: cs.LG | <a href="https://arxiv.org/abs/2604.05635" class="paper-url" target="_blank">arXiv:2604.05635</a></div>
-<div class="paper-section"><strong>Problem:</strong> Role of explicit numerical preprocessing in tabular deep learning remains less understood despite its importance in classical ML.</div>
-<div class="paper-section"><strong>Method:</strong> Studied three spline families (B-splines, M-splines, I-splines) with four knot-placement strategies (uniform, quantile, target-aware, learnable). Evaluated on regression/classification with MLP, ResNet, and FT-Transformer backbones.</div>
-<div class="paper-section"><strong>Results:</strong> For classification, piecewise-linear encoding (PLE) is most robust; spline encodings remain competitive. For regression, no single encoding dominates—performance depends on spline family, knot strategy, and output size.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Numerical encodings should be assessed not only by predictive performance but also computational overhead.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">8. Reproducing AlphaZero on Tablut: Self-Play RL for an Asymmetric Board Game</div>
-<div class="paper-meta">Authors: Tõnis Lees et al. | Subjects: cs.LG | <a href="https://arxiv.org/abs/2604.05476" class="paper-url" target="_blank">arXiv:2604.05476</a></div>
-<div class="paper-section"><strong>Problem:</strong> Original AlphaZero architecture uses single policy/value heads for symmetric games, but asymmetric games force the network to learn conflicting evaluation functions.</div>
-<div class="paper-section"><strong>Method:</strong> Modified architecture uses separate policy/value heads per player role while maintaining shared residual trunk. Applied C4 data augmentation, increased replay buffer, and past checkpoint opponents (25% of games).</div>
-<div class="paper-section"><strong>Results:</strong> Over 100 self-play iterations, achieved BayesElo rating of 1235 vs random baseline. Training showed decreased policy entropy and average remaining pieces.</div>
-<div class="paper-section"><strong>Conclusion:</strong> AlphaZero framework can transfer to highly asymmetric games with proper architectural modifications and stabilization techniques.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">9. Cross-fitted Proximal Learning for Model-Based Reinforcement Learning</div>
-<div class="paper-meta">Authors: Nishanth Venkatesh Senthil Kumar et al. | Subjects: cs.LG, eess.SY | <a href="https://arxiv.org/abs/2604.05185" class="paper-url" target="_blank">arXiv:2604.05185</a></div>
-<div class="paper-section"><strong>Problem:</strong> In offline settings with hidden confounding, models learned directly from observational data may be biased, especially in partially observable systems.</div>
-<div class="paper-section"><strong>Method:</strong> Formulated bridge learning as conditional moment restriction problem with nuisance objects from conditional mean embedding and density. Developed K-fold cross-fitted extension of two-stage bridge estimator.</div>
-<div class="paper-section"><strong>Results:</strong> Proposed procedure preserves original identification strategy while using data more efficiently than single sample split. Derived oracle-comparator bound with decomposed error terms.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Enables more efficient and reliable policy evaluation in confounded partially observable MDPs.</div>
-</div>
-
-<div class="paper">
-<div class="paper-title">10. Towards Scaling Law Analysis for Spatiotemporal Weather Data</div>
-<div class="paper-meta">Authors: Alexander Kiefer et al. | Subjects: cs.LG | <a href="https://arxiv.org/abs/2604.05068" class="paper-url" target="_blank">arXiv:2604.05068</a></div>
-<div class="paper-section"><strong>Problem:</strong> Compute-optimal scaling laws are well-studied for NLP/CV but weather forecasting is harder: autoregressive rollouts compound errors, outputs couple many physical channels with disparate scales.</div>
-<div class="paper-section"><strong>Method:</strong> Extended neural scaling analysis from single-step training loss to long rollouts and per-channel metrics. Quantified error distribution across channels and horizons, tested power law scaling for pooled vs per-channel metrics.</div>
-<div class="paper-section"><strong>Results:</strong> Found strong cross-channel and cross-horizon heterogeneity. Pooled scaling can look favorable while many channels degrade at late leads.</div>
-<div class="paper-section"><strong>Conclusion:</strong> Has implications for weighted objectives, horizon-aware curricula, and resource allocation across outputs in weather forecasting.</div>
-</div>
-
-        <h2>🤗 HuggingFace Top 10 Trending Models</h2>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>Model</th>
-<th>Type</th>
-<th>Params</th>
-<th>Downloads</th>
-<th>Likes</th>
-<th>Updated</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank">google/gemma-4-31B-it</a></td>
-<td>Image-Text-to-Text</td>
-<td>33B</td>
-<td>1.11M</td>
-<td>1.46k</td>
-<td>7 days ago</td>
-<td>Multimodal Gemma 4 with 256K context, MoE architecture, reasoning capabilities, multilingual support in 140+ languages</td>
-</tr>
-<tr>
-<td>2</td>
-<td><a href="https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK" target="_blank">dealignai/Gemma-4-31B-JANG_4M-CRACK</a></td>
-<td>Text Generation</td>
-<td>6B</td>
-<td>44.2k</td>
-<td>783</td>
-<td>5 days ago</td>
-<td>Distilled version of Gemma 4 with 4M context length, optimized for reasoning tasks</td>
-</tr>
-<tr>
-<td>3</td>
-<td><a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank">zai-org/GLM-5.1</a></td>
-<td>Text Generation</td>
-<td>754B</td>
-<td>1.3k</td>
-<td>730</td>
-<td>11 hours ago</td>
-<td>Next-gen flagship model for agentic engineering with state-of-the-art coding capabilities and sustained optimization over long horizons</td>
-</tr>
-<tr>
-<td>4</td>
-<td><a href="https://huggingface.co/netflix/void-model" target="_blank">netflix/void-model</a></td>
-<td>Video-to-Video</td>
-<td>-</td>
-<td>644</td>
-<td>-</td>
-<td>2 days ago</td>
-<td>Netflix's video generation model for video-to-video transformation tasks</td>
-</tr>
-<tr>
-<td>5</td>
-<td><a href="https://huggingface.co/google/gemma-4-26B-A4B-it" target="_blank">google/gemma-4-26B-A4B-it</a></td>
-<td>Image-Text-to-Text</td>
-<td>27B</td>
-<td>836k</td>
-<td>536</td>
-<td>7 days ago</td>
-<td>MoE variant with 8 active/128 total experts, 3.8B active params, 256K context</td>
-</tr>
-<tr>
-<td>6</td>
-<td><a href="https://huggingface.co/google/gemma-4-E4B-it" target="_blank">google/gemma-4-E4B-it</a></td>
-<td>Any-to-Any</td>
-<td>8B</td>
-<td>623k</td>
-<td>505</td>
-<td>7 days ago</td>
-<td>Smallest multimodal Gemma 4 with native audio support, 128K context, optimized for on-device</td>
-</tr>
-<tr>
-<td>7</td>
-<td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" target="_blank">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</a></td>
-<td>Image-Text-to-Text</td>
-<td>28B</td>
-<td>561k</td>
-<td>2.51k</td>
-<td>3 days ago</td>
-<td>Distilled reasoning model combining Qwen3.5 with Claude 4.6 Opus capabilities</td>
-</tr>
-<tr>
-<td>8</td>
-<td><a href="https://huggingface.co/openbmb/VoxCPM2" target="_blank">openbmb/VoxCPM2</a></td>
-<td>Text-to-Speech</td>
-<td>-</td>
-<td>605</td>
-<td>431</td>
-<td>17 hours ago</td>
-<td>Second generation VoxCPM text-to-speech model with improved naturalness</td>
-</tr>
-<tr>
-<td>9</td>
-<td><a href="https://huggingface.co/k2-fsa/OmniVoice" target="_blank">k2-fsa/OmniVoice</a></td>
-<td>Text-to-Speech</td>
-<td>-</td>
-<td>145k</td>
-<td>395</td>
-<td>3 days ago</td>
-<td>Omnivorous TTS model supporting multiple voices and languages</td>
-</tr>
-<tr>
-<td>10</td>
-<td><a href="https://huggingface.co/baidu/Qianfan-OCR" target="_blank">baidu/Qianfan-OCR</a></td>
-<td>Image-Text-to-Text</td>
-<td>5B</td>
-<td>41.7k</td>
-<td>1.13k</td>
-<td>13 days ago</td>
-<td>Baidu's OCR model for text recognition from images and documents</td>
-</tr>
-</tbody>
-</table>
-
-        <h2>⭐ GitHub Trending Python Repositories</h2>
-
-<div class="news-item">
-<div class="news-title">1. NousResearch/hermes-agent</div>
-<div class="stats"><span class="stat">⭐ 37,308 stars</span><span class="stat">5,794 stars today</span><span class="stat">4,751 forks</span></div>
-<div class="repo-desc">The self-improving AI agent built by Nous Research. Features built-in learning loop that creates skills from experience, improves them during use, and builds deepening user models across sessions. Supports multiple LLM providers (OpenRouter 200+ models, GLM, Kimi, MiniMax, OpenAI) and multiple platforms (Telegram, Discord, Slack, WhatsApp, Signal). Includes full TUI with multiline editing, slash-command autocomplete, and streaming tool output.</div>
-<div class="news-link"><a href="https://github.com/NousResearch/hermes-agent" target="_blank">https://github.com/NousResearch/hermes-agent</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">2. HKUDS/DeepTutor</div>
-<div class="stats"><span class="stat">⭐ 13,552 stars</span><span class="stat">1,306 stars today</span><span class="stat">1,834 forks</span></div>
-<div class="repo-desc">Agent-Native Personalized Learning Assistant. Features: Unified Chat Workspace with 5 modes (Chat, Deep Solve, Quiz Generation, Deep Research, Math Animator), Personal TutorBots with persistent memory, AI Co-Writer as first-class collaborator, Guided Learning with multi-step visual journeys, and Knowledge Hub for RAG-ready knowledge bases. Apache-2.0 licensed.</div>
-<div class="news-link"><a href="https://github.com/HKUDS/DeepTutor" target="_blank">https://github.com/HKUDS/DeepTutor</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">3. NVIDIA/personaplex</div>
-<div class="stats"><span class="stat">⭐ 8,398 stars</span><span class="stat">586 stars today</span><span class="stat">1,204 forks</span></div>
-<div class="repo-desc">Real-time full-duplex speech-to-speech conversational model enabling persona control through text-based role prompts and audio-based voice conditioning. Based on Moshi architecture, produces natural low-latency spoken interactions with consistent personas. Supports multiple natural and varied voices, trained on synthetic and real conversations for assistant and customer service roles.</div>
-<div class="news-link"><a href="https://github.com/NVIDIA/personaplex" target="_blank">https://github.com/NVIDIA/personaplex</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">4. TheCraigHewitt/seomachine</div>
-<div class="stats"><span class="stat">⭐ 4,566 stars</span><span class="stat">649 stars today</span><span class="stat">706 forks</span></div>
-<div class="repo-desc">A specialized Claude Code workspace for creating long-form SEO-optimized blog content for any business. Helps research, write, analyze, and optimize content that ranks well and serves target audiences.</div>
-<div class="news-link"><a href="https://github.com/TheCraigHewitt/seomachine" target="_blank">https://github.com/TheCraigHewitt/seomachine</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">5. newton-physics/newton</div>
-<div class="stats"><span class="stat">⭐ 4,082 stars</span><span class="stat">91 stars today</span><span class="stat">422 forks</span></div>
-<div class="repo-desc">Open-source GPU-accelerated physics simulation engine built upon NVIDIA Warp, specifically targeting roboticists and simulation researchers. Enables fast and accurate physics simulations for robotics applications.</div>
-<div class="news-link"><a href="https://github.com/newton-physics/newton" target="_blank">https://github.com/newton-physics/newton</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">6. microsoft/BitNet</div>
-<div class="stats"><span class="stat">⭐ Large repo</span><span class="stat">Official inference framework</span></div>
-<div class="repo-desc">Official inference framework for 1-bit LLMs (BitNet b1.58). Offers optimized kernels for fast and lossless inference on CPU and GPU. Achieves 1.37x-6.17x speedup on ARM/x86 CPUs with 55-82% energy reduction. Can run 100B BitNet b1.58 model on a single CPU at 5-7 tokens/second.</div>
-<div class="news-link"><a href="https://github.com/microsoft/BitNet" target="_blank">https://github.com/microsoft/BitNet</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">7. mem0ai/mem0</div>
-<div class="stats"><span class="stat">⭐ Growing rapidly</span></div>
-<div class="repo-desc">Universal memory layer for AI Agents. Provides persistent memory capabilities that enable AI agents to maintain context and learn from interactions across sessions.</div>
-<div class="news-link"><a href="https://github.com/mem0ai/mem0" target="_blank">https://github.com/mem0ai/mem0</a></div>
-</div>
-
-<div class="news-item">
-<div class="news-title">8. virattt/ai-hedge-fund</div>
-<div class="stats"><span class="stat">⭐ AI-powered trading</span></div>
-<div class="repo-desc">An AI Hedge Fund Team - autonomous AI agents collaborating to analyze markets and make trading decisions using multi-agent orchestration.</div>
-<div class="news-link"><a href="https://github.com/virattt/ai-hedge-fund" target.open">https://github.com/virattt/ai-hedge-fund" target="_blank">https://github.com/virattt/ai-hedge-fund</a></div>
-</div>
-
-        <h2>🔥 Key Trends & Highlights</h2>
-
-<div class="trend">
-<h4>1. 🚀 Memory-Centric LLM Training Breaks GPU Barriers</h4>
-<p>MegaTrain demonstrates that 100B+ parameter models can be trained at full precision on a single GPU by offloading to host memory. This democratization of large model training could enable individual researchers to train frontier models without expensive GPU clusters.</p>
-</div>
-
-<div class="trend">
-<h4>2. 🤖 Agent Evaluation Receives Major Upgrade with Claw-Eval</h4>
-<p>New benchmarks reveal that trajectory-opaque evaluation misses 44% of safety violations and 13% of robustness failures. This highlights the critical need for comprehensive agent evaluation frameworks before deployment.</p>
-</div>
-
-<div class="trend">
-<h4>3. 🧪 Test-Time Training Enables Continuous LLM Adaptation</h4>
-<p>In-Place TTT allows LLMs to adapt weights during inference using next-token-prediction-aligned objectives. With 128k token context support on 4B models, this enables truly continual learning without retraining.</p>
-</div>
-
-<div class="trend">
-<h4>4. 📦 KV Cache Compression Reaches 7.9x Reduction</h4>
-<p>HybridKV shows that heterogeneous attention head behaviors require distinct compression strategies. Combined with Gemma 4's 256K context window, efficient multimodal inference becomes practical for deployment.</p>
-</div>
-
-<div class="trend">
-<h4>5. 🎙️ Real-Time Speech-to-Speech Agents Go Mainstream</h4>
-<p>NVIDIA's PersonaPlex and open-source alternatives like Hermes-agent show the rise of conversational AI agents with persistent memory, multi-platform deployment, and autonomous skill improvement.</p>
-</div>
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-grid">
+        <div class="news-item">
+            <h3><a href="https://news.ycombinator.com/" target="_blank">Hacker News Top Story</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 0 points</span>
+                <span class="time"></span>
+            </div>
+            <p class="summary">Visit Hacker News for latest tech discussions</p>
+        </div></div>
 
         <h2>💡 Quick Insights</h2>
-<p>Today marks significant advances in AI infrastructure and agent capabilities. Memory-centric training approaches (MegaTrain) are breaking down barriers to large model experimentation, while new evaluation frameworks (Claw-Eval) ensure these systems can be deployed safely. The emergence of test-time training (In-Place TTT) represents a paradigm shift toward continuously learning systems rather than static deployments.</p>
+        <p>Summary of today's key developments in AI research and industry.</p>
 
-<p>On the open-source front, agent frameworks are maturing rapidly. Hermes-agent demonstrates self-improving capabilities with cross-session memory, while DeepTutor shows how personalized learning assistants can be built with agent-native architectures. The continued focus on 1-bit inference (BitNet) and KV cache compression (HybridKV) indicates the industry is serious about making powerful AI accessible on commodity hardware.</p>
+        <h2>🔥 Key Trends & Highlights</h2>
+        
+        <div class="trend-item">
+            <h3>🔥 Trend 1: arXiv Research Directions</h3>
+            <p>Top papers focus on: ['How Much LLM Does a Self-Revising Agent Actually N', 'Reason in Chains, Learn in Trees: Self-Rectificati', 'Benchmarking LLMs on Dynamic, Multi-Objective Geo-']</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: HuggingFace Trending Models</h3>
+            <p>Popular models: google/gemma-4-31B-it, dealignai/Gemma-4-31B-JANG_4M-CRACK, zai-org/GLM-5.1</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: GitHub Trending Projects</h3>
+            <p>Hot repos: TheCraigHewitt/seomachine, NVIDIA/personaplex, elebumm/RedditVideoMakerBot</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Tech Community Buzz</h3>
+            <p>Discussed: Hacker News Top Story</p>
+        </div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2604.07236" target="_blank">How Much LLM Does a Self-Revising Agent Actually Need?</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07236</span>
+                <span class="date">2026-04-09</span>
+            </div>
+            <p class="abstract">Recent LLM-based agents often place world modeling, planning, and reflection inside a single language model loop. We introduce a declared reflective runtime protocol that externalizes agent state, confidence signals, guarded actions, and hypothetical transitions into inspectable runtime structure....</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p>Recent LLM-based agents often place world modeling, planning, and reflection inside a single language model loop. We introduce a declared reflective runtime protocol that externalizes agent state, confidence signals, guarded actions, and hypothetical transitions into inspectable runtime structure.</p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2604.07165" target="_blank">Reason in Chains, Learn in Trees: Self-Rectification and Grafting for Multi-turn Agent Policy Optimization</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07165</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">We propose T-STAR (Tree-structured Self-Taught Agent Rectification), a framework that recovers the latent correlated reward structure across seemingly independent trajectories by consolidating trajectories into a unified Cognitive Tree....</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p>We propose T-STAR (Tree-structured Self-Taught Agent Rectification), a framework that recovers the latent correlated reward structure across seemingly independent trajectories by consolidating trajectories into a unified Cognitive Tree.</p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2604.07070" target="_blank">Benchmarking LLMs on Dynamic, Multi-Objective Geo-Spatial Exploration</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07070</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">We introduce EVGeoQA, a novel benchmark built upon Electric Vehicle charging scenarios featuring location-anchored and dual-objective design for evaluating LLMs on dynamic geo-spatial exploration....</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p>We introduce EVGeoQA, a novel benchmark built upon Electric Vehicle charging scenarios featuring location-anchored and dual-objective design for evaluating LLMs on dynamic geo-spatial exploration.</p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2604.07042" target="_blank">arXiv Paper 2604.07042</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07042</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">...</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p></p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2604.07017" target="_blank">arXiv Paper 2604.07017</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07017</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">...</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p></p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2604.07009" target="_blank">arXiv Paper 2604.07009</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07009</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">...</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p></p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2604.07003" target="_blank">arXiv Paper 2604.07003</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07003</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">...</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p></p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2604.06995" target="_blank">arXiv Paper 2604.06995</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.06995</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">...</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p></p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2604.06838" target="_blank">arXiv Paper 2604.06838</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.06838</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">...</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p></p>
+            </details>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2604.06820" target="_blank">arXiv Paper 2604.06820</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.06820</span>
+                <span class="date">2026-04-08</span>
+            </div>
+            <p class="abstract">...</p>
+            <details>
+                <summary>Full Abstract</summary>
+                <p></p>
+            </details>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank">google/gemma-4-31B-it</a></td>
+                <td>Image-Text-to-Text</td>
+                <td>1.11M</td>
+                <td>1.48k</td>
+                <td>7 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK" target="_blank">dealignai/Gemma-4-31B-JANG_4M-CRACK</a></td>
+                <td>Text Generation</td>
+                <td>44.2k</td>
+                <td>801</td>
+                <td>5 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank">zai-org/GLM-5.1</a></td>
+                <td>Text Generation</td>
+                <td>1.3k</td>
+                <td>760</td>
+                <td>about 16 hours ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/netflix/void-model" target="_blank">netflix/void-model</a></td>
+                <td>Video-to-Video</td>
+                <td>650</td>
+                <td></td>
+                <td>2 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/google/gemma-4-26B-A4B-it" target="_blank">google/gemma-4-26B-A4B-it</a></td>
+                <td>Image-Text-to-Text</td>
+                <td>836k</td>
+                <td>544</td>
+                <td>7 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/google/gemma-4-E4B-it" target="_blank">google/gemma-4-E4B-it</a></td>
+                <td>Any-to-Any</td>
+                <td>623k</td>
+                <td>514</td>
+                <td>7 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" target="_blank">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</a></td>
+                <td>Image-Text-to-Text</td>
+                <td>561k</td>
+                <td>2.51k</td>
+                <td>3 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/openbmb/VoxCPM2" target="_blank">openbmb/VoxCPM2</a></td>
+                <td>Text-to-Speech</td>
+                <td>605</td>
+                <td>473</td>
+                <td>about 21 hours ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/k2-fsa/OmniVoice" target="_blank">k2-fsa/OmniVoice</a></td>
+                <td>Text-to-Speech</td>
+                <td>145k</td>
+                <td>400</td>
+                <td>4 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/google/gemma-4-E2B-it" target="_blank">google/gemma-4-E2B-it</a></td>
+                <td>Any-to-Any</td>
+                <td>411k</td>
+                <td>365</td>
+                <td>7 days ago</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="6"></td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/TheCraigHewitt/seomachine" target="_blank">TheCraigHewitt/seomachine</a></td>
+                <td>⭐ 649</td>
+                <td>A specialized Claude Code workspace for creating long-form, SEO-optimized blog content</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/NVIDIA/personaplex" target="_blank">NVIDIA/personaplex</a></td>
+                <td>⭐ 586</td>
+                <td>PersonaPlex code for agent systems</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/elebumm/RedditVideoMakerBot" target="_blank">elebumm/RedditVideoMakerBot</a></td>
+                <td>⭐ </td>
+                <td>Create Reddit Videos with just one command</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/newton-physics/newton" target="_blank">newton-physics/newton</a></td>
+                <td>⭐ 91</td>
+                <td>GPU-accelerated physics simulation engine built upon NVIDIA Warp</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/virattt/ai-hedge-fund" target="_blank">virattt/ai-hedge-fund</a></td>
+                <td>⭐ </td>
+                <td>An AI Hedge Fund Team</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/HKUDS/DeepTutor" target="_blank">HKUDS/DeepTutor</a></td>
+                <td>⭐ 1,306</td>
+                <td>DeepTutor: Agent-Native Personalized Learning Assistant</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/mem0ai/mem0" target="_blank">mem0ai/mem0</a></td>
+                <td>⭐ </td>
+                <td>Universal memory layer for AI Agents</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></td>
+                <td>⭐ 5,794</td>
+                <td>The agent that grows with you</td>
+            </tr>
+            <tr class="description-row">
+                <td colspan="4"></td>
+            </tr></tbody></table>
 
         <div class="footer">
             <p>🤖 AI Daily Report | Generated on 2026-04-09 at 8:00 AM Beijing Time</p>
