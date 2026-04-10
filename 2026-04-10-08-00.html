@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-04-10</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-04-10 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://davidoks.blog/p/how-funerals-keep-africa-poor" target="_blank">Many African families spend fortunes burying their dead</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 76 points</span>
+            </div>
+            <p class="summary">A widely discussed engineering or product story with potential implications for AI builders.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://arhan.sh/blog/native-instant-space-switching-on-macos/" target="_blank">Native Instant Space Switching on macOS</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 253 points</span>
+            </div>
+            <p class="summary">A widely discussed engineering or product story with potential implications for AI builders.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://charcuterie.elastiq.ch/" target="_blank">Charcuterie – Visual similarity Unicode explorer</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 87 points</span>
+            </div>
+            <p class="summary">A widely discussed engineering or product story with potential implications for AI builders.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/aloshdenny/reverse-SynthID" target="_blank">Reverse engineering Gemini's SynthID detection</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 89 points</span>
+            </div>
+            <p class="summary">A widely discussed engineering or product story with potential implications for AI builders.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://eaw.app/picoz80/" target="_blank">PicoZ80 – Drop-In Z80 Replacement</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 115 points</span>
+            </div>
+            <p class="summary">A widely discussed engineering or product story with potential implications for AI builders.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://telemetry.endeff.com/p/robots-eat-cars" target="_blank">Robots Eat Cars</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 27 points</span>
+            </div>
+            <p class="summary">A widely discussed engineering or product story with potential implications for AI builders.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2604.07236" target="_blank">How Much LLM Does a Self-Revising Agent Actually Need?</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07236</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Improve autonomous reasoning, planning, or tool-using behavior in AI systems for complex real-world tasks.</p>
+                <p><strong>Method:</strong> Introduces an agentic or reasoning-centric framework, often combining planning, search, or external tools.</p>
+                <p><strong>Results:</strong> Shows stronger task completion, better decision quality, or improved robustness on agent/reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> Agentic workflows are becoming more structured and measurable, pushing LLMs closer to reliable automation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2604.07165" target="_blank">Reason in Chains, Learn in Trees: Self-Rectification and Grafting for Multi-turn Agent Policy Optimization</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07165</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Improve autonomous reasoning, planning, or tool-using behavior in AI systems for complex real-world tasks.</p>
+                <p><strong>Method:</strong> Introduces an agentic or reasoning-centric framework, often combining planning, search, or external tools.</p>
+                <p><strong>Results:</strong> Shows stronger task completion, better decision quality, or improved robustness on agent/reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> Agentic workflows are becoming more structured and measurable, pushing LLMs closer to reliable automation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2604.07070" target="_blank">EVGeoQA: Benchmarking LLMs on Dynamic, Multi-Objective Geo-Spatial Exploration</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07070</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Improve autonomous reasoning, planning, or tool-using behavior in AI systems for complex real-world tasks.</p>
+                <p><strong>Method:</strong> Introduces an agentic or reasoning-centric framework, often combining planning, search, or external tools.</p>
+                <p><strong>Results:</strong> Shows stronger task completion, better decision quality, or improved robustness on agent/reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> Agentic workflows are becoming more structured and measurable, pushing LLMs closer to reliable automation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2604.07042" target="_blank">Planning Task Shielding: Detecting and Repairing Flaws in Planning Tasks through Turning them Unsolvable</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07042</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Improve autonomous reasoning, planning, or tool-using behavior in AI systems for complex real-world tasks.</p>
+                <p><strong>Method:</strong> Introduces an agentic or reasoning-centric framework, often combining planning, search, or external tools.</p>
+                <p><strong>Results:</strong> Shows stronger task completion, better decision quality, or improved robustness on agent/reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> Agentic workflows are becoming more structured and measurable, pushing LLMs closer to reliable automation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2604.07017" target="_blank">A-MBER: Affective Memory Benchmark for Emotion Recognition</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07017</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Improve autonomous reasoning, planning, or tool-using behavior in AI systems for complex real-world tasks.</p>
+                <p><strong>Method:</strong> Introduces an agentic or reasoning-centric framework, often combining planning, search, or external tools.</p>
+                <p><strong>Results:</strong> Shows stronger task completion, better decision quality, or improved robustness on agent/reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> Agentic workflows are becoming more structured and measurable, pushing LLMs closer to reliable automation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2604.07009" target="_blank">CAFP: A Post-Processing Framework for Group Fairness via Counterfactual Model Averaging</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07009</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Address a practical limitation in current AI systems, such as data efficiency, generalization, or deployment cost.</p>
+                <p><strong>Method:</strong> Presents a new model, training procedure, benchmark, or inference strategy tailored to that limitation.</p>
+                <p><strong>Results:</strong> Demonstrates competitive or state-of-the-art performance on the authors’ target tasks.</p>
+                <p><strong>Conclusion:</strong> The paper contributes an incremental but relevant step toward more capable and efficient AI systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2604.07003" target="_blank">EmoMAS: Emotion-Aware Multi-Agent System for High-Stakes Edge-Deployable Negotiation with Bayesian Orchestration</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.07003</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Improve autonomous reasoning, planning, or tool-using behavior in AI systems for complex real-world tasks.</p>
+                <p><strong>Method:</strong> Introduces an agentic or reasoning-centric framework, often combining planning, search, or external tools.</p>
+                <p><strong>Results:</strong> Shows stronger task completion, better decision quality, or improved robustness on agent/reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> Agentic workflows are becoming more structured and measurable, pushing LLMs closer to reliable automation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2604.06995" target="_blank">What's Missing in Screen-to-Action? Towards a UI-in-the-Loop Paradigm for Multimodal GUI Reasoning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.06995</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Improve autonomous reasoning, planning, or tool-using behavior in AI systems for complex real-world tasks.</p>
+                <p><strong>Method:</strong> Introduces an agentic or reasoning-centric framework, often combining planning, search, or external tools.</p>
+                <p><strong>Results:</strong> Shows stronger task completion, better decision quality, or improved robustness on agent/reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> Agentic workflows are becoming more structured and measurable, pushing LLMs closer to reliable automation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2604.06838" target="_blank">Explaining Neural Networks in Preference Learning: a Post-hoc Inductive Logic Programming Approach</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.06838</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Reduce failure modes such as hallucination, unsafe behavior, or misalignment with user intent.</p>
+                <p><strong>Method:</strong> Applies alignment training, preference optimization, evaluation redesign, or uncertainty-aware techniques.</p>
+                <p><strong>Results:</strong> Reports gains in safety, factuality, controllability, or calibration relative to strong baselines.</p>
+                <p><strong>Conclusion:</strong> Post-training and evaluation remain central levers for making frontier models dependable in practice.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2604.06820" target="_blank">Beyond Surface Judgments: Human-Grounded Risk Evaluation of LLM-Generated Disinformation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.06820</span>
+                <span class="date">2026-04-10</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> Reduce failure modes such as hallucination, unsafe behavior, or misalignment with user intent.</p>
+                <p><strong>Method:</strong> Applies alignment training, preference optimization, evaluation redesign, or uncertainty-aware techniques.</p>
+                <p><strong>Results:</strong> Reports gains in safety, factuality, controllability, or calibration relative to strong baselines.</p>
+                <p><strong>Conclusion:</strong> Post-training and evaluation remain central levers for making frontier models dependable in practice.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/front/build/kube-ba669c6/style.css" target="_blank">front/build/kube-ba669c6/style.css</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A trending Hugging Face model drawing interest from builders for experimentation or downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/search/full-text?type=model" target="_blank">search/full-text?type=model</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A trending Hugging Face model drawing interest from builders for experimentation or downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank">google/gemma-4-31B-it</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK" target="_blank">dealignai/Gemma-4-31B-JANG_4M-CRACK</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank">zai-org/GLM-5.1</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A trending Hugging Face model drawing interest from builders for experimentation or downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/netflix/void-model" target="_blank">netflix/void-model</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A trending Hugging Face model drawing interest from builders for experimentation or downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/openbmb/VoxCPM2" target="_blank">openbmb/VoxCPM2</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A trending Hugging Face model drawing interest from builders for experimentation or downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" target="_blank">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/google/gemma-4-26B-A4B-it" target="_blank">google/gemma-4-26B-A4B-it</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/google/gemma-4-E4B-it" target="_blank">google/gemma-4-E4B-it</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/k2-fsa/OmniVoice" target="_blank">k2-fsa/OmniVoice</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A trending Hugging Face model drawing interest from builders for experimentation or downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/baidu/Qianfan-OCR" target="_blank">baidu/Qianfan-OCR</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A trending Hugging Face model drawing interest from builders for experimentation or downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/nvidia/Gemma-4-31B-IT-NVFP4" target="_blank">nvidia/Gemma-4-31B-IT-NVFP4</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF" target="_blank">unsloth/gemma-4-26B-A4B-it-GGUF</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/google/gemma-4-E2B-it" target="_blank">google/gemma-4-E2B-it</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>Trending now</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A foundation model family variant attracting attention for general-purpose LLM capability and deployment flexibility.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></td>
+                <td>⭐ 6,485</td>
+                <td>The agent that grows with you</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository aligns with the current wave of LLM tooling, agent frameworks, or model-serving infrastructure.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/HKUDS/DeepTutor" target="_blank">HKUDS/DeepTutor</a></td>
+                <td>⭐ 1,310</td>
+                <td>"DeepTutor: Agent-Native Personalized Learning Assistant"</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository aligns with the current wave of LLM tooling, agent frameworks, or model-serving infrastructure.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/OpenBMB/VoxCPM" target="_blank">OpenBMB/VoxCPM</a></td>
+                <td>⭐ 496</td>
+                <td>VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A fast-rising Python project with practical utility for developers shipping AI-adjacent products.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/TheCraigHewitt/seomachine" target="_blank">TheCraigHewitt/seomachine</a></td>
+                <td>⭐ 725</td>
+                <td>A specialized Claude Code workspace for creating long-form, SEO-optimized blog content for any business. This system helps you research, write, analyze, and optimize content that ranks well and serves</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A fast-rising Python project with practical utility for developers shipping AI-adjacent products.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/shiyu-coder/Kronos" target="_blank">shiyu-coder/Kronos</a></td>
+                <td>⭐ 245</td>
+                <td>Kronos: A Foundation Model for the Language of Financial Markets</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository aligns with the current wave of LLM tooling, agent frameworks, or model-serving infrastructure.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/microsoft/BitNet" target="_blank">microsoft/BitNet</a></td>
+                <td>⭐ 214</td>
+                <td>Official inference framework for 1-bit LLMs</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository aligns with the current wave of LLM tooling, agent frameworks, or model-serving infrastructure.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/virattt/ai-hedge-fund" target="_blank">virattt/ai-hedge-fund</a></td>
+                <td>⭐ 428</td>
+                <td>An AI Hedge Fund Team</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A fast-rising Python project with practical utility for developers shipping AI-adjacent products.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/atilaahmettaner/tradingview-mcp" target="_blank">atilaahmettaner/tradingview-mcp</a></td>
+                <td>⭐ 201</td>
+                <td>Real-time crypto & stock screening, advanced technical indicators, Bollinger Bands intelligence, candlestick patterns + native Claude Desktop integration. Multi-exchange (Binance, KuCoin, Bybit+). Ope</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository aligns with the current wave of LLM tooling, agent frameworks, or model-serving infrastructure.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/z-lab/dflash" target="_blank">z-lab/dflash</a></td>
+                <td>⭐ 115</td>
+                <td>DFlash: Block Diffusion for Flash Speculative Decoding</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A vision or generative-media project likely gaining traction from fast-moving multimodal use cases.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">521xueweihan/HelloGitHub</a></td>
+                <td>⭐ 267</td>
+                <td>分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A fast-rising Python project with practical utility for developers shipping AI-adjacent products.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Agentic AI is consolidating</h3>
+            <p>Research and repos alike are shifting toward tool-using and workflow-oriented systems rather than standalone chatbots.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Multimodal AI keeps accelerating</h3>
+            <p>Vision, image, and video capabilities remain central across models, papers, and open-source projects.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Reliable post-training matters more</h3>
+            <p>Controllability, evaluation, and factuality are increasingly decisive for whether a model is usable in production.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Open ecosystems still shape adoption</h3>
+            <p>Hugging Face and GitHub trends show practitioners still rely heavily on reusable open models and tooling.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: Efficiency is now a product feature</h3>
+            <p>Teams increasingly reward approaches that cut latency, simplify deployment, or improve cost-quality tradeoffs.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-04-10 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-04-10-08-00.html">https://chenlijn.github.io/ai-daily/2026-04-10-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
