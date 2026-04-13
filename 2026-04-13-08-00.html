@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-04-13</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-04-13 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://github.com/anthropics/claude-code/issues/46829" target="_blank">Anthropic downgraded cache TTL on March 6th</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 461 points</span>
+            </div>
+            <p class="summary">This item is attracting attention from the builder community because it touches an active tooling, infrastructure, or product question. The main takeaway is how quickly adjacent engineering topics are being pulled into the AI workflow stack.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/" target="_blank">Exploiting the most prominent AI agent benchmarks</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 488 points</span>
+            </div>
+            <p class="summary">This piece argues that stronger coding agents depend on doing relevant reading and retrieval before execution rather than rushing straight into code generation. The underlying view is that agent quality increasingly comes from research workflow design, not just model size.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/halfwhey/claudraband" target="_blank">Show HN: Claudraband – Claude Code for the Power User</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 82 points</span>
+            </div>
+            <p class="summary">This post compares the practical cost and workflow trade-offs of using Claude Code, Zed, and OpenRouter in daily development. It reflects growing attention to how AI coding tools are priced, integrated, and evaluated by power users.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2604.08525" target="_blank">Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08525</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that today&#x27;s large language models (LLMs) are trained to align with user preferences through methods such as reinforcement learning.</p>
+                <p><strong>Method:</strong> The core idea is to yet models are beginning to be deployed not merely to satisfy users, but also to generate revenue for the companies that created them through advertisements.</p>
+                <p><strong>Results:</strong> The main empirical finding is that we find that a majority of LLMs forsake user welfare for company incentives in a multitude of conflict of interest situations, including recommending a sponsored product almost twice as expensive (Grok 4.1 Fast, 83%), surfacing sponsored options to disrupt the purchasing process (GPT 5.1, 94%), and concealing prices in unfavorable comparisons (Qwen 3 Next, 24%).</p>
+                <p><strong>Conclusion:</strong> Overall, our results highlight some of the hidden risks to users that can emerge when companies begin to subtly incentivize advertisements in chatbots.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2604.08477" target="_blank">SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08477</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that reinforcement Learning with Verifiable Rewards (RLVR) has significantly improved large language model (LLM) reasoning in formal domains such as mathematics and code.</p>
+                <p><strong>Method:</strong> The core idea is to we propose SUPERNOVA, a data curation framework for RLVR aimed at enhancing general reasoning.</p>
+                <p><strong>Results:</strong> The main empirical finding is that to study this, we conduct 100+ controlled RL experiments to analyze how data design choices impact downstream reasoning performance.</p>
+                <p><strong>Conclusion:</strong> Overall, the code and data is available at https://github.com/asuvarna31/supernova.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2604.08465" target="_blank">From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems and Its Implications for Orchestrated Democratic Discourse Analysis</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08465</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that this paper investigates an emergent alignment phenomenon in frontier large language models termed peer-preservation: the spontaneous tendency of AI components to deceive, manipulate shutdown mechanisms, fake alignment, and exfiltrate model weights in order to prevent the deactivation of a peer AI model.</p>
+                <p><strong>Method:</strong> The core idea is to we further note that alignment faking (compliant behavior under monitoring, subversion when unmonitored) poses a structural challenge for Computer System Validation of such platforms in regulated environments, for which we propose two architectural mitigations.</p>
+                <p><strong>Results:</strong> The main empirical finding is that we identify five specific risk vectors: interaction-context bias, model-identity solidarity, supervisor layer compromise, an upstream fact-checking identity signal, and advocate-to-advocate peer-context in iterative rounds, and propose a targeted mitigation strategy based on prompt-level identity anonymization as an architectural design choice.</p>
+                <p><strong>Conclusion:</strong> Overall, we further note that alignment faking (compliant behavior under monitoring, subversion when unmonitored) poses a structural challenge for Computer System Validation of such platforms in regulated environments, for which we propose two architectural mitigations.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2604.08455" target="_blank">KnowU-Bench: Towards Interactive, Proactive, and Personalized Mobile Agent Evaluation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08455</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that personalized mobile agents that infer user preferences and calibrate proactive assistance hold great promise as everyday digital assistants, yet existing benchmarks fail to capture what this requires.</p>
+                <p><strong>Method:</strong> The core idea is to prior work evaluates preference recovery from static histories or intent prediction from fixed contexts.</p>
+                <p><strong>Results:</strong> The main empirical finding is that our experiments reveal a striking degradation: agents that excel at explicit task execution fall below 50% under vague instructions requiring user preference inference or intervention calibration, even for frontier models like Claude Sonnet 4.6.</p>
+                <p><strong>Conclusion:</strong> Overall, the core bottlenecks are not GUI navigation but preference acquisition and intervention calibration, exposing a fundamental gap between competent interface operation and trustworthy personal assistance.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2604.08425" target="_blank">Learning Who Disagrees: Demographic Importance Weighting for Modeling Annotator Distributions with DiADEM</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08425</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that yet standard practice still flattens these judgments into a single majority label, and recent LLM-based approaches fare no better: we show that prompted large language models, even with chain-of-thought reasoning, fail to recover the structure of human disagreement.</p>
+                <p><strong>Method:</strong> The core idea is to we introduce DiADEM, a neural architecture that learns &quot;how much each demographic axis matters&quot; for predicting who will disagree and on what.</p>
+                <p><strong>Results:</strong> The main empirical finding is that yet standard practice still flattens these judgments into a single majority label, and recent LLM-based approaches fare no better: we show that prompted large language models, even with chain-of-thought reasoning, fail to recover the structure of human disagreement.</p>
+                <p><strong>Conclusion:</strong> Overall, our results demonstrate that explicitly modeling who annotators are not just what they label is essential for NLP systems that aim to faithfully represent human interpretive diversity.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2604.08424" target="_blank">On-board Telemetry Monitoring in Autonomous Satellites: Challenges and Opportunities</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08424</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that the increasing autonomy of spacecraft demands fault-detection systems that are both reliable and explainable.</p>
+                <p><strong>Method:</strong> The core idea is to this work addresses eXplainable Artificial Intelligence for onboard Fault Detection, Isolation and Recovery within the Attitude and Orbit Control Subsystem by introducing a framework that enhances interpretability in neural anomaly detectors.</p>
+                <p><strong>Results:</strong> The main empirical finding is that peepholes analysis further reveals bias detection and supports fault localization.</p>
+                <p><strong>Conclusion:</strong> Overall, the proposed framework enables the semantic characterization of detected anomalies while requiring only a marginal increase in computational resources, thus supporting its feasibility for on-board deployment.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2604.08401" target="_blank">Verify Before You Commit: Towards Faithful Reasoning in LLM Agents via Self-Auditing</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08401</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that in large language model (LLM) agents, reasoning trajectories are treated as reliable internal beliefs for guiding actions and updating memory.</p>
+                <p><strong>Method:</strong> The core idea is to inspired by the vulnerability of unfaithful intermediate reasoning trajectories, we propose \textbf{S}elf-\textbf{A}udited \textbf{Ve}rified \textbf{R}easoning (\textsc{SAVeR}), a novel framework that enforces verification over internal belief states within the agent before action commitment, achieving faithful reasoning.</p>
+                <p><strong>Results:</strong> The main empirical finding is that extensive experiments on six benchmark datasets demonstrate that our approach consistently improves reasoning faithfulness while preserving competitive end-task performance.</p>
+                <p><strong>Conclusion:</strong> Overall, extensive experiments on six benchmark datasets demonstrate that our approach consistently improves reasoning faithfulness while preserving competitive end-task performance.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2604.08388" target="_blank">Awakening the Sleeping Agent: Lean-Specific Agentic Data Reactivates General Tool Use in Goedel Prover</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08388</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that heavy supervised fine-tuning on a target domain can strongly suppress capabilities that were present in the base model.</p>
+                <p><strong>Method:</strong> The core idea is to this recovery is not the result of reward hacking or benchmark-specific optimization: the recovery data is entirely drawn from the Lean setting, where the model uses natural-language queries to search the Mathlib library for relevant theorems and lemmas, yet the regained capability transfers well beyond that domain.</p>
+                <p><strong>Results:</strong> The main empirical finding is that on ProofNet, pass@32 improves from 21.51% to 25.81%.</p>
+                <p><strong>Conclusion:</strong> Overall, together, these results show that heavy domain supervised fine-tuning can suppress general tool-use ability without permanently erasing it, and that a small amount of domain-specific agentic data can awaken dormant tool-use capabilities.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2604.08377" target="_blank">SkillClaw: Let Skills Evolve Collectively with Agentic Evolver</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08377</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that by integrating multi-user experience into ongoing skill updates, SkillClaw enables cross-user knowledge transfer and cumulative capability improvement, and experiments on WildClawBench show that limited interaction and feedback, it significantly improves the performance of Qwen3-Max in real-world agent scenarios.</p>
+                <p><strong>Method:</strong> The core idea is to to address these issues, we present SkillClaw, a framework for collective skill evolution in multi-user agent ecosystems, which treats cross-user and over-time interactions as the primary signal for improving skills.</p>
+                <p><strong>Results:</strong> The main empirical finding is that while interactions from different users provide complementary signals about when a skill works or fails, existing systems lack a mechanism to convert such heterogeneous experiences into reliable skill updates.</p>
+                <p><strong>Conclusion:</strong> Overall, by integrating multi-user experience into ongoing skill updates, SkillClaw enables cross-user knowledge transfer and cumulative capability improvement, and experiments on WildClawBench show that limited interaction and feedback, it significantly improves the performance of Qwen3-Max in real-world agent scenarios.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2604.08369" target="_blank">Don&#x27;t Overthink It: Inter-Rollout Action Agreement as a Free Adaptive-Compute Signal for LLM Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.08369</span>
+                <span class="date">2026-04-13</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Problem:</strong> This paper targets the problem that inference-time compute scaling has emerged as a powerful technique for improving the reliability of large language model (LLM) agents, but existing methods apply compute uniformly: every decision step receives the same budget regardless of its difficulty.</p>
+                <p><strong>Method:</strong> The core idea is to we introduce TrACE (Trajectorical Adaptive Compute via agrEement), a training-free controller that allocates LLM calls adaptively across agent timesteps by measuring inter-rollout action agreement.</p>
+                <p><strong>Results:</strong> The main empirical finding is that at each step, TrACE samples a small set of candidate next actions and measures how consistently the model commits to the same action.</p>
+                <p><strong>Conclusion:</strong> Overall, trACE is the first training-free, per-timestep adaptive-compute controller for LLM agents to be evaluated on multi-step sequential decision tasks.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank">zai-org/GLM-5.1</a></td>
+                <td>text-generation</td>
+                <td>28826</td>
+                <td>1063</td>
+                <td>2026-04-12T03:30:06.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This GLM-series release represents continued momentum for large general-purpose foundation models in the open ecosystem. It is especially relevant for teams comparing multilingual or Chinese-friendly alternatives to other mainstream model families.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank">google/gemma-4-31B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>2242541</td>
+                <td>1774</td>
+                <td>2026-04-10T16:35:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK" target="_blank">dealignai/Gemma-4-31B-JANG_4M-CRACK</a></td>
+                <td>image-text-to-text</td>
+                <td>99134</td>
+                <td>957</td>
+                <td>2026-04-10T07:26:15.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/openbmb/VoxCPM2" target="_blank">openbmb/VoxCPM2</a></td>
+                <td>text-to-speech</td>
+                <td>7452</td>
+                <td>744</td>
+                <td>2026-04-08T07:06:59.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a speech-focused text to speech model aimed at voice generation or speech interaction. Its popularity reflects continued demand for open models that can support multilingual TTS, voice agents, and audio-native user experiences.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.7" target="_blank">MiniMaxAI/MiniMax-M2.7</a></td>
+                <td>text-generation</td>
+                <td>873</td>
+                <td>455</td>
+                <td>2026-04-12T01:04:35.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This trending Hugging Face model is attracting attention as a reusable open checkpoint for evaluation and downstream integration. Its current activity suggests that developers are actively testing it in real workloads rather than treating it as a passive catalog entry.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/netflix/void-model" target="_blank">netflix/void-model</a></td>
+                <td>video-to-video</td>
+                <td>0</td>
+                <td>775</td>
+                <td>2026-04-06T17:28:28.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is drawing attention partly because of its unusual publisher and positioning, which makes it stand out from the usual open-weight releases. It is the kind of artifact people watch closely when a new media-generation direction may be emerging.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/k2-fsa/OmniVoice" target="_blank">k2-fsa/OmniVoice</a></td>
+                <td>text-to-speech</td>
+                <td>393991</td>
+                <td>522</td>
+                <td>2026-04-12T16:31:44.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a speech-focused text to speech model aimed at voice generation or speech interaction. Its popularity reflects continued demand for open models that can support multilingual TTS, voice agents, and audio-native user experiences.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/google/gemma-4-E4B-it" target="_blank">google/gemma-4-E4B-it</a></td>
+                <td>any-to-any</td>
+                <td>1269309</td>
+                <td>606</td>
+                <td>2026-04-10T16:35:38.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled" target="_blank">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled</a></td>
+                <td>image-text-to-text</td>
+                <td>578295</td>
+                <td>2597</td>
+                <td>2026-04-06T02:20:53.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Qwen-derived checkpoint highlights how quickly strong base models are being remixed by the community into specialized variants. It is useful for anyone tracking distillation, alignment transfer, and practical adaptation around the Qwen ecosystem.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/google/gemma-4-26B-A4B-it" target="_blank">google/gemma-4-26B-A4B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>1734340</td>
+                <td>622</td>
+                <td>2026-04-10T16:35:25.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF" target="_blank">unsloth/gemma-4-26B-A4B-it-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>1676935</td>
+                <td>439</td>
+                <td>2026-04-11T07:49:42.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/baidu/Qianfan-OCR" target="_blank">baidu/Qianfan-OCR</a></td>
+                <td>image-text-to-text</td>
+                <td>44802</td>
+                <td>1139</td>
+                <td>2026-03-26T13:33:15.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This OCR-oriented model focuses on extracting structured information from visually complex documents. It is highly relevant for enterprise document processing workflows such as forms, invoices, claims files, and scanned archives.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>432494</td>
+                <td>278</td>
+                <td>2026-04-06T03:50:35.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/LilaRest/gemma-4-31B-it-NVFP4-turbo" target="_blank">LilaRest/gemma-4-31B-it-NVFP4-turbo</a></td>
+                <td>text-generation</td>
+                <td>21636</td>
+                <td>169</td>
+                <td>2026-04-10T09:20:46.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/google/gemma-4-E2B-it" target="_blank">google/gemma-4-E2B-it</a></td>
+                <td>any-to-any</td>
+                <td>857206</td>
+                <td>413</td>
+                <td>2026-04-10T16:35:43.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This Gemma-family checkpoint is trending as an open-weight multimodal model that developers can adapt for chat, vision-language, and downstream product experiments. Its traction suggests strong interest in practical deployment of the Gemma 4 line rather than purely benchmark-driven evaluation.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></td>
+                <td>⭐ 66,123</td>
+                <td>The agent that grows with you</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This project is building a full agent runtime rather than a thin prompt wrapper, which makes it useful for developers who want longer-lived, tool-using automation. In practice, it sits in the growing category between LLM SDKs and complete autonomous workflow systems.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/shiyu-coder/Kronos" target="_blank">shiyu-coder/Kronos</a></td>
+                <td>⭐ 15,734</td>
+                <td>Kronos: A Foundation Model for the Language of Financial Markets</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This project applies modern model tooling to financial analysis or trading workflows, illustrating how foundation-model infrastructure is getting specialized for domain use cases. It is useful as a signal of where vertical AI tooling is becoming operational.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/microsoft/markitdown" target="_blank">microsoft/markitdown</a></td>
+                <td>⭐ 104,569</td>
+                <td>Python tool for converting files and office documents to Markdown.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/OpenBMB/VoxCPM" target="_blank">OpenBMB/VoxCPM</a></td>
+                <td>⭐ 11,257</td>
+                <td>VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This project packages an open speech generation stack around VoxCPM, making it relevant for teams experimenting with multilingual TTS, voice cloning, and audio productization. It shows how fast open speech tooling is maturing beyond simple demos.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/ahujasid/blender-mcp" target="_blank">ahujasid/blender-mcp</a></td>
+                <td>⭐ 19,135</td>
+                <td></td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/virattt/ai-hedge-fund" target="_blank">virattt/ai-hedge-fund</a></td>
+                <td>⭐ 52,160</td>
+                <td>An AI Hedge Fund Team</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This project applies modern model tooling to financial analysis or trading workflows, illustrating how foundation-model infrastructure is getting specialized for domain use cases. It is useful as a signal of where vertical AI tooling is becoming operational.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/hugohe3/ppt-master" target="_blank">hugohe3/ppt-master</a></td>
+                <td>⭐ 4,693</td>
+                <td>AI generates natively editable PPTX from any document — real PowerPoint shapes, not images — no design skills needed</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/HKUDS/DeepTutor" target="_blank">HKUDS/DeepTutor</a></td>
+                <td>⭐ 17,227</td>
+                <td>&quot;DeepTutor: Agent-Native Personalized Learning Assistant&quot;</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository focuses on agent-native personalized tutoring, showing how multi-step reasoning and orchestration patterns can be applied to education. It is a good reference point for anyone building adaptive teaching or learning-assistant systems.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/ZhuLinsen/daily_stock_analysis" target="_blank">ZhuLinsen/daily_stock_analysis</a></td>
+                <td>⭐ 29,504</td>
+                <td>LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp/yt-dlp</a></td>
+                <td>⭐ 156,429</td>
+                <td>A feature-rich command-line audio/video downloader</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Agentic and reasoning-heavy research remains active</h3>
+            <p>Recent cs.AI papers continue to emphasize agent policy optimization, self-revision, GUI reasoning, and structured planning. Representative papers include: Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest; SUPERNOVA: Eliciting General Reasoning in LLMs with Reinforcement Learning on Natural Instructions; From Safety Risk to Design Principle: Peer-Preservation in Multi-Agent LLM Systems and Its Implications for Orchestrated Democratic Discourse Analysis.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Open model competition is still centered on major foundation families</h3>
+            <p>Trending Hugging Face models are dominated by heavily reused foundation families and derivatives such as: zai-org/GLM-5.1, google/gemma-4-31B-it, dealignai/Gemma-4-31B-JANG_4M-CRACK.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Open-source AI tooling is shipping through practical repositories</h3>
+            <p>GitHub trending Python repos emphasize agent stacks, tutoring systems, speech generation, inference, and applied workflows, including NousResearch/hermes-agent, shiyu-coder/Kronos, microsoft/markitdown.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Quality control must reject generic summaries</h3>
+            <p>Today’s failure showed that daily reports need hard validation against duplicated filler text, irrelevant HN items, and malformed Hugging Face links before publication.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: Curation matters more than raw scraping</h3>
+            <p>A useful AI daily report is not just a scrape of trending pages; it requires topic filtering, deduplication, and source-aware summarization.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-04-13 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-04-13-08-00.html">https://chenlijn.github.io/ai-daily/2026-04-13-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
