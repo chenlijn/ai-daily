@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-04-17</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-04-17 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://blog.cloudflare.com/ai-platform/" target="_blank">Cloudflare&#x27;s AI Platform: an inference layer designed for agents</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 256 points</span>
+            </div>
+            <p class="summary">Cloudflare is positioning inference, vector retrieval, observability, and workflow primitives as one integrated agent stack instead of isolated APIs. The story matters because agent builders are starting to optimize around end to end execution loops, not just raw model calls.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/AgentSeal/codeburn" target="_blank">Show HN: CodeBurn – Analyze Claude Code token usage by task</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 84 points</span>
+            </div>
+            <p class="summary">CodeBurn focuses on token accounting for Claude Code style workflows, giving developers a clearer way to inspect which tasks are expensive and where prompts or tool use are leaking cost. That is a useful signal that coding-agent users are becoming much more disciplined about spend and ROI.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://qwen.ai/blog?id=qwen3.6-35b-a3b" target="_blank">Qwen3.6-35B-A3B: Agentic coding power, now open to all</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 973 points</span>
+            </div>
+            <p class="summary">Qwen3.6-35B-A3B is being discussed as an open model tuned for stronger agentic coding workflows, which broadens access to high end code-generation capability outside closed APIs. It matters because open coding stacks are getting good enough to anchor internal engineering copilots and tool-using agents.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://blog.cloudflare.com/artifacts-git-for-agents-beta/" target="_blank">Artifacts: Versioned storage that speaks Git</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 175 points</span>
+            </div>
+            <p class="summary">Cloudflare Artifacts turns model and agent outputs into versioned, Git-like storage objects, which helps teams persist intermediate results, checkpoints, and workflow state more cleanly. That is important for production agents because reproducibility and rollback are becoming core platform requirements.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://openai.com/index/introducing-gpt-rosalind/" target="_blank">GPT‑Rosalind for life sciences research</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 77 points</span>
+            </div>
+            <p class="summary">GPT-Rosalind extends the current wave of domain-specific AI assistants into life sciences, where traceability, literature grounding, and research workflow support matter more than generic chat. The interest here is less about a single product launch and more about how frontier labs are carving out vertical copilots with stronger domain fit.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank">Claude Opus 4.7</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 1578 points</span>
+            </div>
+            <p class="summary">Claude Opus 4.7 is drawing attention as another step in the race for stronger reasoning and coding performance, especially for long multi-step tasks. The conversation around it shows that users are comparing models less on benchmark headlines and more on how reliably they execute real workflows.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2604.15148" target="_blank">IG-Search: Step-Level Information Gain Rewards for Search-Augmented Reasoning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15148</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 86 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Search-augmented reasoning is a hot post-training topic, and this paper attacks one of the hardest failure modes in agentic QA: bad search queries getting almost no useful credit signal. It matters now because production agents increasingly depend on retrieval quality, not just final-answer scoring.</p>
+                <p><strong>Problem:</strong> Search-augmented LLM training usually rewards only the final trajectory, so the model cannot tell whether a specific search query was helpful, vague, or actively harmful. That is especially painful in multi-hop QA, where one weak retrieval step can collapse the whole chain and leave training with almost no gradient signal.</p>
+                <p><strong>Method:</strong> IG-Search adds a step-level Information Gain reward inside GRPO. For each search action, it compares the model&#x27;s confidence in the gold answer using retrieved documents against a counterfactual baseline built from random documents, then pushes that signal back to the search-query tokens for finer credit assignment.</p>
+                <p><strong>Results:</strong> On seven single-hop and multi-hop QA benchmarks, IG-Search with Qwen2.5-3B reaches 0.430 average EM. The paper reports a 1.6 point gain over the best trajectory-level baseline MR-Search and a 0.9 point gain over the step-level GiGPO method, with especially strong improvements on multi-hop tasks, while adding only about 6.4 percent training overhead and no inference latency.</p>
+                <p><strong>Conclusion:</strong> This is a practical contribution for retrieval-heavy agents because it makes search behavior trainable at the level where errors actually occur. If the method holds up beyond QA, it could improve web agents, enterprise RAG systems, and research copilots that need better query formulation rather than just better final answer formatting.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2604.15233" target="_blank">Blue Data Intelligence Layer: Streaming Data and Agents for Multi-source Multi-modal Data-Centric Applications</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15233</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 84 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Enterprise agent stacks are converging on a data-layer problem: how to combine databases, web knowledge, and user context under one planning interface. This paper matters because it frames that integration layer explicitly instead of treating NL2SQL as the whole solution.</p>
+                <p><strong>Problem:</strong> Classic NL2SQL assumes a single structured database and a one-shot query, but enterprise questions often span multiple sources, multiple modalities, and iterative back-and-forth with the user. Existing systems break when the answer requires relational data, external knowledge, and personal or conversational context in the same workflow.</p>
+                <p><strong>Method:</strong> Blue introduces a Data Intelligence Layer that treats databases, LLM-accessible world knowledge, the web, and even the user as first-class data sources. A registry stores source metadata, while planners decompose user requests into executable query plans mixing relational operators, retrieval, cross-modal reasoning, and result synthesis.</p>
+                <p><strong>Results:</strong> The paper demonstrates the system through two interactive scenarios that require multi-source retrieval and cross-modal reasoning. It is more of a systems paper than a benchmark paper, so the authors do not headline a large table of SOTA numbers; instead they show that the compound architecture can answer data-centric requests that fall outside standard single-database NL2SQL settings.</p>
+                <p><strong>Conclusion:</strong> For enterprise AI teams, the key idea is that agentic data access needs its own intermediate layer, not just a better prompt on top of SQL. This is directly relevant to internal copilots that must bridge structured business data, policy knowledge, and user-specific context without hiding the orchestration logic.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2604.14989" target="_blank">Dr.~RTL: Autonomous Agentic RTL Optimization through Tool-Grounded Self-Improvement</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.14989</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 81 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Tool-grounded agents are moving beyond office automation into engineering design loops, and semiconductor optimization is a very expensive one. This paper stands out because it evaluates against realistic RTL and industrial EDA workflows rather than toy rewrite tasks.</p>
+                <p><strong>Problem:</strong> LLM-based RTL optimization papers often rely on simplified designs, weak open-source tools, and coarse rewards, so they say little about whether agents can help on real chip-design bottlenecks. The missing piece is a realistic closed loop that can analyze timing failures, rewrite RTL, and learn reusable optimization patterns over time.</p>
+                <p><strong>Method:</strong> Dr. RTL uses a multi-agent pipeline for critical-path analysis, parallel RTL rewriting, and tool-based evaluation under an industrial EDA flow. It then applies group-relative skill learning to compare multiple rewrites, distill successful strategies into an interpretable skill library, and reuse those patterns on future designs.</p>
+                <p><strong>Results:</strong> Across 20 real-world RTL designs, Dr. RTL reports average WNS and TNS improvements of 21 percent and 17 percent, plus a 6 percent area reduction relative to an industry-leading commercial synthesis tool. The reusable library contains 47 pattern-strategy entries that help speed convergence across different designs.</p>
+                <p><strong>Conclusion:</strong> This is one of the clearer examples of agentic AI producing measurable value in a high-cost engineering domain rather than a benchmark sandbox. Even for teams outside chip design, the lesson is important: grounding agents in strong external tools and reusable skills can unlock gains that pure prompt loops rarely reach.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2604.15037" target="_blank">From Reactive to Proactive: Assessing the Proactivity of Voice Agents via ProVoice-Bench</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15037</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 78 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Voice agents are shifting from reactive turn-taking toward proactive monitoring and intervention, but evaluation is lagging badly. A benchmark that isolates over-triggering and proactive reasoning is timely as audio-native assistants become more product-like.</p>
+                <p><strong>Problem:</strong> Most voice-agent benchmarks only test whether a model can respond after being explicitly addressed. That misses the harder product question: when should an always-listening assistant step in, stay silent, or monitor a situation without becoming annoying or unsafe.</p>
+                <p><strong>Method:</strong> ProVoice-Bench introduces four tasks targeting proactive voice behavior and uses a multi-stage synthesis pipeline to build 1,182 evaluation samples. The benchmark is designed to stress proactive intervention, monitoring, reasoning, and trigger calibration rather than conventional reactive QA.</p>
+                <p><strong>Results:</strong> Evaluations on state-of-the-art multimodal LLMs show a substantial performance gap, especially around over-triggering and reasoning quality. The abstract does not provide a full leaderboard in the fetched content, so the main result is diagnostic: current models are still weak at deciding when to act proactively in voice settings.</p>
+                <p><strong>Conclusion:</strong> For product teams building assistants, this paper matters because the next usability battle is not speech recognition but behavioral timing. Better proactive evaluation could help voice systems become more helpful without becoming intrusive.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2604.15009" target="_blank">Towards Faster Language Model Inference Using Mixture-of-Experts Flow Matching</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15009</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 77 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Inference efficiency is back in focus, and non-autoregressive generation keeps resurfacing as teams look for lower latency without huge quality drops. This paper is timely because it combines flow matching and MoE ideas in a way aimed squarely at practical speedups.</p>
+                <p><strong>Problem:</strong> Flow matching is attractive for fast generation, but in language modeling it struggles with irregular latent geometry such as anisotropy and multimodality. As a result, non-autoregressive language models often fail to match autoregressive quality without paying too many sampling steps.</p>
+                <p><strong>Method:</strong> The paper proposes mixture-of-experts flow matching, which decomposes global transport into locally specialized vector fields. On top of that, it builds YAN, a non-autoregressive language model instantiated with both Transformer and Mamba backbones and designed to generate in as few as three sampling steps.</p>
+                <p><strong>Results:</strong> Across multiple downstream tasks, YAN is reported to match the generation quality of autoregressive and diffusion-based non-autoregressive baselines while using only three sampling steps. The authors claim roughly 40 times speedup over autoregressive baselines and up to 1000 times over diffusion language models.</p>
+                <p><strong>Conclusion:</strong> If these trade-offs hold in broader evaluation, this line of work could make low-latency generation much more practical for interactive applications. It is especially relevant wherever throughput and serving cost matter as much as raw benchmark quality.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2604.15093" target="_blank">OpenMobile: Building Open Mobile Agents with Task and Trajectory Synthesis</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15093</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 76 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Open mobile agents are still data-starved compared with closed leaders, so an open recipe for task and trajectory synthesis is highly relevant. The paper also connects directly to today&#x27;s broader agent tooling wave around grounded interaction and error recovery.</p>
+                <p><strong>Problem:</strong> Recent mobile agents have improved quickly, but the strongest systems keep their training data and synthesis pipelines closed. That makes it hard for the open community to reproduce results or learn how to generate the diverse, grounded trajectories needed for real UI automation.</p>
+                <p><strong>Method:</strong> OpenMobile contributes a scalable task-synthesis pipeline that builds a global environment memory through exploration and uses it to generate grounded instructions. It pairs that with a policy-switching rollout strategy that alternates learner and expert models so the collected data includes error recovery behavior that imitation-only pipelines often miss.</p>
+                <p><strong>Results:</strong> On three dynamic mobile-agent benchmarks, the fine-tuned Qwen2.5-VL and Qwen3-VL models reach 51.7 percent and 64.7 percent on AndroidWorld. The paper states these results substantially outperform prior open-data approaches and argues the gains come from broader functionality coverage rather than benchmark leakage.</p>
+                <p><strong>Conclusion:</strong> This is valuable because open mobile-agent research has been bottlenecked by hidden data pipelines more than by missing model architectures. A transparent data-generation recipe could help open GUI agents catch up faster and make grounded multimodal agents easier to evaluate and improve.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2604.15231" target="_blank">RadAgent: A tool-using AI agent for stepwise interpretation of chest computed tomography</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15231</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 75 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Medical multimodal agents are becoming more interesting where explainability and audit trails are mandatory, not optional. RadAgent is timely because it combines tool use with an inspectable reasoning trace instead of only chasing report quality.</p>
+                <p><strong>Problem:</strong> Chest CT reporting is a complex multimodal task where clinicians need to understand how a model arrived at a finding, not just read a final report. Existing 3D VLM systems can generate outputs, but they leave users with little visibility into intermediate decisions or failure modes.</p>
+                <p><strong>Method:</strong> RadAgent frames chest CT interpretation as a stepwise, tool-augmented reasoning process. The agent generates the report through intermediate decisions and tool interactions, and exposes that full trace so clinicians can inspect, validate, or refine the path from imaging evidence to final text.</p>
+                <p><strong>Results:</strong> Compared with CT-Chat, RadAgent improves macro-F1 by 6.0 points, micro-F1 by 5.4 points, and adversarial robustness by 24.7 points. It also introduces a faithfulness measure, reaching 37.0 percent on a capability the baseline effectively lacks.</p>
+                <p><strong>Conclusion:</strong> The contribution is not just better report scores, but a more auditable workflow for medical AI. That is the kind of design pattern likely to matter in regulated domains where transparency and clinician oversight are necessary for deployment.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2604.14987" target="_blank">AI-Enabled Covert Channel Detection in RF Receiver Architectures</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.14987</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 68 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This is less central to mainstream LLM discussion, but it is a solid example of compact AI models being pushed into security-sensitive edge hardware. The combination of model compression and FPGA deployment gives it practical engineering relevance.</p>
+                <p><strong>Problem:</strong> Wireless covert channels can leak sensitive information from chips to external attackers, yet detection has to happen under tight resource and latency constraints at the RF receiver. Large detectors are not realistic for such edge deployments, so the challenge is to preserve detection quality while making the model hardware-friendly.</p>
+                <p><strong>Method:</strong> The authors start from a CNN operating on raw I/Q samples, then compact it heavily for efficient deployment. They also build a lightweight CNN accelerator and implement it on FPGA so the system can perform real-time covert-channel detection close to the receiver hardware.</p>
+                <p><strong>Results:</strong> The compacted model cuts parameters by 80 percent while reaching 90.28 percent average covert-channel detection accuracy and 86.50 percent hardware-Trojan identification accuracy for SNR above 1 dB. At SNR above 20 dB, both tasks exceed 97 percent accuracy, with less than 2 percent degradation from the baseline, and the accelerator reaches 107 GOPs/W.</p>
+                <p><strong>Conclusion:</strong> This is a strong example of AI security work that actually closes the loop to deployable hardware. The broader lesson is that compact models plus co-designed accelerators can make niche but critical detection tasks feasible at the edge.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2604.15001" target="_blank">COEVO: Co-Evolutionary Framework for Joint Functional Correctness and PPA Optimization in LLM-Based RTL Generation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15001</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 67 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> RTL generation remains a surprisingly active proving ground for agentic coding and multi-objective optimization. COEVO is interesting because it refuses the common shortcut of optimizing correctness first and hardware quality later.</p>
+                <p><strong>Problem:</strong> Most LLM-based RTL generation systems separate functional correctness from PPA optimization, so partially correct but architecturally promising designs get discarded before they can guide the search. They also collapse area, delay, and power into a single scalar objective, hiding useful trade-offs.</p>
+                <p><strong>Method:</strong> COEVO treats correctness as a continuous optimization dimension alongside area, delay, and power inside one co-evolutionary loop. It uses fine-grained testbench feedback, an annealed correctness gate that keeps promising candidates alive, and four-dimensional Pareto non-dominated sorting instead of one manually weighted fitness score.</p>
+                <p><strong>Results:</strong> On VerilogEval 2.0 and RTLLM 2.0, COEVO reaches 97.5 percent and 94.5 percent Pass@1 with GPT-5.4-mini. The paper also reports the best PPA on 43 of 49 synthesizable RTLLM designs while outperforming agentic baselines across four LLM backbones.</p>
+                <p><strong>Conclusion:</strong> The main takeaway is that code-generation agents for hardware design need genuinely multi-objective search rather than a correctness-only gatekeeper. That insight could transfer to other program-synthesis settings where functional validity and system efficiency must be optimized together.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2604.15210" target="_blank">Learning to Think Like a Cartoon Captionist: Incongruity-Resolution Supervision for Multimodal Humor Understanding</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.15210</span>
+                <span class="date">2026-04-17</span>
+                <span class="date">Heat Score: 64 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This is not the most deployable paper of the day, but it is a sharp multimodal reasoning signal: structured supervision can beat scale-only thinking on subtle perception-plus-interpretation tasks. That makes it relevant to broader reasoning and alignment conversations.</p>
+                <p><strong>Problem:</strong> Humor understanding is a reasoning task where the answer alone is not enough, because the model also needs the right latent interpretation of visual incongruity and its resolution. Prior work on NYCC-style benchmarks mostly treats the task as black-box prediction and misses the reasoning structure behind why a caption is funny.</p>
+                <p><strong>Method:</strong> IRS decomposes multimodal humor understanding into incongruity modeling, resolution modeling, and preference alignment. The framework supervises intermediate reasoning traces grounded in humor theory and expert captionist practice so the model learns not just what to pick, but how to interpret the scene.</p>
+                <p><strong>Results:</strong> Across 7B, 32B, and 72B models on the New Yorker Cartoon Caption Contest tasks, IRS beats strong open and closed multimodal baselines on matching and ranking. The largest model approaches expert-level performance on ranking, and the paper also reports zero-shot transfer gains on external benchmarks, though the fetched content does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader value is methodological: reasoning structure can matter more than simply scaling model size for perception-heavy cognitive tasks. That lesson could carry into multimodal assistants that need to explain subtle judgments rather than merely predict labels.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.7" target="_blank">MiniMaxAI/MiniMax-M2.7</a></td>
+                <td>text-generation</td>
+                <td>142955</td>
+                <td>887</td>
+                <td>2026-04-15T19:00:55.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">MiniMax-M2.7 is a fresh open checkpoint with strong community traction, likely because teams are testing whether it can serve as a practical general model for chat and downstream adaptation. Its download velocity makes it one of today&#x27;s clearest signals that the open base-model race is still active.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/tencent/HY-Embodied-0.5" target="_blank">tencent/HY-Embodied-0.5</a></td>
+                <td>image-text-to-text</td>
+                <td>1060</td>
+                <td>774</td>
+                <td>2026-04-14T11:18:35.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">HY-Embodied-0.5 points toward embodied and agentic multimodal modeling, where perception and action grounding matter more than static VQA. That makes it relevant for robotics, GUI agents, and simulation-based training workflows.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/Qwen/Qwen3.6-35B-A3B" target="_blank">Qwen/Qwen3.6-35B-A3B</a></td>
+                <td>image-text-to-text</td>
+                <td>0</td>
+                <td>525</td>
+                <td>2026-04-15T05:59:19.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Qwen3.6-35B-A3B is trending because developers want an open model with stronger coding and agent behavior without paying closed-model prices. It is especially relevant for Chinese enterprise teams benchmarking deployable alternatives for internal copilots.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank">zai-org/GLM-5.1</a></td>
+                <td>text-generation</td>
+                <td>94376</td>
+                <td>1299</td>
+                <td>2026-04-16T06:11:43.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">GLM-5.1 reinforces the momentum of large Chinese-friendly foundation models that can compete in multilingual and enterprise settings. Its traction suggests continued demand for models that balance capability, localization, and ecosystem fit.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank">google/gemma-4-31B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>3195626</td>
+                <td>1992</td>
+                <td>2026-04-10T16:35:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Gemma-4-31B-it remains one of the most practical large open instruction models for teams wanting a mainstream, well-supported base for chat and multimodal experimentation. The sustained downloads suggest it is being used in real evaluation pipelines, not just sampled casually.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/baidu/ERNIE-Image" target="_blank">baidu/ERNIE-Image</a></td>
+                <td>text-to-image</td>
+                <td>1351</td>
+                <td>392</td>
+                <td>2026-04-17T02:33:16.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">ERNIE-Image is a strong signal that Chinese vendors are pushing open text-to-image capability into the developer ecosystem, not keeping it purely product-side. For Charlie&#x27;s work, it is directly relevant to marketing creative, poster generation, and visual content automation.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/openbmb/VoxCPM2" target="_blank">openbmb/VoxCPM2</a></td>
+                <td>text-to-speech</td>
+                <td>15249</td>
+                <td>944</td>
+                <td>2026-04-16T03:30:11.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">VoxCPM2 is part of the shift toward open speech stacks that can power TTS, voice agents, and audio-native assistants. Its popularity suggests builders want voice interfaces they can customize locally instead of treating speech as a black-box API.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/Jiunsong/supergemma4-26b-uncensored-gguf-v2" target="_blank">Jiunsong/supergemma4-26b-uncensored-gguf-v2</a></td>
+                <td>text-generation</td>
+                <td>42468</td>
+                <td>338</td>
+                <td>2026-04-12T13:42:43.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This GGUF repack shows how fast strong open models are being quantized and redistributed for local inference. The appeal is practical: cheaper experimentation on consumer hardware and faster iteration for power users.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK" target="_blank">dealignai/Gemma-4-31B-JANG_4M-CRACK</a></td>
+                <td>image-text-to-text</td>
+                <td>143000</td>
+                <td>1242</td>
+                <td>2026-04-17T00:43:39.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This variant reflects the continuing downstream remix culture around top open checkpoints, where alignment, style, and guardrail behavior are aggressively modified for niche use. Even if not enterprise-safe, it is a useful ecosystem signal about how adaptable Gemma has become.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/baidu/ERNIE-Image-Turbo" target="_blank">baidu/ERNIE-Image-Turbo</a></td>
+                <td>text-to-image</td>
+                <td>1369</td>
+                <td>272</td>
+                <td>2026-04-17T02:33:45.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">ERNIE-Image-Turbo emphasizes lower-latency image generation, which matters for interactive design tools and batch creative production. Speed-focused generative image models are often what actually unlock product adoption inside workflow systems.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF" target="_blank">unsloth/Qwen3.6-35B-A3B-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>0</td>
+                <td>231</td>
+                <td>2026-04-16T16:37:34.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">The Unsloth GGUF release lowers the barrier to running the new Qwen checkpoint on local and edge-friendly inference stacks. That matters because open coding and agent models spread much faster once they are packaged for commodity deployment.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED" target="_blank">OBLITERATUS/gemma-4-E4B-it-OBLITERATED</a></td>
+                <td>text-generation</td>
+                <td>1586</td>
+                <td>221</td>
+                <td>2026-04-17T04:36:12.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This smaller Gemma derivative shows the market appetite for lightweight, heavily modified instruction models that trade polish for flexibility. It is a reminder that deployment format and community packaging often drive adoption almost as much as original model quality.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/LilaRest/gemma-4-31B-it-NVFP4-turbo" target="_blank">LilaRest/gemma-4-31B-it-NVFP4-turbo</a></td>
+                <td>text-generation</td>
+                <td>57507</td>
+                <td>233</td>
+                <td>2026-04-10T09:20:46.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An NVFP4-tuned Gemma build speaks directly to the production question of how to shrink memory and raise throughput without giving up too much quality. Quantization and systems tuning are clearly part of today&#x27;s model heat, not an afterthought.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/tencent/HY-World-2.0" target="_blank">tencent/HY-World-2.0</a></td>
+                <td>image-to-3d</td>
+                <td>0</td>
+                <td>180</td>
+                <td>2026-04-16T09:11:28.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">HY-World-2.0 signals continued interest in world models and embodied 3D understanding, an area that links multimodal research with simulation, robotics, and controllable content creation. It is early-stage but strategically important.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/Jiunsong/supergemma4-26b-uncensored-mlx-4bit-v2" target="_blank">Jiunsong/supergemma4-26b-uncensored-mlx-4bit-v2</a></td>
+                <td>text-generation</td>
+                <td>8908</td>
+                <td>158</td>
+                <td>2026-04-12T13:34:53.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">The MLX 4-bit build is aimed at Apple Silicon users who want a strong local model with minimal setup friction. It shows how quickly the community now ports hot checkpoints into hardware-specific formats for immediate experimentation.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/lsdefine/GenericAgent" target="_blank">lsdefine/GenericAgent</a></td>
+                <td>⭐ 2,964</td>
+                <td>Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">GenericAgent explores self-evolving agent design, starting from a compact seed and expanding its own skill tree while trying to control token cost. It stands out because it treats agent improvement as a systems problem, not just a prompt engineering trick.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/google/magika" target="_blank">google/magika</a></td>
+                <td>⭐ 14,924</td>
+                <td>Fast and accurate AI powered file content types detection</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Magika is Google&#x27;s AI-powered file type detector, useful anywhere ingestion pipelines need to classify messy real-world files before OCR, parsing, or security checks. It is the kind of quiet infrastructure that makes enterprise document workflows much more reliable.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/topoteretes/cognee" target="_blank">topoteretes/cognee</a></td>
+                <td>⭐ 15,910</td>
+                <td>Knowledge Engine for AI Agent Memory in 6 lines of code</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Cognee packages long-term memory and knowledge retrieval for agents into a very lightweight developer experience. That matters because memory quality is becoming one of the main differentiators between toy agents and systems that can survive repeated real work.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/z-lab/dflash" target="_blank">z-lab/dflash</a></td>
+                <td>⭐ 1,659</td>
+                <td>DFlash: Block Diffusion for Flash Speculative Decoding</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">DFlash implements block diffusion for speculative decoding, targeting a faster path for generation at inference time. It is interesting because decoding innovation is now a major lever for deployment economics, especially when model sizes keep rising.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/openai/openai-agents-python" target="_blank">openai/openai-agents-python</a></td>
+                <td>⭐ 21,365</td>
+                <td>A lightweight, powerful framework for multi-agent workflows</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">OpenAI&#x27;s agents SDK is quickly becoming a reference stack for orchestrating tool-using, multi-agent workflows in Python. Its popularity is less about novelty and more about standardization, developers want battle-tested patterns for production agents.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/public-apis/public-apis" target="_blank">public-apis/public-apis</a></td>
+                <td>⭐ 424,258</td>
+                <td>A collective list of free APIs</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Public APIs is not an AI repo by itself, but it trends whenever builders are wiring more external tools and data sources into apps and agents. In today&#x27;s context, it is a good proxy for the growing importance of tool integration in LLM systems.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/virattt/ai-hedge-fund" target="_blank">virattt/ai-hedge-fund</a></td>
+                <td>⭐ 55,722</td>
+                <td>An AI Hedge Fund Team</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">AI Hedge Fund is a vivid example of domain-specific multi-agent orchestration aimed at investing workflows. Whether or not one adopts it directly, it shows how quickly agent patterns are being translated into vertical decision-support products.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/Tracer-Cloud/opensre" target="_blank">Tracer-Cloud/opensre</a></td>
+                <td>⭐ 1,067</td>
+                <td>Build your own AI SRE agents. The open source toolkit for the AI era ✨</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">OpenSRE applies agent ideas to incident response and reliability engineering, where logs, alerts, and remediation loops are naturally multi-step. That makes it one of the better examples of agents moving from demos into operational infrastructure roles.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/jundot/omlx" target="_blank">jundot/omlx</a></td>
+                <td>⭐ 10,432</td>
+                <td>LLM inference server with continuous batching &amp; SSD caching for Apple Silicon — managed from the macOS menu bar</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">omlx packages continuous batching and SSD caching into a local inference server optimized for Apple Silicon, then wraps it in a friendly desktop control surface. It is a strong signal that inference tooling is getting more productized for individual developers.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/google-research/timesfm" target="_blank">google-research/timesfm</a></td>
+                <td>⭐ 17,956</td>
+                <td>TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">TimesFM brings foundation-model thinking to time-series forecasting, giving teams a reusable base model for demand, risk, and operational forecasting tasks. For enterprise AI, this is relevant because structured prediction remains a high-value but under-served workflow.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Agent systems are becoming workflow-native rather than prompt-native</h3>
+            <p>What: today&#x27;s strongest cross-source signal is the move from single-turn agent demos to systems that search, read, remember, and act across longer workflows. Why now: IG-Search, Blue DIL, Dr. RTL, OpenMobile, GenericAgent, Cognee, and OpenAI&#x27;s agents SDK all attack different layers of the same stack. Signal: the field is converging on better orchestration, credit assignment, memory, and tool grounding as the real performance bottlenecks. So what: enterprise AI teams should invest less in isolated prompt polish and more in retrieval quality, state management, and failure recovery for end-to-end applications.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Open coding and deployable agent models are heating up fast</h3>
+            <p>What: open models tuned for coding and agent behavior are becoming credible alternatives to closed APIs. Why now: Qwen3.6-35B-A3B is trending across HN and Hugging Face, while surrounding GGUF and local-inference releases show immediate downstream packaging demand. Signal: ecosystem velocity now comes from how quickly a model can be quantized, wrapped, and integrated into tool-using workflows. So what: for internal copilots and software-engineering assistants, model choice should now consider deployability, packaging, and agent behavior, not only raw benchmark scores.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Multimodal AI is shifting from wow demos to concrete vertical workflows</h3>
+            <p>What: speech, image generation, medical imaging, embodied perception, and UI automation all show up in today&#x27;s models and papers. Why now: VoxCPM2, ERNIE-Image, HY-Embodied, HY-World, ProVoice-Bench, OpenMobile, and RadAgent collectively point toward operational multimodal systems. Signal: the market is rewarding models that can be inserted into domain workflows like radiology, voice assistants, design generation, and mobile task execution. So what: for insurance and enterprise settings, multimodal tooling is increasingly mature enough for claims, training content, customer communication, and document-heavy operations.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Inference efficiency is again a first-class product constraint</h3>
+            <p>What: speed, quantization, decoding efficiency, and hardware-friendly deployment are back at the center. Why now: YAN, DFlash, NVFP4 and GGUF Gemma/Qwen releases, and omlx all point to teams optimizing latency and cost instead of blindly scaling model size. Signal: the competitive frontier is shifting from only better models to better model economics. So what: in production AI systems, a cheaper, faster model with solid orchestration often beats a frontier model that is too slow or expensive to deploy widely.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: High-value domains want auditable agents, not opaque copilots</h3>
+            <p>What: the most promising vertical systems now emphasize inspectability and controllable intermediate steps. Why now: RadAgent exposes a full reasoning trace for chest CT interpretation, while Blue DIL and Dr. RTL make planning and tool use explicit in enterprise and engineering settings. Signal: regulated and expensive domains are pushing the ecosystem toward transparent multi-step AI rather than pure black-box generation. So what: if a workflow affects compliance, safety, or large business value, agent design should expose evidence, actions, and checkpoints that humans can review.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-04-17 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-04-17-08-00.html">https://chenlijn.github.io/ai-daily/2026-04-17-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
