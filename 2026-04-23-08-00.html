@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-04-23</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-04-23 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/" target="_blank">Workspace Agents in ChatGPT</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 89 points</span>
+            </div>
+            <p class="summary">OpenAI is packaging agent workflows around shared workspace context, which is more about durable task execution than chat-style prompting. That matters today because the product battle is shifting toward agents that can read files, keep state, and operate across team systems instead of just producing one-off answers.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://qwen.ai/blog?id=qwen3.6-27b" target="_blank">Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 618 points</span>
+            </div>
+            <p class="summary">Alibaba is arguing that a 27B dense model can deliver flagship-class coding quality without the serving cost of very large MoE or frontier-scale systems. The story is worth watching because it reinforces the industry&#x27;s push toward cheaper, deployable coding models that still feel premium in IDE and agent workflows.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://zed.dev/blog/parallel-agents" target="_blank">Parallel agents in Zed</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 133 points</span>
+            </div>
+            <p class="summary">Zed is turning coding assistance into a parallel workflow where several agents can explore, edit, and compare solutions at once inside the editor. That is a strong signal that developer tooling is moving from autocomplete toward orchestrated multi-agent work, with UX and latency becoming as important as raw benchmark scores.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/besimple-oss/broccoli" target="_blank">Show HN: Broccoli, one shot coding agent on the cloud</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 48 points</span>
+            </div>
+            <p class="summary">Broccoli is pitching a cloud-hosted coding agent that runs tasks in one shot, which speaks directly to demand for lightweight remote automation instead of full local setup. Even if early, it shows how quickly coding agents are being productized into disposable execution services for small but concrete tasks.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/eighth-generation-tpu-agentic-era/" target="_blank">Our eighth generation TPUs: two chips for the agentic era</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 372 points</span>
+            </div>
+            <p class="summary">Google is framing its latest TPU generation as infrastructure built for always-on agent workloads, not just offline model training. That matters because the next competitive layer in AI is increasingly compute architecture for low-latency inference, memory-heavy workflows, and large fleets of concurrent agents.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://nrehiew.github.io/blog/minimal_editing/" target="_blank">Over-editing refers to a model modifying code beyond what is necessary</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 268 points</span>
+            </div>
+            <p class="summary">This post isolates a very practical coding-agent failure mode: models often keep touching correct code after the requested fix is already done. It is timely because teams deploying code agents now care less about flashy demos and more about minimal, review-friendly edits that reduce regression risk in real repositories.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2604.19457" target="_blank">Four-Axis Decision Alignment for Long-Horizon Enterprise AI Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19457</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 88 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This is the strongest enterprise-agent paper of the day because it ties long-horizon agent evaluation to regulated decision workflows like underwriting and claims, which is exactly where real deployment pressure sits. It also resonates with today&#x27;s broader agent conversation on HN and GitHub, where reliability, auditability, and workflow control matter more than raw one-shot accuracy.</p>
+                <p><strong>Problem:</strong> The paper targets a gap that shows up immediately in regulated deployments: a long-horizon agent can appear successful on an aggregate task score while still hallucinating facts, breaking compliance rules, or making overconfident decisions. In domains like loan qualification and insurance claims, those failure modes are materially different, but existing evaluation often collapses them into one scalar and hides what actually went wrong.</p>
+                <p><strong>Method:</strong> The authors decompose decision alignment into four separately measurable axes: factual precision, reasoning coherence, compliance reconstruction, and calibrated abstention. They then build a controlled benchmark, LongHorizon-Bench, around loan qualification and claims adjudication, and run six memory architectures through the same setup so the evaluation can reveal which design choices help or hurt each axis rather than only reporting overall success.</p>
+                <p><strong>Results:</strong> On LongHorizon-Bench, the decomposition exposed patterns that aggregate accuracy would have missed. Retrieval-heavy memory setups fell apart on factual precision, schema-anchored designs paid a scaffolding cost, and simple summarization with a fact-preservation prompt was a surprisingly strong baseline across several axes. All six architectures still committed on every case, showing that calibrated abstention remains a major unsolved problem. The paper emphasizes directional findings more than a large scoreboard of public metrics.</p>
+                <p><strong>Conclusion:</strong> The useful contribution is not another agent benchmark number, but a cleaner measurement framework for enterprise AI governance. For real-world decision systems, the paper argues that regulatory reconstruction and abstention need to be first-class evaluation targets, which is a practical lesson for any team deploying agents into high-stakes business workflows.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2604.19538" target="_blank">Integrating Anomaly Detection into Agentic AI for Proactive Risk Management in Human Activity</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19538</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 86 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This paper is less benchmark-heavy than the top entries, but it lands in an active theme: using agentic orchestration for safety-critical monitoring instead of a single classifier. It is timely because the market is clearly exploring AI systems that combine anomaly detection, tool use, and human-in-the-loop intervention for healthcare and elder-care workflows.</p>
+                <p><strong>Problem:</strong> Fall prediction and fall detection systems still struggle in real settings because they are brittle to context changes, noisy environments, sparse data, and high false-alarm rates. The authors argue that treating these events as isolated classification tasks misses the larger operational problem, which is ongoing risk management under changing human behavior and environment conditions.</p>
+                <p><strong>Method:</strong> The paper proposes a conceptual agentic architecture that reframes fall mitigation as anomaly detection plus orchestration. Different agents handle data ingestion, preprocessing, anomaly modeling, intervention, explainability, governance, and interaction with IoT devices, while a shared LLM-style reasoning layer coordinates textual knowledge, patient history, and tool selection inside a feedback loop.</p>
+                <p><strong>Results:</strong> This is primarily a framework paper rather than a full benchmark report. The PDF lays out the architectural layers and agent roles in detail, but does not provide a comprehensive experimental table with head-to-head metric gains over prior baselines. So the main output is the system design argument, not a finished SOTA leaderboard claim.</p>
+                <p><strong>Conclusion:</strong> The value here is the shift from reactive fall alerts to proactive, adaptive risk management. For engineering teams, the paper is a reminder that in safety applications the winning system may be an orchestrated stack of sensing, anomaly detection, explanation, and escalation, not just a better standalone predictive model.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2604.19567" target="_blank">Multi-modal Reasoning with LLMs for Visual Semantic Arithmetic</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19567</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 82 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This paper ranks high because it combines two hot signals at once: multimodal reasoning and RL-style post-training. It also has a clear downstream story for robotics and embodied systems, which aligns with today&#x27;s interest in turning vision-language models into agents that can reason over objects and actions instead of just captioning images.</p>
+                <p><strong>Problem:</strong> Large language models have improved a lot on text reasoning, but comparable relational reasoning over images is still weak. The challenge is that visual semantic arithmetic requires extracting the right concepts from cluttered images, bridging modality gaps, and reasoning over relations like composition or substitution instead of just recognizing objects.</p>
+                <p><strong>Method:</strong> The authors formalize two visual semantic arithmetic tasks, including subtraction and three-term operations, and build the Image-Relation-Pair Dataset for evaluation. They then introduce SAri-RFT, a reinforcement fine-tuning approach for large vision-language models that uses a verifiable reward together with GRPO to teach the model to infer cross-image relations rather than rely on brittle embedding arithmetic heuristics.</p>
+                <p><strong>Results:</strong> The paper reports state-of-the-art results on IRPD and says SAri-RFT improves performance by more than 50% over competing methods on the benchmark. It also beats supervised fine-tuning and embedding-arithmetic baselines on the downstream Visual7W-Telling task, which suggests the gain is not limited to a toy dataset. The extracted PDF text exposes the headline improvement but not every detailed metric row.</p>
+                <p><strong>Conclusion:</strong> This is one of the more interesting multimodal papers today because it attacks relational reasoning directly instead of adding another generic VLM benchmark. If the approach scales, it could matter for robotics, visual planning, and multimodal assistants that need to infer object relationships and substitutions in real scenes.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2604.19638" target="_blank">SafetyALFRED: Evaluating Safety-Conscious Planning of Multimodal Large Language Models</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19638</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 79 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> SafetyALFRED sits at the intersection of multimodal agents, embodied planning, and AI safety, three themes that remain highly relevant for product-grade agents. It also mirrors the day&#x27;s broader discussion about the gap between benchmark intelligence and dependable action in real environments.</p>
+                <p><strong>Problem:</strong> Current multimodal safety evaluations often test whether a model can name a hazard in a QA setting, but that is much easier than behaving safely inside an interactive environment. The paper asks whether models that can recognize danger on paper can actually change their plans to avoid or mitigate hazards while carrying out tasks.</p>
+                <p><strong>Method:</strong> The authors extend the ALFRED embodied benchmark into SafetyALFRED by adding six categories of kitchen hazards and then evaluate eleven models from the Qwen, Gemma, and Gemini families. The benchmark separates hazard recognition from active mitigation, so the evaluation can compare what a model says it knows with what it actually does during embodied planning.</p>
+                <p><strong>Results:</strong> Across the benchmark, the authors find a clear alignment gap: models do much better at recognizing hazards in QA prompts than at successfully mitigating them through action plans. The evaluation covers nine open and two closed models, and the paper uses that contrast to argue that static safety QA overestimates real embodied safety competence. The PDF excerpt emphasizes the gap more than exact per-model percentages in the visible text.</p>
+                <p><strong>Conclusion:</strong> The main takeaway is that embodied safety needs action-centric evaluation, not just recognition tests. For teams building robotic or multimodal agents, this paper is a useful warning that a model can sound safety-aware while still failing to produce safe plans under environmental constraints.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2604.19516" target="_blank">From Experience to Skill: Multi-Agent Generative Engine Optimization via Reusable Strategy Learning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19516</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 74 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> MAGEO is timely because generative-engine optimization is becoming a real traffic-acquisition and product-discovery problem now that answer engines are replacing plain link lists. It also connects with today&#x27;s agent theme by turning content optimization into a reusable multi-agent skill-learning process rather than a one-off prompt hack.</p>
+                <p><strong>Problem:</strong> Existing GEO methods tend to optimize each document or query instance independently, so they cannot accumulate durable strategies across engines and tasks. That is a problem as search shifts toward citation-grounded generative answers, where publishers need methods that improve visibility without simply resorting to old SEO tricks or harming factual fidelity.</p>
+                <p><strong>Method:</strong> The paper proposes MAGEO, a multi-agent framework with planning, editing, and fidelity-aware evaluation in the loop. Successful edits are distilled into reusable engine-specific skills, and the evaluation stack includes a Twin Branch protocol for causal attribution plus the DSV-CF metric to measure both semantic visibility and citation fidelity on the new MSME-GEO-Bench benchmark.</p>
+                <p><strong>Results:</strong> Experiments on three mainstream generative engines show that MAGEO outperforms heuristic baselines on both visibility and citation fidelity. The ablation study highlights two key drivers: engine-specific preference modeling and strategy reuse. The paper makes a strong relative-performance claim, though the extracted text here does not expose the full table of exact gains.</p>
+                <p><strong>Conclusion:</strong> This is one of the more commercially relevant papers in today&#x27;s batch because it treats GEO as a learning and systems problem, not just a content-writing trick. For enterprise teams, it hints that discoverability in answer engines may become an optimization layer with its own tooling, benchmarks, and reusable strategies.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2604.19221" target="_blank">UAF: A Unified Audio Front-end LLM for Full-Duplex Speech Interaction</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19221</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 72 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Voice agents remain strategically important, and this paper is notable because it targets the audio front end instead of only scaling the back-end model. That makes it relevant to today&#x27;s push for real-time multimodal assistants that feel interruptible and conversational rather than turn-based.</p>
+                <p><strong>Problem:</strong> Most speech assistants still rely on cascaded front-end modules such as VAD, turn detection, speaker recognition, and ASR before the request even reaches the main LLM. Those pipelines add latency, lose information across module boundaries, and break down in full-duplex settings where people interrupt, overlap, and switch turns dynamically.</p>
+                <p><strong>Method:</strong> UAF reframes several audio front-end tasks as one autoregressive sequence prediction problem. The model consumes streaming audio chunks plus a reference audio prompt for target-speaker anchoring, and emits discrete tokens that encode both semantic content and system-control signals such as interruption cues, covering VAD, turn-taking, speaker recognition, ASR, and QA within one unified front-end model.</p>
+                <p><strong>Results:</strong> The paper reports leading performance across multiple audio front-end tasks and highlights improvements in response latency and interruption accuracy in real interaction scenarios. The visible PDF text confirms broad task wins and better real-time behavior, though it does not surface the complete numerical breakdown in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> The practical insight is that natural voice interaction depends as much on front-end orchestration as on the back-end conversational model. For product teams building voice agents, UAF points toward a more unified and lower-latency speech stack that could make assistants feel markedly more human in live dialogue.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2604.19377" target="_blank">Towards Energy Impact on AI-Powered 6G IoT Networks: Centralized vs. Decentralized</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19377</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 71 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This paper scores on engineering relevance more than frontier novelty: energy efficiency in AI-enabled edge systems is becoming unavoidable as inference spreads into industrial and telecom infrastructure. It fits today&#x27;s broader deployment theme, where cost, sustainability, and system architecture matter alongside model quality.</p>
+                <p><strong>Problem:</strong> AI for 6G IoT networks can improve predictive maintenance and monitoring, but centralized architectures pay a heavy cost in data transmission and energy use. The paper asks whether decentralized learning can preserve enough predictive quality while materially lowering the electricity footprint of real deployments.</p>
+                <p><strong>Method:</strong> The authors compare centralized and decentralized learning architectures with an explicit energy-consumption analysis and validate the comparison on a German railway testbed using sensor data for predictive maintenance. The focus is not on inventing a new model family, but on measuring the systems trade-off between accuracy and energy across deployment architectures.</p>
+                <p><strong>Results:</strong> On the railway testbed, decentralized models retain roughly 90% predictive accuracy while cutting overall electricity consumption by up to 70%, mainly by reducing transmission-related energy costs. That makes the result concrete and operational rather than purely simulated.</p>
+                <p><strong>Conclusion:</strong> For industrial AI teams, the message is straightforward: architecture choices can deliver major sustainability gains without destroying task performance. This is the kind of evidence enterprises need when deciding whether edge or federated designs are worth the added operational complexity.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2604.19488" target="_blank">CoDA: Towards Effective Cross-domain Knowledge Transfer via CoT-guided Domain Adaptation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19488</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 70 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> CoDA earns a place in the Top 10 because it tackles a practical bottleneck in reasoning deployment: how to transfer chain-of-thought structure into domains where curated demonstrations are scarce. That resonates with today&#x27;s open-model ecosystem, where adaptation efficiency matters more than training a new domain model from scratch.</p>
+                <p><strong>Problem:</strong> In-context learning works best when you have strong in-domain exemplars, but many specialized domains, from niche science to legal reasoning, do not have enough expert-written demonstrations. Raw cross-domain example retrieval helps only a little because the model struggles to abstract the latent reasoning pattern through the source-target domain shift.</p>
+                <p><strong>Method:</strong> CoDA uses chain-of-thought guided domain adaptation to align cross-domain reasoning representations instead of relying on direct textual transfer alone. The paper evaluates the method across Gemma and Qwen backbones and multiple reasoning datasets, using source-domain CoT rationales to help the model map shared reasoning structure into the target domain more effectively.</p>
+                <p><strong>Results:</strong> The experiments cover mathematical and logical reasoning tasks such as GSM8K, LogicalDeduction, FOLIO, and related datasets. The paper frames its evaluation around effectiveness, representation alignment, parameter efficiency, and ablations of the key modules, showing that CoDA consistently improves cross-domain transfer over prior baselines. The extracted snippet does not include all exact improvement numbers.</p>
+                <p><strong>Conclusion:</strong> The important signal is that reasoning transfer may need explicit representation alignment, not just better prompt retrieval. For applied teams, that is promising because it offers a way to bootstrap scarce domains with less manual exemplar curation and potentially lower adaptation cost.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2604.19606" target="_blank">AblateCell: A Reproduce-then-Ablate Agent for Virtual Cell Repositories</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19606</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 70 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> AblateCell stands out because it pushes coding agents beyond code generation into reproducible scientific verification, which is a more defensible automation target. It also aligns with the day&#x27;s agent theme around long-horizon workflows, tool use, and reliable experimentation rather than flashy single-shot coding.</p>
+                <p><strong>Problem:</strong> Virtual cell repositories are difficult to standardize, reproduce, and ablate, so researchers rarely get clean evidence about which components actually drive performance. Existing coding agents can write or modify code, but they usually stop before reproducing baselines, managing brittle environments, and running systematic attribution experiments.</p>
+                <p><strong>Method:</strong> AblateCell follows a reproduce-then-ablate loop. It first auto-configures environments, resolves dependency and data issues, reruns official evaluations, and emits verifiable artifacts; then it constructs a graph of isolated repository mutations and adaptively selects ablation experiments with a reward that balances impact against execution cost.</p>
+                <p><strong>Results:</strong> On three single-cell perturbation repositories, CPA, GEARS, and BioLORD, AblateCell reaches 88.9% end-to-end workflow success, which is 29.9 points above the human-expert baseline reported in the paper. It also achieves 93.3% accuracy in recovering ground-truth critical components, 53.3 points above a heuristic baseline, making this one of the clearest quantitative wins in today&#x27;s set.</p>
+                <p><strong>Conclusion:</strong> This paper is exciting because it treats agents as reproducibility infrastructure, not just coding copilots. If the pattern generalizes, similar reproduce-then-ablate agents could become valuable for ML research operations, scientific auditing, and enterprise experimentation pipelines.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2604.19240" target="_blank">Industrial Surface Defect Detection via Diffusion Generation and Asymmetric Student-Teacher Network</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.19240</span>
+                <span class="date">2026-04-23</span>
+                <span class="date">Heat Score: 69 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This paper makes the list because it connects diffusion models to a very practical industrial-vision problem, synthetic defect generation for low-data inspection. That keeps it relevant for enterprise AI adoption, especially in manufacturing scenarios where labeled anomalies are rare and costly to collect.</p>
+                <p><strong>Problem:</strong> Industrial defect detection suffers from three intertwined issues: too few defect samples, long-tailed anomaly distributions, and hard-to-localize subtle defects against messy backgrounds. Supervised methods need labeled positives that factories often do not have, while simpler unsupervised methods can miss fine-grained defect regions.</p>
+                <p><strong>Method:</strong> The authors train a DDPM only on normal samples, then use Gaussian perturbations and Perlin-noise masks to synthesize realistic defect samples with pixel-level annotations. On top of that synthetic data pipeline, they build an asymmetric teacher-student network in which the teacher models normal features and the student reconstructs normal patterns so that anomalous discrepancies become easier to localize.</p>
+                <p><strong>Results:</strong> The paper reports superior performance over prior methods on industrial datasets including MVTecAD, with the gain attributed to both higher-quality synthetic defect generation and the asymmetric reconstruction design. The extracted text confirms strong benchmark performance, but the visible snippet does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> For manufacturing AI, this is a practical recipe: use generative modeling to create better anomaly supervision, then pair it with a localization-friendly architecture. That combination could be useful anywhere defects are rare, expensive to label, and operationally important to catch early.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/Qwen/Qwen3.6-35B-A3B" target="_blank">Qwen/Qwen3.6-35B-A3B</a></td>
+                <td>image-text-to-text</td>
+                <td>582961</td>
+                <td>1237</td>
+                <td>2026-04-22T09:50:54.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A multimodal Qwen release aimed at image-grounded chat and reasoning, useful for teams that want one open model family to cover both visual understanding and general assistant tasks.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/moonshotai/Kimi-K2.6" target="_blank">moonshotai/Kimi-K2.6</a></td>
+                <td>image-text-to-text</td>
+                <td>54456</td>
+                <td>809</td>
+                <td>2026-04-21T01:26:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Kimi-K2.6 appears to be a multimodal assistant model positioned for image-plus-text dialogue, which explains its traction among developers comparing open alternatives for general-purpose agent stacks.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF" target="_blank">unsloth/Qwen3.6-35B-A3B-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>1112454</td>
+                <td>669</td>
+                <td>2026-04-20T12:42:25.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is the GGUF deployment build of Qwen3.6-35B-A3B, so the draw is practical local inference, quantized serving, and easier integration into desktop or edge LLM runtimes.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/tencent/HY-World-2.0" target="_blank">tencent/HY-World-2.0</a></td>
+                <td>image-to-3d</td>
+                <td>0</td>
+                <td>550</td>
+                <td>2026-04-22T08:43:02.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">HY-World-2.0 is an image-to-3D model, making it relevant for asset generation, embodied simulation, digital humans, and other pipelines that need fast scene or object reconstruction from images.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/Qwen/Qwen3.6-27B" target="_blank">Qwen/Qwen3.6-27B</a></td>
+                <td>image-text-to-text</td>
+                <td>0</td>
+                <td>400</td>
+                <td>2026-04-22T12:18:46.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Qwen3.6-27B is a smaller flagship-style multimodal checkpoint that matters because it targets a better cost-quality trade-off for coding agents, enterprise assistants, and private deployment.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>312962</td>
+                <td>372</td>
+                <td>2026-04-17T02:59:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This community remix of Qwen3.6 is clearly tuned for looser refusal behavior, which makes it a signal of downstream appetite for domain-specific or policy-modified variants rather than stock base checkpoints.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED" target="_blank">OBLITERATUS/gemma-4-E4B-it-OBLITERATED</a></td>
+                <td>text-generation</td>
+                <td>79024</td>
+                <td>454</td>
+                <td>2026-04-19T21:43:06.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A Gemma 4 instruction-tuned derivative for text generation, notable less for novel architecture than for how quickly the Gemma ecosystem is being repackaged into niche behavioral variants.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/openai/privacy-filter" target="_blank">openai/privacy-filter</a></td>
+                <td>token-classification</td>
+                <td>3</td>
+                <td>265</td>
+                <td>2026-04-22T16:50:17.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Unlike a chat model, this token-classification model is aimed at privacy filtering, so its practical use case is redaction, sensitive-entity detection, and safer document or log processing before LLM calls.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/baidu/ERNIE-Image" target="_blank">baidu/ERNIE-Image</a></td>
+                <td>text-to-image</td>
+                <td>5253</td>
+                <td>529</td>
+                <td>2026-04-17T02:33:16.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">ERNIE-Image is a text-to-image model, relevant for marketing creatives, visual content generation, and enterprise design workflows where Chinese ecosystem support can matter.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank">google/gemma-4-31B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>4779095</td>
+                <td>2290</td>
+                <td>2026-04-10T16:35:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Gemma-4-31B-it is a large multimodal instruction model that remains popular because it offers an open route to image-aware chat, analysis, and assistant workflows without depending entirely on closed APIs.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/nvidia/Lyra-2.0" target="_blank">nvidia/Lyra-2.0</a></td>
+                <td>Model</td>
+                <td>252</td>
+                <td>256</td>
+                <td>2026-04-18T01:34:58.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Lyra-2.0 is presented simply as a model, but given NVIDIA&#x27;s stack it likely targets multimodal or speech-rich interaction workloads and is being watched as infrastructure-friendly modelware rather than a casual hobby release.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/openbmb/VoxCPM2" target="_blank">openbmb/VoxCPM2</a></td>
+                <td>text-to-speech</td>
+                <td>77590</td>
+                <td>1219</td>
+                <td>2026-04-16T03:30:11.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">VoxCPM2 is a text-to-speech model for speech synthesis and voice interaction, directly relevant to voice agents, dubbing, multilingual narration, and audio-first product experiences.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M2.7" target="_blank">MiniMaxAI/MiniMax-M2.7</a></td>
+                <td>text-generation</td>
+                <td>416155</td>
+                <td>1033</td>
+                <td>2026-04-20T04:28:14.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">MiniMax-M2.7 is a text-generation model that looks positioned for general chat and reasoning, and its popularity suggests active testing as another serious open-model option from the Chinese LLM ecosystem.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/unsloth/Qwen3.6-27B-GGUF" target="_blank">unsloth/Qwen3.6-27B-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>0</td>
+                <td>189</td>
+                <td>2026-04-22T16:01:39.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This quantized GGUF build packages Qwen3.6-27B for practical local use, which is exactly the format developers want when experimenting with lower-cost agents on consumer or workstation hardware.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/tencent/HY-Embodied-0.5" target="_blank">tencent/HY-Embodied-0.5</a></td>
+                <td>image-text-to-text</td>
+                <td>2459</td>
+                <td>900</td>
+                <td>2026-04-14T11:18:35.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">HY-Embodied-0.5 appears aimed at embodied or vision-grounded interaction, so the likely use cases are robotics, environment understanding, and agent systems that need perception tied to action.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/Fincept-Corporation/FinceptTerminal" target="_blank">Fincept-Corporation/FinceptTerminal</a></td>
+                <td>⭐ 13,047</td>
+                <td>FinceptTerminal is a modern finance application offering advanced market analytics, investment research, and economic data tools, designed for interactive exploration and data-driven decision-making i</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">FinceptTerminal packages market analytics, investment research, and economic data tools into an interactive finance workbench. It is useful because it shows how domain software is being rebuilt as an AI-friendly terminal for exploratory analysis rather than a static dashboard.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/HKUDS/RAG-Anything" target="_blank">HKUDS/RAG-Anything</a></td>
+                <td>⭐ 17,511</td>
+                <td>&quot;RAG-Anything: All-in-One RAG Framework&quot;</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">RAG-Anything is an all-in-one retrieval-augmented generation framework, so the practical angle is faster assembly of document, knowledge-base, and multi-source QA systems. Its popularity reflects how central retrieval infrastructure remains for production LLM apps.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/sansan0/TrendRadar" target="_blank">sansan0/TrendRadar</a></td>
+                <td>⭐ 54,406</td>
+                <td>⭐AI-driven public opinion &amp; trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 + RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 + AI 分析简报直推手机，也支持接入 MCP 架构，赋能</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">TrendRadar is an AI-driven monitoring stack for public-opinion and trend analysis across multiple platforms, RSS feeds, alerts, and briefings. That makes it a concrete example of LLMs moving into always-on information triage and competitive-intelligence workflows.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/AIDC-AI/Pixelle-Video" target="_blank">AIDC-AI/Pixelle-Video</a></td>
+                <td>⭐ 5,511</td>
+                <td>🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Pixelle-Video is a fully automated short-video engine, directly relevant to marketing content generation, media automation, and AI-assisted creative pipelines. It stands out because it packages a business-facing multimodal workflow rather than a narrow research demo.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/Z4nzu/hackingtool" target="_blank">Z4nzu/hackingtool</a></td>
+                <td>⭐ 59,610</td>
+                <td>ALL IN ONE Hacking Tool For Hackers</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This is a broad offensive-security toolkit rather than an AI project, but its presence in trending Python shows how general automation and operator tooling still co-mingle with the AI ecosystem on GitHub.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/kyegomez/swarms" target="_blank">kyegomez/swarms</a></td>
+                <td>⭐ 6,455</td>
+                <td>The Enterprise-Grade Production-Ready Multi-Agent Orchestration Framework. Website: https://swarms.ai</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Swarms is a production-oriented multi-agent orchestration framework focused on structuring tool use, task routing, and long-running agent behavior. It remains relevant because many teams now want agent control planes, not just raw model wrappers.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/paperless-ngx/paperless-ngx" target="_blank">paperless-ngx/paperless-ngx</a></td>
+                <td>⭐ 39,778</td>
+                <td>A community-supported supercharged document management system: scan, index and archive all your documents</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">paperless-ngx is a document management system for scanning, indexing, and archiving files. Even though it is not an LLM-native project, it matters to AI builders because document-heavy enterprise workflows increasingly start with reliable ingestion and searchable archives.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/Alishahryar1/free-claude-code" target="_blank">Alishahryar1/free-claude-code</a></td>
+                <td>⭐ 2,764</td>
+                <td>Use claude-code for free in the terminal, VSCode extension or via discord like openclaw</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This project helps users run Claude Code-style workflows for free across terminal, VS Code, or Discord-like interfaces. Its traction shows just how strong demand is for affordable coding-agent access and community repackaging of frontier workflows.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/davila7/claude-code-templates" target="_blank">davila7/claude-code-templates</a></td>
+                <td>⭐ 24,947</td>
+                <td>CLI tool for configuring and monitoring Claude Code</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">claude-code-templates provides CLI tooling and reusable templates for configuring and monitoring Claude Code. In practice, it lowers the friction of standardizing coding-agent workflows across projects and teams.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/open-webui/open-webui" target="_blank">open-webui/open-webui</a></td>
+                <td>⭐ 133,412</td>
+                <td>User-friendly AI Interface (Supports Ollama, OpenAI API, ...)</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Open WebUI remains one of the clearest examples of the self-hosted AI interface layer, connecting Ollama, OpenAI-style APIs, and other backends behind a user-friendly front end. Its continued momentum shows that many teams still want private, model-agnostic control surfaces.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Enterprise agents are being judged by auditability, not demo charisma</h3>
+            <p>What: today&#x27;s strongest cross-signal is the move from impressive one-shot agents toward systems that can be audited across long workflows. Why now: Four-Axis Decision Alignment for Long-Horizon Enterprise AI Agents and SafetyALFRED both expose how aggregate success or QA-style safety checks hide real deployment failures, while HN discussions around Workspace Agents in ChatGPT and Zed&#x27;s parallel agents show product teams pushing the same direction. Signal: the field is converging on reliability, abstention, and workflow control as first-class design goals. So what: for enterprise deployment, especially in regulated or customer-facing flows, evaluation needs to track failure modes step by step instead of relying on a single task score.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Multimodal models are crossing from perception into action-oriented reasoning</h3>
+            <p>What: multimodal AI today is not just about seeing or captioning, but about reasoning over images, speech, and environment context in ways that support action. Why now: Multi-modal Reasoning with LLMs for Visual Semantic Arithmetic, UAF, HY-Embodied-0.5, VoxCPM2, and HY-World-2.0 all point to models that connect perception with relational reasoning, turn-taking, 3D understanding, or embodied interaction. Signal: multimodal capability is becoming a control surface for robots, voice assistants, and world models, not just a benchmark add-on. So what: this is directly relevant for Charlie&#x27;s interest in image/video generation and multimodal business tools because more product value will come from grounded interaction, not plain text chat.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Open-model competition is shifting toward deployable variants and packaging</h3>
+            <p>What: the open ecosystem is increasingly competing on adaptation formats, not only on who ships the next base checkpoint. Why now: Qwen3.6-35B-A3B, Qwen3.6-27B, multiple GGUF variants, Gemma derivatives, and MiniMax-M2.7 are all trending at once, while GitHub projects like Open WebUI and Claude Code templates show the surrounding integration layer heating up too. Signal: quantization, policy tuning, model wrapping, and ecosystem leverage are becoming the moat. So what: for applied teams, model selection should weigh tooling maturity, local deployability, and specialization speed as heavily as raw leaderboard position.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Production AI is again being optimized around cost, latency, and physical constraints</h3>
+            <p>What: another strong signal today is the return of systems pragmatism. Why now: Google&#x27;s eighth-generation TPU launch, the UAF paper&#x27;s focus on interruption latency, the 6G IoT energy paper, and the popularity of smaller deployable models like Qwen3.6-27B all point in the same direction. Signal: the market is rewarding AI stacks that can run continuously, cheaply, and close to the user or device instead of only chasing maximal capability. So what: for enterprise rollouts, this favors architectures that trade a little benchmark peak for much better serving economics, responsiveness, and operational control.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: Agents are starting to automate scientific verification, not just coding</h3>
+            <p>What: the most encouraging agent pattern today is movement from code generation toward reproducible experimentation and attribution. Why now: AblateCell shows an agent reproducing baselines, repairing environments, and running closed-loop ablations, while MAGEO turns content optimization into reusable multi-agent skills rather than isolated edits. Signal: agent systems are becoming workflow engines for verification, search, and iterative experimentation. So what: this matters for AI R&amp;D teams because the next productivity jump may come from agents that can validate, compare, and attribute results, not merely draft implementations.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-04-23 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-04-23-08-00.html">https://chenlijn.github.io/ai-daily/2026-04-23-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
