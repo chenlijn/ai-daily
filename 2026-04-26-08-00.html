@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-04-26</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-04-26 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://openai.com/index/gpt-5-5-bio-bug-bounty/" target="_blank">GPT‑5.5 Bio Bug Bounty</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 123 points</span>
+            </div>
+            <p class="summary">OpenAI launched a biosecurity-focused bug bounty around GPT-5.5 Bio, which turns frontier-model safety into a live external red-teaming program instead of a closed internal review. It matters today because regulated enterprise deployments increasingly need evidence that dangerous-domain controls can survive adversarial testing.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://victortaelin.github.io/lambench/" target="_blank">Lambda Calculus Benchmark for AI</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 128 points</span>
+            </div>
+            <p class="summary">Lambench proposes a lambda-calculus benchmark that tests whether models can manipulate formal programs rather than just imitate natural-language reasoning patterns. That is worth watching because it pushes evaluation toward symbolic rigor, a recurring weak spot for coding and reasoning agents.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.jeffgeerling.com/blog/2026/new-10-gbe-usb-adapters-cooler-smaller-cheaper/" target="_blank">New 10 GbE USB adapters are cooler, smaller, cheaper</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 529 points</span>
+            </div>
+            <p class="summary">This is not an AI story on its face, but the strong discussion around cheap 10 GbE peripherals reflects the same home-lab and edge-infrastructure trend that powers local model serving. Faster, lower-friction networking matters when builders are moving multi-model pipelines, datasets, and inference traffic outside centralized clouds.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2604.21816" target="_blank">Tool Attention Is All You Need: Dynamic Tool Gating and Lazy Schema Loading for Eliminating the MCP/Tools Tax in Scalable Agentic Workflows</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21816</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 82 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Agent builders are fixated on the cost of tool use right now, and this paper squarely targets the token overhead of MCP-style orchestration. It lines up with the day&#x27;s broader signals around agent runtime design, evaluation efficiency, and deployable open tooling, so it feels immediately relevant to production teams.</p>
+                <p><strong>Problem:</strong> The paper tackles a very practical agent-systems bottleneck: MCP-compatible clients often resend large tool schemas on every turn, which wastes context, raises serving cost, and can degrade reasoning once prompts become tool-heavy. The authors argue that current tool orchestration is too stateless and too eager, especially for multi-server enterprise agents with large catalogs.</p>
+                <p><strong>Method:</strong> Tool Attention adds a middleware layer that ranks tools before full schema injection. It combines an Intent-Schema Overlap retrieval score, state-aware gating for preconditions and scope checks, and a two-stage lazy loader that keeps short tool summaries in context and only promotes the top-k tools to full JSON schemas. The design is model-agnostic and meant to sit on top of existing agent stacks rather than retrain the LLM.</p>
+                <p><strong>Results:</strong> On a simulated 120-tool, six-server benchmark calibrated with public MCP deployment audits, the method cuts per-turn tool tokens by 95 percent, from about 47.3k to 2.4k, and lifts effective context utilization from 24 percent to 91 percent. The paper is careful that end-to-end gains in latency, cost, and success rate are projected from token savings plus published telemetry, not measured on live production agents.</p>
+                <p><strong>Conclusion:</strong> The main takeaway is that agent scalability is hitting a protocol-efficiency wall before it hits a raw context-window wall. For teams building multi-tool assistants, the paper offers a credible architecture for reducing the &quot;tools tax&quot; without giving up MCP compatibility, though the strongest live-agent evidence is still pending.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2604.21910" target="_blank">From Research Question to Scientific Workflow: Leveraging Agentic AI for Science Automation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21910</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 75 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This is one of the clearest enterprise-facing agent papers in today&#x27;s batch. It resonates with current interest in turning LLMs from chat interfaces into deterministic workflow front-ends, especially in scientific and regulated environments where reproducibility matters more than flashy free-form generation.</p>
+                <p><strong>Problem:</strong> Scientific workflow systems already execute DAGs well, but scientists still have to manually translate a research question into the right datasets, parameters, and infrastructure choices. Direct LLM code generation helps with flexibility but makes reproducibility fragile because the same prompt can yield different workflows.</p>
+                <p><strong>Method:</strong> The system splits the problem into three layers: an LLM semantic layer that maps natural language into structured intent, a deterministic generation layer that converts validated intents into reproducible workflow DAGs, and a knowledge layer made of domain-expert-authored markdown Skills. A multi-agent pipeline then routes from request interpretation to deployment and execution, while keeping the workflow-generation step deterministic.</p>
+                <p><strong>Results:</strong> On a 1000 Genomes workflow running with Hyperflow on Kubernetes, the ablation study over 150 queries shows Skills improve full-match intent accuracy from 44 percent to 83 percent. Skill-driven deferred workflow generation reduces data transfer by 92 percent, and the full pipeline completes with under 15 seconds of LLM overhead at less than $0.001 per query.</p>
+                <p><strong>Conclusion:</strong> The paper shows a strong pattern for enterprise and scientific automation: use LLMs for semantic interpretation, but hand final execution to deterministic generators and explicit domain knowledge. That architecture is much closer to what cautious production teams can actually deploy.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2604.21501" target="_blank">GeoMind: An Agentic Workflow for Lithology Classification with Reasoned Tool Invocation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21501</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 64 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This paper stands out because it applies the agent-tooling wave to a real industrial science problem instead of another benchmark toy setting. It is a good signal that &quot;agentic workflow&quot; ideas are starting to penetrate vertical domains where traceability and domain constraints matter.</p>
+                <p><strong>Problem:</strong> Lithology classification from well logs is noisy, sequential, and constrained by geology, yet many existing models still treat it as a one-shot discriminative mapping from signals to labels. That makes predictions brittle near formation boundaries and weakly grounded in stratigraphic rules or expert reasoning.</p>
+                <p><strong>Method:</strong> GeoMind reframes the task as plan-execute-reflect reasoning. It uses perception tools to translate raw logs into semantic trends, reasoning modules to form lithology hypotheses, and analysis modules to verify them against stratigraphic constraints, all coordinated by a global planner. Training adds process supervision with module-aware rewards so intermediate reasoning steps, not just final labels, are optimized.</p>
+                <p><strong>Results:</strong> The paper reports consistent gains over strong baselines on four benchmark well-log datasets and emphasizes better geological plausibility plus transparent reasoning traces. The fetched content does not expose the full benchmark table or all effect sizes, so the exact per-dataset margins are not fully visible in this run.</p>
+                <p><strong>Conclusion:</strong> GeoMind is interesting less as a general-purpose agent benchmark and more as evidence that tool-augmented reasoning can improve specialized decision systems when hard domain constraints matter. For enterprise AI teams, it is a reminder that agent patterns become much more valuable when paired with auditable vertical logic.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2604.21649" target="_blank">GS-Quant: Granular Semantic and Generative Structural Quantization for Knowledge Graph Completion</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21649</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 62 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Knowledge-augmented reasoning is back in focus as teams try to ground LLMs without paying huge prompt costs. This paper is timely because it attacks the representation gap between graph structure and token-based language models, which is a recurring pain point in enterprise QA, recommendation, and retrieval-heavy systems.</p>
+                <p><strong>Problem:</strong> Knowledge graph completion methods either linearize graph facts into long text prompts, losing topology and inflating token cost, or align dense graph embeddings with LLM latent spaces, which preserves efficiency but leaves a modality mismatch. The missing piece is a discrete representation that behaves more like language while still carrying graph structure.</p>
+                <p><strong>Method:</strong> GS-Quant builds hierarchical discrete codes for entities instead of flat quantized vectors. Its Granular Semantic Enhancement module injects hierarchy into the codebook so early codes capture coarse semantic classes and later codes refine attributes, while the Generative Structural Reconstruction module uses a lightweight GPT-style decoder to make the code sequence causally coherent. The learned codes are then added to the LLM vocabulary for graph reasoning.</p>
+                <p><strong>Results:</strong> The paper reports that GS-Quant outperforms both text-based and embedding-based LLM4KGC baselines and positions the method as a new state of the art for this setup. The accessible text does not include the full benchmark table or precise MRR and Hits@k deltas, so this summary should be read as directionally strong but numerically incomplete.</p>
+                <p><strong>Conclusion:</strong> The paper offers a useful design lesson: if you want LLMs to reason over structured enterprise knowledge, the representation format matters as much as the base model. Hierarchical code sequences may be a practical bridge between graph databases and token-native reasoning systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2604.21794" target="_blank">Learning to Communicate: Toward End-to-End Optimization of Multi-Agent Language Systems</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21794</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 61 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Multi-agent systems remain a hot topic, but most work still tweaks prompts or role layouts. This paper is timely because it moves the optimization target deeper, from agent instructions to the communication channel itself, which is exactly the kind of systems-level shift researchers are now exploring.</p>
+                <p><strong>Problem:</strong> Current multi-agent LLM systems usually pass information through text, which forces rich internal reasoning states to be compressed into discrete messages. That hurts fidelity, blocks end-to-end optimization across agents, and leaves communication as a fixed interface even when the task would benefit from a learned interaction pattern.</p>
+                <p><strong>Method:</strong> DiffMAS treats key-value cache exchange as a differentiable latent communication channel. Upstream agents sequentially build a shared KV trace, and a final agent decodes on top of that trace while only lightweight LoRA parameters are updated through supervised fine-tuning. In effect, the framework trains not only the final reasoning behavior but also how agents encode information for one another.</p>
+                <p><strong>Results:</strong> Across math, scientific QA, code generation, and commonsense benchmarks, the paper reports more stable reasoning and better accuracy than single-agent inference, text-based multi-agent systems, and earlier latent-communication methods. The visible metrics include a 26.7 percent score on AIME24 and 20.2 percent on GPQA-Diamond, along with consistent gains across other reasoning benchmarks.</p>
+                <p><strong>Conclusion:</strong> The core signal is that multi-agent performance may depend as much on learned communication bandwidth as on agent specialization. If this line holds up, future agent stacks could look less like chatty committees and more like trainable distributed systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2604.21764" target="_blank">Thinking with Reasoning Skills: Fewer Tokens, More Accuracy</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21764</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 60 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Reasoning-token cost is one of the loudest practical concerns in frontier-model deployment, so a paper that claims fewer tokens and better accuracy lands at the right moment. It also connects directly to the broader trend toward reusable skills, memory, and inference-time efficiency.</p>
+                <p><strong>Problem:</strong> Reasoning models often burn large chains of thought rediscovering strategies they have effectively learned before, which raises latency and API cost. Existing attempts to shorten reasoning traces usually force brevity, risking an efficiency-accuracy tradeoff on harder coding and math tasks.</p>
+                <p><strong>Method:</strong> Thinking with Reasoning Skills, or TRS, separates expensive exploration from cheap reuse. Offline, a stronger model distills long trial-and-error trajectories into compact skill cards with triggers and pitfalls; online, the system retrieves the most relevant cards for a new problem and injects them into the prompt so the model can reuse procedural patterns instead of reasoning from scratch.</p>
+                <p><strong>Results:</strong> The paper reports consistent token savings plus accuracy gains on mathematical and coding benchmarks, especially on harder subsets and for weaker models. The fetched text does not expose a full table of exact reductions and win rates, but the reported qualitative result is that TRS breaks the usual efficiency-versus-accuracy tradeoff rather than merely shifting it.</p>
+                <p><strong>Conclusion:</strong> This is a strong engineering idea for production reasoning systems: store distilled problem-solving skills outside the model and retrieve them when needed. It fits enterprise constraints well because it is training-free at serving time, black-box compatible, and directly aimed at reducing inference spend.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2604.21508" target="_blank">BioMiner: A Multi-modal System for Automated Mining of Protein-Ligand Bioactivity Data from Literature</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21508</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 58 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> BioMiner makes today&#x27;s list because it combines multimodal extraction, tool use, and a very concrete scientific data bottleneck. It is the kind of paper that bridges foundation-model capability with a domain workflow where the downstream value is easy to explain.</p>
+                <p><strong>Problem:</strong> Protein-ligand bioactivity data are buried across text, tables, figures, and chemically precise structure diagrams, and manual curation cannot keep up with the literature. Existing extraction systems either handle only part of the multimodal problem or fail on chemically exact reconstruction tasks such as Markush structure resolution.</p>
+                <p><strong>Method:</strong> BioMiner decomposes the pipeline into specialized agents for document parsing, chemical structure extraction, bioactivity measurement extraction, and cross-modal integration. A key design choice is separating semantic extraction from exact molecular construction: multimodal reasoning interprets the literature, while chemistry-specific tools reconstruct valid structures, especially for difficult Markush cases. The work also introduces BioVista, a benchmark curated from 500 papers.</p>
+                <p><strong>Results:</strong> On BioVista, BioMiner reaches an F1 of 0.32 for end-to-end bioactivity triplets. The authors also use it to extract 82,262 entries from 11,683 papers for pretraining, improving downstream models by 3.9 percent; in a human-in-the-loop NLRP3 workflow it doubles high-quality data and yields a 38.6 percent gain across 28 QSAR models; and on PoseBusters annotation it delivers a 5.59x speedup with 5.75 percent better accuracy than manual workflows.</p>
+                <p><strong>Conclusion:</strong> The paper is a strong example of multimodal AI paying off when paired with domain tools instead of pretending a single model can do everything. For pharma and scientific-enterprise teams, it points to a scalable way to unlock high-value data trapped in documents.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2604.21896" target="_blank">Nemobot Games: Crafting Strategic AI Gaming Agents for Interactive Learning with Large Language Models</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21896</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 58 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Game agents are not the hottest commercial theme of the day, but this paper earns a slot because it frames LLM agents as programmable strategic systems rather than black-box chatbots. That overlaps with the current interest in self-improving agents, tool-augmented coding, and interactive learning loops.</p>
+                <p><strong>Problem:</strong> Prompting an LLM to play a game can produce clever behavior, but it is hard to debug, reproduce, or systematically improve. The paper argues that what is missing is a structured programming environment that turns model outputs into inspectable strategy components instead of opaque one-off decisions.</p>
+                <p><strong>Method:</strong> Nemobot is presented as an interactive agentic engineering environment for creating and customizing game agents across four classes of games. Depending on the game type, it mixes compressed state-action models, mathematical reasoning for solvable games, classical search plus crowd signals for heuristic games, and reinforcement learning with human feedback and self-critique for learning-based games.</p>
+                <p><strong>Results:</strong> The paper demonstrates coverage across four game classes and positions Nemobot as a practical environment for experimenting with tool-augmented generation, fine-tuning, and iterative strategy refinement. The accessible text is more conceptual than benchmark-heavy, so this run cannot confirm a standardized leaderboard gain or a single headline metric.</p>
+                <p><strong>Conclusion:</strong> The value here is architectural rather than purely benchmark-driven. For people building interactive agents, the paper reinforces that programmable scaffolding and feedback loops are often what turns model capability into a usable system.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2604.21480" target="_blank">Efficient Agent Evaluation via Diversity-Guided User Simulation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21480</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 57 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Agent evaluation is becoming as important as agent construction, and this paper attacks the evaluation cost problem head-on. It also pairs naturally with today&#x27;s other agent papers about workflow efficiency, tool overhead, and robust deployment.</p>
+                <p><strong>Problem:</strong> Customer-facing agents are stochastic and multi-turn, so evaluating them with repeated full conversation rollouts is expensive and often shallow. Standard Monte Carlo evaluation wastes tokens on shared prefixes and still misses rare user behaviors that reveal deep failure modes.</p>
+                <p><strong>Method:</strong> DIVERT turns evaluation into a branching search problem. It snapshots agent-environment state at important junctions, reuses shared conversation prefixes instead of regenerating them from the root, and deliberately branches with diverse user responses to probe semantically different paths. The framework is coverage-guided, so it prioritizes unexplored interaction states rather than just more random samples.</p>
+                <p><strong>Results:</strong> The paper reports improved failure-discovery efficiency over conventional linear rollout protocols while also reducing token waste through prefix reuse. The fetched content does not include a detailed numeric comparison table, so the strongest claim visible here is directional: better coverage and lower evaluation redundancy rather than a single public benchmark score.</p>
+                <p><strong>Conclusion:</strong> For production agent teams, better evaluation infrastructure may matter as much as another prompt trick. DIVERT is a useful sign that the field is maturing from &quot;can the agent do it once&quot; to &quot;can we systematically map where it fails and what that costs.&quot;</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2604.21743" target="_blank">Bridging the Training-Deployment Gap: Gated Encoding and Multi-Scale Refinement for Efficient Quantization-Aware Image Enhancement</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2604.21743</span>
+                <span class="date">2026-04-26</span>
+                <span class="date">Heat Score: 53 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This paper is one of the few image-side entries in today&#x27;s mix, and it is relevant because it focuses on deployment realism rather than just image quality in the lab. For Charlie&#x27;s interests around image generation and mobile delivery, that engineering angle matters.</p>
+                <p><strong>Problem:</strong> Mobile image-enhancement models are usually trained in full precision but deployed under INT8 constraints, which creates a training-deployment mismatch. For pixel-level tasks, quantization noise can cause visible artifacts like color shifts, banding, and texture damage that standard post-training quantization does not handle well.</p>
+                <p><strong>Method:</strong> The model uses a hierarchical image-enhancement network with gated encoder blocks and multi-scale refinement, then bakes quantization-aware training directly into optimization. By simulating low-precision behavior during training, the system learns activation distributions that are more robust to the hardware realities of mobile inference.</p>
+                <p><strong>Results:</strong> The paper reports high-fidelity enhancement with low computational overhead on standard mobile devices and argues that quantization-aware training avoids the quality drop seen with post-training quantization. The visible text does not expose the complete benchmark table, so exact PSNR, SSIM, or latency deltas are not fully available in this pass.</p>
+                <p><strong>Conclusion:</strong> The message is straightforward and useful: for image-generation and enhancement products, deployment-aware training is not an optimization detail but part of the model design itself. That is especially relevant when visual quality must survive aggressive on-device compression.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank">deepseek-ai/DeepSeek-V4-Pro</a></td>
+                <td>text-generation</td>
+                <td>78864</td>
+                <td>2682</td>
+                <td>2026-04-24T10:00:14.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending text generation model that appears aimed at text generation and chat, not just a generic base release. The useful takeaway is what kind of workload it supports and the fact that it is already attracting measurable community interest (78864 downloads, 2682 likes).</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/moonshotai/Kimi-K2.6" target="_blank">moonshotai/Kimi-K2.6</a></td>
+                <td>image-text-to-text</td>
+                <td>291840</td>
+                <td>1025</td>
+                <td>2026-04-23T05:37:54.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending image text to text model that appears aimed at a specific downstream AI task, not just a generic base release. The useful takeaway is what kind of workload it supports and the fact that it is already attracting measurable community interest (291840 downloads, 1025 likes).</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/Qwen/Qwen3.6-27B" target="_blank">Qwen/Qwen3.6-27B</a></td>
+                <td>image-text-to-text</td>
+                <td>257685</td>
+                <td>812</td>
+                <td>2026-04-24T02:39:16.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-derived image text to text, which usually means the model is adapting a strong base family toward a narrower task such as instruction following, reasoning, or multimodal use. The important signal is not just the family name, but that the community is actively specializing Qwen into task-ready variants, with 257685 downloads, 812 likes.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/openai/privacy-filter" target="_blank">openai/privacy-filter</a></td>
+                <td>token-classification</td>
+                <td>21097</td>
+                <td>749</td>
+                <td>2026-04-22T16:50:17.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending token classification model that appears aimed at text generation and chat, not just a generic base release. The useful takeaway is what kind of workload it supports and the fact that it is already attracting measurable community interest (21097 downloads, 749 likes).</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash" target="_blank">deepseek-ai/DeepSeek-V4-Flash</a></td>
+                <td>text-generation</td>
+                <td>25391</td>
+                <td>684</td>
+                <td>2026-04-24T09:59:37.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending text generation model that appears aimed at text generation and chat, not just a generic base release. The useful takeaway is what kind of workload it supports and the fact that it is already attracting measurable community interest (25391 downloads, 684 likes).</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/Qwen/Qwen3.6-35B-A3B" target="_blank">Qwen/Qwen3.6-35B-A3B</a></td>
+                <td>image-text-to-text</td>
+                <td>1027741</td>
+                <td>1402</td>
+                <td>2026-04-24T02:53:42.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-derived image text to text, which usually means the model is adapting a strong base family toward a narrower task such as instruction following, reasoning, or multimodal use. The important signal is not just the family name, but that the community is actively specializing Qwen into task-ready variants, with 1027741 downloads, 1402 likes.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/unsloth/Qwen3.6-27B-GGUF" target="_blank">unsloth/Qwen3.6-27B-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>458273</td>
+                <td>403</td>
+                <td>2026-04-22T16:01:39.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-derived image text to text, which usually means the model is adapting a strong base family toward a narrower task such as instruction following, reasoning, or multimodal use. The important signal is not just the family name, but that the community is actively specializing Qwen into task-ready variants, with 458273 downloads, 403 likes.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF" target="_blank">unsloth/Qwen3.6-35B-A3B-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>1488984</td>
+                <td>763</td>
+                <td>2026-04-20T12:42:25.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-derived image text to text, which usually means the model is adapting a strong base family toward a narrower task such as instruction following, reasoning, or multimodal use. The important signal is not just the family name, but that the community is actively specializing Qwen into task-ready variants, with 1488984 downloads, 763 likes.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/tencent/HY-World-2.0" target="_blank">tencent/HY-World-2.0</a></td>
+                <td>image-to-3d</td>
+                <td>2851</td>
+                <td>602</td>
+                <td>2026-04-22T08:43:02.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending image to 3d model that appears aimed at document understanding, not just a generic base release. The useful takeaway is what kind of workload it supports and the fact that it is already attracting measurable community interest (2851 downloads, 602 likes).</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>418743</td>
+                <td>430</td>
+                <td>2026-04-17T02:59:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-derived image text to text, which usually means the model is adapting a strong base family toward a narrower task such as instruction following, reasoning, or multimodal use. The important signal is not just the family name, but that the community is actively specializing Qwen into task-ready variants, with 418743 downloads, 430 likes.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-Base" target="_blank">deepseek-ai/DeepSeek-V4-Pro-Base</a></td>
+                <td>Model</td>
+                <td>804</td>
+                <td>207</td>
+                <td>2026-04-24T03:45:20.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending Model model that appears aimed at text generation and chat, not just a generic base release. The useful takeaway is what kind of workload it supports and the fact that it is already attracting measurable community interest (804 downloads, 207 likes).</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/OBLITERATUS/gemma-4-E4B-it-OBLITERATED" target="_blank">OBLITERATUS/gemma-4-E4B-it-OBLITERATED</a></td>
+                <td>text-generation</td>
+                <td>110832</td>
+                <td>503</td>
+                <td>2026-04-19T21:43:06.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family text generation checkpoint, likely positioned for text generation and chat. It is notable because Gemma variants are often evaluated for deployable open-weight assistants, and this one is currently showing strong community pull with 110832 downloads, 503 likes.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/inclusionAI/LLaDA2.0-Uni" target="_blank">inclusionAI/LLaDA2.0-Uni</a></td>
+                <td>any-to-any</td>
+                <td>281</td>
+                <td>176</td>
+                <td>2026-04-24T02:07:53.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending any to any model that appears aimed at image generation, not just a generic base release. The useful takeaway is what kind of workload it supports and the fact that it is already attracting measurable community interest (281 downloads, 176 likes).</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/hesamation/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GGUF" target="_blank">hesamation/Qwen3.6-35B-A3B-Claude-4.6-Opus-Reasoning-Distilled-GGUF</a></td>
+                <td>text-generation</td>
+                <td>104757</td>
+                <td>181</td>
+                <td>2026-04-19T01:24:41.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-derived text generation, which usually means the model is adapting a strong base family toward a narrower task such as text generation and chat. The important signal is not just the family name, but that the community is actively specializing Qwen into task-ready variants, with 104757 downloads, 181 likes.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank">google/gemma-4-31B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>5770677</td>
+                <td>2359</td>
+                <td>2026-04-10T16:35:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family image text to text checkpoint, likely positioned for text generation and chat. It is notable because Gemma variants are often evaluated for deployable open-weight assistants, and this one is currently showing strong community pull with 5770677 downloads, 2359 likes.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/Alishahryar1/free-claude-code" target="_blank">Alishahryar1/free-claude-code</a></td>
+                <td>⭐ 11,438</td>
+                <td>Use claude-code for free in the terminal, VSCode extension or via discord like openclaw</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/Z4nzu/hackingtool" target="_blank">Z4nzu/hackingtool</a></td>
+                <td>⭐ 63,803</td>
+                <td>ALL IN ONE Hacking Tool For Hackers</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/PostHog/posthog" target="_blank">PostHog/posthog</a></td>
+                <td>⭐ 33,477</td>
+                <td>🦔 PostHog is an all-in-one developer platform for building successful products. We offer product analytics, web analytics, session replay, error tracking, feature flags, experimentation, surveys, data</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/davila7/claude-code-templates" target="_blank">davila7/claude-code-templates</a></td>
+                <td>⭐ 25,331</td>
+                <td>CLI tool for configuring and monitoring Claude Code</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/huggingface/ml-intern" target="_blank">huggingface/ml-intern</a></td>
+                <td>⭐ 6,203</td>
+                <td>🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/Universal-Commerce-Protocol/ucp" target="_blank">Universal-Commerce-Protocol/ucp</a></td>
+                <td>⭐ 2,783</td>
+                <td>Specification and documentation for the Universal Commerce Protocol (UCP)</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/ComposioHQ/awesome-codex-skills" target="_blank">ComposioHQ/awesome-codex-skills</a></td>
+                <td>⭐ 1,457</td>
+                <td>A curated list of practical Codex skills for automating workflows across the Codex CLI and API.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/HunxByts/GhostTrack" target="_blank">HunxByts/GhostTrack</a></td>
+                <td>⭐ 8,793</td>
+                <td>Useful tool to track location or mobile number</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/tile-ai/tilelang" target="_blank">tile-ai/tilelang</a></td>
+                <td>⭐ 5,748</td>
+                <td>Domain-specific language designed to streamline the development of high-performance GPU/CPU/Accelerators kernels</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/donnemartin/system-design-primer" target="_blank">donnemartin/system-design-primer</a></td>
+                <td>⭐ 344,283</td>
+                <td>Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository packages an AI-related workflow or infrastructure component into something developers can test and reuse quickly. Its practical value is in shortening the path from research ideas to working systems.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Agent systems are shifting from prompt design to runtime architecture</h3>
+            <p>What: the strongest cross-signal today is around the systems layer of agents, not another general reasoning prompt. Why now: Tool Attention (2604.21816), DIVERT (2604.21480), DiffMAS (2604.21794), and the scientific-workflow paper (2604.21910) all optimize different pieces of the runtime stack, from tool routing and evaluation to inter-agent communication and deterministic execution. Signal: the field is converging on the idea that reliable agents need better middleware, state management, and evaluation harnesses, not just more verbose chain-of-thought. So what: for enterprise deployment, the winning teams will likely be the ones that treat agents as software systems with observability, cost controls, and execution boundaries.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Inference cost pressure is forcing reusable reasoning and sparse context strategies</h3>
+            <p>What: reducing unnecessary tokens is a major theme across both agent orchestration and reasoning itself. Why now: Tool Attention reports a 95 percent drop in tool-schema tokens, while Thinking with Reasoning Skills (2604.21764) pushes reusable procedural memory instead of fresh long-form reasoning on every query. Signal: the market is moving from &quot;longer context solves everything&quot; toward retrieval, gating, and skill reuse as first-class design patterns. So what: this is directly relevant to production LLM apps where cost, latency, and concurrency often block rollout before raw model quality does.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Multimodal AI is becoming more valuable when paired with domain tools</h3>
+            <p>What: multimodality today looks less like a generic demo and more like domain workflow infrastructure. Why now: BioMiner (2604.21508) combines text, tables, figures, and chemistry tools to extract bioactivity data, while the mobile image-enhancement paper (2604.21743) shows deployment-aware computer vision engineering rather than pure benchmark chasing. Signal: the deeper change is that multimodal systems are being judged by whether they can unlock hard business data or survive real-device constraints. So what: for enterprise teams in pharma, insurance, document AI, or creative tooling, the edge comes from orchestrating specialized tools around multimodal models.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Open-weight momentum is coming from specialized task layers, not just bigger base models</h3>
+            <p>What: today&#x27;s Hugging Face and paper signals point toward adaptation layers, task-specific pipelines, and structured knowledge interfaces rather than a single dominant new foundation model release. Why now: papers like GS-Quant (2604.21649) and TRS (2604.21764) are about making existing models reason better over graphs or harder tasks, while the GitHub and model ecosystem continues to reward reusable stacks around inference, agents, and speech. Signal: capability gains are increasingly being extracted from representation engineering, retrieval, and workflow design. So what: that is good news for applied teams, because differentiated products can still be built by improving the stack around a model instead of training a frontier base model from scratch.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: Deterministic shells around LLMs are becoming the default for serious automation</h3>
+            <p>What: a recurring theme today is keeping the LLM in the loop for interpretation while constraining execution with deterministic components. Why now: the science-automation paper (2604.21910) uses structured intent plus deterministic workflow generation, GeoMind (2604.21501) uses explicit validators and planners, and DIVERT treats evaluation as a structured search instead of a free-form chat transcript. Signal: the deeper architectural pattern is not &quot;let the model do everything&quot; but &quot;let the model decide, then force the system to verify and execute predictably.&quot; So what: this is exactly the pattern most enterprises will need for regulated, auditable AI products.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-04-26 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-04-26-08-00.html">https://chenlijn.github.io/ai-daily/2026-04-26-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
