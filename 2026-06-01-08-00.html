@@ -174,10 +174,10 @@
             </div>
             <div class="paper-analysis">
                 <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): generation, agent, post_training. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
-                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Printed circuit board (PCB) schematic design defines nearly all electronic hardware, but it remains manual and expertise-intensive.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
-                <p><strong>Method:</strong> The central method is summarized by this core description: framework that allows collaborators to develop and share new arXiv features directly on our website.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
-                <p><strong>Results:</strong> The experimental takeaway described in the current content is: SchGen significantly outperforms alternative representations and even larger general-purpose LLMs on wire connectivity accuracy and functional correctness.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
-                <p><strong>Conclusion:</strong> The broader takeaway is: Our results highlight the critical role of representation design in enabling generative models for complex hardware design tasks.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+                <p><strong>Problem:</strong> PCB schematic design is still a manual, expertise-heavy process, and existing file formats are poor targets for LLM generation because they mix verbose tool-specific syntax with geometry-heavy coordinates. The real difficulty is not just drawing symbols, but generating editable circuit structure with correct relative placement and wiring semantics, which makes naive text generation or code completion unreliable for hardware-design workflows.</p>
+                <p><strong>Method:</strong> SchGen reframes schematic generation around a semantic-grounded code representation instead of raw vendor syntax. The representation encodes editing primitives, relative placement, and pin-name-based wiring, then pairs that format with a large prompt-schematic dataset built through a human-agent pipeline that converts open-source hardware designs into training examples, so the model learns semantics-first generation rather than brittle geometry emission.</p>
+                <p><strong>Results:</strong> The paper reports that SchGen beats alternative representations and even larger general-purpose LLM baselines on wire-connectivity accuracy and functional-correctness evaluation. The visible extract does not surface every dataset split or metric table, but the benchmark language is concrete: the gain is measured against competing representations and stronger baseline models, not just anecdotal examples.</p>
+                <p><strong>Conclusion:</strong> This paper is notable because it extends generative AI into structured hardware design, where representation choices matter more than flashy prompt tricks. For enterprise engineering tools, the broader lesson is that domain-specific intermediate languages can unlock much more reliable generation on diagrams, forms, layouts, and other constrained business artifacts.</p>
             </div>
         </div>
         <div class="paper-item">
@@ -190,10 +190,10 @@
             </div>
             <div class="paper-analysis">
                 <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): multimodal, post_training, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
-                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Understanding how Vision-Language-Action (VLA) models transform multimodal knowledge into embodied control remains an open challenge.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
-                <p><strong>Method:</strong> The central method is summarized by this core description: framework that analyzes VLA models through a unified evidence chain from representation dynamics to causal control attribution and behavioral manifestation.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
-                <p><strong>Results:</strong> The experimental takeaway described in the current content is: Experiments on $\pi_{0.5}$ and OpenVLA reveal three key findings.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
-                <p><strong>Conclusion:</strong> The broader takeaway is: arXiv is committed to these values and only works with partners that adhere to them.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+                <p><strong>Problem:</strong> Vision-Language-Action models can perform impressive embodied tasks, but it is still unclear how they transform multimodal perception into concrete action decisions and where their control pathways fail. Existing evaluation often emphasizes end-task success while hiding representation drift, modality routing, and the gap between visual grounding and fine-grained semantic instruction following.</p>
+                <p><strong>Method:</strong> VLA-Trace builds a diagnostic pipeline rather than a new control policy. It combines cross-modal and checkpoint-drift CKA analysis for representation tracing, attention knockout interventions for causal pathway inspection, and rollout-level behavioral probes that test grounding, shortcut dependence, and semantic following, creating a unified framework that links internal representation changes to external action behavior.</p>
+                <p><strong>Results:</strong> Experiments on pi_0.5 and OpenVLA show that the two models adapt their modalities differently during VLA finetuning and rely on different layer-wise routing patterns at action decoding time. The evaluation also finds that both systems are much stronger at visually grounded trajectory generation than at fine-grained semantic following, which is an important benchmark result even though the surfaced text does not include the full metric table.</p>
+                <p><strong>Conclusion:</strong> The value of this paper is diagnostic clarity: it gives researchers a framework for locating where embodied multimodal systems succeed and where they silently cut corners. For robotics and embodied-agent teams, that matters because better interpretability and circuit-level analysis can guide safer adaptation than simply scaling data and hoping control improves.</p>
             </div>
         </div>
         <div class="paper-item">
@@ -206,10 +206,10 @@
             </div>
             <div class="paper-analysis">
                 <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It has relatively direct relevance to production workflows or enterprise deployment scenarios.</p>
-                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Abstract: The widespread adoption of AI chatbots in education will drastically change learning, making responsible deployment a critical concern.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
-                <p><strong>Method:</strong> The central method is summarized by this core description: framework that allows collaborators to develop and share new arXiv features directly on our website.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
-                <p><strong>Results:</strong> The experimental takeaway described in the current content is: we introduce an agentic AI chatbot architecture assisting students with exercise solving, specifically designed to contribute to more responsible AI use in education.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
-                <p><strong>Conclusion:</strong> The broader takeaway is: ) Author Venue Institution Topic About arXivLabs arXivLabs: experimental projects with community collaborators arXivLabs is a framework that allows collaborators to develop and share new arXiv features directly on our website.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+                <p><strong>Problem:</strong> Educational chatbots can answer exercises fluently without actually supporting good learning, and a monolithic out-of-the-box LLM often ignores pedagogical constraints such as transfer, critical thinking, and controllable scaffolding. The paper targets the responsible-learning gap, asking how to make an educational assistant that can be supervised and shaped around educational-science principles instead of generic chat behavior.</p>
+                <p><strong>Method:</strong> The authors propose a modular agentic architecture for exercise-solving support, splitting the workflow into targeted modules for different stages of the learning process. That modular design allows pedagogical guidance, transparency, and oversight to be injected at specific decision points, which is a very different strategy from relying on one end-to-end chatbot prompt or a single monolithic policy.</p>
+                <p><strong>Results:</strong> This is more of an architecture and responsible-design paper than a pure leaderboard paper, so the surfaced excerpt does not provide a large benchmark table with dataset and metric numbers. Still, the contribution is concrete: it defines responsible-system desiderata, motivates why monolithic baselines are structurally weak, and presents a modular framework intended to improve controllability and pedagogical alignment in the evaluation setting of exercise assistance.</p>
+                <p><strong>Conclusion:</strong> For applied AI, the broader takeaway is that domain governance often requires architectural decomposition, not just prompt rewriting. In education and other regulated human-in-the-loop workflows, modular agents may be easier to audit, tune, and keep within policy than a single general-purpose assistant.</p>
             </div>
         </div>
         <div class="paper-item">
@@ -222,10 +222,10 @@
             </div>
             <div class="paper-analysis">
                 <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, generation. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
-                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Abstract: Scientific discovery is an inherently creative and uncertain process, requiring reasoning beyond the recall of known knowledge.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
-                <p><strong>Method:</strong> The central method is summarized by this core description: framework for evaluating model performance in scientific discovery and reasoning, building up from a raw problem to the classical null hypothesis test.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
-                <p><strong>Results:</strong> The experimental takeaway described in the current content is: GPT-5.4 and Gemini 3.1 pro outperform their previous generation counterparts as expected, and GPT-5.4 in particular maintains 0.7 F1 score alignment with ground truth conclusions even under minimal context.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
-                <p><strong>Conclusion:</strong> The broader takeaway is: conclusions from the original paper and evaluated via automated semantic similarity of constituent atomic claims.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+                <p><strong>Problem:</strong> Most LLM research benchmarks test retrieval, reasoning, or answer quality after the model has already been given substantial information, but scientific discovery often begins under partial information and uncertainty. The missing piece is a benchmark that separates innovative hypothesis generation under sparse context from grounded reasoning once more evidence is disclosed.</p>
+                <p><strong>Method:</strong> ProjectionBench evaluates scientific hypothesis generation through progressive information disclosure. Models first receive only a topic and research question from a recent paper, then get more technical details step by step; at each stage they generate hypotheses that are compared against the original paper&#x27;s conclusions using semantic similarity over atomic claims, which lets the benchmark track both inventiveness and grounding as context grows.</p>
+                <p><strong>Results:</strong> The paper evaluates GPT-5, GPT-5.4, Gemini 2.5 Pro, and Gemini 3.1 Pro Preview across 45 papers spanning bioactive materials, mechanical materials, and nanomaterials. The headline quantitative result is that GPT-5.4 maintains about 0.7 F1 alignment with ground-truth conclusions even under minimal context, outperforming earlier-generation counterparts in this benchmark setting.</p>
+                <p><strong>Conclusion:</strong> This is a useful benchmark paper because it measures a capability that many &quot;AI scientist&quot; narratives talk about but rarely quantify cleanly: hypothesis generation before the answer is obvious. For research copilots and scientific-discovery systems, it offers a more realistic evaluation lens than standard QA-style tasks.</p>
             </div>
         </div>
         <div class="paper-item">
@@ -238,10 +238,10 @@
             </div>
             <div class="paper-analysis">
                 <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, efficiency, enterprise. Its direction is also showing up in today’s GitHub tooling and implementation activity. It has relatively direct relevance to production workflows or enterprise deployment scenarios. It matters because agent reliability and long-horizon task execution are becoming central evaluation targets.</p>
-                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Abstract: Are AI agents tools, co-authors, or researchers?. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
-                <p><strong>Method:</strong> The central method is summarized by this core description: We present a quantified case study ($N=1$): a physicist supervising an AI coding agent (Claude Code, Sonnet and Opus models) over 12 work days and 57 sessions to build CLAX-PT, a differentiable one-loop perturbation theory module in JAX.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
-                <p><strong>Results:</strong> The experimental takeaway described in the current content is: We documented and classified 15 supervision events by intervention level.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
-                <p><strong>Conclusion:</strong> The broader takeaway is: Three supervision practices proved critical for catching what oracle tests missed: testing at diverse parameter points beyond the fiducial calibration; shared changelogs that surfaced stalled exploration across sessions; and an explicit rule against unphysical numerical patches.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+                <p><strong>Problem:</strong> AI coding agents can pass local tests while still converging on the wrong conceptual solution, especially in scientific software where domain validity matters as much as executable correctness. The paper investigates that failure mode through a detailed human-supervised case study, showing how oracle tests alone can miss architectural errors and physically meaningless patches.</p>
+                <p><strong>Method:</strong> The study follows a physicist supervising an AI coding agent over 57 sessions and 12 work days while building a differentiable perturbation-theory module in JAX. Rather than proposing a new model, it analyzes supervision events, changelogs, failed redesign loops, and oracle-test interactions to identify where the agent could self-correct, where domain knowledge had to intervene, and which kinds of errors escaped the default coding loop.</p>
+                <p><strong>Results:</strong> Out of 15 documented supervision events, the agent resolved 10 autonomously and 2 with physicist domain help, but 3 critical failures escaped oracle detection and revealed a deeper architectural mismatch. A particularly concrete result is that the agent spent 33 of 57 sessions tuning coefficients inside a representation that could not express the target physics, which makes this less a generic opinion piece and more a quantified failure analysis.</p>
+                <p><strong>Conclusion:</strong> This paper is valuable because it shifts the coding-agent discussion from vibes to supervision mechanics. For enterprise engineering teams, the lesson is that shared changelogs, broader test coverage, and explicit bans on unphysical or nonsensical patches can be just as important as model quality when agents are asked to build high-stakes technical software.</p>
             </div>
         </div>
 
@@ -262,28 +262,6 @@
     
             <tr>
                 <td>1</td>
-                <td><a href="https://huggingface.co/join/discord" target="_blank">join/discord</a></td>
-                <td>Model</td>
-                <td>N/A</td>
-                <td>N/A</td>
-                <td>N/A</td>
-            </tr>
-            <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This is a trending Model model with a specialized downstream purpose rather than just a generic release. Based on the available model-card signals, it appears aimed at a concrete task that teams can plug into real product workflows.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><a href="https://huggingface.co/inference/models" target="_blank">inference/models</a></td>
-                <td>Model</td>
-                <td>N/A</td>
-                <td>N/A</td>
-                <td>N/A</td>
-            </tr>
-            <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
-            </tr>
-            <tr>
-                <td>3</td>
                 <td><a href="https://huggingface.co/openbmb/MiniCPM5-1B" target="_blank">openbmb/MiniCPM5-1B</a></td>
                 <td>text-generation</td>
                 <td>36730</td>
@@ -291,10 +269,10 @@
                 <td>2026-05-26T04:24:04.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 36730 downloads, 658 likes.</td>
+                <td colspan="6" class="desc-cell">MiniCPM5-1B is a compact text-generation model aimed at assistant and automation workloads with a much smaller serving footprint than flagship LLMs. Its traction shows continued demand for small models that can be embedded into enterprise copilots, edge workflows, or cost-sensitive API stacks.</td>
             </tr>
             <tr>
-                <td>4</td>
+                <td>2</td>
                 <td><a href="https://huggingface.co/nvidia/LocateAnything-3B" target="_blank">nvidia/LocateAnything-3B</a></td>
                 <td>image-text-to-text</td>
                 <td>24586</td>
@@ -302,10 +280,10 @@
                 <td>2026-05-27T08:30:54.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 24586 downloads, 592 likes.</td>
+                <td colspan="6" class="desc-cell">LocateAnything-3B is a multimodal model for grounding objects or regions inside images from natural-language queries. That is useful for inspection, robotics, UI understanding, and document-region localization, all of which need more precise visual control than generic image captioning.</td>
             </tr>
             <tr>
-                <td>5</td>
+                <td>3</td>
                 <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
                 <td>image-text-to-text</td>
                 <td>2439402</td>
@@ -313,10 +291,10 @@
                 <td>2026-04-17T02:59:21.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 2439402 downloads, 1155 likes.</td>
+                <td colspan="6" class="desc-cell">This Qwen-derived checkpoint is positioned as a less-restricted multimodal assistant variant, which explains part of its viral spread even if it is not enterprise-safe by default. The broader signal is that open-model communities keep pushing customization layers, persona tuning, and alternative guardrail settings on top of strong base families.</td>
             </tr>
             <tr>
-                <td>6</td>
+                <td>4</td>
                 <td><a href="https://huggingface.co/LiquidAI/LFM2.5-8B-A1B" target="_blank">LiquidAI/LFM2.5-8B-A1B</a></td>
                 <td>text-generation</td>
                 <td>27677</td>
@@ -324,10 +302,10 @@
                 <td>2026-05-31T18:41:57.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 27677 downloads, 318 likes.</td>
+                <td colspan="6" class="desc-cell">LFM2.5-8B-A1B is a text model from LiquidAI that appears to target general assistant, reasoning, and automation use cases with an efficiency-oriented scale point. It is worth watching because the market keeps rewarding deployable midsize models that balance quality, latency, and serving cost.</td>
             </tr>
             <tr>
-                <td>7</td>
+                <td>5</td>
                 <td><a href="https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5" target="_blank">meituan-longcat/LongCat-Video-Avatar-1.5</a></td>
                 <td>Model</td>
                 <td>0</td>
@@ -335,10 +313,10 @@
                 <td>2026-05-26T03:21:29.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 0 downloads, 439 likes.</td>
+                <td colspan="6" class="desc-cell">LongCat-Video-Avatar-1.5 appears aimed at controllable talking-avatar or character-video generation rather than plain text chat. That matters for training videos, digital presenters, and customer-facing media production, where avatar quality and controllability are directly tied to product value.</td>
             </tr>
             <tr>
-                <td>8</td>
+                <td>6</td>
                 <td><a href="https://huggingface.co/nvidia/PiD" target="_blank">nvidia/PiD</a></td>
                 <td>image-to-image</td>
                 <td>498</td>
@@ -346,10 +324,10 @@
                 <td>2026-05-26T01:17:21.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 498 downloads, 217 likes.</td>
+                <td colspan="6" class="desc-cell">PiD is an image-to-image model entry from NVIDIA, likely focused on controllable visual transformation or editing rather than raw text-to-image generation. The interesting part is the continued push toward production-friendly editing models, which often have more immediate business value than purely creative generation demos.</td>
             </tr>
             <tr>
-                <td>9</td>
+                <td>7</td>
                 <td><a href="https://huggingface.co/bytedance-research/Lance" target="_blank">bytedance-research/Lance</a></td>
                 <td>any-to-any</td>
                 <td>2948</td>
@@ -357,10 +335,10 @@
                 <td>2026-05-28T06:25:28.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 2948 downloads, 992 likes.</td>
+                <td colspan="6" class="desc-cell">Lance is an any-to-any multimodal model, which suggests a broader interface that can translate across text, image, audio, or video modalities in one system. That is strategically important because product teams increasingly want unified multimodal backbones instead of stitching together many single-task models.</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td>8</td>
                 <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank">deepseek-ai/DeepSeek-V4-Pro</a></td>
                 <td>text-generation</td>
                 <td>5886599</td>
@@ -368,10 +346,10 @@
                 <td>2026-05-06T04:18:44.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This is a DeepSeek-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 5886599 downloads, 4496 likes.</td>
+                <td colspan="6" class="desc-cell">DeepSeek-V4-Pro is a high-traction general LLM release aimed at reasoning, coding, and assistant workloads. Its scale of adoption reinforces that the Chinese open-model ecosystem remains a top source of deployable frontier-class checkpoints for enterprise and developer tooling.</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td>9</td>
                 <td><a href="https://huggingface.co/stepfun-ai/Step-3.7-Flash" target="_blank">stepfun-ai/Step-3.7-Flash</a></td>
                 <td>image-text-to-text</td>
                 <td>7638</td>
@@ -379,10 +357,10 @@
                 <td>2026-05-29T10:03:47.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 7638 downloads, 161 likes.</td>
+                <td colspan="6" class="desc-cell">Step-3.7-Flash looks like a fast multimodal assistant model tuned for lower-latency interactive use. The key business signal is that &quot;flash&quot; style deployments are becoming their own category, where acceptable quality plus speed can beat slower frontier models in real product loops.</td>
             </tr>
             <tr>
-                <td>12</td>
+                <td>10</td>
                 <td><a href="https://huggingface.co/sapientinc/HRM-Text-1B" target="_blank">sapientinc/HRM-Text-1B</a></td>
                 <td>text-generation</td>
                 <td>143904</td>
@@ -390,10 +368,10 @@
                 <td>2026-05-21T05:57:38.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 143904 downloads, 427 likes.</td>
+                <td colspan="6" class="desc-cell">HRM-Text-1B is a compact text model that appears positioned for reasoning or structured text generation with a lightweight footprint. Models in this class matter because many enterprise workflows need cheap batch inference or embedded copilots more than maximum benchmark scores.</td>
             </tr>
             <tr>
-                <td>13</td>
+                <td>11</td>
                 <td><a href="https://huggingface.co/NemoStation/Marlin-2B" target="_blank">NemoStation/Marlin-2B</a></td>
                 <td>video-text-to-text</td>
                 <td>16277</td>
@@ -401,10 +379,10 @@
                 <td>2026-05-30T08:55:53.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 16277 downloads, 468 likes.</td>
+                <td colspan="6" class="desc-cell">Marlin-2B is a video-text model, which points to video understanding or video-grounded dialogue rather than static-image QA alone. That keeps it relevant for surveillance review, training-content indexing, and short-video workflow automation.</td>
             </tr>
             <tr>
-                <td>14</td>
+                <td>12</td>
                 <td><a href="https://huggingface.co/tencent/Hy-MT2-30B-A3B" target="_blank">tencent/Hy-MT2-30B-A3B</a></td>
                 <td>translation</td>
                 <td>4226</td>
@@ -412,10 +390,10 @@
                 <td>2026-05-26T09:05:48.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 4226 downloads, 440 likes.</td>
+                <td colspan="6" class="desc-cell">Hy-MT2-30B-A3B is a translation-focused large model, making it directly useful for multilingual enterprise support, localization, and cross-region document workflows. In practice, strong translation models still matter because many business systems need faithful language transfer more than open-ended reasoning.</td>
             </tr>
             <tr>
-                <td>15</td>
+                <td>13</td>
                 <td><a href="https://huggingface.co/LiquidAI/LFM2.5-8B-A1B-GGUF" target="_blank">LiquidAI/LFM2.5-8B-A1B-GGUF</a></td>
                 <td>text-generation</td>
                 <td>41828</td>
@@ -423,7 +401,29 @@
                 <td>2026-05-29T16:25:34.000Z</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 41828 downloads, 133 likes.</td>
+                <td colspan="6" class="desc-cell">This GGUF release packages the same LiquidAI model family for local or community inference stacks such as llama.cpp-style serving. The trend signal is clear: deployability format now matters enough to drive separate popularity, especially for offline, edge, and self-hosted use cases.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6" target="_blank">PaddlePaddle/PaddleOCR-VL-1.6</a></td>
+                <td>image-text-to-text</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">PaddleOCR-VL-1.6 is a document vision-language model aimed at OCR, layout parsing, and structured extraction from PDFs, forms, and screenshots. It matters because enterprise document AI is shifting from plain text extraction toward full page understanding that can feed downstream workflow automation.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/nvidia/Qwen3.6-35B-A3B-NVFP4" target="_blank">nvidia/Qwen3.6-35B-A3B-NVFP4</a></td>
+                <td>text-generation</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is an NVIDIA-packaged Qwen variant optimized around lighter-weight deployment with an FP4-style serving format. The practical signal is that open LLM competition is no longer just about base checkpoints, but about who can ship strong reasoning models in cheaper inference-friendly packaging.</td>
             </tr></tbody></table>
 
         <h2>⭐ GitHub Trending Python Repositories</h2>
@@ -446,7 +446,7 @@
                 <td>利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM.</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides 利用AI大模型，一键生成高清短视频 Generate short videos with one click using AI LLM. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">MoneyPrinterTurbo is a short-video generation pipeline that uses LLMs and media-generation components to automate script, asset, and video assembly. It is directly relevant to marketing content and training-material production because it turns multimodal generation into an end-to-end workflow instead of a single model demo.</td>
             </tr>
             <tr>
                 <td>2</td>
@@ -455,7 +455,7 @@
                 <td>Python tool for converting files and office documents to Markdown.</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides python tool for converting files and office documents to Markdown. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">MarkItDown converts Office files, PDFs, and other documents into Markdown that downstream LLM or RAG systems can actually consume. That makes it a practical bridge layer for document ingestion, knowledge-base construction, and enterprise automation.</td>
             </tr>
             <tr>
                 <td>3</td>
@@ -464,7 +464,7 @@
                 <td>🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">Scrapling is a web-scraping framework built to scale from one-off fetches to larger crawls while handling messy real-world sites. It matters for AI teams because reliable data acquisition is still the first bottleneck in monitoring, RAG refresh, and agent tooling.</td>
             </tr>
             <tr>
                 <td>4</td>
@@ -473,7 +473,7 @@
                 <td>Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+                <td colspan="4" class="desc-cell">Hermes WebUI provides a browser and phone-friendly interface for using the Hermes agent stack. The appeal is not just another chat shell, but a more accessible operational surface for running agent workflows outside the terminal.</td>
             </tr>
             <tr>
                 <td>5</td>
@@ -482,7 +482,7 @@
                 <td>VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository is a speech or audio project: VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning. It can support transcription, voice generation, dubbing, or conversational audio products.</td>
+                <td colspan="4" class="desc-cell">VoxCPM focuses on multilingual TTS, voice design, and realistic voice cloning. That is highly relevant for training videos, spoken assistants, dubbing, and customer-service automation where natural voice output is part of the product.</td>
             </tr>
             <tr>
                 <td>6</td>
@@ -491,7 +491,7 @@
                 <td>Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows </td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+                <td colspan="4" class="desc-cell">Claude Code is Anthropic&#x27;s terminal-native coding agent that reads repositories, edits files, runs commands, and helps manage git workflows. Its continued popularity shows that developer demand is shifting toward agentic tooling that can act across a whole codebase, not just autocomplete inside an editor.</td>
             </tr>
             <tr>
                 <td>7</td>
@@ -500,7 +500,7 @@
                 <td>A list of developer portfolios for your inspiration</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides a list of developer portfolios for your inspiration. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">This repository curates developer portfolio examples rather than an AI system, but its popularity is a useful product signal: presentation, personal branding, and front-end polish still matter in the developer ecosystem that surrounds AI tooling.</td>
             </tr>
             <tr>
                 <td>8</td>
@@ -509,7 +509,7 @@
                 <td>Kronos: A Foundation Model for the Language of Financial Markets</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides kronos: A Foundation Model for the Language of Financial Markets. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">Kronos is a foundation model oriented toward financial-market language and analysis. Domain-shaped models like this matter because enterprise adoption often depends on task-specific priors and vocabulary more than general chat ability.</td>
             </tr>
             <tr>
                 <td>9</td>
@@ -518,7 +518,7 @@
                 <td>A platform for reproducible world model research and evaluation</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides a platform for reproducible world model research and evaluation. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">stable-worldmodel offers a reproducible platform for world-model research and evaluation. That is timely because embodied AI and long-horizon agent work increasingly need shared infrastructure for comparing planning and environment-modeling approaches.</td>
             </tr>
             <tr>
                 <td>10</td>
@@ -527,30 +527,30 @@
                 <td>The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides the most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">ComfyUI remains one of the strongest open workflow layers for diffusion-based image generation and editing, with node-based composition across models and tools. Its staying power highlights that controllable orchestration and plugin ecosystems are as important as the underlying image models.</td>
             </tr></tbody></table>
 
         <h2>🔥 Key Trends & Highlights</h2>
         <div class="trends-list">
         <div class="trend-item">
-            <h3>🔥 Trend 1: Cheap multimodal generation is becoming a first-class product constraint</h3>
-            <p>What: today’s strongest cross-source signal is the push toward lower-cost image and multimodal generation. Why now: the HN item on Bonsai Image 4B, the arXiv SafeDIG paper for Diffusion Transformers, and multiple HF image-oriented checkpoints all point to the same pressure, namely making media generation safer and lighter to deploy. Signal: the frontier is shifting from pure quality chasing to controllability, safety, and device-side efficiency. So what: for marketing creatives, training content, and customer-facing visual generation, teams should evaluate models not only on output quality but also on runtime cost, safety-steering depth, and whether private deployment is possible.</p>
+            <h3>🔥 Trend 1: Agent systems are being judged by workflow fidelity, not just reasoning flair</h3>
+            <p>What: several of today&#x27;s strongest research and tooling signals treat agents as execution systems that must preserve intent across long workflows. Why now: Learning to Choose, AgentSchool, and Physics Is All You Need? all focus on semantic consistency, supervision, and long-horizon coordination, while GitHub projects like claude-code and hermes-webui show builders productizing those same control loops. Signal: the field is converging on observability, state transitions, and plan repair as the real differentiators. So what: for enterprise automation, checkpointing, rollback, and semantic alignment are becoming core product features rather than nice-to-have wrappers.</p>
         </div>
         <div class="trend-item">
-            <h3>🔥 Trend 2: Agent systems are being judged by workflow fidelity, not just reasoning flair</h3>
-            <p>What: several of today’s most interesting papers treat agents as execution systems that must preserve intent across many steps. Why now: Learning to Choose, AgentSchool, and educational-agency work all emphasize semantic consistency, long-horizon state, and role coordination rather than flashy single-turn benchmarks. Signal: the field is converging on observability, state transitions, and multi-agent control as the real differentiators. So what: for enterprise automation and internal copilots, the next bottleneck is trustworthy workflow execution, meaning checkpointing, rollback, and semantic alignment are becoming core product features.</p>
+            <h3>🔥 Trend 2: Cheap and controllable multimodal generation is becoming a first-class product constraint</h3>
+            <p>What: today&#x27;s cross-source heat points toward lower-cost, more controllable media generation instead of pure quality chasing. Why now: the HN story on Bonsai Image 4B, the SafeDIG paper on diffusion-transformer safety steering, HF entries like LongCat-Video-Avatar-1.5 and Lance, plus ComfyUI on GitHub all reinforce the same direction. Signal: the frontier is shifting toward deployment cost, safety steering, and workflow-level control in image and video systems. So what: for marketing creatives, training content, and customer-facing visual generation, teams should benchmark private deployment, editability, and safety depth alongside output quality.</p>
         </div>
         <div class="trend-item">
             <h3>🔥 Trend 3: Persona and context sensitivity is turning into a measurable enterprise AI risk</h3>
-            <p>What: recommendation and retrieval-augmented assistants are showing large output shifts when user persona changes. Why now: the brand-recommendation audit on arXiv gives explicit same-query variability numbers, while today’s broader model ecosystem keeps pushing LLMs deeper into buying, support, and advisory workflows. Signal: evaluation is moving from average benchmark scores toward context-conditional behavior auditing. So what: for insurance, sales, and customer communication systems, teams need persona-stratified testing before trusting AI outputs in production decision paths.</p>
+            <p>What: recommendation and retrieval-augmented assistants are showing large output shifts when the user persona changes, even for the same surface query. Why now: the brand-recommendation audit paper gives explicit Jaccard and consistency numbers, while today&#x27;s broader LLM tooling stack keeps pushing models deeper into commercial search, support, and advisory flows. Signal: evaluation is moving from average benchmark scores toward context-conditional behavior auditing. So what: for insurance, sales, and customer communication systems, persona-stratified testing should become standard before trusting model outputs in production decision paths.</p>
         </div>
         <div class="trend-item">
-            <h3>🔥 Trend 4: Inference-time orchestration is emerging as a practical lever for idea generation</h3>
-            <p>What: today’s ideation papers suggest that better decoding orchestration can improve diversity without paying full multi-round generation cost. Why now: Anchorless Diversification shows planning-driven semantic direction stratification beating simpler baselines on the diversity-quality-compute frontier, while GitHub and HF activity continues to reward workflow tools over monolithic model changes. Signal: more value is coming from how we drive models at runtime than from constantly swapping base checkpoints. So what: this matters for PPT generation, marketing copy, poster ideation, and any workflow where many candidate outputs must be explored quickly and cheaply.</p>
+            <h3>🔥 Trend 4: Inference-time orchestration is emerging as a practical lever for idea generation and scientific search</h3>
+            <p>What: several papers today suggest that better runtime orchestration can unlock more value without swapping the base model. Why now: Anchorless Diversification shows planning-driven semantic direction stratification beating simpler baselines for ideation, while ProjectionBench highlights how hypothesis quality changes with staged information disclosure. Signal: more performance is being extracted from how models are driven, scaffolded, and evaluated at runtime. So what: this matters for PPT generation, marketing ideation, research copilots, and any workflow where many candidate outputs must be explored quickly and cheaply.</p>
         </div>
         <div class="trend-item">
-            <h3>🔥 Trend 5: AI is expanding from text software into structured design and document-heavy domains</h3>
-            <p>What: LLMs are being adapted to structured professional artifacts rather than only chat or code. Why now: SchGen targets editable PCB schematic generation, while document- and enterprise-oriented models in today’s HF stream keep reinforcing the move toward domain-shaped representations. Signal: representation design is becoming the bottleneck for bringing generative AI into specialized workflows with hard structural constraints. So what: for enterprise deployment, the win often comes from redesigning the intermediate representation so models can operate on business artifacts, forms, layouts, and diagrams reliably.</p>
+            <h3>🔥 Trend 5: AI is expanding from chat and code into structured professional artifacts</h3>
+            <p>What: LLMs are being adapted to artifacts with hard structure, such as PCB schematics, OCR-heavy documents, and multilingual business content. Why now: SchGen targets editable PCB schematic generation, PaddleOCR-VL-1.6 trends on Hugging Face, and MarkItDown keeps rising on GitHub as a bridge from enterprise files into LLM-ready formats. Signal: representation design is becoming the bottleneck for bringing generative AI into diagrams, forms, layouts, and document workflows. So what: for enterprise deployment, wins often come from redesigning the intermediate representation so models can operate on business artifacts reliably instead of only chatting about them.</p>
         </div></div>
 
         <div class="footer">
