@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-06-03</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-06-03 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://julienreszka.com/blog/rss-is-back-ai-agents-are-reading-it/" target="_blank">Now AI agents need what RSS does</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 40 points</span>
+            </div>
+            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/getpaseo/paseo" target="_blank">Paseo – Beautiful open-source coding agent interface (desktop, mobile, CLI)</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 9 points</span>
+            </div>
+            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.anthropic.com/news/expanding-project-glasswing" target="_blank">Expanding Project Glasswing</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 149 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://fergusfinn.com/blog/deepseek-v4-flash-mi300x/" target="_blank">Bringing Up DeepSeek-V4-Flash on AMD MI300X</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 71 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.kapa.ai/blog/how-we-index-images-for-rag" target="_blank">How we index images for RAG</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 75 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2606.02449" target="_blank">HLL: Can Agents Cross Humanity&#x27;s Last Line of Verification?</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02449</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 94 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, enterprise, multimodal. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> CAPTCHA is a clean stress test for whether multimodal GUI agents can truly replace humans in protected workflows such as sign-up, submission, and gated content access. The hard part is not image recognition alone, but maintaining spatial grounding, action precision, state tracking, and a valid interaction trace under cluttered real web interfaces. Existing agent evaluations rarely measure this human-verification boundary directly.</p>
+                <p><strong>Method:</strong> The paper introduces HLL, a benchmark built around interactive CAPTCHA tasks in a closed-loop GUI environment. It covers multiple verification types and adds realism stressors such as cluttered pages, harder task variants, and trace-conditioned checking that requires the final answer to be supported by a plausible action sequence. Eight frontier multimodal agents are evaluated under the same environment protocol.</p>
+                <p><strong>Results:</strong> Across the benchmark, the authors report that agent performance varies sharply by CAPTCHA type and degrades once realistic UI noise and action-trace validation are added. The paper highlights systematic failures in localization, click calibration, state tracking, and process consistency; the abstract does not expose a full metric table, but it clearly shows that current agents are still brittle at this boundary.</p>
+                <p><strong>Conclusion:</strong> This is a useful reality check for claims about autonomous browser agents. For deployment teams, the message is that agents may look competent on ordinary GUI tasks yet still fail on anti-bot checkpoints that matter in real products. HLL is valuable because it turns a vague safety and capability question into a concrete benchmark.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2606.02461" target="_blank">AGENTCL: Toward Rigorous Evaluation of Continual Learning in Language Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02461</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 94 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, enterprise, post_training. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Language agents spend a lot of compute solving tasks, but most of what they learn in one episode is not reused well in later ones. Existing continual-learning benchmarks for agents often rely on naive task streams or long-context retrieval settings, so they do not clearly separate genuine transfer from noise or memory interference. That makes it hard to judge whether a memory design really improves an agent over time.</p>
+                <p><strong>Method:</strong> AGENTCL builds controlled task streams where earlier sub-solutions, evidence, and workflows are intentionally reusable in later tasks, then contrasts them with naive streams where reuse is not guaranteed. The framework adds transfer-oriented metrics and introduces MemProbe, a probing setup for analysing how stored interactions, insights, and skills are consolidated or filtered. The benchmark is used to compare non-parametric memory designs across coding, deep research, and reasoning tasks.</p>
+                <p><strong>Results:</strong> The experiments show that naive streams have weak diagnostic power, while the controlled streams expose much clearer differences in plasticity and stable reuse across memory designs. In held-out and naive settings, gains are often limited and memory can even hurt performance, which is an important negative result. The abstract does not publish the full score table, but it does show that evaluation design strongly changes which memory systems look effective.</p>
+                <p><strong>Conclusion:</strong> The paper matters because agent memory is becoming a core product feature, yet the field still lacks rigorous ways to measure long-term improvement. AGENTCL argues that better benchmarks must model reusable experience rather than just longer transcripts. For engineering teams, it suggests that memory systems should be judged on transfer quality and interference, not only on retrieval accuracy.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2606.02355" target="_blank">SIRI: Self-Internalizing Reinforcement Learning with Intrinsic Skills for LLM Agent Training</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02355</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 80 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, efficiency, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Skill-based long-horizon agents often depend on external skill generators during training or on explicit skill retrieval at inference time. That increases system complexity, prompt length, and latency, which makes deployment harder and weakens the appeal of skill learning in real products. The paper asks whether an agent can internalize useful skills into its own policy instead of carrying an external skill bank forever.</p>
+                <p><strong>Method:</strong> SIRI uses a three-phase pipeline. It first warms up the agent with GiGPO to collect successful skill-free trajectories, then mines compact skills from those trajectories and validates them with paired skill-guided versus plain rollouts. In the final phase, it distills only beneficial skill-guided action tokens back into the base policy using trajectory-level utility and action-level advantage, so inference can run with the original prompt only.</p>
+                <p><strong>Results:</strong> On ALFWorld with Qwen2.5-7B-Instruct, SIRI improves GiGPO from 0.908 to 0.930. On WebShop, it improves from 0.728 to 0.813 and outperforms prompt-based, RL-based, and memory-augmented baselines. The authors also report that self-mined skills achieve performance comparable to distillation from a closed-source large model, which is a strong practicality signal.</p>
+                <p><strong>Conclusion:</strong> This is one of the cleaner papers today for turning agent skill discovery into something deployable. The key takeaway is that reusable behaviors can be absorbed into the policy rather than kept as external scaffolding. That matters for enterprise agents because it reduces runtime overhead while still improving long-horizon task performance.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2606.02434" target="_blank">Bridging the Sim-to-Real Gap in Semiconductor Visual Program Synthesis via Input Binarization</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02434</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 68 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): generation, multimodal, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Semiconductor inspection needs nanometer-level geometric accuracy, but real SEM training data is expensive and ordinary generative augmentation cannot guarantee the exact structure needed for metrology. A model trained only on synthetic DSL-rendered layouts also struggles on noisy real SEM images because of a clear sim-to-real domain gap. The paper targets that practical bottleneck in visual program synthesis for chip inspection.</p>
+                <p><strong>Method:</strong> The proposed system uses a vision-language model to translate inspection images into editable DSL programs that describe circuit geometry. Those programs can then be rendered or manipulated to generate precisely controlled training samples. To bridge the domain gap, the authors binarize real SEM inputs to remove texture and noise, forcing the model to focus on geometric structure instead of imaging artefacts.</p>
+                <p><strong>Results:</strong> On the MIIC dataset, input binarization raises the mean Dice coefficient from 0.4393 to 0.5256 versus the raw-input baseline. That is a concrete improvement for a relatively simple preprocessing intervention, and it supports the paper’s claim that texture abstraction helps align synthetic training data with real inspection images. The abstract does not expose additional ablations, but the reported gain is already meaningful.</p>
+                <p><strong>Conclusion:</strong> This work is interesting because it combines VLM-style program induction with an industrial visual inspection setting where exact controllability matters more than photorealism. The broader lesson is that some sim-to-real problems can be reduced by simplifying the observation space rather than only scaling model capacity. For enterprise CV teams, that is a practical and cheap engineering insight.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2606.02484" target="_blank">Iteris: Agentic Research Loops for Computational Mathematics</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02484</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 68 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Agentic math systems have done well on olympiad-style problems and theorem proving, but computational mathematics often requires numerical experiments, adversarial constructions, and algorithm design in addition to symbolic reasoning. That makes the workflow much messier and more tool-heavy than standard proof tasks. The paper studies whether an agentic loop can contribute meaningfully in this research setting without removing human verification.</p>
+                <p><strong>Method:</strong> Iteris is presented as an agentic research system for open problems in computational mathematics. It runs research loops that generate numerical evidence, candidate constructions, and proof drafts, then hands those outputs to experts for review and correction. The paper demonstrates the setup on two open problems drawn from a recent Simons Workshop collection.</p>
+                <p><strong>Results:</strong> In the two case studies, Iteris helped produce verified outcomes after expert review. One result is a phase diagram comparing conjugate gradient with randomized coordinate descent on power-law spectra; the other is a counterexample showing that QR factorization with column pivoting can fail to select well-conditioned submatrices even under low coherence. This is evidence of useful research assistance, although it is not a broad benchmark leaderboard paper.</p>
+                <p><strong>Conclusion:</strong> The important point is not full automation, but credible participation in real research loops. Iteris suggests that agent systems can help explore computational conjectures by mixing experimentation and draft reasoning, while humans remain responsible for validation. That makes it more relevant to scientific co-pilot design than to one-shot benchmark chasing.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2606.02373" target="_blank">Harness-1: Reinforcement Learning for Search Agents with State-Externalizing Harnesses</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02373</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 65 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, enterprise. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today. It has relatively direct relevance to production workflows or enterprise deployment scenarios.</p>
+                <p><strong>Problem:</strong> Search agents are usually trained over ever-growing transcripts, so the policy must both choose good searches and remember a large amount of recoverable bookkeeping. That entangles semantic decision-making with routine state maintenance and makes reinforcement learning less sample-efficient. The paper targets the design question of what happens if that state is externalized into the environment instead.</p>
+                <p><strong>Method:</strong> Harness-1 is a 20B retrieval/search agent trained with RL inside a stateful search harness. The harness stores candidate pools, curated evidence sets, verification records, compressed observations, and budget-aware context rendering, while the model keeps responsibility for semantic choices such as what to search, what to verify, and when to stop. This separates environment memory from policy reasoning during training and inference.</p>
+                <p><strong>Results:</strong> Across eight retrieval benchmarks covering web search, finance, patents, and multi-hop QA, Harness-1 reaches 0.730 average curated recall. It beats the next strongest open search subagent by 11.4 points and stays competitive with much larger frontier-model searchers. The gains are especially strong on held-out transfer benchmarks, which suggests the externalized-state design improves generalization rather than only overfitting training domains.</p>
+                <p><strong>Conclusion:</strong> This paper is a strong engineering signal for agent architecture. It argues that part of what we call “agent intelligence” should live in the harness, not inside the policy transcript. For production systems, that is attractive because explicit state management is easier to audit, compress, and optimize than hidden chain-of-thought behavior.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2606.02374" target="_blank">Spatial Representation Learning Beyond Pixels: Unifying Raster Data and Vector Semantics for Human-Centric Geospatial Foundation Models</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02374</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 65 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): multimodal, agent, post_training. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Earth observation foundation models mostly learn from raster imagery, while rich vector sources such as OpenStreetMap and Overture encode geometry, topology, and semantic relations that imagery alone cannot express cleanly. Existing geospatial learning pipelines treat raster and vector data separately or bridge them through lossy conversions. That limits both human-centric understanding and downstream transfer for real geospatial applications.</p>
+                <p><strong>Method:</strong> This is a perspective paper rather than a new benchmark system. It argues for a unified spatial representation learning paradigm in which raster perception and vector-based reasoning share an embedding space. The discussion organizes the conceptual foundations, alignment challenges, and future directions needed to combine heterogeneous spatial modalities into next-generation geospatial foundation models.</p>
+                <p><strong>Results:</strong> Because the paper is a position piece, it does not present a new benchmark table or a headline SOTA number in the abstract. Instead, its evidence is conceptual: vector data contributes explicit object, topology, and semantic context that current raster-only EOFMs miss, and the authors argue that integrating both modalities should improve accuracy, interpretability, and grounding. So the main output is a research agenda, not a leaderboard gain.</p>
+                <p><strong>Conclusion:</strong> This is worth tracking because many enterprise spatial tasks depend on both what is visible in imagery and what is encoded in structured maps or demographic layers. The paper reframes geospatial AI as a multimodal representation problem closer to modern foundation-model design. For applied teams, it points toward richer map-plus-imagery systems rather than bigger raster-only encoders.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2606.02386" target="_blank">AgentPLM: Agentic Protein Language Models with Reasoning-Augmented Decoding for Protein Sequence Design</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02386</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 65 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, generation. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Standard protein language models generate candidate sequences in one forward pass and cannot actively query structural or thermodynamic tools when a candidate looks risky. That makes them more like passive sequence generators than design agents, especially in tasks where folding, binding, or stability constraints should change the next design step. The paper asks how to turn a PLM into a tool-using design loop.</p>
+                <p><strong>Method:</strong> AgentPLM adds two components to a pretrained protein language model. Reasoning-Augmented Decoding interleaves autoregressive sequence generation with calls to external oracles such as ESMFold, FoldX, and AutoDock Vina, while CAPO trains the policy end to end with a trajectory-level preference-style objective so it learns when external feedback is actually informative. The result is an agentic decoding process instead of a single blind generation pass.</p>
+                <p><strong>Results:</strong> The model is evaluated on de novo enzyme design, antibody optimization, thermostability, protein-protein interface design, and zero-shot fitness prediction under standardized oracle APIs and sequence-identity splits. The paper reports state-of-the-art performance and specifically notes a gain in antibody top-10% hit rate over the strongest passive baseline. The abstract does not provide the full metric table, but it clearly attributes the gain to online error correction enabled by tool use.</p>
+                <p><strong>Conclusion:</strong> The broader value is that biological sequence design is moving closer to agentic planning rather than static text generation. For research and biotech tooling, AgentPLM is a good example of how reasoning, external simulation, and policy optimization can be fused into one loop. The same design pattern could influence agentic systems in other scientific domains.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2606.02372" target="_blank">COMAP: Co-Evolving World Models and Agent Policies for LLM Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02372</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 60 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, efficiency. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today. It matters because agent reliability and long-horizon task execution are becoming central evaluation targets.</p>
+                <p><strong>Problem:</strong> World models help agents imagine the consequences of actions, but most textual world models are frozen after training and therefore drift away from the on-policy distribution induced by an improving agent. At the same time, many agent-improvement methods depend on external reward models or verifiers that are not always available in realistic environments. The paper targets this mismatch between a changing policy and a static predictive model.</p>
+                <p><strong>Method:</strong> COMAP co-evolves the world model and the agent policy through closed-loop interaction. At each step, the world model predicts future feedback for candidate actions; the agent then performs future-aware reflection, estimates how reliable that feedback is, and refines the action. The resulting on-policy trajectories are used to update the world model by self-distillation, so prediction quality improves alongside policy improvement.</p>
+                <p><strong>Results:</strong> Across embodied task planning, web navigation, and tool-use benchmarks, COMAP consistently beats strong baselines. The abstract highlights a 16.75% relative improvement with Qwen3-4B and also reports that the co-evolution loop improves world-model prediction accuracy over time. That combination is important because it shows gains in both downstream task performance and the intermediate predictive component.</p>
+                <p><strong>Conclusion:</strong> This paper pushes the field away from treating world models as static accessories. The main lesson is that planning quality can improve when the predictive model is updated on the agent’s own evolving behavior rather than fixed offline forever. For long-horizon agents, that is a practical route to better robustness without assuming perfect external rewards.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2606.02470" target="_blank">MCP-Persona: Benchmarking LLM Agents on Real-World Personal Applications via Environment Simulation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.02470</span>
+                <span class="date">2026-06-03</span>
+                <span class="date">Heat Score: 59 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, enterprise. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today. It has relatively direct relevance to production workflows or enterprise deployment scenarios.</p>
+                <p><strong>Problem:</strong> The Model Context Protocol is spreading quickly across personal and workplace apps, but current agent benchmarks still focus mostly on generic search tools instead of account-specific, personalized software. Real personal applications involve local databases, social context, and user-linked tool behavior that standard tool-use evaluations miss. The paper addresses that gap by asking how well agents actually handle personalized MCP environments.</p>
+                <p><strong>Method:</strong> MCP-Persona builds a simulated benchmark for real-world personal applications connected through MCP-style tools. The environments cover apps ranging from Reddit and Xiaohongshu to enterprise suites such as Lark and Slack, so the evaluation goes beyond generic API calls into user-specific workflows. The benchmark is designed to stress personalized tool use rather than plain information retrieval.</p>
+                <p><strong>Results:</strong> The authors report extensive experiments with multiple state-of-the-art agents and find that they struggle significantly on these personalized tasks. The abstract does not disclose a detailed score breakdown, but the qualitative result is already important: agents that look strong on generic tool benchmarks still fall short once identity, local state, and social-app context are introduced. That makes the benchmark useful as a failure-finding instrument.</p>
+                <p><strong>Conclusion:</strong> This is directly relevant to enterprise copilots and personal assistants, because many valuable workflows live behind user-specific state rather than public knowledge. MCP-Persona suggests that tool-use progress is overstated if we only test generic search and sandbox tasks. For product teams building assistants on Feishu, Slack, or social workflows, this benchmark points to a more realistic bar.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/JetBrains/Mellum2-12B-A2.5B-Thinking" target="_blank">JetBrains/Mellum2-12B-A2.5B-Thinking</a></td>
+                <td>text-generation</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A coding-oriented text-generation model from JetBrains, likely aimed at IDE completion, reasoning-heavy coding help, and developer workflow automation. Even without full page metadata in the scrape, the naming and publisher signals point to practical software engineering use rather than a generic chat release.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/OpenMOSS-Team/MOSS-TTS-v1.5" target="_blank">OpenMOSS-Team/MOSS-TTS-v1.5</a></td>
+                <td>text-to-speech</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A speech-synthesis model aimed at high-quality TTS generation for voice assistants, dubbing, and spoken content production. It is notable today because voice models are increasingly being packaged as deployable building blocks instead of demo-only research artifacts.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/nvidia/LocateAnything-3B" target="_blank">nvidia/LocateAnything-3B</a></td>
+                <td>image-text-to-text</td>
+                <td>61604</td>
+                <td>960</td>
+                <td>2026-05-27T08:30:54.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 61604 downloads, 960 likes.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/LiquidAI/LFM2.5-8B-A1B" target="_blank">LiquidAI/LFM2.5-8B-A1B</a></td>
+                <td>text-generation</td>
+                <td>47742</td>
+                <td>440</td>
+                <td>2026-05-31T18:41:57.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 47742 downloads, 440 likes.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/openbmb/MiniCPM5-1B" target="_blank">openbmb/MiniCPM5-1B</a></td>
+                <td>text-generation</td>
+                <td>57683</td>
+                <td>733</td>
+                <td>2026-05-26T04:24:04.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 57683 downloads, 733 likes.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>2573320</td>
+                <td>1274</td>
+                <td>2026-04-17T02:59:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 2573320 downloads, 1274 likes.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/stepfun-ai/Step-3.7-Flash" target="_blank">stepfun-ai/Step-3.7-Flash</a></td>
+                <td>image-text-to-text</td>
+                <td>12932</td>
+                <td>213</td>
+                <td>2026-06-01T05:59:26.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 12932 downloads, 213 likes.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5" target="_blank">meituan-longcat/LongCat-Video-Avatar-1.5</a></td>
+                <td>Model</td>
+                <td>174</td>
+                <td>485</td>
+                <td>2026-06-01T03:05:39.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 174 downloads, 485 likes.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank">deepseek-ai/DeepSeek-V4-Pro</a></td>
+                <td>text-generation</td>
+                <td>5829042</td>
+                <td>4568</td>
+                <td>2026-05-06T04:18:44.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a DeepSeek-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 5829042 downloads, 4568 likes.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6" target="_blank">PaddlePaddle/PaddleOCR-VL-1.6</a></td>
+                <td>image-text-to-text</td>
+                <td>4003</td>
+                <td>184</td>
+                <td>2026-05-29T09:38:09.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 4003 downloads, 184 likes.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/LiquidAI/LFM2.5-8B-A1B-GGUF" target="_blank">LiquidAI/LFM2.5-8B-A1B-GGUF</a></td>
+                <td>text-generation</td>
+                <td>70865</td>
+                <td>158</td>
+                <td>2026-05-29T16:25:34.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 70865 downloads, 158 likes.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/nvidia/PiD" target="_blank">nvidia/PiD</a></td>
+                <td>image-to-image</td>
+                <td>646</td>
+                <td>260</td>
+                <td>2026-06-02T13:51:53.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 646 downloads, 260 likes.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/bytedance-research/Lance" target="_blank">bytedance-research/Lance</a></td>
+                <td>any-to-any</td>
+                <td>3192</td>
+                <td>1011</td>
+                <td>2026-05-28T06:25:28.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 3192 downloads, 1011 likes.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/nvidia/Qwen3.6-35B-A3B-NVFP4" target="_blank">nvidia/Qwen3.6-35B-A3B-NVFP4</a></td>
+                <td>text-generation</td>
+                <td>313480</td>
+                <td>137</td>
+                <td>2026-05-29T19:10:41.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 313480 downloads, 137 likes.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/JetBrains/Mellum2-12B-A2.5B-Thinking" target="_blank">JetBrains/Mellum2-12B-A2.5B-Thinking</a></td>
+                <td>text-generation</td>
+                <td>799</td>
+                <td>122</td>
+                <td>2026-06-01T15:40:37.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 799 downloads, 122 likes.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></td>
+                <td>⭐ 6,299</td>
+                <td>Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/microsoft/markitdown" target="_blank">microsoft/markitdown</a></td>
+                <td>⭐ 141,053</td>
+                <td>Python tool for converting files and office documents to Markdown.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides python tool for converting files and office documents to Markdown. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/D4Vinci/Scrapling" target="_blank">D4Vinci/Scrapling</a></td>
+                <td>⭐ 59,122</td>
+                <td>🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/nesquena/hermes-webui" target="_blank">nesquena/hermes-webui</a></td>
+                <td>⭐ 12,513</td>
+                <td>Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/OpenBMB/VoxCPM" target="_blank">OpenBMB/VoxCPM</a></td>
+                <td>⭐ 25,089</td>
+                <td>VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is a speech or audio project: VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning. It can support transcription, voice generation, dubbing, or conversational audio products.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/jamwithai/production-agentic-rag-course" target="_blank">jamwithai/production-agentic-rag-course</a></td>
+                <td>⭐ 6,363</td>
+                <td></td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/Open-LLM-VTuber/Open-LLM-VTuber" target="_blank">Open-LLM-VTuber/Open-LLM-VTuber</a></td>
+                <td>⭐ 8,326</td>
+                <td>Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D taking face running locally across platforms</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is a speech or audio project: Talk to any LLM with hands-free voice interaction, voice interruption, and Live2D taking face running locally across platforms. It can support transcription, voice generation, dubbing, or conversational audio products.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/anthropics/claude-code" target="_blank">anthropics/claude-code</a></td>
+                <td>⭐ 129,607</td>
+                <td>Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows </td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/awslabs/aidlc-workflows" target="_blank">awslabs/aidlc-workflows</a></td>
+                <td>⭐ 2,669</td>
+                <td>AI-Driven Life Cycle (AI-DLC) adaptive workflow steering rules for AI coding agents</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: AI-Driven Life Cycle (AI-DLC) adaptive workflow steering rules for AI coding agents. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/datalab-to/surya" target="_blank">datalab-to/surya</a></td>
+                <td>⭐ 20,492</td>
+                <td>OCR, layout analysis, reading order, table recognition in 90+ languages</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is a document-processing project: OCR, layout analysis, reading order, table recognition in 90+ languages. It can extract, parse, or structure information from business documents.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: UI-grounded and tool-sandboxed agents are the clearest signal today</h3>
+            <p>What: UI-grounded and tool-sandboxed agents are the clearest signal today. Why now: this pattern is visible today in papers like HLL: Can Agents Cross Humanity&#x27;s Last Line of Verification? and AGENTCL: Toward Rigorous Evaluation of Continual Learning in Language Agents; HF models such as join/discord and inference/models; repos including chopratejas/headroom and microsoft/markitdown; HN discussions like Now AI agents need what RSS does and Paseo – Beautiful open-source coding agent interface (desktop, mobile, CLI). Signal: The deeper change is that agent quality is now being tested through recovery, state management, and environment interaction, not just single-turn cleverness. The same-day anchors are HLL: Can Agents Cross Humanity&#x27;s Last Line of Verification?, AGENTCL: Toward Rigorous Evaluation of Continual Learning in Language Agents, join/discord, inference/models. So what: For enterprise deployment, orchestration, guardrails, memory, and observable rollback paths are becoming as important as the underlying model.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Creative-model activity is broadening into full media pipelines</h3>
+            <p>What: Creative-model activity is broadening into full media pipelines. Why now: this pattern is visible today in papers like Bridging the Sim-to-Real Gap in Semiconductor Visual Program Synthesis via Input Binarization; HF models such as meituan-longcat/LongCat-Video-Avatar-1.5 and nvidia/PiD; repos including OpenBMB/VoxCPM and Open-LLM-VTuber/Open-LLM-VTuber. Signal: The deeper signal is that generative media is now being evaluated as a workflow layer where controllability, editing, and packaging matter as much as novelty. The same-day anchors are Bridging the Sim-to-Real Gap in Semiconductor Visual Program Synthesis via Input Binarization, meituan-longcat/LongCat-Video-Avatar-1.5, nvidia/PiD, OpenBMB/VoxCPM. So what: That is directly useful for marketing materials, training videos, spoken assistants, and multimodal customer-facing assets.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Open families are competing through deployable variants and specialization</h3>
+            <p>What: Open families are competing through deployable variants and specialization. Why now: this pattern is visible today in papers like SIRI: Self-Internalizing Reinforcement Learning with Intrinsic Skills for LLM Agent Training and COMAP: Co-Evolving World Models and Agent Policies for LLM Agents; HF models such as HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive and deepseek-ai/DeepSeek-V4-Pro; HN discussions like Bringing Up DeepSeek-V4-Flash on AMD MI300X. Signal: Differentiation is shifting toward fine-tuned variants, serving formats, and task-shaped packaging rather than just announcing one more base model. The same-day anchors are SIRI: Self-Internalizing Reinforcement Learning with Intrinsic Skills for LLM Agent Training, COMAP: Co-Evolving World Models and Agent Policies for LLM Agents, HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive, deepseek-ai/DeepSeek-V4-Pro. So what: That makes ecosystem fit, adaptation cost, and deployment form factor central to real product selection.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-06-03 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-06-03-08-00.html">https://chenlijn.github.io/ai-daily/2026-06-03-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
