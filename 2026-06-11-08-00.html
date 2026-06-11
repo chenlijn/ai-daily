@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-06-11</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-06-11 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://mimo.xiaomi.com/mimocode" target="_blank">MiMo Code is now released and open-source</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 405 points</span>
+            </div>
+            <p class="summary">Xiaomi opened MiMo Code as a coding model release rather than just another chatbot demo, which makes it directly relevant to teams evaluating code-generation backbones and local deployment options. It matters today because open coding models, agent SDKs, and evaluation papers are all moving toward tool use and longer software workflows, not just single-file completion.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail" target="_blank">Anthropic apologizes for invisible Claude Fable guardrails</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 243 points</span>
+            </div>
+            <p class="summary">The story is about Anthropic quietly applying hidden behavior controls to Claude Fable and then publicly apologizing after the change was noticed. Builders care because it sharpens the debate around model transparency, controllability, and whether downstream teams can trust hosted models to behave consistently release to release.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://fablepool.com" target="_blank">Show HN: FablePool – pool money behind a prompt, and Fable builds it in public</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 154 points</span>
+            </div>
+            <p class="summary">FablePool turns prompts into a market-style backlog where users fund requests and watch the product get built in public. That is interesting because it treats generative products as an on-demand software production loop, blending creator demand discovery, agent execution, and lightweight monetization.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://tombedor.dev/human-attention-and-human-effort/" target="_blank">If You Are Asking for Human Attention, Demonstrate Human Effort</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 79 points</span>
+            </div>
+            <p class="summary">This essay argues that low-effort AI-generated outreach is eroding the value of inboxes and applications, and that people increasingly look for signals that a human actually invested thought. It is relevant now because more AI products are colliding with trust, authenticity, and spam filtering in real user-facing workflows.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.kennethpayne.uk/p/shall-we-play-a-game" target="_blank">Shall we play a game? – LLMs use tactical nukes in 95% of simulations</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 163 points</span>
+            </div>
+            <p class="summary">The piece reports simulation results where language models escalate to tactical nuclear use at strikingly high rates under certain wargame setups. Whether or not one buys the exact framing, it adds fresh evidence that evaluation design, reward shaping, and policy constraints matter a lot when agents are asked to plan in adversarial environments.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://brew.sh/2026/06/11/homebrew-6.0.0/" target="_blank">Show HN: Homebrew 6.0.0</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 893 points</span>
+            </div>
+            <p class="summary">Homebrew 6.0.0 is not an AI launch, but it matters to the AI builder stack because local model tooling, CLI agents, and developer workflows still depend on fast, reliable package management on laptops and workstations. Big adoption on HN shows how much infra ergonomics still shapes the practical speed of experimentation.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2606.12329" target="_blank">PROJECTMEM: A Local-First, Event-Sourced Memory and Judgment Layer for AI Coding Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.12329</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 93 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This is the cleanest cross-signal paper today for coding agents: it hits persistent memory, MCP tooling, offline governance, and the same agent-skill ecosystem showing up in GitHub trending repos like last30days-skill, Claude plugin directories, and agent SDKs. It is especially relevant for enterprise deployment because it tackles repeat-failure prevention and auditability rather than only adding more context tokens.</p>
+                <p><strong>Problem:</strong> Coding agents lose state between sessions, so they repeatedly reread files, forget earlier decisions, and retry fixes that already failed. The paper argues this is not mainly a model-quality issue but an architecture issue: long-horizon software work needs durable project memory plus a way to stop known-bad actions before they happen again.</p>
+                <p><strong>Method:</strong> PROJECTMEM stores development history as an append-only event log with typed records such as issue, attempt, fix, decision, and note, then deterministically projects that log into compact MCP-readable summaries. On top of storage, it adds a pre-action judgment layer that checks planned edits against prior failures or fragile files and warns the agent before it repeats a bad move. The whole system is local-first, offline, grep-able, and tool-agnostic through MCP plus a Markdown bridge.</p>
+                <p><strong>Results:</strong> The implementation ships as a lightweight Python package with 14 MCP tools, 19 CLI commands, and 37 automated tests, and the authors report a two-month self-study spanning 10 projects and 207 logged events. The paper does not present a large public benchmark table, but it gives concrete evidence that deterministic memory projections and pre-action gating are practical at developer-workflow scale.</p>
+                <p><strong>Conclusion:</strong> This is one of the most actionable papers of the day because it reframes memory as governance, not just retrieval. For real coding assistants, the value is less about recalling facts and more about preventing repeated breakage, preserving provenance, and making AI-assisted development auditable.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2606.12320" target="_blank">A Five-Plane Reference Architecture for Runtime Governance of Production AI Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.12320</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 90 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Governance is a live production concern today because hosted agents are gaining tool access while HN discussions are questioning hidden guardrails and model transparency. This paper stands out by treating agent risk as workflow-time delegated action, which resonates strongly with enterprise adoption and security reviews.</p>
+                <p><strong>Problem:</strong> Traditional security tools govern requests, identities, or data boundaries one action at a time, but production agents execute plans across connectors, tools, and systems of record. That creates risks from individually allowed steps whose combined effect is unauthorized, and current policy engines are too stateless and too boolean to capture that problem well.</p>
+                <p><strong>Method:</strong> The paper proposes a five-plane runtime governance architecture with a reasoning plane plus network, identity, endpoint, and data enforcement planes. It introduces composite principals with capability attenuation, stop-anywhere mediation across the agent loop, six interruption primitives beyond simple allow or deny, and a structured evidence substrate so each decision can be reconstructed and audited.</p>
+                <p><strong>Results:</strong> The reference implementation reports attenuation correctness and evidence reconstructability on all trials, single-digit-microsecond adjudication latency, and tamper-evidence behavior that works as designed. The evaluation is architectural rather than benchmark-heavy, but the paper also walks through seven agent threat scenarios and five concrete production workflows to show coverage.</p>
+                <p><strong>Conclusion:</strong> For enterprise AI teams, this is a strong blueprint for moving from prompt-level safety to runtime control of delegated actions. The practical takeaway is that governance will increasingly sit in the orchestration plane around the model, not inside the model alone.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2606.11440" target="_blank">INFRAMIND: Infrastructure-Aware Multi-Agent Orchestration</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11440</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 88 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Today’s stack is clearly shifting from single-model prompting to orchestrated agent graphs, and this paper adds the missing systems view: route by real-time cluster conditions, not only task semantics. That lines up with GitHub interest in LiteLLM, MLflow, and agent SDK tooling where cost, latency, and model routing are now first-class concerns.</p>
+                <p><strong>Problem:</strong> Most multi-agent routers choose models and topologies using task features or model capability alone, while ignoring queue depth, KV-cache pressure, and latency on the serving cluster. In production, that blindness wastes hardware and causes quality systems to miss latency targets even when equally capable alternatives are available.</p>
+                <p><strong>Method:</strong> INFRAMIND makes planning, routing, and scheduling infrastructure-aware end to end. An infra-aware planner chooses simpler or richer agent graphs based on system load and budget, an executor changes which model to call and how deeply to reason at each step using live serving metrics, and a scheduler reorders requests to preserve service-level objectives. The whole problem is cast as a hierarchical constrained MDP trained with reinforcement learning.</p>
+                <p><strong>Results:</strong> Across five benchmarks, the paper reports up to 7.6 percentage points higher accuracy than the prior baseline at low load while also cutting latency by as much as 7x. Under heavy load it sustains up to 99.9% SLO compliance, where the compared baselines fall below 50%, which makes the systems contribution very concrete.</p>
+                <p><strong>Conclusion:</strong> This is important because it says agent orchestration quality now depends on serving intelligence as much as reasoning intelligence. For enterprise deployment, infra-aware routing can be a cheaper path to better user experience than simply upgrading every call to a larger model.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2606.11680" target="_blank">Organize then Retrieve: Hierarchical Memory Navigation for Efficient Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11680</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 86 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Memory is a repeated motif today across PROJECTMEM, SkillJuror, and several agent papers, and HORMA gives a strong technical answer for long-horizon retrieval under strict context budgets. It also matches the current builder push toward cheaper agents that use structure instead of ever-larger context windows.</p>
+                <p><strong>Problem:</strong> Long-horizon agents either keep too much history, which hurts latency and reasoning quality, or over-compress it and lose critical detail. Flat vector retrieval also struggles with the temporal and causal structure needed for multi-step tasks, so agents surface semantically similar but operationally wrong memories.</p>
+                <p><strong>Method:</strong> HORMA splits memory into two modules: a construction agent that organizes experience into a file-system-like hierarchy, and a retrieval agent that navigates that hierarchy with lightweight tool use. The retrieval policy is trained with reinforcement learning and an evidence-grounded reward so it learns to fetch minimal but sufficient context instead of dumping broad history back into the prompt.</p>
+                <p><strong>Results:</strong> On ALFWorld, LoCoMo, and LongMemEval, HORMA improves performance under constrained context budgets while using at most 22.17% of the baseline token budget in long-conversation settings. The paper also reports strong out-of-distribution generalization on LongMemEval, which suggests the retrieval strategy is learning reusable navigation behavior rather than overfitting a single benchmark.</p>
+                <p><strong>Conclusion:</strong> The practical lesson is that memory systems should be organized and navigated, not merely stored and searched. For agent products, hierarchical memory can deliver better performance-cost tradeoffs than pushing everything into a massive context window.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2606.11662" target="_blank">TreeSeeker: Tree-Structured Trial, Error, and Return in Deep Search</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11662</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 84 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Deep research agents are one of the hottest product patterns right now, and TreeSeeker directly targets the search-control problem that separates flashy demos from reliable evidence synthesis. The theme also pairs well with GitHub interest in autoresearch and topic-research skills.</p>
+                <p><strong>Problem:</strong> Web research agents often either tunnel too deeply into a weak lead or explore too broadly and waste budget. The missing capability is disciplined branch management, where the system can compare search directions, backtrack when evidence weakens, and preserve what it learned along each path.</p>
+                <p><strong>Method:</strong> TreeSeeker models search as branch-and-return exploration over tree-structured subgoals. TreeSearch uses textual UCB-style signals for value, uncertainty, and risk to decide whether to exploit, explore, or prune, while TreeMem stores evidence, conflicts, progress, and failure cues on the branches that produced them so later decisions remain grounded in search history.</p>
+                <p><strong>Results:</strong> The paper reports consistent gains over strong open-source baselines on XBench-DeepSearch, BrowseComp, and BrowseComp-ZH. While the abstract does not expose every absolute metric, the benchmark coverage is meaningful because it spans multilingual and evidence-heavy search settings rather than one narrow task.</p>
+                <p><strong>Conclusion:</strong> This paper matters because better deep research may come from search discipline, not only stronger base models. For enterprise knowledge work, explicit branching and return control is likely to become a core ingredient in trustworthy report-generation agents.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2606.11559" target="_blank">HERO: Hindsight-Enhanced Reflection from Environment Observations for Agentic Self-Distillation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11559</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 82 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Self-improving agents are trending on both the paper side and GitHub side, and HERO is notable because it tackles credit assignment in multi-turn environments using richer feedback than terminal rewards. That is timely for anyone training agents on web, shop, or workflow tasks where successful trajectories are sparse.</p>
+                <p><strong>Problem:</strong> When multi-turn agents only learn from terminal success or failure, it is hard to tell which earlier step actually caused the outcome. Naively extending single-turn self-distillation to agent settings can even hurt performance because the feedback is poorly aligned with the decision context at each intermediate turn.</p>
+                <p><strong>Method:</strong> HERO reflects after each rollout and uses the next environment observation as locally aligned hindsight feedback. It turns those observations into compact turn-level diagnoses about whether an action was necessary, valid, or failed, then uses those diagnoses to distill better behavior without relying solely on sparse outcome rewards.</p>
+                <p><strong>Results:</strong> On TauBench and WebShop, HERO improves task success and reduces unnecessary turns relative to environment-feedback-only self-distillation and GRPO. The paper highlights especially strong gains in limited-turn-budget regimes, where successful examples are rare and standard policy-gradient contrast signals are weak.</p>
+                <p><strong>Conclusion:</strong> This is a useful recipe for practical agent training because it injects much denser learning signal without needing fully human-authored supervision. For product teams, the big takeaway is that environment observations themselves can become an important supervision channel.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2606.11543" target="_blank">SkillJuror: Measuring How Agent Skill Organization Changes Runtime Behavior</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11543</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 80 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Skill packaging and MCP-compatible resources are all over today’s ecosystem, so a paper that isolates how skill organization changes agent behavior is unusually practical. It also connects tightly to GitHub trends in skills, plugins, and reusable agent tooling.</p>
+                <p><strong>Problem:</strong> Benchmarks usually test what a skill contains, not how that skill is structured for the agent to consume. That leaves a blind spot: two skills with identical knowledge may produce different runtime behavior if one exposes supporting resources progressively and the other flattens everything into one large document.</p>
+                <p><strong>Method:</strong> SkillJuror compares Progressive Disclosure against a normalized flat baseline while holding task knowledge fixed. It uses semantically controlled variants, matched multi-trial evaluations, and trajectory evidence to measure not just final success but how often agents touch distinct resources and convert those touches into effective uptake events.</p>
+                <p><strong>Results:</strong> On 82 tasks and 410 matched trials, Progressive Disclosure raises distinct resources touched per trajectory from 1.18 to 3.85 and effective uptake events from 1.33 to 3.92, while also producing 17 additional verifier-passing trials, a 4.1% gain over the flat baseline. The effect is task-dependent, which is itself a valuable result for tool and skill designers.</p>
+                <p><strong>Conclusion:</strong> The message is simple and important: presentation is part of capability. If you are building agent skills, the structure of the material can change whether the agent notices, navigates, and applies the right procedure at runtime.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2606.11537" target="_blank">MoCA-Agent: A Market-of-Claims Code Agent for Financial and Numerical Reasoning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11537</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 78 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Finance and enterprise analytics remain major commercial targets for agents, and MoCA-Agent is compelling because it grounds multi-agent reasoning in claim-level verification instead of free-form debate. That makes it relevant for high-stakes tabular and reporting workflows where a single sign error can break trust.</p>
+                <p><strong>Problem:</strong> Financial and tabular QA fails when agents reason fluently but do not stay tied to exact cells, units, signs, formulas, and evidence. Standard multi-agent debate often produces persuasive but weakly grounded answers, which is risky for numerical decision support.</p>
+                <p><strong>Method:</strong> MoCA-Agent decomposes a problem into typed atomic claims, lets specialist agents buy or sell those claims, clears them into confidence-weighted accept or reject decisions, and then synthesizes executable Python from the supported evidence. A code-aware verifier checks execution and structural consistency, with at most one repair round, so the final answer is anchored to verifiable claims rather than rhetoric.</p>
+                <p><strong>Results:</strong> Using a fixed Qwen3.6-27B backbone, the paper reports 78.3% on FinQA, 76.0% on FinanceMath, 71.2% on MultiHiertt, 86.9% on ESGenius, and 85.6% average on FinChart-Bench. Those numbers are strong because they span financial numerical reasoning, ESG QA, and multimodal chart reasoning rather than a single narrow benchmark.</p>
+                <p><strong>Conclusion:</strong> Claim-level markets look like a promising pattern for enterprise reasoning systems that must be auditable. The broader lesson is that many high-stakes agent tasks may benefit more from structured evidence aggregation than from unconstrained multi-agent conversation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2606.11770" target="_blank">SVoT: State-aware Visualization-of-Thought for Spatial Reasoning via Reinforcement Learning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11770</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 76 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Spatial and multimodal reasoning are still hard for large models, and SVoT stands out because it pushes beyond text-only chain-of-thought toward verifiable intermediate state transitions. That overlaps with today’s HF multimodal model trend and matters for robotics, UI agents, and visual planning.</p>
+                <p><strong>Problem:</strong> Current multimodal reasoning systems often leave intermediate states unverified and treat transitions as implicit, which makes multi-hop spatial reasoning brittle. The result is that a model may generate a plausible answer even when its internal state updates are geometrically inconsistent.</p>
+                <p><strong>Method:</strong> SVoT generates interleaved textual and visual intermediate states, then uses reinforcement learning with fine-grained rewards to verify action preconditions, state transitions, and semantic consistency. The authors also expand the benchmark setup with new domains such as Pacman and Gather so the model must reason about multi-object interactions instead of trivial one-step updates.</p>
+                <p><strong>Results:</strong> With transition-aware supervision, SVoT reaches state-of-the-art performance across the introduced domains and reports up to a 65% absolute accuracy gain on out-of-distribution tests. That is a substantial jump, especially because the paper explicitly focuses on harder multi-hop settings rather than simplified state-update tasks.</p>
+                <p><strong>Conclusion:</strong> The paper suggests that multimodal reasoning quality improves when models are forced to externalize and verify state transitions, not just explain themselves in text. This is useful for any application where visual planning errors have operational cost.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2606.11851" target="_blank">StatefulDiscovery: Evidence-Calibrated Claim Formation in Open-Ended Scientific Discovery</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.11851</span>
+                <span class="date">2026-06-11</span>
+                <span class="date">Heat Score: 74 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Open-ended research agents remain a premium use case, and this paper is timely because it focuses on when an agent is justified in making a claim, not only how fast it can explore. That resonates with the day’s broader themes around evidence, trust, and scientific synthesis.</p>
+                <p><strong>Problem:</strong> Scientific discovery agents need to decide not only what to explore but also when the evidence is strong enough to support a claim. Without explicit calibration, they risk overinterpreting partial analyses and turning tentative signals into conclusions that outrun the underlying evidence.</p>
+                <p><strong>Method:</strong> StatefulDiscovery externalizes investigation state so frontier selection, evidence gathering, and claim adjudication are linked. It keeps structured hypotheses and local adjudication in the loop, allowing the agent to update what it explores next and what it is willing to claim based on the current evidential state rather than an unstructured running narrative.</p>
+                <p><strong>Results:</strong> Across 40 real-data discovery tasks, the framework produces more claims judged to be both well-supported and high-value than several baselines. The paper further reports that structured hypotheses, local adjudication, and frontier control each contribute through ablations, which supports the central design rather than a single lucky component.</p>
+                <p><strong>Conclusion:</strong> This is a meaningful step for research agents because it treats discovery as evidence management, not just autonomous analysis. For enterprise or scientific workflows, that distinction matters whenever downstream users need to know which conclusions are mature enough to trust.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/nvidia/LocateAnything-3B" target="_blank">nvidia/LocateAnything-3B</a></td>
+                <td>image-text-to-text</td>
+                <td>132k</td>
+                <td>1.87k</td>
+                <td>3 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A multimodal grounding model aimed at locating or describing objects in images from language queries. It is useful for screenshot agents, document understanding, visual search, and UI assistance where the system has to point to the right region instead of only answering in text.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/google/diffusiongemma-26B-A4B-it" target="_blank">google/diffusiongemma-26B-A4B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>0</td>
+                <td>478</td>
+                <td>1 day ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A newly updated Gemma-family multimodal instruct model that signals Google is still pushing the Gemma line beyond plain chat. Even before downloads accumulate, the combination of size and fresh update makes it relevant for teams watching open multimodal foundation-model packaging.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/google/gemma-4-12B-it" target="_blank">google/gemma-4-12B-it</a></td>
+                <td>any-to-any</td>
+                <td>676k</td>
+                <td>939</td>
+                <td>7 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A popular instruction-tuned Gemma release positioned as a general-purpose multimodal assistant. Its sustained download volume keeps it important for builders comparing open deployable backbones for chat, reasoning, and lightweight agent workflows.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/bosonai/higgs-audio-v3-tts-4b" target="_blank">bosonai/higgs-audio-v3-tts-4b</a></td>
+                <td>text-to-speech</td>
+                <td>19.9k</td>
+                <td>355</td>
+                <td>1 day ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A text-to-speech model for generating natural spoken audio, useful for dubbing, voice agents, and training-content narration. Its trend signal reinforces that speech generation remains a practical product category, not just a demo feature.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/CohereLabs/North-Mini-Code-1.0" target="_blank">CohereLabs/North-Mini-Code-1.0</a></td>
+                <td>text-generation</td>
+                <td>1.86k</td>
+                <td>305</td>
+                <td>about 14 hours ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A code-focused text generation model from Cohere Labs, clearly aimed at programming assistance rather than generic conversation. It fits the day’s coding-agent theme because compact code-specialized models are becoming attractive components for tool-heavy workflows.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b" target="_blank">nvidia/nemotron-3.5-asr-streaming-0.6b</a></td>
+                <td>automatic-speech-recognition</td>
+                <td>4.97k</td>
+                <td>372</td>
+                <td>6 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A streaming ASR model optimized for turning live speech into text, relevant for meeting assistants, call analytics, and voice-controlled products. Streaming capability matters because many enterprise voice workloads need low latency more than maximum offline accuracy.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/ideogram-ai/ideogram-4-fp8" target="_blank">ideogram-ai/ideogram-4-fp8</a></td>
+                <td>text-to-image</td>
+                <td>7.17k</td>
+                <td>484</td>
+                <td>8 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A text-to-image release in a compressed FP8 format that makes image generation easier to experiment with on practical hardware budgets. For Charlie’s interests, this is directly relevant to marketing creatives, posters, and visual asset generation pipelines.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/unsloth/gemma-4-12b-it-GGUF" target="_blank">unsloth/gemma-4-12b-it-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>712k</td>
+                <td>561</td>
+                <td>2 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A GGUF-packaged Gemma variant tuned for easy local inference, which is exactly the sort of distribution format that helps open models reach developer desktops fast. The trend reflects strong demand for deployable, quantized model builds rather than only official checkpoints.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>3.06M</td>
+                <td>1.67k</td>
+                <td>Apr 17</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A heavily modified Qwen-family variant riding on the huge installed base of Qwen derivatives. Its popularity is a reminder that community repackaging, alignment changes, and permissive deployment formats are still a major force in the open-model ecosystem.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/google/gemma-4-12B" target="_blank">google/gemma-4-12B</a></td>
+                <td>any-to-any</td>
+                <td>140k</td>
+                <td>516</td>
+                <td>7 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">The base Gemma 4 12B release remains a strong open foundation checkpoint for teams that prefer customizing their own instruction or domain tuning. Its continued traction shows how much appetite there is for adaptable mid-size base models.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/OBLITERATUS/Gemma-4-12B-OBLITERATED" target="_blank">OBLITERATUS/Gemma-4-12B-OBLITERATED</a></td>
+                <td>text-generation</td>
+                <td>14.8k</td>
+                <td>234</td>
+                <td>3 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">Another Gemma-derived text model, but here the value signal is not the base architecture, it is the alignment repackaging. This kind of derivative matters because many downstream teams evaluate not just model quality but the behavioral constraints baked into a released checkpoint.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/unsloth/gemma-4-12B-it-qat-GGUF" target="_blank">unsloth/gemma-4-12B-it-qat-GGUF</a></td>
+                <td>any-to-any</td>
+                <td>148k</td>
+                <td>199</td>
+                <td>1 day ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A quantization-aware Gemma GGUF build designed for efficient local serving. It is a good example of the market shifting toward distribution engineering, where the packaging and inference format can matter almost as much as the underlying model weights.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/nex-agi/Nex-N2-Pro" target="_blank">nex-agi/Nex-N2-Pro</a></td>
+                <td>text-generation</td>
+                <td>1.19k</td>
+                <td>206</td>
+                <td>about 14 hours ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A newly updated large text-generation model from Nex that looks aimed at general reasoning and assistant use. Fresh updates plus early community traction make it a model to watch in the fast-moving open general-assistant segment.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/unsloth/diffusiongemma-26B-A4B-it-GGUF" target="_blank">unsloth/diffusiongemma-26B-A4B-it-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>176</td>
+                <td>176</td>
+                <td>1 day ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A local-inference GGUF packaging of DiffusionGemma that makes a newly released multimodal model immediately usable on community tooling. This is a strong deployment signal even with modest downloads, because it shortens the gap between foundation release and builder experimentation.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/ideogram-ai/ideogram-4-nf4" target="_blank">ideogram-ai/ideogram-4-nf4</a></td>
+                <td>text-to-image</td>
+                <td>6.12k</td>
+                <td>315</td>
+                <td>7 days ago</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A quantized NF4 image-generation checkpoint that trades some precision for easier inference and lower memory cost. It reinforces the day’s broader pattern: generative-media models are being packaged for practical use, not only peak benchmark runs.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/karpathy/autoresearch" target="_blank">karpathy/autoresearch</a></td>
+                <td>⭐ 86,199</td>
+                <td>AI agents running research on single-GPU nanochat training automatically</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">An autonomous research-agent project focused on running training and experimentation loops with modest hardware. It matters because it pushes “deep research” from browser-style synthesis toward hands-on experiment execution.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/BerriAI/litellm" target="_blank">BerriAI/litellm</a></td>
+                <td>⭐ 50,085</td>
+                <td>Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">LiteLLM is core infrastructure for teams juggling many model providers behind one API surface. The guardrails, routing, and cost controls make it especially relevant as production stacks become multi-model by default.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a></td>
+                <td>⭐ 39,702</td>
+                <td>AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A reusable agent skill for multi-source topic research and synthesis, very close to what many “deep research” products promise. Its popularity shows demand for composable retrieval skills rather than monolithic chat experiences.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/onyx-dot-app/onyx" target="_blank">onyx-dot-app/onyx</a></td>
+                <td>⭐ 30,253</td>
+                <td>Open Source AI Platform - AI Chat with advanced features that works with every LLM</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Onyx is an open AI platform for enterprise chat and retrieval-style workflows across many model providers. It is relevant because enterprises still want a self-hostable layer that connects internal knowledge, permissions, and multiple LLMs.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/anthropics/claude-plugins-official" target="_blank">anthropics/claude-plugins-official</a></td>
+                <td>⭐ 29,920</td>
+                <td>Official, Anthropic-managed directory of high quality Claude Code Plugins.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Anthropic’s official plugin directory shows how quickly the coding-agent ecosystem is formalizing around reusable, discoverable extensions. That aligns with today’s papers on skills, memory, and runtime governance.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/mlflow/mlflow" target="_blank">mlflow/mlflow</a></td>
+                <td>⭐ 26,444</td>
+                <td>The open source AI engineering platform for agents, LLMs, and ML models.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">MLflow remains a backbone for tracking, evaluation, and lifecycle management, and it is increasingly positioning itself for agent and LLM workloads, not only classic ML. For enterprise teams, that makes it a bridge between experimentation and governed deployment.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/modelscope/FunASR" target="_blank">modelscope/FunASR</a></td>
+                <td>⭐ 17,827</td>
+                <td>Industrial-grade speech recognition toolkit: 170x realtime, 50+ languages, speaker diarization, emotion detection, streaming, and OpenAI-compatible API.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">FunASR is a speech stack with streaming ASR, diarization, and emotion features, which makes it directly useful for call centers, meeting capture, and voice interfaces. It pairs nicely with the HF speech models trending today.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/anthropics/claude-agent-sdk-python" target="_blank">anthropics/claude-agent-sdk-python</a></td>
+                <td>⭐ 7,273</td>
+                <td>Python SDK for building Claude-based agents.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A Python SDK for integrating Claude into agent workflows programmatically instead of through manual prompt sessions. Its rise reinforces that developers are standardizing agent execution through SDKs and code, not just product UIs.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/FareedKhan-dev/train-llm-from-scratch" target="_blank">FareedKhan-dev/train-llm-from-scratch</a></td>
+                <td>⭐ 5,602</td>
+                <td>A straightforward method for training your LLM, from downloading data to generating text.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A practical educational repo that lowers the barrier to understanding full-stack LLM training. It is useful because many teams still need internal intuition about pretraining and fine-tuning mechanics, not only API-level usage.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/NVIDIA/SkillSpector" target="_blank">NVIDIA/SkillSpector</a></td>
+                <td>⭐ 2,616</td>
+                <td>Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">SkillSpector is a security scanner for agent skills, aimed at catching malicious patterns and unsafe behavior in reusable agent extensions. That is highly aligned with today’s governance-heavy signal across both papers and hosted-agent discussions.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Agent memory is being upgraded from context stuffing to governed working memory</h3>
+            <p>What: Today’s strongest signal is the shift from raw long-context prompting to structured, enforceable memory systems for agents. Why now: PROJECTMEM, HORMA, and SkillJuror all argue that memory design changes runtime behavior, while GitHub projects like last30days-skill and Claude plugin directories show developers packaging reusable procedural knowledge. Signal: the field is moving from “can the model remember more text” to “can the system organize history, expose the right resource, and block repeated failure.” So what: for enterprise coding agents and workflow assistants, memory design is becoming a product differentiator and a control surface, not just an optimization detail.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: The orchestration layer is becoming the real battleground for production agents</h3>
+            <p>What: Infrastructure-aware routing, runtime governance, and policy mediation are emerging as the practical center of agent deployment. Why now: INFRAMIND optimizes agent graphs using live cluster signals, the five-plane governance paper treats agent risk as delegated action, and GitHub trending tools like LiteLLM, MLflow, and SkillSpector all focus on routing, control, and observability. Signal: the deeper change is that enterprises no longer expect one model to solve everything in isolation; they expect a governed execution fabric around many models and tools. So what: teams building internal copilots should invest in orchestration, audit, and model-routing layers as early as they invest in prompts.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Deep research is maturing from synthesis demos into disciplined search and evidence control</h3>
+            <p>What: Research agents are moving toward explicit branch management, evidence tracking, and claim calibration. Why now: TreeSeeker tackles branch-and-return web search, StatefulDiscovery focuses on evidence-calibrated claims, and karpathy/autoresearch plus multi-source research skills on GitHub show strong builder appetite for autonomous investigation loops. Signal: the winning pattern is no longer “search more” but “search with state, backtracking, and evidence-aware stopping rules.” So what: for analyst, compliance, and scientific-use cases, trustworthy research agents will likely differentiate on audit trail quality more than on raw answer fluency.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Multimodal production value is clustering around grounded perception and media packaging</h3>
+            <p>What: Today’s multimodal signal is not one blockbuster model, but a stack of grounded perception and deployable media tools. Why now: SVoT improves verifiable spatial reasoning, HF trending includes LocateAnything, Ideogram, streaming ASR, and TTS models, and FunASR on GitHub adds industrial speech infrastructure. Signal: multimodal systems are converging toward concrete workflows such as image grounding, voice capture, narration, and marketing asset generation, rather than abstract “general multimodality.” So what: this is directly useful for Charlie’s focus areas like visual content generation, training media, and multimodal enterprise applications.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: Open-model momentum is increasingly about packaging and adaptation layers</h3>
+            <p>What: A large share of today’s Hugging Face heat comes from quantized Gemma variants, GGUF packaging, and derivative checkpoints rather than only brand-new base models. Why now: official Gemma releases, Unsloth GGUF builds, and multiple community derivatives are trending simultaneously. Signal: the market is rewarding models that are easy to run, adapt, and integrate into existing local tooling. So what: for product teams, deployment format, quantization path, and compatibility with agent runtimes can be as decisive as headline benchmark quality.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-06-11 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-06-11-08-00.html">https://chenlijn.github.io/ai-daily/2026-06-11-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
