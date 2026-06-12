@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-06-13</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-06-13 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://ikyle.me/blog/2026/how-to-setup-a-local-coding-agent-on-macos" target="_blank">How to setup a local coding agent on macOS</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 224 points</span>
+            </div>
+            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://bitboard.work/" target="_blank">Launch HN: BitBoard (YC P25) – Analytics Workspace for Agents</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 33 points</span>
+            </div>
+            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://correresmidestino.com/dont-you-just-upload-it-to-chatgpt/" target="_blank">&quot;Don&#x27;t You Just Upload It to ChatGPT?&quot;</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 274 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2606.13392" target="_blank">MiniMax Sparse Attention</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13392</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 99 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): enterprise, agent, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Ultra-long-context capability is becoming indispensable for frontier LLMs: agentic workflows, repository-scale code reasoning, and persistent memory all require the model to jointly attend over hundreds of thousands to millions of tokens, yet the quadratic cost of softmax attention makes this untenable at deployment scale.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework that allows collaborators to develop and share new arXiv features directly on our website.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: Paired with our co-designed kernel, MSA achieves 14.2x prefill and 7.6x decoding wall-clock speedups on H800.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: Our inference kernel is available at: this https URL .. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2606.13669" target="_blank">Agents-K1: Towards Agent-native Knowledge Orchestration</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13669</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 84 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Existing works often reduce papers to abstracts, surface mentions, and flat \texttt{cites} edges, omitting key entities, claims, evidence, mechanisms, and method lineages essential for scientific reasoning.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: To this end, we introduce \textbf{Agents-K1}, an end-to-end knowledge orchestration pipeline that converts raw documents into agent-native scientific knowledge graphs.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: experiments demonstrate that Agents-K1 achieves superior performance in scientific information extraction, knowledge graph construction, and multi-hop scientific reasoning.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: experiments demonstrate that Agents-K1 achieves superior performance in scientific information extraction, knowledge graph construction, and multi-hop scientific reasoning.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2606.13662" target="_blank">EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13662</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 74 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: As model capabilities continue to improve, we argue that the bottleneck for autonomous scientific discovery is shifting from prescribing agent workflows to designing agent environments: the resources, constraints, and interfaces that shape agent behavior.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework that allows collaborators to develop and share new arXiv features directly on our website.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: results that outperform human-designed approaches.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: ) Related Papers Recommenders and Search Tools Link to Influence Flower Influence Flower ( What are Influence Flowers?. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2606.13368" target="_blank">IterCAD: An Iterative Multimodal Agent for Visually-Grounded CAD Generation and Editing</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13368</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 72 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): generation, agent, multimodal. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Computer-Aided Design is pivotal in modern manufacturing, yet existing automated methods predominantly rely on open-loop, one-shot generation, creating a mismatch with iterative real-world practices.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework for closed-loop, interactive CAD generation and editing.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: experiments demonstrate that IterCAD achieves highly competitive performance across multiple benchmarks, significantly outperforming existing approaches in both code executability and geometric precision, while exhibiting superior capabilities in closed-loop iterative refinement.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: Finally, we introduce the IterCAD-Bench evaluation suite and propose the Chamfer Distance Tolerance-Recall (CD-TR) curve alongside its AUC-TR metric, establishing a survivor-bias-free standard that unifies code validity and geometric precision.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2606.13361" target="_blank">Can I Buy Your KV Cache?</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13361</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 71 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, efficiency, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: On Qwen3-4B, reuse is 9-50x cheaper in compute than prefill, and the gap widens with length (prefill&#x27;s attention scales with L^2), so a single reuse already pays it back.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework that allows collaborators to develop and share new arXiv features directly on our website.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: The same answer, computed a million times.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: Hosting it provider-side, exactly as production prompt-caching works, removes egress entirely.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2606.13602" target="_blank">EpiBench: Verifiable Evaluation of AI Agents on Epigenomics Analysis</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13602</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 71 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: We introduce EpiBench, a verifiable benchmark for short-horizon epigenomics analysis.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework that allows collaborators to develop and share new arXiv features directly on our website.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: results, but failed when the task required deeper, assay-specific scientific judgment.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: benchmar includes aluations across CUT&amp;T ag/CUT&amp;R C-seq, ChIP -seq, lation cross 5,088 alid jec- ories from model-har ness pairs, passed jority attem -5.5 45.0% 143/318 attem con dence inter CI , 36.3 53.7 , ollo -5.5 OpenAI Codex 39.9% 127/318 attem 31.6 48.3 .. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2606.13598" target="_blank">Reward Modeling for Multi-Agent Orchestration</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13598</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 63 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, efficiency, post_training. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today. It matters because agent reliability and long-horizon task execution are becoming central evaluation targets.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Multi-Agent Systems (MAS) built on Large Language Models (LLMs) require effective orchestration to coordinate specialized agents, yet training such orchestrators is hindered by limited supervision and high computational cost.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework for evaluating orchestration quality without human annotations.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: OrchRM improves training efficiency by up to 10x in token usage while improving MAS test-time scaling performance by up to 8% in accuracy.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: ) Related Papers Recommenders and Search Tools Link to Influence Flower Influence Flower ( What are Influence Flowers?. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2606.13604" target="_blank">Multi-Agent Reinforcement Learning from Delayed Marketplace Feedback for Objective-Weight Adaptation in Three-Sided Dispatch</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13604</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 63 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): efficiency, agent, post_training. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Dispatch in three-sided marketplaces provides a natural setting for reinforcement learning from world feedback: decisions are evaluated by delayed operational outcomes such as delivery speed, courier utilization, and merchant congestion.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework that allows collaborators to develop and share new arXiv features directly on our website.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: Results illustrate how world feedback from a live economic and logistics system can be used to safely adapt decision policies online.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: present deplo reinforcement learn- system DoorDas that adapts dispatch jecti weight ge-scale food-deli etplace using delayed signals.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2606.13621" target="_blank">Beyond Runtime Enforcement: Shield Synthesis as Defensibility Analysis for Adversarial Networks</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13621</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 63 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, generation. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Shielded reinforcement learning is typically presented as a runtime safety mechanism that compiles temporal-logic specifications into automata restricting an agent&#x27;s actions.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework for answering architectural questions about whether, where, and how a system can be defended.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: We instantiate this through a constrained two-player safety game for network defense.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: The defensibility verdict is the output, not the safe policy.. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2606.13608" target="_blank">AgentBeats: Agentifying Agent Assessment for Openness, Standardization, and Reproducibility</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.13608</span>
+                <span class="date">2026-06-13</span>
+                <span class="date">Heat Score: 60 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> This paper focuses on the task or application setting described here: Abstract: Agent systems are advancing quickly across domains, but their evaluation remains fragmented.. The key point is not just that the topic is interesting, but that existing approaches still fail in a specific way, for example weak robustness, poor generalization, high cost, limited context handling, or missing multimodal alignment. A good report should make that gap explicit so the reader understands exactly what subject the paper is trying to move forward.</p>
+                <p><strong>Method:</strong> The central method is summarized by this core description: framework that separates assessment logic from agent implementation and enables reproducible, interoperable, and multi-agent evaluation.. That should be expanded into a neat explanation of the main pipeline, including the mechanism, module design, training recipe, inference strategy, or evaluation setup that makes the approach different from standard baselines. The reader should come away knowing how the system works at a high level, not just the method name.</p>
+                <p><strong>Results:</strong> The experimental takeaway described in the current content is: results, yielding research insights about agent design.. The report should name the benchmark or evaluation setting, say whether the gain is about accuracy, robustness, efficiency, or generalization, and mention the baseline comparison whenever it is available. If only partial evidence is visible, it should say that the paper reports clear improvement but the current extraction does not expose every metric value.</p>
+                <p><strong>Conclusion:</strong> The broader takeaway is: Have an idea for a project that will add value for arXiv&#x27;s community?. The conclusion should explain why this matters in practice, where the method is likely to be useful, and what kind of research or engineering direction it strengthens. It should read like a concrete judgment about the paper’s value, not a rewritten final sentence from the abstract.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/join/discord" target="_blank">join/discord</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending Model model with a specialized downstream purpose rather than just a generic release. Based on the available model-card signals, it appears aimed at a concrete task that teams can plug into real product workflows.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/inference/models" target="_blank">inference/models</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/google/diffusiongemma-26B-A4B-it" target="_blank">google/diffusiongemma-26B-A4B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>20669</td>
+                <td>612</td>
+                <td>2026-06-10T13:45:13.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 20669 downloads, 612 likes.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/nvidia/LocateAnything-3B" target="_blank">nvidia/LocateAnything-3B</a></td>
+                <td>image-text-to-text</td>
+                <td>149206</td>
+                <td>1925</td>
+                <td>2026-06-12T10:51:04.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 149206 downloads, 1925 likes.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/google/gemma-4-12B-it" target="_blank">google/gemma-4-12B-it</a></td>
+                <td>any-to-any</td>
+                <td>911544</td>
+                <td>966</td>
+                <td>2026-06-04T11:58:10.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family any to any for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 911544 downloads, 966 likes.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/CohereLabs/North-Mini-Code-1.0" target="_blank">CohereLabs/North-Mini-Code-1.0</a></td>
+                <td>text-generation</td>
+                <td>4054</td>
+                <td>334</td>
+                <td>2026-06-11T10:01:06.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 4054 downloads, 334 likes.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code" target="_blank">moonshotai/Kimi-K2.7-Code</a></td>
+                <td>image-text-to-text</td>
+                <td>0</td>
+                <td>330</td>
+                <td>2026-06-12T10:05:55.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 0 downloads, 330 likes.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/bosonai/higgs-audio-v3-tts-4b" target="_blank">bosonai/higgs-audio-v3-tts-4b</a></td>
+                <td>text-to-speech</td>
+                <td>29347</td>
+                <td>386</td>
+                <td>2026-06-10T19:57:37.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for speech synthesis. It can generate natural speech for dubbing, voice assistants, or spoken content production. It is already drawing 29347 downloads, 386 likes.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M3" target="_blank">MiniMaxAI/MiniMax-M3</a></td>
+                <td>image-text-to-text</td>
+                <td>442</td>
+                <td>245</td>
+                <td>2026-06-12T12:52:11.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 442 downloads, 245 likes.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>2393894</td>
+                <td>1722</td>
+                <td>2026-04-17T02:59:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 2393894 downloads, 1722 likes.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/OBLITERATUS/Gemma-4-12B-OBLITERATED" target="_blank">OBLITERATUS/Gemma-4-12B-OBLITERATED</a></td>
+                <td>text-generation</td>
+                <td>43578</td>
+                <td>254</td>
+                <td>2026-06-09T10:55:06.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 43578 downloads, 254 likes.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/ideogram-ai/ideogram-4-fp8" target="_blank">ideogram-ai/ideogram-4-fp8</a></td>
+                <td>text-to-image</td>
+                <td>4987</td>
+                <td>503</td>
+                <td>2026-06-03T18:34:44.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 4987 downloads, 503 likes.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/unsloth/diffusiongemma-26B-A4B-it-GGUF" target="_blank">unsloth/diffusiongemma-26B-A4B-it-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>17666</td>
+                <td>212</td>
+                <td>2026-06-12T14:44:09.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 17666 downloads, 212 likes.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b" target="_blank">nvidia/nemotron-3.5-asr-streaming-0.6b</a></td>
+                <td>automatic-speech-recognition</td>
+                <td>3551</td>
+                <td>392</td>
+                <td>2026-06-05T21:59:07.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for speech recognition. It can transcribe speech into text for meeting notes, call analysis, or voice interfaces. It is already drawing 3551 downloads, 392 likes.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/nex-agi/Nex-N2-Pro" target="_blank">nex-agi/Nex-N2-Pro</a></td>
+                <td>text-generation</td>
+                <td>2551</td>
+                <td>223</td>
+                <td>2026-06-11T09:43:23.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 2551 downloads, 223 likes.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/music-assistant/server" target="_blank">music-assistant/server</a></td>
+                <td>⭐ 1,769</td>
+                <td>Music Assistant is a free, opensource Media library manager that connects to your streaming services and a wide range of connected speakers. The server is the beating heart, the core of Music Assistan</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides music Assistant is a free, opensource Media library manager that connects to your streaming services and a wide range of connected speakers. The server is the beating heart, the core of Music Assistant and must run on an always-on device like a Raspberry Pi, a NAS or an Intel NUC or alike. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/maziyarpanahi/openmed" target="_blank">maziyarpanahi/openmed</a></td>
+                <td>⭐ 3,183</td>
+                <td>open-source healthcare ai</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides open-source healthcare ai. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/LMCache/LMCache" target="_blank">LMCache/LMCache</a></td>
+                <td>⭐ 8,629</td>
+                <td>LMCache: Supercharge Your LLM with the Fastest KV Cache Layer</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides lMCache: Supercharge Your LLM with the Fastest KV Cache Layer. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/NVIDIA/SkillSpector" target="_blank">NVIDIA/SkillSpector</a></td>
+                <td>⭐ 3,433</td>
+                <td>Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/FareedKhan-dev/train-llm-from-scratch" target="_blank">FareedKhan-dev/train-llm-from-scratch</a></td>
+                <td>⭐ 5,830</td>
+                <td>A straightforward method for training your LLM, from downloading data to generating text.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides a straightforward method for training your LLM, from downloading data to generating text. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/karpathy/autoresearch" target="_blank">karpathy/autoresearch</a></td>
+                <td>⭐ 86,412</td>
+                <td>AI agents running research on single-GPU nanochat training automatically</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: AI agents running research on single-GPU nanochat training automatically. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/soxoj/maigret" target="_blank">soxoj/maigret</a></td>
+                <td>⭐ 32,951</td>
+                <td>🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides 🕵️‍♂️ Collect a dossier on a person by username from 3000+ sites. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/Free-TV/IPTV" target="_blank">Free-TV/IPTV</a></td>
+                <td>⭐ 16,696</td>
+                <td>M3U Playlist for free TV channels</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides m3U Playlist for free TV channels. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/OpenBB-finance/OpenBB" target="_blank">OpenBB-finance/OpenBB</a></td>
+                <td>⭐ 69,022</td>
+                <td>Financial data platform for analysts, quants and AI agents.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Financial data platform for analysts, quants and AI agents. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/shuvonsec/claude-bug-bounty" target="_blank">shuvonsec/claude-bug-bounty</a></td>
+                <td>⭐ 2,753</td>
+                <td>AI-powered bug bounty hunting from your terminal - recon, 20 vuln classes, autonomous hunting, and report generation. All inside Claude Code.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: AI-powered bug bounty hunting from your terminal - recon, 20 vuln classes, autonomous hunting, and report generation. All inside Claude Code. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: UI-grounded and tool-sandboxed agents are the clearest signal today</h3>
+            <p>What: UI-grounded and tool-sandboxed agents are the clearest signal today. Why now: this pattern is visible today in papers like MiniMax Sparse Attention and Agents-K1: Towards Agent-native Knowledge Orchestration; HF models such as join/discord and inference/models; repos including music-assistant/server and maziyarpanahi/openmed; HN discussions like How to setup a local coding agent on macOS and Launch HN: BitBoard (YC P25) – Analytics Workspace for Agents. Signal: The deeper change is that agent quality is now being tested through recovery, state management, and environment interaction, not just single-turn cleverness. The same-day anchors are MiniMax Sparse Attention, Agents-K1: Towards Agent-native Knowledge Orchestration, join/discord, inference/models. So what: For enterprise deployment, orchestration, guardrails, memory, and observable rollback paths are becoming as important as the underlying model.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: The day&#x27;s media-generation signal is about controllable image, video, and voice workflows</h3>
+            <p>What: The day&#x27;s media-generation signal is about controllable image, video, and voice workflows. Why now: this pattern is visible today in papers like IterCAD: An Iterative Multimodal Agent for Visually-Grounded CAD Generation and Editing; HF models such as google/diffusiongemma-26B-A4B-it and bosonai/higgs-audio-v3-tts-4b. Signal: The deeper signal is that generative media is now being evaluated as a workflow layer where controllability, editing, and packaging matter as much as novelty. The same-day anchors are IterCAD: An Iterative Multimodal Agent for Visually-Grounded CAD Generation and Editing, google/diffusiongemma-26B-A4B-it, bosonai/higgs-audio-v3-tts-4b. So what: That is directly useful for marketing materials, training videos, spoken assistants, and multimodal customer-facing assets.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: The day&#x27;s open-model energy is in adaptation layers, not a single flagship release</h3>
+            <p>What: The day&#x27;s open-model energy is in adaptation layers, not a single flagship release. Why now: this pattern is visible today in papers like Can I Buy Your KV Cache?; HF models such as google/diffusiongemma-26B-A4B-it and google/gemma-4-12B-it. Signal: Differentiation is shifting toward fine-tuned variants, serving formats, and task-shaped packaging rather than just announcing one more base model. The same-day anchors are Can I Buy Your KV Cache?, google/diffusiongemma-26B-A4B-it, google/gemma-4-12B-it. So what: That makes ecosystem fit, adaptation cost, and deployment form factor central to real product selection.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-06-13 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-06-13-08-00.html">https://chenlijn.github.io/ai-daily/2026-06-13-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
