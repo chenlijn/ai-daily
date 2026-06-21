@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-06-21</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-06-21 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://blog.cloudflare.com/temporary-accounts/" target="_blank">Temporary Cloudflare accounts for AI agents</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 153 points</span>
+            </div>
+            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.argusred.com/cli" target="_blank">Show HN: We post-trained a model that pen tests instead of refusing</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 62 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://injuly.in/blog/napkin-inference-cost/index.html" target="_blank">Inference cost at scale with napkin math</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 42 points</span>
+            </div>
+            <p class="summary">The conversation is centered on compute efficiency and system performance, which remain core bottlenecks for production AI. What makes it timely is that teams now care as much about serving cost and responsiveness as they do about raw model capability.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2606.20363" target="_blank">Automating SKILL.md Generation for Computer-Using Agents via Interaction Trajectory Mining</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20363</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 91 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, generation. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> The paper studies computer-use agents whose behavior is documented as explicit SKILL.md files, then asks whether those skills can be mined automatically from GUI trajectories instead of written by hand. The hard part is that interpretable segment clusters are not the same thing as useful control primitives: boundary detection, representation of long interaction segments, and transfer from source workflows to new websites all break easily.</p>
+                <p><strong>Method:</strong> The pipeline has three stages: segment raw GUI trajectories into candidate skill spans, cluster those spans into reusable skill types, then use the mined annotations to train a skill-aware policy. The study evaluates cluster purity against InteraSkill Workflows labels and then applies GRPO-based policy training to test whether the induced skill structure actually improves downstream execution.</p>
+                <p><strong>Results:</strong> On the source benchmark, 5 of 8 discovered clusters reach at least 0.95 purity against InteraSkill Workflows labels, so the mined skills are reasonably readable. But policy gains are weak: GRPO lifts IW skill-step accuracy only from 18.5% to 20.5%, leaves BrowseComp+ nearly unchanged, and even trails simple frequency priors on some source-domain metrics.</p>
+                <p><strong>Conclusion:</strong> This is more valuable as a diagnostic paper than as a finished recipe for agent improvement. It shows that trajectory mining can surface inspectable skill structure, but current segmentation, orderless segment embeddings, and offline reward modeling are not yet enough to deliver robust cross-domain computer-use agents.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2606.20245" target="_blank">Navigating Unreliable Parametric and Contextual Knowledge: Explicit Knowledge Conflict Resolution for LLM Inference</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20245</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 79 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> LLMs often answer with a mixture of parametric knowledge and retrieved context, but both sources can be wrong and can also contradict each other. Most existing methods dodge that issue by trusting either the model or the prompt context, instead of explicitly resolving conflicts among multiple unreliable evidence sources.</p>
+                <p><strong>Method:</strong> MACR first estimates the model&#x27;s confidence with a modified semantic-entropy score to decide whether to rely on internal knowledge, retrieve external evidence, or combine both. It then runs a multi-agent reasoning procedure in which specialized agents induce explicit rules, identify contradictions across contexts, and produce a final conflict-resolved answer rather than a simple source preference.</p>
+                <p><strong>Results:</strong> The paper reports that MACR beats strong baselines across its conflict-heavy evaluation benchmarks while also producing interpretable conflict-resolution traces. The abstract and extracted text do not expose the full metric table, so the exact gains over each baseline are not all visible in the current read, but the reported improvement is consistent across settings.</p>
+                <p><strong>Conclusion:</strong> This is timely for production RAG and agent systems, where stale model memory and noisy retrieval routinely collide. The main contribution is not just better QA accuracy, but a more explicit inference-time decision process for when to trust the model, the context, or neither without hiding the conflict.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2606.20333" target="_blank">SoftSkill: Behavioral Compression for Contextual Adaptation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20333</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 73 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): efficiency, agent, generation. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Many agent skills are shipped as long Markdown instructions, which are readable for humans but expensive and indirect for frozen language models to use at inference time. The paper targets the gap between interpretable skill documents and compact behavioral adaptation, especially when long textual skills must be repeatedly retranslated into token-level behavior.</p>
+                <p><strong>Method:</strong> SoftSkill converts a natural-language skill into a short continuous prefix that acts as a latent behavioral prior for a frozen backbone model. The method keeps the base model fixed, trains only a soft skill delta with next-token prediction, and injects a tiny virtual-token prefix at inference instead of hundreds or thousands of Markdown tokens; the paper also tests a sparse trajectory-imitation variant for harder agentic execution.</p>
+                <p><strong>Results:</strong> In the main single-round setting on Qwen3.5-4B, a length-32 SoftSkill prefix improves over no-skill prompting by 8.3 points on SearchQA, 42.1 points on LiveMath, and 1.3 points on DocVQA. Against SkillOpt, it gains 5.2 points on SearchQA and 12.5 points on LiveMath while using only a handful of virtual tokens; the agentic long-horizon setting is harder and shows useful signal but not yet robust procedural compression.</p>
+                <p><strong>Conclusion:</strong> The paper makes a strong case that some reusable skills should be compiled into compact latent controls instead of left as verbose prompt text. For builders, that points to a practical path for cheaper inference, smaller context windows, and more stable task conditioning without full-model fine-tuning.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2606.20162" target="_blank">Implicit Semantic-Aware Communication Based on Hypergraph Reasoning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20162</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 72 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, efficiency, post_training. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Semantic communication systems try to transmit meaning rather than raw bits, but many current methods represent semantics with ordinary graphs that only capture pairwise relations. That misses higher-order interactions such as group structure and multi-entity context, which makes inference more ambiguous and brittle when the communication channel is noisy or partially corrupted.</p>
+                <p><strong>Method:</strong> HISR replaces pairwise graph reasoning with hypergraph-based semantic modeling so one hyperedge can encode richer multi-entity relations. It maps entities and their higher-order relations into dedicated semantic subspaces, then performs implicit semantic reasoning over those subspaces to reduce over-smoothing and preserve useful structure even when part of the transmitted information is lost.</p>
+                <p><strong>Results:</strong> Across the paper&#x27;s semantic interpretation experiments, HISR improves implicit semantic understanding accuracy by as much as 36.6% over prior state-of-the-art baselines. The excerpt does not surface the full benchmark table, but the headline result is a sizeable gain under noisy communication conditions rather than a marginal improvement.</p>
+                <p><strong>Conclusion:</strong> This work matters if semantic communication is going to move from toy settings into real multi-entity environments. The hypergraph formulation is a neat signal that future communication stacks may need richer relational world models, not just better channel coding, to stay robust under noise.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2606.20274" target="_blank">Lagrange: An Open-Vocabulary, Energy-Based Sparse Framework for Generalized End-to-End Driving</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20274</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 72 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): efficiency, agent, multimodal. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> End-to-end autonomous driving needs both semantic generalization to rare open-world events and trajectory generation that obeys vehicle dynamics. Dense occupancy-style methods are robust but computationally heavy, sparse query planners are efficient but closed-set, and autoregressive VLA approaches struggle to produce smooth continuous control at driving frequency.</p>
+                <p><strong>Method:</strong> Lagrange uses a sparse open-vocabulary pipeline built around Masked Latent Fields. A vision-language model encodes class-agnostic object proposals into continuous semantic tokens, an intent-driven masked cross-attention block filters the relevant scene entities over time, and the attended representation is decoded into an energy field over space; planning is then framed as Lagrangian action minimization on that field to enforce kinematic feasibility and collision avoidance.</p>
+                <p><strong>Results:</strong> The system is evaluated offline on both nuScenes and the long-tail CODA benchmark, where the authors report stronger robustness and better handling of anomalous open-world cases than standard dense or closed-set sparse baselines. The current extraction does not expose all metric values, so the exact margins are not recoverable here, but the paper positions the gains around generalization, interpretability, and kinematically valid planning.</p>
+                <p><strong>Conclusion:</strong> This is an interesting bridge between VLM semantics and continuous control, which is exactly the missing piece in many VLA-for-driving stories. If the approach holds up beyond offline evaluation, it could offer a more practical route to open-vocabulary driving stacks that stay computationally sparse without giving up safety constraints.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2606.20210" target="_blank">Augmenting Game AI with Deep Reinforcement Learning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20210</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 67 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, multimodal, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Game studios want non-player characters that feel adaptive and believable, but hand-authored behavior trees and scripted logic are expensive to scale across genres and often break immersion. Reinforcement learning is promising, yet deployment in commercial games is blocked by constraints around stability, controllability, player experience, development cost, and integration into real production pipelines.</p>
+                <p><strong>Method:</strong> This is a vision-style framework paper rather than a single benchmark-driven algorithm. It lays out requirements for training and deploying RL-based game AI in production, discusses examples of RL-augmented characters, and organizes the practical design space around training setup, player-facing safety, evaluation, and engineering constraints that matter to modern game development.</p>
+                <p><strong>Results:</strong> The paper presents case-driven evidence and deployment lessons rather than a narrow leaderboard comparison. It argues that RL can augment game AI meaningfully, but the extracted content does not provide a canonical benchmark, metric table, or single improvement number because the contribution is a synthesis of bottlenecks and design guidance for the field.</p>
+                <p><strong>Conclusion:</strong> Even without a flashy SOTA table, this is useful because it frames game AI as an applied agent problem with very real product constraints. The takeaway for broader AI work is that believable interactive agents need evaluation and control criteria tied to user experience, not just reward maximization in isolated simulators.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2606.20532" target="_blank">How Do Instructions Shape Speech? Cross-Attention Attribution for Style-Captioned Text-to-Speech</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20532</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 67 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): generation, multimodal, post_training. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It is relevant to Charlie’s priority areas around generative and multimodal AI.</p>
+                <p><strong>Problem:</strong> Style-captioned TTS lets users describe the desired voice in natural language, but current systems are still opaque about how individual instruction words affect the generated waveform. That makes it hard to diagnose controllability failures, understand which tokens govern prosody, and improve expressive speech generation in a principled way.</p>
+                <p><strong>Method:</strong> The authors adapt DAAM-style cross-attention attribution to speech diffusion models and apply it to CapSpeech-TTS. Their analysis extracts per-token attention heatmaps across 25 layers and 24 ODE denoising steps, then studies 3,600 caption-transcript pairs to connect attention behavior with acoustic properties such as F0 and energy.</p>
+                <p><strong>Results:</strong> The study finds that style tokens have lower temporal variance than content and function words, supporting the idea that they provide global conditioning. Style attention correlates with F0 and energy, peaks in early diffusion steps and deeper layers, and reaches maximum selectivity around layer 17 where attention entropy is lowest; this is an interpretability result rather than a benchmark win-rate paper, so the key outputs are explanatory patterns instead of headline accuracy gains.</p>
+                <p><strong>Conclusion:</strong> For expressive TTS, this is a useful interpretability tool rather than just another generation model. It gives practitioners a concrete way to inspect whether textual style instructions are actually steering speech, which should help debugging, prompt design, and future controllable voice systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2606.20518" target="_blank">FlowEdit: Associative Memory for Lifelong Pronunciation Adaptation in Flow-Matching TTS</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20518</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 64 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): efficiency, multimodal, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Zero-shot flow-matching TTS systems sound strong out of the box, but once deployed they keep mispronouncing out-of-vocabulary names unless the whole model is retrained. That is especially painful for multilingual products, where user names and domain-specific terms appear continuously and need fast correction without harming general speech quality.</p>
+                <p><strong>Method:</strong> FlowEdit keeps the TTS backbone frozen and learns each pronunciation fix as a token-level perturbation in text-embedding space instead of changing model weights. Each correction is stored in a Modern Hopfield Network as content-addressable episodic memory, and at inference time the system retrieves relevant edits through soft attention plus a similarity gate so it can reuse prior fixes for morphologically related names.</p>
+                <p><strong>Results:</strong> On a benchmark of 312 multilingual proper nouns spanning 18 language families, FlowEdit cuts target-word phoneme error rate by 92.7% relative to the zero-shot baseline while preserving general-speech quality. Each correction takes about 15 seconds on a single GPU, which is a practical latency for post-deployment adaptation instead of full retraining.</p>
+                <p><strong>Conclusion:</strong> This is one of the more obviously deployable papers in the batch. It shows a clean pattern for lifelong adaptation in generative speech systems: keep the core model frozen, store small reusable edits in memory, and fix the long tail of real-world pronunciations cheaply after launch.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2606.20264" target="_blank">Confidence-Aware Automated Assessment of Student-Drawn Scientific Models</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20264</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 62 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): efficiency, generation, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It has relatively direct relevance to production workflows or enterprise deployment scenarios.</p>
+                <p><strong>Problem:</strong> Science classes often use student drawings to assess conceptual understanding, but grading those drawings requires expert interpretation of complex visual structure. That makes large-scale classroom deployment expensive and creates a trust problem for automation, since a wrong automatic score can be more harmful than a deferred human review.</p>
+                <p><strong>Method:</strong> The paper fine-tunes a Vision Transformer with parameter-efficient adaptation for scoring student-generated scientific models, then adds a confidence-aware decision layer based on test-time predictive distributions. Instead of forcing automation on every response, the system selectively auto-scores only high-confidence submissions and routes uncertain cases to human graders.</p>
+                <p><strong>Results:</strong> Across six NGSS-aligned middle-school assessment items, the confidence-aware framework improves scoring reliability while exposing a practical coverage-versus-risk trade-off. The extracted text does not include the full set of reliability coefficients or threshold curves, so the exact numerical operating points are not all visible here, but the central result is that selective automation outperforms naive full automation.</p>
+                <p><strong>Conclusion:</strong> The paper is a good example of trustworthy multimodal AI for real workflows: use model confidence to decide when not to automate. That pattern matters well beyond education, because many enterprise vision tasks also need partial automation with human fallback rather than brittle all-or-nothing model decisions.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2606.20517" target="_blank">Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.20517</span>
+                <span class="date">2026-06-21</span>
+                <span class="date">Heat Score: 62 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> LiveCodeBench is widely used for contamination-aware code-generation evaluation, but it is effectively a Python benchmark. That leaves a big blind spot for real software engineering, where models must generate and reason across many languages and where apparent coding strength may partly come from Python-specific optimization or contamination.</p>
+                <p><strong>Method:</strong> Multi-LCB extends the original LCB protocol to 12 programming languages by translating Python competitive-programming tasks into equivalent cross-language problems while preserving release-date filtering, freshness, and evaluation compatibility. Because it mirrors the original format, future LiveCodeBench updates can flow directly into the multilingual benchmark without rebuilding the pipeline from scratch.</p>
+                <p><strong>Results:</strong> The benchmark evaluates 24 instruction-tuned and reasoning-oriented LLMs and finds clear evidence of Python overfitting, language-specific contamination, and large performance gaps across languages. The excerpt does not expose every per-model score, but the paper&#x27;s main empirical result is that many models that look strong on Python degrade meaningfully once the same problem family is tested in a broader language set.</p>
+                <p><strong>Conclusion:</strong> This is an important benchmark paper for anyone building coding agents or enterprise developer tools. It pushes evaluation away from single-language comfort zones and toward the multilingual reality of production codebases, which should make future post-training and agent benchmarking materially more honest.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/lordx64/Qwable-v1" target="_blank">lordx64/Qwable-v1</a></td>
+                <td>image-text-to-text</td>
+                <td>3351</td>
+                <td>145</td>
+                <td>2026-06-20</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This appears to be a multimodal Qwen-derived model for image-grounded conversation and reasoning. It can read visual inputs alongside text, which makes it useful for screenshot understanding, document QA, and general multimodal assistant workflows. It is already drawing 3351 downloads and 145 likes.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro" target="_blank">deepseek-ai/DeepSeek-V4-Pro</a></td>
+                <td>text-generation</td>
+                <td>2611991</td>
+                <td>4999</td>
+                <td>2026-06-20</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a frontier-scale DeepSeek text-generation model aimed at high-end reasoning and assistant use cases. Its popularity today signals continued demand for open or semi-open alternatives to top proprietary LLMs in coding, complex QA, and enterprise knowledge work. It is already drawing 2611991 downloads and 4999 likes.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF" target="_blank">yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF</a></td>
+                <td>text-generation</td>
+                <td>312332</td>
+                <td>1980</td>
+                <td>2026-06-19T03:52:11.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 312332 downloads, 1980 likes.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">zai-org/GLM-5.2</a></td>
+                <td>text-generation</td>
+                <td>19683</td>
+                <td>1681</td>
+                <td>2026-06-19T09:14:51.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a GLM-series text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 19683 downloads, 1681 likes.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/MiniMaxAI/MiniMax-M3" target="_blank">MiniMaxAI/MiniMax-M3</a></td>
+                <td>image-text-to-text</td>
+                <td>85771</td>
+                <td>1159</td>
+                <td>2026-06-16T05:18:24.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 85771 downloads, 1159 likes.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/WeiboAI/VibeThinker-3B" target="_blank">WeiboAI/VibeThinker-3B</a></td>
+                <td>text-generation</td>
+                <td>16270</td>
+                <td>510</td>
+                <td>2026-06-19T18:28:29.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 16270 downloads, 510 likes.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code" target="_blank">moonshotai/Kimi-K2.7-Code</a></td>
+                <td>image-text-to-text</td>
+                <td>317963</td>
+                <td>927</td>
+                <td>2026-06-15T07:49:29.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 317963 downloads, 927 likes.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/google/diffusiongemma-26B-A4B-it" target="_blank">google/diffusiongemma-26B-A4B-it</a></td>
+                <td>image-text-to-text</td>
+                <td>673464</td>
+                <td>1022</td>
+                <td>2026-06-10T13:45:13.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 673464 downloads, 1022 likes.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/microsoft/FastContext-1.0-4B-SFT" target="_blank">microsoft/FastContext-1.0-4B-SFT</a></td>
+                <td>text-generation</td>
+                <td>1998</td>
+                <td>243</td>
+                <td>2026-06-17T05:43:37.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 1998 downloads, 243 likes.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/nvidia/LocateAnything-3B" target="_blank">nvidia/LocateAnything-3B</a></td>
+                <td>image-text-to-text</td>
+                <td>235606</td>
+                <td>2215</td>
+                <td>2026-06-12T10:51:04.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 235606 downloads, 2215 likes.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/prefeitura-rio/Rio-3.5-Open-397B" target="_blank">prefeitura-rio/Rio-3.5-Open-397B</a></td>
+                <td>image-text-to-text</td>
+                <td>190694</td>
+                <td>326</td>
+                <td>2026-06-14T18:58:47.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 190694 downloads, 326 likes.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>3812636</td>
+                <td>2039</td>
+                <td>2026-04-17T02:59:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 3812636 downloads, 2039 likes.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/unsloth/GLM-5.2-GGUF" target="_blank">unsloth/GLM-5.2-GGUF</a></td>
+                <td>text-generation</td>
+                <td>22586</td>
+                <td>205</td>
+                <td>2026-06-18T15:37:12.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a GLM-series text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 22586 downloads, 205 likes.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b" target="_blank">nvidia/nemotron-3.5-asr-streaming-0.6b</a></td>
+                <td>automatic-speech-recognition</td>
+                <td>21426</td>
+                <td>582</td>
+                <td>2026-06-16T16:01:48.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for speech recognition. It can transcribe speech into text for meeting notes, call analysis, or voice interfaces. It is already drawing 21426 downloads, 582 likes.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF" target="_blank">yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF</a></td>
+                <td>text-generation</td>
+                <td>6307</td>
+                <td>182</td>
+                <td>2026-06-19T09:31:48.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 6307 downloads, 182 likes.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/calesthio/OpenMontage" target="_blank">calesthio/OpenMontage</a></td>
+                <td>⭐ 7,027</td>
+                <td>World&#x27;s first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: World&#x27;s first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/google-research/timesfm" target="_blank">google-research/timesfm</a></td>
+                <td>⭐ 24,530</td>
+                <td>TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides timesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/chopratejas/headroom" target="_blank">chopratejas/headroom</a></td>
+                <td>⭐ 41,796</td>
+                <td>Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/public-apis/public-apis" target="_blank">public-apis/public-apis</a></td>
+                <td>⭐ 443,142</td>
+                <td>A collective list of free APIs</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides a collective list of free APIs. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/home-assistant/core" target="_blank">home-assistant/core</a></td>
+                <td>⭐ 87,873</td>
+                <td>🏡 Open source home automation that puts local control and privacy first.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides 🏡 Open source home automation that puts local control and privacy first. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/onyx-dot-app/onyx" target="_blank">onyx-dot-app/onyx</a></td>
+                <td>⭐ 30,454</td>
+                <td>Open Source AI Platform - AI Chat with advanced features that works with every LLM</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides open Source AI Platform - AI Chat with advanced features that works with every LLM. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp/yt-dlp</a></td>
+                <td>⭐ 172,079</td>
+                <td>A feature-rich command-line audio/video downloader</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is a speech or audio project: A feature-rich command-line audio/video downloader. It can support transcription, voice generation, dubbing, or conversational audio products.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/microsoft/presidio" target="_blank">microsoft/presidio</a></td>
+                <td>⭐ 9,357</td>
+                <td>An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides an open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/unslothai/unsloth" target="_blank">unslothai/unsloth</a></td>
+                <td>⭐ 66,977</td>
+                <td>Unsloth Studio is a web UI for training and running open models like Gemma 4, Qwen3.6, DeepSeek, gpt-oss locally.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides unsloth Studio is a web UI for training and running open models like Gemma 4, Qwen3.6, DeepSeek, gpt-oss locally. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank">mukul975/Anthropic-Cybersecurity-Skills</a></td>
+                <td>⭐ 17,065</td>
+                <td>754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&amp;CK, NIST CSF 2.0, MITRE ATLAS, D3FEND &amp; NIST AI RMF · agentskills.io standard · Works with Claude Code, GitHub Cop</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: 754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&amp;CK, NIST CSF 2.0, MITRE ATLAS, D3FEND &amp; NIST AI RMF · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI &amp; 20+ platforms · 26 security domains · Apache 2.0. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Cost and deployability are shaping the day&#x27;s strongest engineering stories</h3>
+            <p>What: Cost and deployability are shaping the day&#x27;s strongest engineering stories. Why now: this pattern is visible today in papers like Automating SKILL.md Generation for Computer-Using Agents via Interaction Trajectory Mining and Navigating Unreliable Parametric and Contextual Knowledge: Explicit Knowledge Conflict Resolution for LLM Inference; HF models such as inference/models and yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF; HN discussions like Inference cost at scale with napkin math. Signal: The field keeps rewarding approaches that preserve utility while shrinking token spend, latency, or serving complexity. The same-day anchors are Automating SKILL.md Generation for Computer-Using Agents via Interaction Trajectory Mining, Navigating Unreliable Parametric and Contextual Knowledge: Explicit Knowledge Conflict Resolution for LLM Inference, inference/models, yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF. So what: For applied teams, model choice increasingly depends on operating economics and runtime simplicity, not just benchmark reputation.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Visual, speech, and document systems are being packaged as practical stacks</h3>
+            <p>What: Visual, speech, and document systems are being packaged as practical stacks. Why now: this pattern is visible today in papers like Automating SKILL.md Generation for Computer-Using Agents via Interaction Trajectory Mining and Navigating Unreliable Parametric and Contextual Knowledge: Explicit Knowledge Conflict Resolution for LLM Inference; HF models such as MiniMaxAI/MiniMax-M3 and moonshotai/Kimi-K2.7-Code; repos including calesthio/OpenMontage and yt-dlp/yt-dlp. Signal: The important signal is that multimodal capability is being organized into usable modules for creation, understanding, and interaction, rather than staying as isolated benchmarks. The same-day anchors are Automating SKILL.md Generation for Computer-Using Agents via Interaction Trajectory Mining, Navigating Unreliable Parametric and Contextual Knowledge: Explicit Knowledge Conflict Resolution for LLM Inference, MiniMaxAI/MiniMax-M3, moonshotai/Kimi-K2.7-Code. So what: That matters directly for document processing, visual QA, training assets, customer communication, and media-generation pipelines.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Open families are competing through deployable variants and specialization</h3>
+            <p>What: Open families are competing through deployable variants and specialization. Why now: this pattern is visible today in papers like SoftSkill: Behavioral Compression for Contextual Adaptation; HF models such as yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF and zai-org/GLM-5.2; repos including unslothai/unsloth. Signal: Differentiation is shifting toward fine-tuned variants, serving formats, and task-shaped packaging rather than just announcing one more base model. The same-day anchors are SoftSkill: Behavioral Compression for Contextual Adaptation, yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF, zai-org/GLM-5.2, unslothai/unsloth. So what: That makes ecosystem fit, adaptation cost, and deployment form factor central to real product selection.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Creative-model activity is broadening into full media pipelines</h3>
+            <p>What: Creative-model activity is broadening into full media pipelines. Why now: this pattern is visible today in papers like How Do Instructions Shape Speech? Cross-Attention Attribution for Style-Captioned Text-to-Speech and FlowEdit: Associative Memory for Lifelong Pronunciation Adaptation in Flow-Matching TTS; HF models such as google/diffusiongemma-26B-A4B-it and nvidia/nemotron-3.5-asr-streaming-0.6b; repos including yt-dlp/yt-dlp. Signal: The deeper signal is that generative media is now being evaluated as a workflow layer where controllability, editing, and packaging matter as much as novelty. The same-day anchors are How Do Instructions Shape Speech? Cross-Attention Attribution for Style-Captioned Text-to-Speech, FlowEdit: Associative Memory for Lifelong Pronunciation Adaptation in Flow-Matching TTS, google/diffusiongemma-26B-A4B-it, nvidia/nemotron-3.5-asr-streaming-0.6b. So what: That is directly useful for marketing materials, training videos, spoken assistants, and multimodal customer-facing assets.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-06-21 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-06-21-08-00.html">https://chenlijn.github.io/ai-daily/2026-06-21-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
