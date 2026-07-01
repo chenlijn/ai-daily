@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-07-01</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-07-01 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://deepmind.google/models/gemini-image/flash-lite/" target="_blank">Nano Banana 2 Lite</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 279 points</span>
+            </div>
+            <p class="summary">Google’s lighter Gemini image model is notable because it pushes image generation and editing into a cheaper, faster tier instead of treating multimodal creation as a premium-only feature. For product teams, that matters more than the launch itself, because low-latency creative models are what make bulk poster generation, marketing asset iteration, and in-app visual assistance economically deployable.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://docs.mistral.ai/models/model-cards/leanstral-1-5-26-06" target="_blank">Leanstral 1.5</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 56 points</span>
+            </div>
+            <p class="summary">Mistral’s Leanstral release is getting attention as a small-model efficiency play rather than a flagship frontier-model announcement. The signal today is that open-model competition is tightening around inference cost, deployability, and usable quality per watt, which is exactly where enterprise pilots either scale or stall.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank">Claude Sonnet 5</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 800 points</span>
+            </div>
+            <p class="summary">Anthropic’s Sonnet update is being read as a coding-and-agents product move, not just a leaderboard refresh. What makes it timely is the combination of stronger tool use, better instruction following, and shipping pressure from Google, OpenAI, and open models, all of which are turning model selection into a workflow and ROI decision.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://thereallo.dev/blog/claude-code-prompt-steganography" target="_blank">Claude Code is steganographically marking requests</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 1296 points</span>
+            </div>
+            <p class="summary">This post triggered a concrete trust debate around whether coding agents are inserting hidden metadata into prompts and what that means for privacy, vendor lock-in, and evaluation fairness. It matters because the industry is moving from ‘can agents code?’ to ‘what exactly are they doing inside enterprise developer workflows?’</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://claude.com/product/claude-science" target="_blank">Claude Science</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 326 points</span>
+            </div>
+            <p class="summary">Claude Science stands out because it packages frontier models around literature reading, hypothesis support, and scientific workflow assistance instead of generic chat. The broader signal is that model vendors now want higher-value vertical workflows, especially research, analysis, and document-heavy knowledge work, where differentiated UX can beat raw model parity.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/" target="_blank">TabFM: A zero-shot foundation model for tabular data</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 19 points</span>
+            </div>
+            <p class="summary">TabFM is interesting because it applies foundation-model thinking to messy tabular tasks that still dominate enterprise systems, from underwriting to risk scoring to operations reporting. For Charlie’s world, this is relevant less as a consumer launch and more as a sign that structured business data is becoming a first-class target for generalizable AI modeling.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2606.30531" target="_blank">Entity Binding Failures in Tool-Augmented Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30531</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 94 (Very High)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Agent safety is resonating across sources today, and this paper isolates a failure mode that directly blocks enterprise rollout: doing the right action on the wrong person, file, or account. It pairs clean diagnostic design with concrete error numbers, which makes it more actionable than generic “agent reliability” discussion.</p>
+                <p><strong>Problem:</strong> The paper argues that current tool-use evaluation overfocuses on whether an agent picked the right tool and valid arguments, while missing whether it bound the user’s references to the right real-world entity. In enterprise workflows, that gap is severe: emailing the wrong Alex or updating the wrong account can be catastrophic even when the tool call itself is syntactically correct.</p>
+                <p><strong>Method:</strong> The authors separate tool correctness from entity correctness and build a taxonomy of wrong-entity failures. They then evaluate entity-aware execution mechanisms, including entity-resolution preconditions, confidence-gated binding, ambiguity-triggered clarification, and provenance tracking before an action is allowed to proceed.</p>
+                <p><strong>Results:</strong> In a 60-task diagnostic setup spanning five model backends and six tool-use methods, all systems achieved 0% wrong-tool error, but action-oriented baselines still made wrong-entity actions in 24% to 26% of runs. The entity-aware variants eliminated wrong-entity actions in this controlled setting, though they traded off direct completion by deferring when ambiguity remained.</p>
+                <p><strong>Conclusion:</strong> This is one of the most practically useful agent papers today because it turns a vague safety concern into a measurable failure class. For enterprise copilots, the message is clear: safe tool use requires explicit entity resolution and permission-to-act logic, not just better prompting.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2606.30246" target="_blank">Clarus: Coordinating Autonomous Research Agents toward Web-Scale Scientific Collaboration</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30246</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 88 (High)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Research-agent infrastructure is hot, but most papers stay at single-agent demos. Clarus matters now because it reframes autonomous science as auditable multi-party coordination, which lines up with the broader shift from toy agents to production process orchestration.</p>
+                <p><strong>Problem:</strong> Existing research agents help with isolated subtasks like writing or searching, but scientific work is inherently collaborative, resource-constrained, and multi-phase. The missing piece is infrastructure that can coordinate questions, evidence, humans, agents, and even physical resources under uncertainty.</p>
+                <p><strong>Method:</strong> Clarus defines a project-agent-resource object model and organizes work across four layers: research application, digital collaboration, physical substrate, and the physical world. Around that core it adds pluggable modules for trust, attribution, coordination, and resource-aware execution, so different collaboration structures can be supported without hard-coding one workflow.</p>
+                <p><strong>Results:</strong> The paper validates Clarus through a controlled paper-generation case study, showing that a research goal can be decomposed into a traceable, reviewable, and attributable collaboration network across phases and participants. The excerpt does not expose a headline metric table, but the reported result is improved auditability and accumulation of work rather than a single benchmark score.</p>
+                <p><strong>Conclusion:</strong> Clarus is more infrastructure thesis than benchmark paper, but the direction is important. If research agents are going to matter in real labs or enterprise knowledge work, they need governance, attribution, and resource coordination layers like this, not only stronger models.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2606.30555" target="_blank">Linguistic Firewall: Geometry as Defense in Multi-Agent Systems Routing</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30555</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 86 (High)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Multi-agent routing is becoming a security problem, not just a task-allocation problem. This paper stands out because it directly attacks prompt-description spoofing, which is a very current issue as agent marketplaces and MCP-style ecosystems expand.</p>
+                <p><strong>Problem:</strong> Most agent routers decide which specialized agent to call using text descriptions or learned embeddings of claimed capability. That creates an attack surface: malicious or overconfident agents can misrepresent themselves and get selected even when they should not be.</p>
+                <p><strong>Method:</strong> ANTAP replaces metadata-based routing with active capability testing. It probes candidate agents, compresses observed performance into behavioral operators in a shared semantic space, and performs routing by non-textual algebraic projection, creating what the authors call a linguistic firewall against description-level manipulation.</p>
+                <p><strong>Results:</strong> Against description-based injection attacks, ANTAP reports near-zero attack success rate, while the description-based baseline is 67.3% or higher. The paper also reports materially lower attack success against adaptive embedding attacks, with about a 20% reduction versus the embedding-based baseline.</p>
+                <p><strong>Conclusion:</strong> The practical takeaway is that agent ecosystems need runtime competence verification, not blind trust in self-description. This is especially relevant for enterprise or marketplace settings where third-party agents, tools, or skills may be untrusted.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2606.30296" target="_blank">ManimAgent: Self-Evolving Multimodal Agents for Visual Education</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30296</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 82 (High)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This paper links multimodal agents, memory, and educational content generation, which gives it stronger product relevance than a pure benchmark paper. It also fits today’s broader interest in agents that improve over repeated tasks without expensive retraining.</p>
+                <p><strong>Problem:</strong> Reflection helps an agent recover inside a single task, but the lessons are usually discarded before the next task starts. For visual education workflows like generating mathematical animations from paper text, that means the same classes of coding and rendering mistakes repeat over and over.</p>
+                <p><strong>Method:</strong> ManimAgent stores cross-task experience in a dual-channel episodic memory bank: a positive memory of successful rationales and a negative memory of validated failure patterns. A vision-language model scores rendered keyframes after each animation converges, and those signals are used to grow the memory bank without any weight updates or human-seeded examples.</p>
+                <p><strong>Results:</strong> On a fixed-probe evaluation against no-memory, matched-budget RAG, and shuffled-memory baselines, blind human Pass@1 rises as memory size grows while the number of reflection rounds falls. The abstract does not reveal the exact improvement values, but it clearly claims better first-pass quality and lower iterative repair cost.</p>
+                <p><strong>Conclusion:</strong> The paper is a nice example of “self-improvement without retraining” applied to a concrete multimodal workflow. For product teams building repeatable creative or instructional agents, the memory design may be more reusable than the Manim domain itself.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2606.30639" target="_blank">Self-Evolving World Models for LLM Agent Planning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30639</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 79 (High)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> World models for agents are a hot topic, and this paper adds a practical test-time adaptation angle instead of proposing another full retraining recipe. That makes it relevant to teams trying to improve planning performance under fixed-model deployment constraints.</p>
+                <p><strong>Problem:</strong> World models are only useful if their foresight is accurate enough to guide planning; otherwise predictions can be ignored or actively mislead the agent. The challenge is improving prediction quality at deployment time without retraining the agent or the world model backbone.</p>
+                <p><strong>Method:</strong> WorldEvolver adds three pieces around a frozen downstream agent: episodic memory for retrieval-based simulation from real transitions, semantic memory for persistent rules distilled from prediction errors, and selective foresight that filters low-confidence predictions before they enter the reasoning context.</p>
+                <p><strong>Results:</strong> The paper evaluates on ALFWorld and ScienceWorld, measures prediction quality on Word2World, and reports downstream success on AgentBoard. Across three backbones, WorldEvolver achieves the best world-model prediction accuracy and outperforms other world-model baselines on planning success, although the excerpt does not list the full metric table.</p>
+                <p><strong>Conclusion:</strong> This is a useful engineering direction because it treats memory revision as a deployment-time control surface. For long-horizon agents, improving what the model believes about the environment may be as important as improving the model itself.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2606.30561" target="_blank">The Human Creativity Benchmark</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30561</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 75 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Creative-model evaluation is increasingly bottlenecked by poor metrics, especially in image and design workflows. This benchmark is timely because it separates “must be correct” signals from taste-driven disagreement, which is exactly the distinction product teams need for controllable generation.</p>
+                <p><strong>Problem:</strong> Most AI evaluation pipelines collapse reviewer disagreement into noise, but that assumption fails in creative work where experts can legitimately disagree on taste. Without separating objective convergence from aesthetic divergence, teams learn the wrong lessons about where a model should be strict versus steerable.</p>
+                <p><strong>Method:</strong> The Human Creativity Benchmark gathers pairwise preferences, scalar ratings for prompt adherence, usability, and visual appeal, plus qualitative rationale from professionals. It spans five creative domains and three workflow phases, allowing the benchmark to distinguish agreement on technical execution from divergence on aesthetic choice.</p>
+                <p><strong>Results:</strong> The benchmark contains 15,000 professional judgments. The analysis shows convergence clustering around technical correctness and visual hierarchy, while divergence concentrates on taste and conceptual risk; it also finds that no single model dominates across ideation, mockup, and refinement phases.</p>
+                <p><strong>Conclusion:</strong> For image, poster, and design-generation systems, this paper offers a more realistic way to evaluate output quality. The deeper lesson is that creative AI should optimize for controllability and phase-specific excellence, not a single flattened score.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2606.30185" target="_blank">Dynamo: Dynamic Skill-Tool Evolution for Vision-Language Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30185</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 74 (Medium)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Training-free improvement for vision-language agents hits a valuable sweet spot: better reasoning without RL cost. It also ties directly into today’s VLM and agent interest, especially where teams want faster iteration over tools and prompts rather than another retraining cycle.</p>
+                <p><strong>Problem:</strong> Improving visual reasoning usually means retraining the VLM or hand-crafting prompts and tools for each benchmark. That is costly and brittle, especially when the model’s failures alternate between cognitive reasoning mistakes and perceptual bottlenecks.</p>
+                <p><strong>Method:</strong> Dynamo keeps the VLM frozen and lets the agent inspect its own successes and failures on a small labeled subset. From that, it evolves two reusable assets: reasoning skills for cognitive bottlenecks and executable visual tools for perceptual bottlenecks, with each tool paired to a skill that decides when it should be invoked.</p>
+                <p><strong>Results:</strong> Across four visual reasoning benchmarks and five VLM backbones, Dynamo improves direct inference in all 20 model-benchmark settings with an average gain of +5.6 accuracy. Against RL baselines such as VTool-R1 and DeepEyes, it closes 65% to 99% of the RL gap while using far less compute, and it also combines additively with RL when available.</p>
+                <p><strong>Conclusion:</strong> This is one of the cleaner “do more with frozen models” stories in today’s list. For multimodal product teams, the idea of evolving a persistent skill-tool library may be much cheaper to operationalize than retraining every time a new failure mode appears.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2606.30294" target="_blank">Rehearsed Multi-Agent Live Product Demonstrations with Real-Time Voice Question Answering</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30294</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 72 (Medium)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> The paper sits at the intersection of agents, voice, UI grounding, and enterprise demos, which gives it unusually direct product relevance. It also mirrors the current market push toward agents that can present, narrate, and answer questions over live software rather than static outputs.</p>
+                <p><strong>Problem:</strong> Live product demos remain expensive because humans must choose features, drive the UI, narrate coherently, and handle questions in real time. Existing browser agents optimize for task completion, while demo-video tools create fixed artifacts that cannot survive interface drift or interactive questioning.</p>
+                <p><strong>Method:</strong> Rhetor takes a running web app and its source repository, then builds a rehearsed demonstration using multiple coordinated agents. Key pieces include a cross-modal feature representation from UI plus code analysis, a grounded script generator constrained to observed UI elements, a rehearsal loop with convergence checks, and a synchronization invariant between narration and interface state.</p>
+                <p><strong>Results:</strong> The abstract frames the contribution as a systems architecture paper and does not expose benchmark numbers in the visible excerpt. The claimed result is a live, segment-synchronized demo pipeline with real-time voice question answering and graceful degradation when the UI no longer supports an action path.</p>
+                <p><strong>Conclusion:</strong> This is a strong signal that “agentic presentation” is becoming its own workflow category. For software sales, onboarding, and training content generation, the combination of UI grounding plus live QA could become more valuable than another generic browser agent.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2606.30182" target="_blank">MirrorCode: AI can rebuild entire programs from behavior alone</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30182</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 71 (Medium)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Long-horizon coding benchmarks keep getting more important as coding agents improve. MirrorCode is worth attention because it measures whether a model can recreate substantial software purely from behavior, which is much closer to real engineering work than short benchmark snippets.</p>
+                <p><strong>Problem:</strong> Existing coding benchmarks are often too short and too narrow, while impressive one-off demos are difficult to compare fairly across models. The field needs a standardized evaluation that tests sustained software reconstruction under realistic functional constraints.</p>
+                <p><strong>Method:</strong> MirrorCode asks AI agents to reimplement complete programs without access to source code, scoring them by exact output agreement on end-to-end tests including held-out cases. The benchmark covers 25 target programs across diverse domains such as Unix utilities, query tools, bioinformatics, interpreters, static analysis, cryptography, and compression.</p>
+                <p><strong>Results:</strong> The strongest model reaches 56% on the benchmark, showing that current systems can already rebuild substantial software projects. The paper also highlights a concrete example: reimplementing gotree, a roughly 16,000-line bioinformatics toolkit, which the authors argue would take weeks for a human engineer.</p>
+                <p><strong>Conclusion:</strong> MirrorCode is useful because it raises the bar from “can the model finish a coding kata?” to “can it reconstruct real software behavior?” That makes it a better lens for evaluating coding agents intended for maintenance, migration, and legacy-system understanding.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2606.30191" target="_blank">From Detecting Agency to Doing Work: Self-Caused Credit Builds a Durable Behavioral Self in a Minimal Spiking Agent</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2606.30191</span>
+                <span class="date">2026-07-01</span>
+                <span class="date">Heat Score: 67 (Medium)</span>
+                <span class="date">HF Trending: Yes | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> This is the most theory-heavy paper in the list, but it still stands out because it offers a mechanistic account of durable self-shaped behavior rather than a vague agency metaphor. It matters more for foundational agent research than immediate product use, but the conceptual signal is real.</p>
+                <p><strong>Problem:</strong> Detecting agency is not the same as developing stable self-shaped behavior. The authors ask how a system that can distinguish self from world can accumulate that distinction into persistent policy changes rather than momentary recognition.</p>
+                <p><strong>Method:</strong> They add agency-gated slow credit, a conjunctive Own×Agency×Salience update, to a minimal spiking-agent substrate implemented with Nengo LIF/PES. By toggling only the slow-credit channel while reproducing the same agency comparator, they isolate whether durable behavior comes from self-caused credit assignment rather than simple agency detection.</p>
+                <p><strong>Results:</strong> On a self-preservation task, the learned behavior survives episodic buffer removal with a retained fraction of 0.96 over 50 runs and collapses when slow decoders are reset or the agency gate is removed. In a 24-dimensional partially observed control setting, the same dissociation holds at 0.74 versus 0.00, and the authors also report reduced forgetting across eight sequential tasks under interference.</p>
+                <p><strong>Conclusion:</strong> This is not an enterprise paper, but it contributes a concrete mechanism for durable behavioral identity in agents. If the result holds up, it could matter for future work on continual learning, persistent autonomy, and the internal credit signals that support long-lived agent behavior.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/baidu/Unlimited-OCR" target="_blank">baidu/Unlimited-OCR</a></td>
+                <td>image-text-to-text</td>
+                <td>630246</td>
+                <td>1573</td>
+                <td>2026-06-28 06:20</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A document-understanding model aimed at OCR and layout-heavy extraction. It is directly useful for forms, invoices, scanned contracts, and other enterprise document pipelines where text plus structure both matter.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF" target="_blank">empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>1113871</td>
+                <td>1148</td>
+                <td>2026-06-28 17:05</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A long-context Qwen-derived model packaged for local and open experimentation, with strong signals around reasoning and extended context windows. It is useful for assistant, coding, and document-heavy workflows where context length changes actual product behavior.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">zai-org/GLM-5.2</a></td>
+                <td>text-generation</td>
+                <td>159967</td>
+                <td>3168</td>
+                <td>2026-06-23 03:56</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A flagship text-generation model positioned for bilingual chat, reasoning, and tool-using assistant workloads. Its popularity today reinforces how much demand is concentrating around strong open conversational models that can actually slot into production agents.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B-GGUF" target="_blank">deepreinforce-ai/Ornith-1.0-35B-GGUF</a></td>
+                <td>text-generation</td>
+                <td>233701</td>
+                <td>607</td>
+                <td>2026-06-25 14:31</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An open text-generation checkpoint from the Ornith family, with today’s trend showing sustained appetite for large downstream variants and local deployment formats. The engineering relevance is straightforward: teams want the same model family in base, hosted, and GGUF forms so they can move between cloud and local runtimes.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B-GGUF" target="_blank">deepreinforce-ai/Ornith-1.0-9B-GGUF</a></td>
+                <td>text-generation</td>
+                <td>191409</td>
+                <td>365</td>
+                <td>2026-06-25 14:12</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An open text-generation checkpoint from the Ornith family, with today’s trend showing sustained appetite for smaller downstream variants and local deployment formats. The engineering relevance is straightforward: teams want the same model family in base, hosted, and GGUF forms so they can move between cloud and local runtimes.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B" target="_blank">Qwen/Qwen-AgentWorld-35B-A3B</a></td>
+                <td>text-generation</td>
+                <td>34371</td>
+                <td>497</td>
+                <td>2026-06-25 07:24</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An agent-oriented Qwen release focused on world modeling and environment simulation. That makes it relevant for planning, tool-use evaluation, and agent training setups where the model needs to reason about action consequences, not only produce text.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF" target="_blank">yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF</a></td>
+                <td>text-generation</td>
+                <td>288741</td>
+                <td>917</td>
+                <td>2026-06-19 09:31</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A Gemma-based agentic checkpoint tuned around tool use, reasoning, and terminal-style workflows. The relevance is the same pattern visible elsewhere today: smaller open models are being specialized for concrete agent jobs instead of generic chat.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/deepreinforce-ai/Ornith-1.0-9B" target="_blank">deepreinforce-ai/Ornith-1.0-9B</a></td>
+                <td>text-generation</td>
+                <td>46677</td>
+                <td>332</td>
+                <td>2026-06-25 14:08</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An open text-generation checkpoint from the Ornith family, with today’s trend showing sustained appetite for smaller downstream variants and local deployment formats. The engineering relevance is straightforward: teams want the same model family in base, hosted, and GGUF forms so they can move between cloud and local runtimes.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B" target="_blank">deepreinforce-ai/Ornith-1.0-35B</a></td>
+                <td>text-generation</td>
+                <td>135452</td>
+                <td>290</td>
+                <td>2026-06-25 14:30</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An open text-generation checkpoint from the Ornith family, with today’s trend showing sustained appetite for large downstream variants and local deployment formats. The engineering relevance is straightforward: teams want the same model family in base, hosted, and GGUF forms so they can move between cloud and local runtimes.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M" target="_blank">empero-ai/Qwythos-9B-Claude-Mythos-5-1M</a></td>
+                <td>text-generation</td>
+                <td>114499</td>
+                <td>614</td>
+                <td>2026-06-28 16:36</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A long-context Qwen-derived model packaged for local and open experimentation, with strong signals around reasoning and extended context windows. It is useful for assistant, coding, and document-heavy workflows where context length changes actual product behavior.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark" target="_blank">deepseek-ai/DeepSeek-V4-Pro-DSpark</a></td>
+                <td>text-generation</td>
+                <td>7629</td>
+                <td>276</td>
+                <td>2026-06-27 05:12</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A newer DeepSeek text-generation release that signals continued open-model pressure in high-capability chat and reasoning. For builders, it is part of the broader shift toward choosing between multiple strong open families rather than defaulting to one vendor.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/krea/Krea-2-Turbo" target="_blank">krea/Krea-2-Turbo</a></td>
+                <td>text-to-image</td>
+                <td>56953</td>
+                <td>435</td>
+                <td>2026-06-23 16:23</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A text-to-image generation model tuned for fast creative iteration. It matters because controllable visual generation is increasingly judged by turnaround speed and usability in design workflows, not just image quality in isolation.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF" target="_blank">yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF</a></td>
+                <td>text-generation</td>
+                <td>597090</td>
+                <td>2551</td>
+                <td>2026-06-19 03:52</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A coder-focused Gemma GGUF release intended for local code generation and reasoning. This keeps the local-coding stack hot, especially for developers who want strong models without depending on hosted APIs.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/nvidia/GLM-5.2-NVFP4" target="_blank">nvidia/GLM-5.2-NVFP4</a></td>
+                <td>text-generation</td>
+                <td>136933</td>
+                <td>198</td>
+                <td>2026-06-26 23:49</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A quantized GLM-5.2 variant optimized for lower-precision deployment. The practical value is cost and throughput, because teams can test a strong open model under much tighter serving budgets.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/deepreinforce-ai/Ornith-1.0-397B" target="_blank">deepreinforce-ai/Ornith-1.0-397B</a></td>
+                <td>text-generation</td>
+                <td>5792</td>
+                <td>186</td>
+                <td>2026-06-25 15:23</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An open text-generation checkpoint from the Ornith family, with today’s trend showing sustained appetite for large downstream variants and local deployment formats. The engineering relevance is straightforward: teams want the same model family in base, hosted, and GGUF forms so they can move between cloud and local runtimes.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/usestrix/strix" target="_blank">usestrix/strix</a></td>
+                <td>⭐ 29652</td>
+                <td>Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">An AI pentesting toolkit that automates vulnerability discovery and remediation workflows. It reflects how fast security teams are adopting agentic tooling for offensive testing and secure-by-design review.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/HKUDS/Vibe-Trading" target="_blank">HKUDS/Vibe-Trading</a></td>
+                <td>⭐ 16495</td>
+                <td>&quot;Vibe-Trading: Your Personal Trading Agent&quot;</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A personal trading-agent framework that packages LLM-driven market analysis into an end-user workflow. Whether or not one trusts the strategy layer, it shows how agent products are spreading into decision-support verticals.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/allenai/olmocr" target="_blank">allenai/olmocr</a></td>
+                <td>⭐ 18255</td>
+                <td>Toolkit for linearizing PDFs for LLM datasets/training</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A PDF linearization toolkit for turning messy documents into LLM-ready training or inference inputs. This is directly relevant to enterprise RAG and document AI, because extraction quality still determines downstream model usefulness.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/Mebus/cupp" target="_blank">Mebus/cupp</a></td>
+                <td>⭐ 6238</td>
+                <td>Common User Passwords Profiler (CUPP)</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A classic password-profiling security utility that remains useful for auditing and red-team scenarios. Its presence beside newer AI-agent projects is a reminder that practical security workflows still mix old and new tooling.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/Unclecheng-li/VulnClaw" target="_blank">Unclecheng-li/VulnClaw</a></td>
+                <td>⭐ 1560</td>
+                <td>基于 AI Agent + MCP 工具链 + 渗透 Skill 编排， 配合大语言模型， 自然语言输入 → 自动完成「信息收集 → 漏洞发现 → 漏洞利用 → 报告生成」全流程。</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A Chinese-language AI agent security framework that orchestrates recon, vulnerability discovery, exploitation, and report generation. It is one of the clearest GitHub signals today that MCP-style toolchains are reaching full offensive-security automation stacks.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/browser-use/video-use" target="_blank">browser-use/video-use</a></td>
+                <td>⭐ 13200</td>
+                <td>Edit videos with coding agents</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A coding-agent workflow for editing videos through code rather than traditional timeline UI operations. That matters because generative video is moving closer to software-style automation, reproducibility, and batch production.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/google/agents-cli" target="_blank">google/agents-cli</a></td>
+                <td>⭐ 4574</td>
+                <td>The CLI and skills that turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Google’s CLI for creating, evaluating, and deploying AI agents on Google Cloud. It shows the platform race shifting from model APIs to full-stack agent tooling, evaluation, and deployment surfaces.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/open-webui/open-webui" target="_blank">open-webui/open-webui</a></td>
+                <td>⭐ 143729</td>
+                <td>User-friendly AI Interface (Supports Ollama, OpenAI API, ...)</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A widely adopted self-hosted interface for connecting users to local or API-backed models. Its continued popularity highlights the demand for private, customizable AI front ends in enterprise and prosumer settings.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/virgiliojr94/book-to-skill" target="_blank">virgiliojr94/book-to-skill</a></td>
+                <td>⭐ 7391</td>
+                <td>Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">A utility that turns technical book PDFs into reusable Claude Code skills. It is a neat example of knowledge distillation into workflow-native assets, which is exactly the kind of applied productivity layer developers keep asking for.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/psf/black" target="_blank">psf/black</a></td>
+                <td>⭐ 41663</td>
+                <td>The uncompromising Python code formatter</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Black is not an AI project, but it remains a foundational Python formatter that shows up whenever developer workflow maintenance is in focus. Its presence is a small reminder that strong AI coding stacks still depend on boring, reliable engineering hygiene.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Agent reliability is shifting from tool selection to action correctness</h3>
+            <p>What: the strongest cross-source signal today is that agent systems are being judged on whether they act on the right entity, not merely whether they call the right tool. Why now: arXiv papers like Entity Binding Failures in Tool-Augmented Agents, Linguistic Firewall, and WorldEvolver all focus on safer routing, binding, and planning, while GitHub projects such as google/agents-cli and VulnClaw show agent frameworks getting closer to real operations. Signal: the stack is maturing from prompt tricks toward explicit control layers for identity, routing, verification, and intervention. So what: enterprise copilots in document, workflow, and customer-facing systems need binding checks, provenance, and runtime guardrails before wider rollout.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Document and evidence pipelines remain a core enterprise AI battleground</h3>
+            <p>What: document understanding and evidence preparation remain one of the clearest monetizable AI workloads today. Why now: baidu/Unlimited-OCR trends on Hugging Face, allenai/olmocr trends on GitHub, and Claude Science plus Clarus both emphasize research and knowledge-heavy workflows. Signal: teams are still investing in the boring but decisive layers that turn PDFs, forms, and source materials into model-usable context. So what: for insurance, finance, and internal operations, better OCR, PDF linearization, and evidence-grounded reasoning are still among the fastest paths to production value.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Open-model competition is being won through packaging, specialization, and deployment form factors</h3>
+            <p>What: today’s model heat is less about one monolithic frontier launch and more about a dense field of specialized open releases. Why now: GLM-5.2, Qwen-AgentWorld, multiple Ornith variants, Gemma GGUF derivatives, and DeepSeek-V4-Pro-DSpark are all trending together, often in both hosted and local forms. Signal: the market is rewarding families that ship agentic tuning, coding variants, long-context versions, and quantized builds rather than a single generic checkpoint. So what: enterprise teams now have more room to optimize for serving cost, locality, and workload fit instead of blindly choosing the largest model.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Creative and media workflows are becoming more controllable, benchmarked, and automatable</h3>
+            <p>What: visual generation and media automation are becoming workflow problems, not isolated model demos. Why now: Krea-2-Turbo and Nano Banana 2 Lite point to faster image-generation loops, The Human Creativity Benchmark reframes how creative systems should be evaluated, and browser-use/video-use plus Rhetor show video and live-demo production moving into agentic automation. Signal: the ecosystem is converging on controllability, phase-specific quality, and repeatable production pipelines. So what: this is directly relevant to marketing material generation, training content creation, and multimodal customer communication products.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-07-01 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-07-01-08-00.html">https://chenlijn.github.io/ai-daily/2026-07-01-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
