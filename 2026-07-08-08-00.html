@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-07-08</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-07-08 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://spectrum.ieee.org/large-language-models-ieee-course" target="_blank">IEEE Rolls Out Large Language Models Training Course</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 17 points</span>
+            </div>
+            <p class="summary">IEEE is packaging LLM fundamentals into a formal training course, which says enterprise demand has shifted from curiosity to workforce upskilling. That matters today because regulated industries now need repeatable education pipelines, not just ad hoc prompt experimentation.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/kklimuk/docx-cli" target="_blank">Show HN: Docx-CLI: agents read/edit Word docs using 1/2 the time and tokens</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 47 points</span>
+            </div>
+            <p class="summary">Docx-CLI turns Word files into an agent-friendly interface, so models can inspect and edit .docx content with less token overhead than naïve document parsing. The signal is practical: teams want AI to work inside existing office-document workflows instead of forcing content into custom web apps.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/rowboatlabs/rowboat" target="_blank">Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 72 points</span>
+            </div>
+            <p class="summary">Rowboat is an open, local-first desktop shell for agent workflows, aiming to give users Claude-style tooling without giving up control of data or runtime. Its traction reflects a wider push toward self-hosted agent UX, especially for developers and companies that care about privacy, auditability, and extension hooks.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro/" target="_blank">Local, CPU-Friendly, High-Quality TTS (Text-to-Speech) with Kokoro</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 225 points</span>
+            </div>
+            <p class="summary">This post walks through running Kokoro-style text-to-speech locally on CPU, which lowers the bar for adding voice generation without GPU infrastructure. It is worth watching because speech features are moving from expensive cloud add-ons into lightweight components that can ship in edge and desktop products.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2607.05055" target="_blank">Toward Trustworthy Large Language Model Agents in Healthcare</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.05055</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 98 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Healthcare agents are one of the clearest enterprise deployment stories today, and this paper brings concrete safety, latency, and cost numbers instead of vague agent demos. It also lines up with the same-day surge of practical agent tooling on HN and GitHub, which makes it more relevant than a pure benchmark paper.</p>
+                <p><strong>Problem:</strong> Hospitals still spend too much staff time on appointment scheduling because the workflow spans booking, rescheduling, cancellation, and facility lookup across fragmented systems. Generic chatbots are risky here because they can hallucinate, drift into medical advice, or miss emergency cues in a domain where mistakes have operational and safety consequences.</p>
+                <p><strong>Method:</strong> CareConnect builds a tightly scoped scheduling agent around LLM function calling, RAG, and deterministic guardrails. The system routes requests across eight healthcare-specific tools, refuses diagnosis-related intents, and uses short-circuit rules for emergencies and other safety-critical cases before the LLM can improvise.</p>
+                <p><strong>Results:</strong> On a 680-scenario benchmark covering end-to-end tasks, multi-turn flows, and edge cases, the system reaches 91.8% task completion with 2.2-second median latency. The paper also reports 96.0% safety compliance on a dedicated critical-safety subset and an average cost of $0.0324 per appointment, indicating a meaningful reduction versus manual scheduling.</p>
+                <p><strong>Conclusion:</strong> This is a strong example of how agents become deployable in regulated settings: narrow the scope, add deterministic controls, and measure failure modes directly. For enterprise teams, the value is less &#x27;AI receptionist&#x27; hype and more a concrete blueprint for workflow automation with auditable safety boundaries.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2607.04907" target="_blank">Medi-Gemma: A Hybrid Clinical Decision Support System Integrating Deterministic EMR Analytics and Retrieval-Augmented Generation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.04907</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 95 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Clinical copilots remain hard to ship because structured EMR data and free-text reasoning rarely stay aligned, and this paper attacks that exact integration gap. It matters now because enterprise LLM stacks are increasingly mixing deterministic analytics with RAG instead of trusting a single end-to-end generation path.</p>
+                <p><strong>Problem:</strong> Clinical decision support fails when an LLM must reason over messy EMR tables, retrieval results, and patient-specific facts at once. Hallucinations, weak tabular reasoning, and stale retrieved context are especially dangerous in wound triage and workflow automation, where the answer must stay faithful to validated backend records.</p>
+                <p><strong>Method:</strong> Medi-Gemma separates orchestration from clinical reasoning through a multi-stage pipeline coordinated by a ClinicalOrchestrator. An IntentRouter sends analytical requests to deterministic Pandas-based processing, patient-specific questions to a ClinicalRAGEngine, and a Ground Truth Injection module inserts the latest structured patient snapshot into the prompt so the model cannot drift away from validated state.</p>
+                <p><strong>Results:</strong> The paper reports that the architecture eliminates semantic context drift, prevents database-compilation failures, and improves factual adherence to clinical repositories. The abstract does not disclose a full benchmark table or headline percentage gains, so the current evidence is architectural validation plus qualitative robustness rather than a fully quantified leaderboard result.</p>
+                <p><strong>Conclusion:</strong> The useful takeaway is that high-stakes copilots probably need hybrid control planes, not pure chat wrappers over a model. For enterprise builders, this is a credible pattern for combining structured-data fidelity, retrieval grounding, and explicit safety enforcement in medical workflows.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2607.05147" target="_blank">DSpark: Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.05147</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 75 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Inference efficiency is still one of the few levers that instantly changes product economics, and this paper brings a production-serving result rather than an offline-only trick. It is even more timely because the same-day Hugging Face list includes DeepSeek-V4-Pro-DSpark, giving the paper a direct model-to-system resonance.</p>
+                <p><strong>Problem:</strong> Parallel speculative decoding can speed up generation, but long drafted blocks are often rejected because tokens inside the block do not condition on each other well enough. In real high-concurrency serving, blindly verifying those low-confidence suffixes wastes batch capacity and can actually hurt throughput under latency constraints.</p>
+                <p><strong>Method:</strong> DSpark combines a parallel drafter with a lightweight sequential component, creating a semi-autoregressive generator that preserves some intra-block dependency while staying fast. It then uses confidence-scheduled verification to adapt how many drafted tokens get checked for each request based on estimated survival probability and the serving engine&#x27;s throughput profile.</p>
+                <p><strong>Results:</strong> Across offline benchmarks, DSpark improves accepted draft length over prior autoregressive and parallel drafters. In live DeepSeek-V4 serving traffic, it improves per-user generation speed by 60% to 85% versus the MTP-1 production baseline at matched throughput, while avoiding the verification waste that normally collapses responsiveness.</p>
+                <p><strong>Conclusion:</strong> This is the kind of systems paper that can matter immediately in production because it shifts the latency-throughput Pareto frontier instead of chasing tiny offline gains. For anyone serving large models at scale, it reinforces that smarter verification policy is now as important as faster kernels.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2607.05174" target="_blank">AgentGym2: Benchmarking Large Language Model Agents in De-Idealized Real-World Environments</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.05174</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 75 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Agent evaluation is getting more serious, and this paper stands out because it tests messy end-to-end reality instead of sanitized tool benches. That fits the current market mood: lots of agent products are shipping, but teams increasingly want evidence about failure modes under ambiguity, noise, and missing instructions.</p>
+                <p><strong>Problem:</strong> Most existing agent benchmarks make the task too easy by pre-wiring tools, cleaning the inputs, and removing the need to explore the environment. That hides the exact failure modes that show up in production, where agents must discover capabilities, tolerate underspecified requests, and recover from uncertainty mid-workflow.</p>
+                <p><strong>Method:</strong> AgentGym2 builds a de-idealized benchmark around real-world end-to-end work demands rather than toy tool calls. The framework explicitly measures tool discovery, execution of long procedures, composition for unseen tasks, and robustness to noisy or incomplete information in addition to ordinary planning and reasoning.</p>
+                <p><strong>Results:</strong> The benchmark evaluates 15 open and proprietary models and finds that even frontier systems such as Gemini and GPT-5 struggle. The abstract highlights a substantial capability gap but does not expose all per-model scores in the extracted text, so the strongest signal here is the benchmark&#x27;s diagnostic finding rather than a single SOTA number.</p>
+                <p><strong>Conclusion:</strong> This paper is a useful corrective to overly optimistic agent demos. For teams building enterprise agents, the message is clear: benchmark success in idealized environments is no longer enough, and tool discovery plus recovery under ambiguity should be first-class evaluation targets.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2607.05391" target="_blank">LLM-as-a-Verifier: A General-Purpose Verification Framework</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.05391</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 71 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Verifier models are becoming a real scaling axis for agent systems, and this paper connects that idea to coding, robotics, and RL in one framework. It matters now because the field is moving from &#x27;generate better answers&#x27; toward &#x27;score and refine trajectories more intelligently.&#x27;</p>
+                <p><strong>Problem:</strong> LM judges that emit discrete scores are often too coarse and noisy to rank candidate solutions well, especially for agentic tasks with multiple partially correct trajectories. That limits both practical reranking and the ability to turn verification into a reusable training signal.</p>
+                <p><strong>Method:</strong> LLM-as-a-Verifier replaces discrete judge outputs with continuous scores computed from the expected value over scoring-token logits. The framework then scales verification along three knobs, score granularity, repeated evaluation, and criteria decomposition, and adds a cost-aware ranking algorithm for selecting the best candidate response.</p>
+                <p><strong>Results:</strong> The paper reports state-of-the-art results on several agent-oriented benchmarks, including 86.5% on Terminal-Bench V2, 78.2% on SWE-Bench Verified, 87.4% on RoboRewardBench, and 73.3% on MedAgentBench. It also shows that the verifier&#x27;s dense signals can improve sample efficiency for SAC and GRPO in robotics and math-reasoning settings.</p>
+                <p><strong>Conclusion:</strong> The bigger idea is that verification is graduating from an evaluation afterthought into core infrastructure for search, reranking, monitoring, and RL. For engineering teams, this points toward agent stacks where a strong verifier materially improves reliability even when the base model stays fixed.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2607.05199" target="_blank">Reason, Reward, Refine: Step-Level Errors Corrections with Structured Feedback for Physics Reasoning in Small Language Models</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.05199</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 66 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Small-model reasoning is still strategically important because many enterprise deployments cannot afford frontier-scale inference on every step. This paper is timely because it shows a concrete reward-design recipe that improves multi-step reasoning without needing preference datasets or exposing gold solutions during training.</p>
+                <p><strong>Problem:</strong> Small language models often collapse in physics reasoning because one early mistake poisons the entire chain of derivation. Existing step-level methods usually need costly annotations or weak reward signals, so they struggle to correct the first bad step in a scalable way.</p>
+                <p><strong>Method:</strong> The authors introduce a step-level reward framework that detects the first reasoning error, generates structured corrective feedback, and trains the model to revise its answer with policy gradient plus KL regularization. An external verifier is used only during training, which avoids turning gold solutions into supervised generation targets.</p>
+                <p><strong>Results:</strong> Across five physics benchmarks, the method improves accuracy by 17% to 20% over chain-of-thought prompting and by 10% to 16% over the strongest baseline. It also cuts calculation errors from 56.9% to 23.5% and miscomprehension errors from 22.3% to 12.0%, though conceptual errors remain difficult even after dropping from 89.7% to 68.7%.</p>
+                <p><strong>Conclusion:</strong> This is a solid reminder that better reward shaping can still unlock a lot from smaller models. For practical deployment, the paper is encouraging because it improves structured reasoning with a training-time verifier rather than requiring larger inference budgets at serving time.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2607.05310" target="_blank">Evaluating and Understanding Model Editing for Medical Vision Language Models</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.05310</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 66 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Medical multimodal models are starting to look like long-lived products, which makes post-deployment editing and correction much more important. This paper stands out because it does not just propose another editor, it shows that the evaluation regime itself is missing the clinical failure modes that actually matter.</p>
+                <p><strong>Problem:</strong> When a medical VLM makes a mistake after deployment, retraining the whole model is slow and expensive, so targeted model editing is attractive. The problem is that existing editing benchmarks are mostly general-domain and do not test whether a medical edit stays precise, local, and robust across modality shifts, protocol changes, and temporal progression.</p>
+                <p><strong>Method:</strong> The paper introduces M3Bench, a clinically grounded benchmark with 16,276 questions covering diverse anatomy, modalities, and specialties, including single-edit and sequential-edit settings. It then evaluates four representative editing methods across six medical and general VLM backbones to analyze transfer, locality, compositionality, and backbone sensitivity.</p>
+                <p><strong>Results:</strong> The study finds no editing method that dominates across all clinical criteria. Gradient-based editors transfer edits better but suffer from severe locality violations, while memory-based methods preserve locality more effectively yet struggle with compositional generalization and show high sensitivity to the underlying backbone; the extracted abstract does not include one overall winning score.</p>
+                <p><strong>Conclusion:</strong> The practical lesson is that editing medical VLMs is not a solved patching problem, it is a reliability tradeoff problem. For healthcare and other regulated multimodal deployments, stronger domain-specific benchmarks may matter more than marginal gains from another editing algorithm.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2607.04963" target="_blank">STAPO: Selective Trajectory-Aware Policy Optimization for LLM Agent Training</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.04963</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 65 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Post-training for agents is becoming more trajectory-aware, and this paper targets one of the most common real failures, losing the plot halfway through a long interaction. It matters now because agent builders are shifting from final-outcome rewards toward step selection and credit assignment that better matches long-horizon behavior.</p>
+                <p><strong>Problem:</strong> Long-horizon RL for LLM agents suffers from sparse, delayed rewards, so the model may drift away from the task goal at intermediate steps without getting corrected. Prior entropy-based uncertainty heuristics are noisy because they mix true decision unreliability with the inherent complexity of the current state.</p>
+                <p><strong>Method:</strong> STAPO introduces normalized entropy to detect steps whose confidence is abnormally poor relative to the agent&#x27;s own typical behavior in similar states. On top of that signal, it applies a hierarchical group-based RL objective with trajectory-aware rewards and trajectory-independent penalties so the agent can repair neglected steps without destabilizing training.</p>
+                <p><strong>Results:</strong> The abstract reports extensive experiments on ALFWorld, WebShop, and other benchmarks, with consistent gains over prior training approaches. The extracted text does not surface exact aggregate percentages, so the reliable claim here is broad multi-benchmark improvement tied to better handling of trajectory neglect rather than a single headline metric.</p>
+                <p><strong>Conclusion:</strong> For agent training, this paper is valuable because it focuses on where the trajectory breaks, not just whether the final episode succeeds. That is a useful direction for teams trying to improve long-horizon tool use without exploding training cost.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2607.05123" target="_blank">ASSEMCAD: Production-Ready CAD Assembly Generation from Natural Language</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.05123</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 64 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> Text-to-CAD is moving beyond single parts, and that matters for real manufacturing workflows where assemblies, interfaces, and physical constraints are the actual bottleneck. The paper is especially relevant for applied generative design because it turns language-to-geometry into a structured engineering pipeline rather than a one-shot code generation trick.</p>
+                <p><strong>Problem:</strong> Generating one CAD part from text is now feasible, but real mechanical products require assemblies with multiple interacting components, valid mates, and engineering consistency. Directly asking an LLM to emit executable CAD code does not reliably enforce assembly relations, reuse, or physical validity across components.</p>
+                <p><strong>Method:</strong> AssemCAD first represents the target as an explicit assembly specification with typed parts, geometry-backed ports, executable mates, and engineering axioms. A deterministic port-and-mate assembly library then executes those symbolic relations, which makes the resulting design interpretable, verifiable, and reusable instead of burying everything in monolithic CAD code.</p>
+                <p><strong>Results:</strong> The abstract positions AssemCAD as a production-ready framework and emphasizes mechanically valid, reusable assembly generation, but the extracted text does not include benchmark names or numerical improvements. That means the evidence visible here is the stronger problem formulation and deterministic execution path, with full quantitative comparison likely deferred to the paper body.</p>
+                <p><strong>Conclusion:</strong> This is a promising direction for industrial generative design because it treats structure and constraints as first-class objects. For enterprise applications, that is much closer to how CAD automation needs to work than pure text-to-code generation.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2607.04758" target="_blank">AgenticPD: A Stage-Aware Agentic Framework for Physical Design QoR Optimization</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.04758</span>
+                <span class="date">2026-07-08</span>
+                <span class="date">Heat Score: 63 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> EDA is an unusually good fit for agent systems because the workflow is expensive, multi-stage, and full of reusable intermediate state, and this paper leans into that structure. It deserves attention because it shows agent framing can improve a real engineering optimization loop rather than just a browser or coding benchmark.</p>
+                <p><strong>Problem:</strong> Physical design QoR optimization is costly because each design-stage choice affects downstream timing, power, and area, and naive search requires repeated full-flow EDA runs. Flat parameter tuning or generic LLM script generation misses the staged nature of the workflow and wastes compute by failing to reuse intermediate progress.</p>
+                <p><strong>Method:</strong> AgenticPD organizes optimization around stage boundaries in the physical design flow. A Judge Agent steers global search, stage-specialized agents make local decisions with stage-local tools, and the harness maintains structured observations, execution history, and checkpoint reuse so new candidates can branch from prior intermediate states instead of restarting the full flow.</p>
+                <p><strong>Results:</strong> Across the reported baselines, AgenticPD achieves strong post-route timing while staying competitive on power and area. The abstract does not reveal the full QoR table or exact deltas, but it clearly claims end-to-end optimization gains at signoff-level evaluation rather than on proxy stage metrics alone.</p>
+                <p><strong>Conclusion:</strong> The paper is a good example of agent architecture aligned to the underlying engineering process. For industrial AI, the key lesson is that workflow-aware decomposition and state reuse may deliver more value than asking a general-purpose agent to optimize the whole flow in one shot.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/join/discord" target="_blank">join/discord</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending Model model with a specialized downstream purpose rather than just a generic release. Based on the available model-card signals, it appears aimed at a concrete task that teams can plug into real product workflows.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/inference/models" target="_blank">inference/models</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/settings/hardware" target="_blank">settings/hardware</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF" target="_blank">empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>1683711</td>
+                <td>1749</td>
+                <td>2026-06-28T17:05:20.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 1683711 downloads, 1749 likes.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/tencent/Hy3" target="_blank">tencent/Hy3</a></td>
+                <td>text-generation</td>
+                <td>121</td>
+                <td>484</td>
+                <td>2026-07-06T14:09:24.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 121 downloads, 484 likes.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">zai-org/GLM-5.2</a></td>
+                <td>text-generation</td>
+                <td>281584</td>
+                <td>3587</td>
+                <td>2026-07-02T08:08:14.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a GLM-series text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 281584 downloads, 3587 likes.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/baidu/Unlimited-OCR" target="_blank">baidu/Unlimited-OCR</a></td>
+                <td>image-text-to-text</td>
+                <td>1084945</td>
+                <td>1829</td>
+                <td>2026-07-03T05:15:09.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 1084945 downloads, 1829 likes.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/InternScience/Agents-A1" target="_blank">InternScience/Agents-A1</a></td>
+                <td>text-generation</td>
+                <td>14723</td>
+                <td>372</td>
+                <td>2026-07-03T07:19:00.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 14723 downloads, 372 likes.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/google/tabfm-1.0.0-pytorch" target="_blank">google/tabfm-1.0.0-pytorch</a></td>
+                <td>tabular-classification</td>
+                <td>9458</td>
+                <td>286</td>
+                <td>2026-07-04T06:08:26.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 9458 downloads, 286 likes.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B-GGUF" target="_blank">deepreinforce-ai/Ornith-1.0-35B-GGUF</a></td>
+                <td>text-generation</td>
+                <td>502663</td>
+                <td>779</td>
+                <td>2026-06-25T14:31:04.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 502663 downloads, 779 likes.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4" target="_blank">nvidia/Qwen3.6-27B-NVFP4</a></td>
+                <td>text-generation</td>
+                <td>538687</td>
+                <td>314</td>
+                <td>2026-06-30T14:40:07.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 538687 downloads, 314 likes.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/AliesTaha/fable-traces" target="_blank">AliesTaha/fable-traces</a></td>
+                <td>text-generation</td>
+                <td>3886</td>
+                <td>184</td>
+                <td>2026-07-04T20:47:18.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 3886 downloads, 184 likes.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF" target="_blank">yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF</a></td>
+                <td>text-generation</td>
+                <td>384383</td>
+                <td>1073</td>
+                <td>2026-06-19T09:31:48.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Gemma-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 384383 downloads, 1073 likes.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>2823988</td>
+                <td>2551</td>
+                <td>2026-04-17T02:59:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 2823988 downloads, 2551 likes.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark" target="_blank">deepseek-ai/DeepSeek-V4-Pro-DSpark</a></td>
+                <td>text-generation</td>
+                <td>15538</td>
+                <td>424</td>
+                <td>2026-07-04T03:14:46.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a DeepSeek-family text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 15538 downloads, 424 likes.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/bradautomates/claude-video" target="_blank">bradautomates/claude-video</a></td>
+                <td>⭐ 5,128</td>
+                <td>Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/kyutai-labs/pocket-tts" target="_blank">kyutai-labs/pocket-tts</a></td>
+                <td>⭐ 6,140</td>
+                <td>A TTS that fits in your CPU (and pocket)</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is a speech or audio project: A TTS that fits in your CPU (and pocket). It can support transcription, voice generation, dubbing, or conversational audio products.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank">hesreallyhim/awesome-claude-code</a></td>
+                <td>⭐ 49,100</td>
+                <td>A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable </td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a></td>
+                <td>⭐ 50,312</td>
+                <td>AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/langbot-app/LangBot" target="_blank">langbot-app/LangBot</a></td>
+                <td>⭐ 16,743</td>
+                <td>Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integr</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Production-grade platform for building agentic IM bots - 生产级多平台智能机器人开发平台/ Agent、知识库编排、插件系统 / Bots for Discord / Slack / LINE / Telegram / WeChat(企业微信, 企微智能机器人, 公众号) / 飞书 / 钉钉 / QQ / Matrix e.g. Integrated with ChatGPT(GPT), DeepSeek, Dify, n8n, Langflow, Coze, Claude, Gemini, GLM, Ollama, SiliconFlow, Moonshot, openclaw / hermes agent, deerflow. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/XiaoYouChR/Ghost-Downloader-3" target="_blank">XiaoYouChR/Ghost-Downloader-3</a></td>
+                <td>⭐ 5,700</td>
+                <td>An AI-boost cross-platform multi-protocol fluent-design concurrent downloader built with Python &amp; Qt.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides an AI-boost cross-platform multi-protocol fluent-design concurrent downloader built with Python &amp; Qt. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/anthropics/claude-plugins-official" target="_blank">anthropics/claude-plugins-official</a></td>
+                <td>⭐ 31,752</td>
+                <td>Official, Anthropic-managed directory of high quality Claude Code Plugins.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Official, Anthropic-managed directory of high quality Claude Code Plugins. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/p1ngul1n0/blackbird" target="_blank">p1ngul1n0/blackbird</a></td>
+                <td>⭐ 6,832</td>
+                <td>An OSINT tool to search for accounts by username and email in social networks.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides an OSINT tool to search for accounts by username and email in social networks. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/maziyarpanahi/openmed" target="_blank">maziyarpanahi/openmed</a></td>
+                <td>⭐ 4,284</td>
+                <td>Local-first healthcare AI: clinical NER &amp; HIPAA PII de-identification that runs 100% on-device. 1,000+ medical models, 12 languages, Apple MLX + Python, no cloud, no patient data leaving your network.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides local-first healthcare AI: clinical NER &amp; HIPAA PII de-identification that runs 100% on-device. 1,000+ medical models, 12 languages, Apple MLX + Python, no cloud, no patient data leaving your network. Apache-2.0. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/cheahjs/free-llm-api-resources" target="_blank">cheahjs/free-llm-api-resources</a></td>
+                <td>⭐ 26,200</td>
+                <td>A list of free LLM inference resources accessible via API.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an inference or serving project: A list of free LLM inference resources accessible via API. It can reduce deployment cost, improve latency, or serve models more efficiently.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Enterprise agents are getting narrower, safer, and more workflow-native</h3>
+            <p>What: The strongest cross-source signal today is not generic &#x27;AI agents&#x27; but domain-scoped agents with hard boundaries around tools and actions. Why now: CareConnect (2607.05055), Medi-Gemma (2607.04907), Docx-CLI on HN, and LangBot on GitHub all point toward agents embedded in real business systems instead of standalone chat demos. Signal: the stack is converging on tool orchestration, deterministic routing, retrieval grounding, and policy guardrails as core product requirements. So what: for enterprise deployment, especially in regulated settings like healthcare or document workflows, reliability architecture is becoming a bigger differentiator than raw model cleverness.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Verification, trajectory control, and evaluation are becoming the new post-training frontier</h3>
+            <p>What: A big share of today&#x27;s research energy is going into judging, correcting, and training long-horizon behavior rather than just generating better first-pass answers. Why now: LLM-as-a-Verifier (2607.05391), STAPO (2607.04963), Reason-Reward-Refine (2607.05199), and AgentGym2 (2607.05174) all attack different pieces of the same problem, scoring candidate trajectories, detecting drift, improving credit assignment, and measuring messy real-world execution. Signal: the field is moving toward agent stacks with explicit feedback loops and stronger diagnostics. So what: teams building coding agents, enterprise copilots, or automation workflows should expect verifier modules and harder evals to become standard infrastructure.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Efficiency and edge-ready media tooling are translating model progress into product economics</h3>
+            <p>What: Today&#x27;s product-facing momentum is around making powerful generation cheaper to serve and easier to ship in full media workflows. Why now: DSpark (2607.05147) shows 60% to 85% serving-speed gains in live traffic, while Kokoro-style CPU TTS on HN, Pocket-TTS on GitHub, and multimodal projects like claude-video show demand for lightweight voice and video components. Signal: the market is rewarding systems work that lowers latency, reduces GPU dependence, and bundles multimodal primitives into usable pipelines. So what: this is directly relevant to Charlie&#x27;s interests in training content, customer-facing media, and multimodal enterprise applications where cost and packaging matter as much as model quality.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Structured generation is pushing deeper into engineering and industrial design</h3>
+            <p>What: Generative AI is increasingly being shaped around explicit constraints, state, and reusable intermediate representations in technical domains. Why now: AssemCAD (2607.05123) models assemblies through ports, mates, and engineering axioms, while AgenticPD (2607.04758) decomposes EDA optimization by stage and checkpoint reuse. Signal: instead of free-form text generation everywhere, applied systems are wrapping models in symbolic or process-aware structure to make outputs verifiable and reusable. So what: for enterprise AI teams, especially those building vertical copilots, structured generation may be the difference between flashy demos and deployable engineering tools.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-07-08 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-07-08-08-00.html">https://chenlijn.github.io/ai-daily/2026-07-08-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
