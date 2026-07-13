@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-07-14</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-07-14 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://github.com/morganwilliscloud/billai-bass" target="_blank">Show HN: BillAI Bass, an AI-Powered Big Mouth Billy Bass Using Strands Agents</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 51 points</span>
+            </div>
+            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://insideai.news/news/ai-safety/mits-new-method-flags-ai-models-trained-on-child-abuse-imagery-without-generating-it/3869/" target="_blank">MIT&#x27;s New Method Flags AI Models Trained on CASM Without Generating It</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 10 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://nobie.com" target="_blank">Show HN: Nobie – an Excel-compatible runtime for agents and humans</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 68 points</span>
+            </div>
+            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py" target="_blank">Show HN: I implemented a neural network in SQL</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 43 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/thephw/claude-meseeks" target="_blank">Claude is just Mr. Meeseeks</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 65 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://get-inscribe.com/blog/apple-speech-api-benchmark.html" target="_blank">Apple&#x27;s new SpeechAnalyzer API, benchmarked against Whisper and its predecessor</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 404 points</span>
+            </div>
+            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2607.08964" target="_blank">Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.08964</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 92 (Very High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Most agent benchmarks test short terminal tasks and grade only the final answer, so they miss partial progress, debugging ability, and long-horizon planning failures. This paper targets the harder regime where agents must work for minutes to hours across open-ended software, scientific, and multimodal tasks with meaningful intermediate steps.</p>
+                <p><strong>Method:</strong> The authors build Long-Horizon-Terminal-Bench, a 46-task benchmark across nine categories. Each task keeps the terminal-style executable setup of prior work, but is decomposed into fine-grained subtasks with dense reward-based grading so evaluators can measure how far an agent gets, not just whether it fully solves the task.</p>
+                <p><strong>Results:</strong> Across 15 frontier models, runs average 9.9M tokens, 231 episodes, and 85.3 minutes per task, which makes the benchmark substantially harder than earlier terminal suites. Even the best model reaches only 15.2% pass@1 at a 0.95 partial-reward threshold and 10.9% at a perfect 1.0 threshold; the mean across models is 4.3% and 1.7% respectively.</p>
+                <p><strong>Conclusion:</strong> This is a useful benchmark paper for anyone building coding or tool-using agents because it exposes how weak current systems still are once tasks become long, stateful, and iterative. The dense-grading design is especially valuable for post-training and evaluation because it can support finer reward signals than pass/fail tests.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2607.09493" target="_blank">Shared Selective Persistent Memory for Agentic LLM Systems</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09493</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 78 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, enterprise, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Code-generating agent systems repeatedly lose useful context between sessions, but simply storing full chat histories makes generation noisy, stale, and expensive. The paper focuses on enterprise-style workflows where agents need to preserve schemas, constraints, and tool settings without dragging along irrelevant reasoning traces.</p>
+                <p><strong>Method:</strong> It proposes shared selective persistent memory, which stores four reusable context classes: task specifications, data schemas, tool configurations, and output constraints. The memory is packaged in shareable workspaces with role-based access control, and paired with a zero-token data refresh mechanism so generated artifacts can be updated from fresh runtime data without re-invoking the LLM.</p>
+                <p><strong>Results:</strong> In three enterprise scenarios, the system reaches 96% task completion versus 79% without memory and 71% with naive full-history persistence. Zero-token refresh cuts recurring update time by 14x, summary-driven generation reduces token cost by 97x versus raw-data injection, and a replication on four public datasets succeeds in 12/12 zero-refresh trials.</p>
+                <p><strong>Conclusion:</strong> The practical message is strong: selective memory beats both forgetting everything and keeping everything. For enterprise agent products, this points toward shared structured memory and executable artifacts as a better design pattern than ever-growing conversation logs.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2607.09521" target="_blank">SAGEAgent: A Self-Evolving Agent for Cost-Aware Modality Acquisition in Multimodal Survival Prediction</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09521</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 78 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, multimodal, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Clinical multimodal survival models usually assume every patient gets the full diagnostic workup, even though later modalities can be costly, invasive, or slow. This paper tackles the sequential decision problem of deciding whether each additional modality is worth acquiring for a specific patient while preserving predictive quality.</p>
+                <p><strong>Method:</strong> SAGEAgent is an LLM-based clinical agent that chooses modalities step by step based on the patient&#x27;s evolving state. It combines tool-generated textual summaries of numerical predictors, episodic memory over similar past cases, and semantic memory that accumulates reusable decision patterns, so the agent can trade off accuracy against acquisition burden.</p>
+                <p><strong>Results:</strong> On a glioma cohort built from TCGA-LGG, TCGA-GBM, and BraTS with four diagnostic modalities, SAGEAgent maintains competitive survival-prediction performance while reducing average acquisition burden by 55%. The abstract does not expose the full metric table, but the reported gain is specifically lower diagnostic burden at comparable predictive accuracy.</p>
+                <p><strong>Conclusion:</strong> This is an interesting multimodal-healthcare agent paper because it reframes missing-modality handling as active acquisition policy learning. The broader engineering lesson also transfers outside medicine: agentic systems can decide when extra data collection is worth its cost instead of assuming more context is always better.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2607.09322" target="_blank">LongMedBench: Benchmarking Medical Agents for Long-Horizon Clinical Decision-Making</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09322</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 76 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Medical-agent evaluations often over-index on short QA and isolated tool use, while real clinical care is longitudinal and depends on reasoning across repeated visits, notes, tests, and treatments. The paper addresses the lack of realistic benchmarks for long-horizon clinical decision-making with persistent patient history.</p>
+                <p><strong>Method:</strong> The authors construct LongMedBench from MIMIC-IV admission records and clinical notes, converting them into time-series event streams and long-context memory datasets for multi-session agent interaction. They also define a three-part evaluation taxonomy covering fact-based QA, temporal reasoning, and full long-horizon decision-making.</p>
+                <p><strong>Results:</strong> LongMedBench contains 335 patients, with 19.72 inpatient visits per patient on average and 44.91 medical events per visit. Experiments show recent LLMs can use explicit timestamps reasonably well, but struggle with implicit temporal inference; RAG and memory help retrieval tasks, while decision quality remains strongly tied to immediate context and the underlying model.</p>
+                <p><strong>Conclusion:</strong> The benchmark makes a useful distinction between retrieving historical facts and making durable longitudinal decisions, which many medical-agent demos blur together. For healthcare AI teams, it suggests long-context infrastructure alone is not enough; better temporal reasoning and decision policies are still bottlenecks.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2607.09474" target="_blank">ProofCouncil: An LLM Agent for Solving Open Mathematical Problems</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09474</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 74 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, enterprise. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> LLMs are starting to contribute to research-level mathematics, but raw prompting is still too brittle for genuine open-problem solving. This paper addresses the gap between short formal-math benchmarks and the messier workflow real mathematicians use when proposing, criticizing, and refining proofs.</p>
+                <p><strong>Method:</strong> ProofCouncil uses an author-critic style agent architecture tailored to mathematical problem solving. The system was built for the FirstProof challenge and is accompanied by an open-source agent-building library, with the workflow designed to iteratively draft arguments, critique them, and improve candidate solutions.</p>
+                <p><strong>Results:</strong> On the second batch of FirstProof, ProofCouncil produced submissions for 6 of 10 problems that referees judged correct up to at most minor revisions, which the paper says was the best performance among participating teams. On 30 additional open problems, 5 of 21 solutions with human feedback were judged completely correct, 2 more were promising pending verification, and 8 showed useful partial progress.</p>
+                <p><strong>Conclusion:</strong> The paper is notable less as a general-purpose theorem prover and more as evidence that agent workflows can produce nontrivial progress on authentic open problems. It is a meaningful signal for AI-for-science work because it shows structured critique loops can matter as much as base-model capability.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2607.09059" target="_blank">ARCANA: A Reflective Multi-Agent Program Synthesis Framework for ARC-AGI-2 Reasoning</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09059</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 68 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, generation, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> ARC-AGI-2 tasks are hard because systems must infer abstract transformations under strict test-time and hardware limits, and one-shot neural predictions often fail when symbolic structure matters. The paper targets the challenge of combining perception, search, and self-correction in a resource-constrained reasoning loop.</p>
+                <p><strong>Method:</strong> ARCANA is a multi-agent program-synthesis framework with four main roles: perceptual grounding, hypothesis generation, symbolic execution, and reflective refinement. A grounding agent converts raw grids into object-centric scene graphs, a program policy proposes DSL candidates, a symbolic executor checks them against demonstrations, and a reflective agent feeds failures back through a shared differentiable blackboard controlled by a meta-controller.</p>
+                <p><strong>Results:</strong> The abstract says the design improves reasoning efficiency and solution quality on challenging ARC-AGI-2 transformations, but it does not disclose the full score table, baselines, or margins in the visible excerpt. What is clear is that the claimed gain comes from structured search plus iterative correction rather than from scaling a single monolithic model.</p>
+                <p><strong>Conclusion:</strong> For agent researchers, ARCANA is a clean example of where decomposition still matters: perception, symbolic verification, and reflection are treated as separate competencies. That makes it relevant to anyone exploring hybrid neuro-symbolic reasoning or test-time scaling under tight compute budgets.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2607.09142" target="_blank">MedRealMM: A Real-World Multimodal Benchmark for Chinese Online Medical Consultation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09142</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 68 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): multimodal, post_training, agent. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It is relevant to Charlie’s priority areas around generative and multimodal AI.</p>
+                <p><strong>Problem:</strong> Existing medical-consultation benchmarks are often synthetic, text-only, or evaluated with metrics that do not reflect clinical usefulness. This paper addresses the mismatch between benchmark design and real Chinese online consultation settings, where doctors must interpret both multimodal evidence and patient dialogue.</p>
+                <p><strong>Method:</strong> The authors introduce MedRealMM, a benchmark built from de-identified patient-doctor interactions from a nationwide Chinese internet hospital. It uses a Multimodal Clinical Challenge Point extraction framework to surface clinically important evaluation targets and explicitly includes patient-uploaded medical images alongside consultation text.</p>
+                <p><strong>Results:</strong> The visible abstract excerpt confirms the benchmark is large-scale and grounded in real consultations, but it does not expose the full model leaderboard or exact metric deltas in the snippet available here. The core contribution is therefore the dataset and evaluation design rather than a single state-of-the-art performance claim.</p>
+                <p><strong>Conclusion:</strong> This benchmark matters because healthcare LLM evaluation is moving away from sanitized QA toward messier real-world consultation flows. For multimodal medical products in China, MedRealMM could become a more realistic test bed for safety, usefulness, and clinically grounded response quality.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2607.09153" target="_blank">KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09153</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 68 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, efficiency, post_training. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Process reward models are helpful for multi-agent test-time scaling, but long trajectories make them expensive because standard text-based PRMs repeatedly re-encode the full rollout from scratch. The paper addresses the inference bottleneck that appears when reward scoring becomes quadratic in sequence length and dominates long-context runs.</p>
+                <p><strong>Method:</strong> KV-PRM reuses the KV cache naturally produced during generation instead of reprocessing the entire trajectory as text on every scoring call. In effect, it turns PRM evaluation into a cache-aware procedure that is better aligned with how long multi-agent rollouts are actually computed.</p>
+                <p><strong>Results:</strong> The abstract states that KV-PRM is designed to remove the heavy text re-encoding cost and make PRM-guided test-time scaling practical for longer contexts. The visible snippet does not include the exact benchmark table or speedup numbers, so the safest reading is that the main reported benefit is substantially lower scoring overhead with retained guidance quality.</p>
+                <p><strong>Conclusion:</strong> If the results hold in full experiments, this is an important systems paper for test-time scaling because reward models are only useful when they are cheap enough to stay in the loop. It points toward a broader pattern: agent infrastructure is increasingly being optimized around cache reuse and incremental computation, not just bigger models.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2607.09195" target="_blank">Toward Auditable AI Scientists: A Hypothesis Evolution Protocol for LLM Agents</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09195</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 65 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, generation. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> AI scientist agents can generate hypotheses, run tests, and update beliefs, but those steps are usually buried in opaque logs that are hard for humans or the agent itself to audit. This paper focuses on the missing protocol layer needed to make scientific agent workflows inspectable and trustworthy.</p>
+                <p><strong>Method:</strong> The authors propose the Hypothesis Evolution Protocol, or HEP, which turns hypothesis generation, evaluation, and revision into explicit structured objects rather than free-form hidden traces. That protocol acts as an agent harness for recording how ideas change over time and what evidence caused each update.</p>
+                <p><strong>Results:</strong> From the abstract, the contribution is mainly architectural and procedural: it introduces a concrete auditable workflow for scientific discovery agents. The visible excerpt does not provide a full benchmark table or numeric comparison, so the current evidence is strongest on traceability and process design rather than on a quantified SOTA claim.</p>
+                <p><strong>Conclusion:</strong> The paper is timely because AI-for-science is moving from flashy demos toward demands for provenance, verification, and human oversight. Even outside science, HEP is a useful pattern for any high-stakes agent system where teams need structured records of why the agent changed its mind.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2607.09403" target="_blank">Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.09403</span>
+                <span class="date">2026-07-14</span>
+                <span class="date">Heat Score: 65 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It matches today’s hot direction(s): agent, post_training, efficiency. Its topic resonates with today’s trending model activity on Hugging Face. Its direction is also showing up in today’s GitHub tooling and implementation activity. It overlaps with what the builder community is actively discussing today.</p>
+                <p><strong>Problem:</strong> Automated worldbuilding with LLMs runs into three compounding issues: context grows uncontrollably as the fictional world expands, creativity can drift into inconsistency, and there is rarely an automated quality-control loop. The paper targets long-form creative generation where coherence matters across many interdependent artifacts.</p>
+                <p><strong>Method:</strong> AutoWorldBuilder is a multi-agent system with five linked components, including a structured concept network with conflict detection, a DAG-based batch scheduler, hierarchical context compression, and iterative review. The overall design tries to preserve global consistency while still allowing multiple specialized agents to expand the fictional world in parallel.</p>
+                <p><strong>Results:</strong> The abstract clearly specifies the system design and the problems it aims to solve, but the visible excerpt does not provide the full evaluation numbers, datasets, or human-study outcomes. Based on the available text, the key claim is improved scalability and consistency for collaborative long-form worldbuilding rather than a single benchmark score.</p>
+                <p><strong>Conclusion:</strong> This is a niche but instructive agent paper because creative pipelines often hit the same memory, coordination, and review problems as enterprise document agents. The context-compression and iterative-review ideas could transfer well to long-form content generation, game design tools, and multi-stage marketing asset creation.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/join/discord" target="_blank">join/discord</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a trending Model model with a specialized downstream purpose rather than just a generic release. Based on the available model-card signals, it appears aimed at a concrete task that teams can plug into real product workflows.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/inference/models" target="_blank">inference/models</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/settings/hardware" target="_blank">settings/hardware</a></td>
+                <td>Model</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/tencent/Hy3" target="_blank">tencent/Hy3</a></td>
+                <td>text-generation</td>
+                <td>9157</td>
+                <td>754</td>
+                <td>2026-07-06T14:09:24.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 9157 downloads, 754 likes.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF" target="_blank">empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF</a></td>
+                <td>image-text-to-text</td>
+                <td>1985221</td>
+                <td>2081</td>
+                <td>2026-07-12T00:57:41.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 1985221 downloads, 2081 likes.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">zai-org/GLM-5.2</a></td>
+                <td>text-generation</td>
+                <td>464914</td>
+                <td>3897</td>
+                <td>2026-07-02T08:08:14.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a GLM-series text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 464914 downloads, 3897 likes.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/bottlecapai/ThinkingCap-Qwen3.6-27B" target="_blank">bottlecapai/ThinkingCap-Qwen3.6-27B</a></td>
+                <td>image-text-to-text</td>
+                <td>4909</td>
+                <td>306</td>
+                <td>2026-07-10T13:15:25.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 4909 downloads, 306 likes.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/conradlocke/krea2-identity-edit" target="_blank">conradlocke/krea2-identity-edit</a></td>
+                <td>Model</td>
+                <td>0</td>
+                <td>251</td>
+                <td>2026-07-09T13:51:08.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 0 downloads, 251 likes.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates" target="_blank">froggeric/Qwen-Fixed-Chat-Templates</a></td>
+                <td>Model</td>
+                <td>0</td>
+                <td>886</td>
+                <td>2026-07-03T08:54:29.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family Model for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 0 downloads, 886 likes.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/InternScience/Agents-A1" target="_blank">InternScience/Agents-A1</a></td>
+                <td>text-generation</td>
+                <td>29801</td>
+                <td>524</td>
+                <td>2026-07-09T01:14:45.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 29801 downloads, 524 likes.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF" target="_blank">GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF</a></td>
+                <td>text-generation</td>
+                <td>68714</td>
+                <td>220</td>
+                <td>2026-07-13T14:56:34.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 68714 downloads, 220 likes.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/baidu/Unlimited-OCR" target="_blank">baidu/Unlimited-OCR</a></td>
+                <td>image-text-to-text</td>
+                <td>1506937</td>
+                <td>1963</td>
+                <td>2026-07-03T05:15:09.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 1506937 downloads, 1963 likes.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize" target="_blank">OpenMOSS-Team/MOSS-Transcribe-Diarize</a></td>
+                <td>audio-text-to-text</td>
+                <td>39509</td>
+                <td>161</td>
+                <td>2026-07-12T07:03:41.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for speech recognition. It can transcribe speech into text for meeting notes, call analysis, or voice interfaces. It is already drawing 39509 downloads, 161 likes.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B" target="_blank">nvidia/Nemotron-Labs-Audex-30B-A3B</a></td>
+                <td>text-generation</td>
+                <td>1058</td>
+                <td>142</td>
+                <td>2026-07-08T17:58:05.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 1058 downloads, 142 likes.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive" target="_blank">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a></td>
+                <td>image-text-to-text</td>
+                <td>2512124</td>
+                <td>2710</td>
+                <td>2026-04-17T02:59:21.000Z</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 2512124 downloads, 2710 likes.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/HKUDS/Vibe-Trading" target="_blank">HKUDS/Vibe-Trading</a></td>
+                <td>⭐ 21,705</td>
+                <td>&quot;Vibe-Trading: Your Personal Trading Agent&quot;</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: &quot;Vibe-Trading: Your Personal Trading Agent&quot;. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank">Shubhamsaboo/awesome-llm-apps</a></td>
+                <td>⭐ 119,556</td>
+                <td>100+ AI Agent &amp; RAG apps you can actually run — clone, customize, ship.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: 100+ AI Agent &amp; RAG apps you can actually run — clone, customize, ship. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/Graphify-Labs/graphify" target="_blank">Graphify-Labs/graphify</a></td>
+                <td>⭐ 84,647</td>
+                <td>AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/github/spec-kit" target="_blank">github/spec-kit</a></td>
+                <td>⭐ 120,563</td>
+                <td>💫 Toolkit to help you get started with Spec-Driven Development</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides 💫 Toolkit to help you get started with Spec-Driven Development. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/PrefectHQ/prefect" target="_blank">PrefectHQ/prefect</a></td>
+                <td>⭐ 23,319</td>
+                <td>Prefect is a workflow orchestration framework for building resilient data pipelines in Python.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides prefect is a workflow orchestration framework for building resilient data pipelines in Python. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/FoundationAgents/OpenManus" target="_blank">FoundationAgents/OpenManus</a></td>
+                <td>⭐ 57,370</td>
+                <td>No fortress, purely open ground. OpenManus is Coming.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: No fortress, purely open ground. OpenManus is Coming. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/virattt/ai-hedge-fund" target="_blank">virattt/ai-hedge-fund</a></td>
+                <td>⭐ 61,610</td>
+                <td>An AI Hedge Fund Team</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is a finance-focused AI project: An AI Hedge Fund Team. It can support research, analysis, or decision workflows in financial settings.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/smicallef/spiderfoot" target="_blank">smicallef/spiderfoot</a></td>
+                <td>⭐ 19,575</td>
+                <td>SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides spiderFoot automates OSINT for threat intelligence and mapping your attack surface. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/TauricResearch/TradingAgents" target="_blank">TauricResearch/TradingAgents</a></td>
+                <td>⭐ 92,819</td>
+                <td>TradingAgents: Multi-Agents LLM Financial Trading Framework</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: TradingAgents: Multi-Agents LLM Financial Trading Framework. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/p-e-w/heretic" target="_blank">p-e-w/heretic</a></td>
+                <td>⭐ 26,235</td>
+                <td>Fully automatic censorship removal for language models</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repository provides fully automatic censorship removal for language models. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: UI-grounded and tool-sandboxed agents are the clearest signal today</h3>
+            <p>What: UI-grounded and tool-sandboxed agents are the clearest signal today. Why now: this pattern is visible today in papers like Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading and Shared Selective Persistent Memory for Agentic LLM Systems; HF models such as join/discord and inference/models; repos including HKUDS/Vibe-Trading and Shubhamsaboo/awesome-llm-apps; HN discussions like Show HN: BillAI Bass, an AI-Powered Big Mouth Billy Bass Using Strands Agents and Show HN: Nobie – an Excel-compatible runtime for agents and humans. Signal: The deeper change is that agent quality is now being tested through recovery, state management, and environment interaction, not just single-turn cleverness. The same-day anchors are Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading, Shared Selective Persistent Memory for Agentic LLM Systems, join/discord, inference/models. So what: For enterprise deployment, orchestration, guardrails, memory, and observable rollback paths are becoming as important as the underlying model.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Visual, speech, and document systems are being packaged as practical stacks</h3>
+            <p>What: Visual, speech, and document systems are being packaged as practical stacks. Why now: this pattern is visible today in papers like Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading and Shared Selective Persistent Memory for Agentic LLM Systems; HF models such as empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF and bottlecapai/ThinkingCap-Qwen3.6-27B; repos including Graphify-Labs/graphify; HN discussions like Apple&#x27;s new SpeechAnalyzer API, benchmarked against Whisper and its predecessor. Signal: The important signal is that multimodal capability is being organized into usable modules for creation, understanding, and interaction, rather than staying as isolated benchmarks. The same-day anchors are Long-Horizon-Terminal-Bench: Testing the Limits of Agents on Long-Horizon Terminal Tasks with Dense Reward-Based Grading, Shared Selective Persistent Memory for Agentic LLM Systems, empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF, bottlecapai/ThinkingCap-Qwen3.6-27B. So what: That matters directly for document processing, visual QA, training assets, customer communication, and media-generation pipelines.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: The day&#x27;s open-model energy is in adaptation layers, not a single flagship release</h3>
+            <p>What: The day&#x27;s open-model energy is in adaptation layers, not a single flagship release. Why now: this pattern is visible today in papers like Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review; HF models such as empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF and zai-org/GLM-5.2. Signal: Differentiation is shifting toward fine-tuned variants, serving formats, and task-shaped packaging rather than just announcing one more base model. The same-day anchors are Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review, empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF, zai-org/GLM-5.2. So what: That makes ecosystem fit, adaptation cost, and deployment form factor central to real product selection.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: The day&#x27;s media-generation signal is about controllable image, video, and voice workflows</h3>
+            <p>What: The day&#x27;s media-generation signal is about controllable image, video, and voice workflows. Why now: this pattern is visible today in papers like KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling; HF models such as OpenMOSS-Team/MOSS-Transcribe-Diarize. Signal: The deeper signal is that generative media is now being evaluated as a workflow layer where controllability, editing, and packaging matter as much as novelty. The same-day anchors are KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling, OpenMOSS-Team/MOSS-Transcribe-Diarize. So what: That is directly useful for marketing materials, training videos, spoken assistants, and multimodal customer-facing assets.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-07-14 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-07-14-08-00.html">https://chenlijn.github.io/ai-daily/2026-07-14-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
