@@ -61,25 +61,46 @@
         <h2>📰 Daily News & Tech Buzz</h2>
         <div class="news-list">
         <div class="news-item">
-            <h3><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank">Our position on open-weights models</a></h3>
+            <h3><a href="https://github.com/openai/codex-security" target="_blank">OpenAI just open-sourced Codex Security</a></h3>
             <div class="news-meta">
-                <span class="points">⬆ 275 points</span>
+                <span class="points">⬆ 274 points</span>
             </div>
-            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+            <p class="summary">OpenAI released a dedicated Codex Security SDK and CLI, pushing secure code review and policy scanning closer to the coding-agent toolchain itself. That matters because teams are starting to treat security checks as a first-class agent step, not a bolt-on review after code is already generated.</p>
         </div>
         <div class="news-item">
-            <h3><a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md" target="_blank">Benchmarking Opus 5 on SlopCodeBench</a></h3>
+            <h3><a href="https://sebastianraschka.com/blog/2026/kimi-k3-architecture-notes.html" target="_blank">Kimi K3 Architecture Overview and Notes</a></h3>
             <div class="news-meta">
-                <span class="points">⬆ 9 points</span>
+                <span class="points">⬆ 272 points</span>
             </div>
-            <p class="summary">The post argues that good agents should spend more effort on reading, retrieval, and problem framing before they start acting. That is interesting because it reframes agent quality as a workflow design problem rather than just a bigger-model problem.</p>
+            <p class="summary">This post breaks down Kimi K3’s architecture choices, which is exactly the kind of analysis builders want once a strong open model appears and people need to decide whether to fine-tune it, serve it, or copy its design ideas. The signal today is that the community is moving quickly from hype to implementation details like attention design, scaling strategy, and deployability.</p>
         </div>
         <div class="news-item">
-            <h3><a href="https://usefeyn.com/blog/feynobg/" target="_blank">Show HN: FeyNoBg – Automatic background removal model and training library</a></h3>
+            <h3><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses-with-claude" target="_blank">Discovering Cryptographic Weaknesses with Claude</a></h3>
             <div class="news-meta">
-                <span class="points">⬆ 80 points</span>
+                <span class="points">⬆ 163 points</span>
             </div>
-            <p class="summary">This story is getting traction because it exposes a concrete builder concern, whether around tooling, infrastructure, distribution, or product strategy. For the AI crowd, the useful signal is less the headline itself and more what it says about where technical and commercial attention is concentrating right now.</p>
+            <p class="summary">Anthropic’s research story is about using Claude to help find real cryptographic weaknesses, which turns LLM capability from generic assistance into a targeted security workflow. It is worth watching because it suggests high-end models are becoming more useful for specialist reasoning tasks where evidence, iteration, and domain expertise all matter.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://modelcontextprotocol.io/specification/2026-07-28/" target="_blank">MCP 2026-07-28 Specification: transport going stateless</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 94 points</span>
+            </div>
+            <p class="summary">A new MCP spec revision focusing on stateless transport is getting attention because agent ecosystems now need cleaner interoperability across tools, servers, and runtimes. For product teams, protocol maturity matters almost as much as model quality, since integration friction is often what slows real deployment.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/anthropics/cryptography-research-demo" target="_blank">Anthropic publishes a practical key-recovery attack on HAWK-256</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 46 points</span>
+            </div>
+            <p class="summary">This is a concrete cryptography result, not just a model demo: Anthropic published a practical key-recovery attack on HAWK-256 and paired it with reproducible research code. The broader AI signal is that labs are increasingly showcasing models in rigorous security-analysis roles instead of only conversational or coding benchmarks.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://tomrenner.com/posts/banning-ai-will-not-make-it-go-away/" target="_blank">Banning AI will not make it go away</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 17 points</span>
+            </div>
+            <p class="summary">The essay argues that blanket bans are a weak response to a technology that is already diffusing through everyday software and work. It is relevant because enterprise adoption is entering the governance phase, where the real question is how to control use, permissions, and accountability rather than whether the tools exist at all.</p>
         </div></div>
 
         <h2>📄 Top 10 arXiv Papers</h2>
@@ -262,168 +283,168 @@
     
             <tr>
                 <td>1</td>
-                <td><a href="https://huggingface.co/join/discord" target="_blank">join/discord</a></td>
-                <td>Model</td>
-                <td>N/A</td>
-                <td>N/A</td>
-                <td>N/A</td>
+                <td><a href="https://huggingface.co/moonshotai/Kimi-K3" target="_blank">moonshotai/Kimi-K3</a></td>
+                <td>image-text-to-text</td>
+                <td>99.2k</td>
+                <td>7.94k</td>
+                <td>Updated 1 day ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This is a trending Model model with a specialized downstream purpose rather than just a generic release. Based on the available model-card signals, it appears aimed at a concrete task that teams can plug into real product workflows.</td>
+                <td colspan="6" class="desc-cell">A frontier multimodal model that sits right at the intersection of open-weight competition and practical assistant deployment. It matters today because builders are actively studying it for screenshot reasoning, document understanding, and high-end multimodal chat workflows.</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><a href="https://huggingface.co/inference/models" target="_blank">inference/models</a></td>
-                <td>Model</td>
-                <td>N/A</td>
-                <td>N/A</td>
-                <td>N/A</td>
+                <td><a href="https://huggingface.co/baidu/Unlimited-OCR" target="_blank">baidu/Unlimited-OCR</a></td>
+                <td>image-text-to-text</td>
+                <td>2.69M</td>
+                <td>3.41k</td>
+                <td>Updated about 16 hours ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
+                <td colspan="6" class="desc-cell">A document-centric VLM/OCR model aimed at extracting text and structure from complex images, scans, and forms. Its huge download volume makes it one of the clearest signs that document AI remains a very concrete production market, not just a research niche.</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td><a href="https://huggingface.co/settings/hardware" target="_blank">settings/hardware</a></td>
-                <td>Model</td>
-                <td>N/A</td>
-                <td>N/A</td>
-                <td>N/A</td>
+                <td><a href="https://huggingface.co/poolside/Laguna-S-2.1" target="_blank">poolside/Laguna-S-2.1</a></td>
+                <td>text-generation</td>
+                <td>67.3k</td>
+                <td>798</td>
+                <td>Updated 1 day ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows.</td>
+                <td colspan="6" class="desc-cell">A coding-oriented text model from Poolside, relevant because software agents still need strong long-context code synthesis and repository reasoning. It fits today’s broader shift toward specialized developer models rather than one-size-fits-all chat checkpoints.</td>
             </tr>
             <tr>
                 <td>4</td>
-                <td><a href="https://huggingface.co/moonshotai/Kimi-K3" target="_blank">moonshotai/Kimi-K3</a></td>
+                <td><a href="https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF" target="_blank">DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF</a></td>
                 <td>image-text-to-text</td>
-                <td>2850</td>
-                <td>6002</td>
-                <td>2026-07-27T16:29:18.000Z</td>
+                <td>737k</td>
+                <td>846</td>
+                <td>Updated about 23 hours ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 2850 downloads, 6002 likes.</td>
+                <td colspan="6" class="desc-cell">A community-packaged Qwen variant in GGUF form, showing how fast the open ecosystem repackages strong bases into more deployable local formats. The interest here is less about the branding and more about how quickly power users adapt popular families for private inference and custom workflows.</td>
             </tr>
             <tr>
                 <td>5</td>
-                <td><a href="https://huggingface.co/baidu/Unlimited-OCR" target="_blank">baidu/Unlimited-OCR</a></td>
-                <td>image-text-to-text</td>
-                <td>2645773</td>
-                <td>3327</td>
-                <td>2026-07-23T09:16:19.000Z</td>
+                <td><a href="https://huggingface.co/upstage/Solar-Open2-250B" target="_blank">upstage/Solar-Open2-250B</a></td>
+                <td>text-generation</td>
+                <td>4.8k</td>
+                <td>644</td>
+                <td>Updated 1 day ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 2645773 downloads, 3327 likes.</td>
+                <td colspan="6" class="desc-cell">A very large open text model positioned for high-end generation and reasoning workloads. It is worth tracking because open families are now competing not only on benchmark quality but also on whether enterprises can actually adopt them as alternatives to closed APIs.</td>
             </tr>
             <tr>
                 <td>6</td>
-                <td><a href="https://huggingface.co/poolside/Laguna-S-2.1" target="_blank">poolside/Laguna-S-2.1</a></td>
+                <td><a href="https://huggingface.co/Nanbeige/Nanbeige4.2-3B" target="_blank">Nanbeige/Nanbeige4.2-3B</a></td>
                 <td>text-generation</td>
-                <td>63605</td>
-                <td>754</td>
-                <td>2026-07-27T11:25:04.000Z</td>
+                <td>18.9k</td>
+                <td>526</td>
+                <td>Updated about 11 hours ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 63605 downloads, 754 likes.</td>
+                <td colspan="6" class="desc-cell">A compact 3B-class agentic model, directly aligned with today’s arXiv interest in small but capable local assistants. For Charlie’s use cases, this is the kind of model that could matter for private enterprise deployment, lightweight agents, and low-cost experimentation.</td>
             </tr>
             <tr>
                 <td>7</td>
-                <td><a href="https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF" target="_blank">DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF</a></td>
-                <td>image-text-to-text</td>
-                <td>634146</td>
-                <td>747</td>
-                <td>2026-07-27T07:46:59.000Z</td>
+                <td><a href="https://huggingface.co/microsoft/Mage-Flow" target="_blank">microsoft/Mage-Flow</a></td>
+                <td>text-to-image</td>
+                <td>2.01k</td>
+                <td>415</td>
+                <td>Updated 6 days ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This is a Qwen-family image text to text for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 634146 downloads, 747 likes.</td>
+                <td colspan="6" class="desc-cell">A text-to-image release from Microsoft that points to continued investment in controllable image generation stacks. It matters for marketing and content teams because production image systems now compete on workflow fit and controllability, not only raw visual quality.</td>
             </tr>
             <tr>
                 <td>8</td>
-                <td><a href="https://huggingface.co/upstage/Solar-Open2-250B" target="_blank">upstage/Solar-Open2-250B</a></td>
+                <td><a href="https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev" target="_blank">Kwaipilot/KAT-Coder-V2.5-Dev</a></td>
                 <td>text-generation</td>
-                <td>3761</td>
-                <td>628</td>
-                <td>2026-07-27T10:30:02.000Z</td>
+                <td>6.28k</td>
+                <td>286</td>
+                <td>Updated about 19 hours ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 3761 downloads, 628 likes.</td>
+                <td colspan="6" class="desc-cell">A code-generation model aimed at developer productivity, showing that coding remains one of the most commercially intense specialization lanes. The signal is that code assistants are still being optimized as distinct products rather than treated as a generic byproduct of general LLMs.</td>
             </tr>
             <tr>
                 <td>9</td>
-                <td><a href="https://huggingface.co/Nanbeige/Nanbeige4.2-3B" target="_blank">Nanbeige/Nanbeige4.2-3B</a></td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">zai-org/GLM-5.2</a></td>
                 <td>text-generation</td>
-                <td>16518</td>
-                <td>492</td>
-                <td>2026-07-27T07:41:07.000Z</td>
+                <td>1.27M</td>
+                <td>4.6k</td>
+                <td>Updated 27 days ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 16518 downloads, 492 likes.</td>
+                <td colspan="6" class="desc-cell">A flagship Chinese open model family with very large usage momentum on Hugging Face. Its continued popularity shows that the Chinese model ecosystem remains strategically important for multilingual enterprise deployment, local adaptation, and open competition.</td>
             </tr>
             <tr>
                 <td>10</td>
-                <td><a href="https://huggingface.co/microsoft/Mage-Flow" target="_blank">microsoft/Mage-Flow</a></td>
-                <td>text-to-image</td>
-                <td>1691</td>
-                <td>385</td>
-                <td>2026-07-23T03:15:05.000Z</td>
+                <td><a href="https://huggingface.co/owensong/Inflect-Micro-v2" target="_blank">owensong/Inflect-Micro-v2</a></td>
+                <td>text-to-speech</td>
+                <td>645</td>
+                <td>263</td>
+                <td>Updated about 18 hours ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for image generation. It can generate images from text prompts or support image editing workflows. It is already drawing 1691 downloads, 385 likes.</td>
+                <td colspan="6" class="desc-cell">A lightweight TTS model for speech synthesis, useful for voice assistants, dubbing, and spoken content production. It reinforces today’s pattern that generative media tooling is becoming more modular and easier to slot into downstream products.</td>
             </tr>
             <tr>
                 <td>11</td>
-                <td><a href="https://huggingface.co/thinkingmachines/Inkling" target="_blank">thinkingmachines/Inkling</a></td>
-                <td>image-text-to-text</td>
-                <td>36196</td>
-                <td>1602</td>
-                <td>2026-07-23T17:27:17.000Z</td>
+                <td><a href="https://huggingface.co/unsloth/Laguna-S-2.1-GGUF" target="_blank">unsloth/Laguna-S-2.1-GGUF</a></td>
+                <td>text-generation</td>
+                <td>130k</td>
+                <td>231</td>
+                <td>Updated 2 days ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for vision-language understanding. It can read images and answer questions, reason over screenshots, or support multimodal assistants. It is already drawing 36196 downloads, 1602 likes.</td>
+                <td colspan="6" class="desc-cell">A GGUF-packaged version of Laguna-S-2.1, which matters because packaging and quantized deployment formats heavily influence whether a model actually gets used. This is a strong sign that local inference convenience is now a core distribution advantage.</td>
             </tr>
             <tr>
                 <td>12</td>
-                <td><a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">zai-org/GLM-5.2</a></td>
-                <td>text-generation</td>
-                <td>1003547</td>
-                <td>4546</td>
-                <td>2026-07-02T08:08:14.000Z</td>
+                <td><a href="https://huggingface.co/thinkingmachines/Inkling" target="_blank">thinkingmachines/Inkling</a></td>
+                <td>image-text-to-text</td>
+                <td>39.1k</td>
+                <td>1.62k</td>
+                <td>Updated 5 days ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This is a GLM-series text generation for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 1003547 downloads, 4546 likes.</td>
+                <td colspan="6" class="desc-cell">A multimodal model with strong community attention, likely aimed at image-grounded reasoning and assistant scenarios. The important signal is that multimodal checkpoints are now expected to be useful for real work like screen understanding and document reading, not just demos.</td>
             </tr>
             <tr>
                 <td>13</td>
-                <td><a href="https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev" target="_blank">Kwaipilot/KAT-Coder-V2.5-Dev</a></td>
+                <td><a href="https://huggingface.co/fdtn-ai/antares-1b" target="_blank">fdtn-ai/antares-1b</a></td>
                 <td>text-generation</td>
-                <td>5312</td>
-                <td>240</td>
-                <td>2026-07-25T09:19:26.000Z</td>
+                <td>7.67k</td>
+                <td>221</td>
+                <td>Updated 6 days ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 5312 downloads, 240 likes.</td>
+                <td colspan="6" class="desc-cell">A 1B-class text model that reflects continuing interest in small-model efficiency and portability. Small open models like this matter when teams need private deployment, edge experimentation, or inexpensive fine-tuning loops.</td>
             </tr>
             <tr>
                 <td>14</td>
-                <td><a href="https://huggingface.co/owensong/Inflect-Micro-v2" target="_blank">owensong/Inflect-Micro-v2</a></td>
-                <td>text-to-speech</td>
-                <td>483</td>
-                <td>223</td>
-                <td>2026-07-26T21:39:49.000Z</td>
+                <td><a href="https://huggingface.co/microsoft/Fara1.5-27B" target="_blank">microsoft/Fara1.5-27B</a></td>
+                <td>image-text-to-text</td>
+                <td>1.54k</td>
+                <td>178</td>
+                <td>Updated 1 day ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for speech synthesis. It can generate natural speech for dubbing, voice assistants, or spoken content production. It is already drawing 483 downloads, 223 likes.</td>
+                <td colspan="6" class="desc-cell">A 27B multimodal model from Microsoft, relevant because large VLMs remain a key battleground for enterprise copilots that need to read screenshots, documents, and mixed-media inputs. It is another sign that multimodal capability is becoming table stakes.</td>
             </tr>
             <tr>
                 <td>15</td>
-                <td><a href="https://huggingface.co/unsloth/Laguna-S-2.1-GGUF" target="_blank">unsloth/Laguna-S-2.1-GGUF</a></td>
+                <td><a href="https://huggingface.co/prism-ml/Ternary-Bonsai-27B-gguf" target="_blank">prism-ml/Ternary-Bonsai-27B-gguf</a></td>
                 <td>text-generation</td>
-                <td>117456</td>
-                <td>217</td>
-                <td>2026-07-27T00:15:55.000Z</td>
+                <td>665k</td>
+                <td>1.08k</td>
+                <td>Updated 11 days ago</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="6" class="desc-cell">This model is built for text generation and chat. It can generate, rewrite, and reason over text in assistant or automation workflows. It is already drawing 117456 downloads, 217 likes.</td>
+                <td colspan="6" class="desc-cell">A quantized GGUF release that emphasizes deployable reasoning capacity rather than raw training novelty. The traction here reflects how much the market now values efficient serving formats and local usability alongside core model quality.</td>
             </tr></tbody></table>
 
         <h2>⭐ GitHub Trending Python Repositories</h2>
@@ -441,112 +462,116 @@
     
             <tr>
                 <td>1</td>
-                <td><a href="https://github.com/NanmiCoder/MediaCrawler" target="_blank">NanmiCoder/MediaCrawler</a></td>
-                <td>⭐ 58,145</td>
-                <td>小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫</td>
-            </tr>
-            <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides 小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><a href="https://github.com/shiyu-coder/Kronos" target="_blank">shiyu-coder/Kronos</a></td>
-                <td>⭐ 34,556</td>
-                <td>Kronos: A Foundation Model for the Language of Financial Markets</td>
-            </tr>
-            <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides kronos: A Foundation Model for the Language of Financial Markets. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><a href="https://github.com/bradautomates/claude-video" target="_blank">bradautomates/claude-video</a></td>
-                <td>⭐ 11,038</td>
-                <td>Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.</td>
-            </tr>
-            <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">mvanhorn/last30days-skill</a></td>
-                <td>⭐ 54,151</td>
-                <td>AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary</td>
-            </tr>
-            <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
-            </tr>
-            <tr>
-                <td>5</td>
                 <td><a href="https://github.com/andrewyng/aisuite" target="_blank">andrewyng/aisuite</a></td>
-                <td>⭐ 15,528</td>
+                <td>⭐ 15,670</td>
                 <td>Simple, unified interface to multiple Generative AI providers</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides simple, unified interface to multiple Generative AI providers. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">Aisuite gives developers one interface across multiple model providers, which is useful when teams need to switch vendors, compare outputs, or keep fallback routes in production. That kind of abstraction layer matters more as enterprise stacks become explicitly multi-model.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/huggingface/speech-to-speech" target="_blank">huggingface/speech-to-speech</a></td>
+                <td>⭐ 7,200</td>
+                <td>Build local voice agents with open-source models</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This repo packages the local voice-agent stack end to end, which is exactly what many teams want when they need privacy-preserving speech interfaces without depending on hosted APIs. It is a strong practical signal for on-device and self-hosted conversational audio systems.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/virgiliojr94/book-to-skill" target="_blank">virgiliojr94/book-to-skill</a></td>
+                <td>⭐ 11,297</td>
+                <td>Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Book-to-skill turns long technical PDFs into reusable assistant skills, effectively treating knowledge distillation as agent packaging. That is interesting because it points toward a future where companies operationalize domain knowledge by converting internal docs and books directly into workflow components.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/paperswithbacktest/awesome-systematic-trading" target="_blank">paperswithbacktest/awesome-systematic-trading</a></td>
+                <td>⭐ 9,552</td>
+                <td>A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">This is not an AI repo per se, but it is trending because finance remains a high-value downstream domain for modeling and automation. The broader signal is that domain-specific stacks with clear ROI keep attracting attention even when the underlying techniques are familiar.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank">microsoft/agent-governance-toolkit</a></td>
+                <td>⭐ 5,176</td>
+                <td>AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">Microsoft’s toolkit is one of the clearest same-day signs that agent governance is shifting from slides into code. It focuses on policy enforcement, sandboxing, and zero-trust identity, which maps directly to enterprise concerns around permission scope, safety, and auditability.</td>
             </tr>
             <tr>
                 <td>6</td>
-                <td><a href="https://github.com/usestrix/strix" target="_blank">usestrix/strix</a></td>
-                <td>⭐ 44,976</td>
-                <td>Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.</td>
+                <td><a href="https://github.com/bradautomates/claude-video" target="_blank">bradautomates/claude-video</a></td>
+                <td>⭐ 12,057</td>
+                <td>Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides open-source AI penetration testing tool to find and fix your app’s vulnerabilities. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">Claude-video operationalizes a multimodal workflow that many teams want right now: take raw video, extract frames and transcripts, then hand structured context to a model. It matters for training content, media analysis, and any business process that needs video understanding without building the plumbing from scratch.</td>
             </tr>
             <tr>
                 <td>7</td>
-                <td><a href="https://github.com/arc53/DocsGPT" target="_blank">arc53/DocsGPT</a></td>
-                <td>⭐ 18,129</td>
-                <td>Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.</td>
+                <td><a href="https://github.com/NanmiCoder/MediaCrawler" target="_blank">NanmiCoder/MediaCrawler</a></td>
+                <td>⭐ 58,823</td>
+                <td>小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+                <td colspan="4" class="desc-cell">MediaCrawler is a cross-platform social data collection toolkit covering major Chinese content platforms. For AI teams, that matters because high-quality, domain-specific, and region-specific data pipelines are often the real bottleneck behind training, evaluation, and market-intelligence systems.</td>
             </tr>
             <tr>
                 <td>8</td>
-                <td><a href="https://github.com/home-assistant/core" target="_blank">home-assistant/core</a></td>
-                <td>⭐ 89,518</td>
-                <td>🏡 Open source home automation that puts local control and privacy first.</td>
+                <td><a href="https://github.com/HKUDS/OpenSpace" target="_blank">HKUDS/OpenSpace</a></td>
+                <td>⭐ 7,145</td>
+                <td>&quot;OpenSpace: The Skill Management Layer for AI Agents&quot; -- https://open-space.cloud/</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides 🏡 Open source home automation that puts local control and privacy first. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">OpenSpace focuses on skill management for AI agents, which is becoming a real systems problem as agent stacks accumulate tools, prompts, and execution policies. It reflects a broader move from one-off demos toward maintainable agent platforms.</td>
             </tr>
             <tr>
                 <td>9</td>
-                <td><a href="https://github.com/nesquena/hermes-webui" target="_blank">nesquena/hermes-webui</a></td>
-                <td>⭐ 16,624</td>
-                <td>Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!</td>
+                <td><a href="https://github.com/usestrix/strix" target="_blank">usestrix/strix</a></td>
+                <td>⭐ 45,329</td>
+                <td>Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository is an agent or coding-assistant project: Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!. It can help developers build tool-using assistants, automate multi-step tasks, or improve coding workflows.</td>
+                <td colspan="4" class="desc-cell">Strix packages AI-focused penetration testing into an open workflow, showing how security tooling is adapting to applications that embed LLMs and agents. This is especially relevant as teams now have to test prompt injection, tool abuse, and data leakage alongside classic app vulnerabilities.</td>
             </tr>
             <tr>
                 <td>10</td>
-                <td><a href="https://github.com/666ghj/MiroFish" target="_blank">666ghj/MiroFish</a></td>
-                <td>⭐ 69,513</td>
-                <td>A Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物</td>
+                <td><a href="https://github.com/volcengine/OpenViking" target="_blank">volcengine/OpenViking</a></td>
+                <td>⭐ 27,575</td>
+                <td>Self-evolving Context Database for AI Agents. Unify Agent Memory, Knowledge RAG and Skills.</td>
             </tr>
             <tr class="desc-row">
-                <td colspan="4" class="desc-cell">This repository provides a Simple and Universal Swarm Intelligence Engine, Predicting Anything. 简洁通用的群体智能引擎，预测万物. It can help developers use that capability directly in real workflows rather than starting from scratch.</td>
+                <td colspan="4" class="desc-cell">OpenViking unifies agent memory, retrieval, and skills in one context database, which is a direct answer to the fragmentation problem in agent engineering. It stands out because the market is clearly searching for more coherent long-term memory and knowledge substrates for autonomous workflows.</td>
             </tr></tbody></table>
 
         <h2>🔥 Key Trends & Highlights</h2>
         <div class="trends-list">
         <div class="trend-item">
-            <h3>🔥 Trend 1: UI-grounded and tool-sandboxed agents are the clearest signal today</h3>
-            <p>What: UI-grounded and tool-sandboxed agents are the clearest signal today. Why now: this pattern is visible today in papers like TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI and Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Mode; HF models such as join/discord and inference/models; repos including NanmiCoder/MediaCrawler and shiyu-coder/Kronos; HN discussions like Benchmarking Opus 5 on SlopCodeBench. Signal: The deeper change is that agent quality is now being tested through recovery, state management, and environment interaction, not just single-turn cleverness. The same-day anchors are TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI, Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Mode, join/discord, inference/models. So what: For enterprise deployment, orchestration, guardrails, memory, and observable rollback paths are becoming as important as the underlying model.</p>
+            <h3>🔥 Trend 1: Agent infrastructure is moving from prompting tricks to operating systems for autonomy</h3>
+            <p>What: The strongest cross-source signal today is not a single model release, but the rapid build-out of infrastructure around agent routing, governance, memory, and protocol interoperability. Why now: arXiv papers such as TRACE-ROUTER and Dynamic Capability Scoping line up with GitHub repos like microsoft/agent-governance-toolkit, HKUDS/OpenSpace, and volcengine/OpenViking, while Hacker News attention on the MCP 2026-07-28 spec shows the ecosystem cares about standard interfaces too. Signal: the stack is maturing from &#x27;can an agent do a demo&#x27; into &#x27;can an agent be routed, sandboxed, observed, and integrated safely at scale&#x27;. So what: for enterprise AI teams, orchestration, permissions, memory, and protocol design are now product-critical layers, especially if internal agents will touch sensitive business tools.</p>
         </div>
         <div class="trend-item">
-            <h3>🔥 Trend 2: Visual, speech, and document systems are being packaged as practical stacks</h3>
-            <p>What: Visual, speech, and document systems are being packaged as practical stacks. Why now: this pattern is visible today in papers like TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI and Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Mode; HF models such as moonshotai/Kimi-K3 and baidu/Unlimited-OCR; repos including bradautomates/claude-video and arc53/DocsGPT. Signal: The important signal is that multimodal capability is being organized into usable modules for creation, understanding, and interaction, rather than staying as isolated benchmarks. The same-day anchors are TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI, Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Mode, moonshotai/Kimi-K3, baidu/Unlimited-OCR. So what: That matters directly for document processing, visual QA, training assets, customer communication, and media-generation pipelines.</p>
+            <h3>🔥 Trend 2: Compact local agents are becoming credible, not just aspirational</h3>
+            <p>What: Small and mid-sized open models are getting good enough to be considered for real agent workloads. Why now: Nanbeige4.2-3B is both a top paper and a trending HF model, while GGUF-packaged variants like unsloth/Laguna-S-2.1-GGUF and community Qwen derivatives show strong demand for deployable local formats. Signal: the market increasingly values private deployment, low serving cost, and packaging convenience alongside raw benchmark strength. So what: this is especially meaningful for enterprise scenarios where sensitive data, latency, or cost make fully hosted frontier APIs unattractive.</p>
         </div>
         <div class="trend-item">
-            <h3>🔥 Trend 3: Open families are competing through deployable variants and specialization</h3>
-            <p>What: Open families are competing through deployable variants and specialization. Why now: this pattern is visible today in papers like Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Mode; HF models such as DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF and zai-org/GLM-5.2; HN discussions like Our position on open-weights models. Signal: Differentiation is shifting toward fine-tuned variants, serving formats, and task-shaped packaging rather than just announcing one more base model. The same-day anchors are Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Mode, DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF, zai-org/GLM-5.2, Our position on open-weights models. So what: That makes ecosystem fit, adaptation cost, and deployment form factor central to real product selection.</p>
+            <h3>🔥 Trend 3: Multimodal AI is being judged by workflow usefulness, not demo appeal</h3>
+            <p>What: Today’s multimodal winners are the systems that can read, watch, extract, and act inside a workflow. Why now: SceneActBench stresses 3D action rather than passive captioning, while HF models like Kimi-K3, Unlimited-OCR, Inkling, and Fara1.5-27B are all about image-grounded reasoning or document understanding; bradautomates/claude-video extends the same pattern to video. Signal: multimodality is converging on practical enterprise tasks such as document parsing, screen understanding, video review, and media production. So what: for Charlie’s focus areas, this is the clearest bridge from research into insurance-ready applications like training-content analysis, visual claims support, and marketing asset generation.</p>
         </div>
         <div class="trend-item">
-            <h3>🔥 Trend 4: Generative media today is clustering around production-ready toolchains</h3>
-            <p>What: Generative media today is clustering around production-ready toolchains. Why now: this pattern is visible today in HF models such as microsoft/Mage-Flow and owensong/Inflect-Micro-v2. Signal: The deeper signal is that generative media is now being evaluated as a workflow layer where controllability, editing, and packaging matter as much as novelty. The same-day anchors are microsoft/Mage-Flow, owensong/Inflect-Micro-v2. So what: That is directly useful for marketing materials, training videos, spoken assistants, and multimodal customer-facing assets.</p>
+            <h3>🔥 Trend 4: Reasoning efficiency is now a first-class optimization target</h3>
+            <p>What: Several of today’s papers attack the same business problem from different angles, namely how to keep reasoning and agent systems accurate without paying runaway latency or token costs. Why now: ESTR targets faster async RL, QLPO cuts reasoning length by 30 to 70 percent, and TRACE-ROUTER improves task-level accuracy-latency trade-offs at serving time. Signal: the field is no longer satisfied with &#x27;works on benchmark&#x27;; it wants training efficiency, shorter inference, and better workload allocation. So what: this directly affects whether advanced reasoning can be economically deployed in customer-facing or high-volume enterprise pipelines.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: Security is becoming a native AI workflow, not a separate audit lane</h3>
+            <p>What: Security appeared today as both model-assisted analysis and agent-governance engineering. Why now: HN surfaced OpenAI’s Codex Security release, Anthropic’s HAWK-256 attack demo, and broader interest in Claude-driven cryptographic analysis, while GitHub trends include Strix and Microsoft’s agent governance toolkit. Signal: AI builders increasingly expect models to participate in secure coding, vulnerability discovery, and permission control, not just feature generation. So what: for enterprise deployments, that means safety tooling must be designed into the agent loop itself, especially where generated code or autonomous tool use can create new attack surfaces.</p>
         </div></div>
 
         <div class="footer">
