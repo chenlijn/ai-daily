@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Report - 2026-07-30</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .container { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1a1a1a; font-size: 2.2em; margin-bottom: 10px; border-bottom: 3px solid #6366f1; padding-bottom: 15px; }
+        .date { color: #666; font-size: 1.1em; margin-bottom: 30px; }
+        h2 { color: #4f46e5; font-size: 1.5em; margin-top: 35px; margin-bottom: 20px; border-left: 5px solid #6366f1; padding-left: 15px; }
+        
+        /* Hacker News */
+        .news-list { display: flex; flex-direction: column; gap: 15px; }
+        .news-item { background: #f8fafc; border-radius: 8px; padding: 20px; border-left: 4px solid #22c55e; }
+        .news-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 8px; }
+        .news-item h3 a { color: #1e40af; text-decoration: none; }
+        .news-item h3 a:hover { text-decoration: underline; }
+        .news-meta { font-size: 0.9em; color: #64748b; margin-bottom: 8px; }
+        .summary { color: #374151; font-size: 0.95em; line-height: 1.5; }
+        
+        /* arXiv Papers */
+        .paper-item { background: #f8fafc; border-radius: 8px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #6366f1; }
+        .paper-item h3 { color: #1e40af; font-size: 1.1em; margin-bottom: 10px; }
+        .paper-item h3 a { color: #1e40af; text-decoration: none; }
+        .paper-item h3 a:hover { text-decoration: underline; }
+        .paper-meta { font-size: 0.85em; color: #64748b; margin-bottom: 12px; }
+        .paper-meta span { margin-right: 15px; }
+        .paper-analysis p { margin-bottom: 8px; padding: 8px 12px; background: white; border-radius: 4px; }
+        .paper-analysis strong { color: #4338ca; }
+        
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.9em; }
+        th { background: #4f46e5; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+        tr:hover { background: #f1f5f9; }
+        .desc-row { background: #fafafa; }
+        .desc-cell { padding: 8px 12px; color: #64748b; font-size: 0.9em; font-style: italic; }
+        
+        /* Trends */
+        .trends-list { display: flex; flex-direction: column; gap: 15px; }
+        .trend-item { background: #fef3c7; border-radius: 8px; padding: 15px 20px; border-left: 4px solid #f59e0b; }
+        .trend-item h3 { color: #92400e; font-size: 1.1em; margin-bottom: 8px; }
+        .trend-item p { color: #78350f; }
+        
+        /* Footer */
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e2e8f0; text-align: center; color: #64748b; }
+        .footer a { color: #4f46e5; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        a { color: #4f46e5; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 AI Daily Report</h1>
+        <p class="date">2026-07-30 | 8:00 AM Beijing Time</p>
+
+        <h2>📰 Daily News & Tech Buzz</h2>
+        <div class="news-list">
+        <div class="news-item">
+            <h3><a href="https://christianselig.com/2026/07/vision-pro-house/" target="_blank">The coolest use for the Vision Pro</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 284 points</span>
+            </div>
+            <p class="summary">This post shows a concrete spatial-computing use case rather than a vague hardware demo, which is why it is landing with builders. It matters for AI-adjacent product teams because interfaces that blend vision, context, and 3D interaction are getting closer to practical everyday workflows.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research" target="_blank">AI&#x27;s top startups are barely publishing their research</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 111 points</span>
+            </div>
+            <p class="summary">The piece is about how frontier AI companies are pulling back from open publication even as their commercial influence grows. That is worth tracking because it changes how fast the broader ecosystem can learn from new techniques and how much progress stays locked inside product labs.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://github.com/drumih/turbo-fieldfare" target="_blank">Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 609 points</span>
+            </div>
+            <p class="summary">This demo is really about aggressive local inference efficiency, not just a flashy model port. It matters because shrinking memory requirements can widen where strong open models can actually run, from laptops to private enterprise environments.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.superlogical.com/" target="_blank">Superlogical</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 476 points</span>
+            </div>
+            <p class="summary">This product story is getting attention because it packages complex logic or workflow behavior into a simpler interface that builders can immediately evaluate. The broader signal is that users increasingly expect AI-era tools to feel operational, not experimental.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://www.digitalfoundry.net/news/2026/07/keychron-announces-first-open-source-firmware-for-gaming-mice" target="_blank">Keychron announces first open-source firmware for gaming mice</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 261 points</span>
+            </div>
+            <p class="summary">This is not an AI launch, but it reflects the same broader push toward hackable hardware and user-controlled stacks. That matters indirectly for AI builders because open peripherals and edge devices make custom local interaction loops easier to prototype.</p>
+        </div>
+        <div class="news-item">
+            <h3><a href="https://huggingface.co/blog/agent-intrusion-technical-timeline" target="_blank">Anatomy of a Frontier Lab Agent Intrusion: A Timeline of the July 2026 Incident</a></h3>
+            <div class="news-meta">
+                <span class="points">⬆ 262 points</span>
+            </div>
+            <p class="summary">This timeline is directly relevant because it turns agent security from a hypothetical risk into an operational postmortem. The useful takeaway for AI teams is that tool permissions, containment, and auditability need to be engineered before agent autonomy expands further.</p>
+        </div></div>
+
+        <h2>📄 Top 10 arXiv Papers</h2>
+        
+        <div class="paper-item">
+            <h3>1. <a href="https://arxiv.org/abs/2607.25904" target="_blank">Interactive Reward Agent: GUI Task Evaluation via Environment-State Verification</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25904</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 92 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> Interactive Reward Agent: GUI Task Evaluation via Environment-State Verification targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>2. <a href="https://arxiv.org/abs/2607.25947" target="_blank">A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25947</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 89 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It lands in the current multimodal wave, which is drawing simultaneous research and product attention.</p>
+                <p><strong>Problem:</strong> A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>3. <a href="https://arxiv.org/abs/2607.25816" target="_blank">Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25816</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 86 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>4. <a href="https://arxiv.org/abs/2607.26041" target="_blank">Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions?</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.26041</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 83 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> Desktop-Delta Bench: Do Computer-Use Models Understand Desktop GUI Transitions? targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The extracted paper text includes concrete improvements, including 65.1%; 65.7%; 16.7%; 72.36%. Overall, the authors show a better capability-efficiency trade-off than baseline methods on the benchmarks discussed in the paper.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>5. <a href="https://arxiv.org/abs/2607.25891" target="_blank">Messier: A High-Resolution Corpus for Cross-Benchmark Agent Evaluation</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25891</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 80 (High)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> Messier: A High-Resolution Corpus for Cross-Benchmark Agent Evaluation targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>6. <a href="https://arxiv.org/abs/2607.25853" target="_blank">HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25853</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 77 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>7. <a href="https://arxiv.org/abs/2607.25914" target="_blank">Toward Standardized Cross-Vendor Agent Tool Trust Management in Autonomous Networks</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25914</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 74 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> Toward Standardized Cross-Vendor Agent Tool Trust Management in Autonomous Networks targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>8. <a href="https://arxiv.org/abs/2607.25890" target="_blank">Distributing Security Controls Through Harness Engineering</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25890</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 71 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> Distributing Security Controls Through Harness Engineering targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>9. <a href="https://arxiv.org/abs/2607.25877" target="_blank">Runtime Uncertainty Monitoring for LLM-Based Multi-Agent Systems Using Bayesian Networks</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.25877</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 68 (Medium)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It sits in today&#x27;s strongest agent workflow cluster, where model capability, tool use, and deployment practice are moving together.</p>
+                <p><strong>Problem:</strong> Runtime Uncertainty Monitoring for LLM-Based Multi-Agent Systems Using Bayesian Networks targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+        <div class="paper-item">
+            <h3>10. <a href="https://arxiv.org/abs/2607.26023" target="_blank">CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer</a></h3>
+            <div class="paper-meta">
+                <span class="arxiv-id">arXiv: 2607.26023</span>
+                <span class="date">2026-07-30</span>
+                <span class="date">Heat Score: 65 (Watchlist)</span>
+                <span class="date">HF Trending: No | HF Upvotes: 0</span>
+            </div>
+            <div class="paper-analysis">
+                <p><strong>Why it matters now:</strong> It lands in the current multimodal wave, which is drawing simultaneous research and product attention.</p>
+                <p><strong>Problem:</strong> CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer targets a concrete bottleneck described in the paper rather than a generic benchmark tweak. From the abstract and extracted paper text, the core issue is that current methods in this setting still trade off capability, robustness, or cost too aggressively for practical deployment.</p>
+                <p><strong>Method:</strong> The paper proposes a named approach tailored to that bottleneck and combines multiple design choices instead of a single prompt trick. From the available text, the main contribution is the training or inference pipeline, with key mechanisms added to improve reliability or efficiency in the target setting.</p>
+                <p><strong>Results:</strong> The paper reports positive empirical results on its chosen benchmarks and positions the method against existing baselines in the same task family. Some entries expose exact gains in the retrieved text, while others only show that the method improves the capability-cost trade-off without giving every number in the extracted snippet.</p>
+                <p><strong>Conclusion:</strong> This paper is worth watching because it maps cleanly onto active production concerns such as agent reliability, multimodal usefulness, or cheaper reasoning. The practical takeaway is not just the metric gain, but the specific design pattern that teams could reuse when building real systems.</p>
+            </div>
+        </div>
+
+        <h2>🤗 HuggingFace Top 15 Trending Models (30 days)</h2>
+        
+    <table class="model-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Downloads</th>
+                <th>Likes</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://huggingface.co/moonshotai/Kimi-K3" target="_blank">moonshotai/Kimi-K3</a></td>
+                <td>text-generation</td>
+                <td>120k</td>
+                <td>8.1k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A large open text-generation model that is drawing attention as a practical frontier-style checkpoint for reasoning and general assistant workloads.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://huggingface.co/baidu/Unlimited-OCR" target="_blank">baidu/Unlimited-OCR</a></td>
+                <td>document-understanding</td>
+                <td>38k</td>
+                <td>2.4k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An OCR and document-understanding model aimed at extracting text and structure from complex business documents, scans, and screenshots.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://huggingface.co/poolside/Laguna-S-2.1" target="_blank">poolside/Laguna-S-2.1</a></td>
+                <td>text-generation</td>
+                <td>26k</td>
+                <td>1.8k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A code-and-agent oriented language model positioned for software engineering and tool-using workflows.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://huggingface.co/upstage/Solar-Open2-250B" target="_blank">upstage/Solar-Open2-250B</a></td>
+                <td>text-generation</td>
+                <td>19k</td>
+                <td>2.1k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A very large open language model meant for high-end text generation, reasoning, and enterprise assistant scenarios.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://huggingface.co/Nanbeige/Nanbeige4.2-3B" target="_blank">Nanbeige/Nanbeige4.2-3B</a></td>
+                <td>text-generation</td>
+                <td>14k</td>
+                <td>1.1k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A compact agentic model designed to keep useful reasoning and tool-use behavior in a much smaller deployment footprint.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://huggingface.co/Kwaipilot/KAT-Coder-V2.5-Dev" target="_blank">Kwaipilot/KAT-Coder-V2.5-Dev</a></td>
+                <td>text-generation</td>
+                <td>11k</td>
+                <td>860</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A coder model tuned for software development tasks such as code completion, editing, and repository-level programming help.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://huggingface.co/owensong/Inflect-Micro-v2" target="_blank">owensong/Inflect-Micro-v2</a></td>
+                <td>text-generation</td>
+                <td>9.2k</td>
+                <td>740</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A small language model release focused on lightweight instruction following and efficient downstream adaptation.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://huggingface.co/zai-org/GLM-5.2" target="_blank">zai-org/GLM-5.2</a></td>
+                <td>text-generation</td>
+                <td>48k</td>
+                <td>3.3k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A new GLM-series checkpoint targeting general text generation and assistant-style reasoning across multilingual workflows.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://huggingface.co/microsoft/Fara1.5-27B" target="_blank">microsoft/Fara1.5-27B</a></td>
+                <td>image-text-to-text</td>
+                <td>13k</td>
+                <td>920</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A multimodal model from Microsoft that appears aimed at vision-language understanding and image-grounded assistant tasks.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://huggingface.co/unsloth/Kimi-K3" target="_blank">unsloth/Kimi-K3</a></td>
+                <td>text-generation</td>
+                <td>17k</td>
+                <td>1.4k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">An Unsloth-packaged Kimi-K3 release that makes the model easier to fine-tune or run in common open-model workflows.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="https://huggingface.co/thinkingmachines/Inkling" target="_blank">thinkingmachines/Inkling</a></td>
+                <td>text-generation</td>
+                <td>8.6k</td>
+                <td>690</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A lightweight language model release oriented toward efficient assistant and reasoning experiments.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="https://huggingface.co/unsloth/Kimi-K3-GGUF" target="_blank">unsloth/Kimi-K3-GGUF</a></td>
+                <td>text-generation</td>
+                <td>15k</td>
+                <td>1.2k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A GGUF build of Kimi-K3 intended for local inference stacks, especially llama.cpp-style deployment.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="https://huggingface.co/microsoft/VibeVoice-ASR-BitNet" target="_blank">microsoft/VibeVoice-ASR-BitNet</a></td>
+                <td>automatic-speech-recognition</td>
+                <td>22k</td>
+                <td>1.7k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A speech-recognition model that connects frontier voice work with more efficient inference through BitNet-style design.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="https://huggingface.co/Qwen/Qwen3.6-35B-A3B" target="_blank">Qwen/Qwen3.6-35B-A3B</a></td>
+                <td>text-generation</td>
+                <td>57k</td>
+                <td>4.2k</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A fresh Qwen checkpoint for general text generation and reasoning, with obvious relevance for enterprise fine-tuning and serving.</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="https://huggingface.co/ATH-MaaS/OvisOCR2" target="_blank">ATH-MaaS/OvisOCR2</a></td>
+                <td>document-understanding</td>
+                <td>12k</td>
+                <td>880</td>
+                <td>recently</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="6" class="desc-cell">A document and OCR model focused on extracting usable content from images, pages, and scanned files.</td>
+            </tr></tbody></table>
+
+        <h2>⭐ GitHub Trending Python Repositories</h2>
+        
+    <table class="repo-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Repository</th>
+                <th>Stars</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+            <tr>
+                <td>1</td>
+                <td><a href="https://github.com/huggingface/speech-to-speech" target="_blank">huggingface/speech-to-speech</a></td>
+                <td>⭐ 7,838</td>
+                <td>Build local voice agents with open-source models</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">huggingface/speech-to-speech is a Python project for Build local voice agents with open-source models. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://github.com/deepfakes/faceswap" target="_blank">deepfakes/faceswap</a></td>
+                <td>⭐ 56,238</td>
+                <td>Deepfakes Software For All</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">deepfakes/faceswap is a Python project for Deepfakes Software For All. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><a href="https://github.com/microsoft/VibeVoice" target="_blank">microsoft/VibeVoice</a></td>
+                <td>⭐ 51,244</td>
+                <td>Open-Source Frontier Voice AI</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">microsoft/VibeVoice is a Python project for Open-Source Frontier Voice AI. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://github.com/NanmiCoder/MediaCrawler" target="_blank">NanmiCoder/MediaCrawler</a></td>
+                <td>⭐ 59,053</td>
+                <td>小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">NanmiCoder/MediaCrawler is a Python project for 小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫 | 知乎问答文章｜评论爬虫. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://github.com/paperswithbacktest/awesome-systematic-trading" target="_blank">paperswithbacktest/awesome-systematic-trading</a></td>
+                <td>⭐ 10,371</td>
+                <td>A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">paperswithbacktest/awesome-systematic-trading is a Python project for A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="https://github.com/virgiliojr94/book-to-skill" target="_blank">virgiliojr94/book-to-skill</a></td>
+                <td>⭐ 12,692</td>
+                <td>Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">virgiliojr94/book-to-skill is a Python project for Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="https://github.com/sgl-project/sglang" target="_blank">sgl-project/sglang</a></td>
+                <td>⭐ 30,930</td>
+                <td>SGLang is a high-performance serving framework for large language models and multimodal models.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">sgl-project/sglang is a Python project for SGLang is a high-performance serving framework for large language models and multimodal models. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="https://github.com/arc53/DocsGPT" target="_blank">arc53/DocsGPT</a></td>
+                <td>⭐ 18,182</td>
+                <td>Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model support, and API connectivity for agents.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">arc53/DocsGPT is a Python project for Private AI platform for agents, assistants and enterprise search. Built-in Agent Builder, Deep research, Document analysis, Multi-model supp. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="https://github.com/microsoft/agent-governance-toolkit" target="_blank">microsoft/agent-governance-toolkit</a></td>
+                <td>⭐ 5,460</td>
+                <td>AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">microsoft/agent-governance-toolkit is a Python project for AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI a. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="https://github.com/lightseekorg/tokenspeed" target="_blank">lightseekorg/tokenspeed</a></td>
+                <td>⭐ 1,755</td>
+                <td>TokenSpeed is a speed-of-light LLM inference engine.</td>
+            </tr>
+            <tr class="desc-row">
+                <td colspan="4" class="desc-cell">lightseekorg/tokenspeed is a Python project for TokenSpeed is a speed-of-light LLM inference engine. It is useful because teams can adopt this capability directly instead of rebuilding the surrounding engineering stack from scratch.</td>
+            </tr></tbody></table>
+
+        <h2>🔥 Key Trends & Highlights</h2>
+        <div class="trends-list">
+        <div class="trend-item">
+            <h3>🔥 Trend 1: Agent systems are being optimized as workflows, not single calls</h3>
+            <p>What: today&#x27;s strongest paper cluster is about end-to-end agent behavior, including routing, skills, and permission control. Why now: papers like agent routing, skill regression analysis, and enterprise scoping all point at the same pressure, namely making long-horizon systems reliable. Signal: the stack is shifting from model-centric evaluation to workflow-centric evaluation. So what: enterprise teams should measure task-level success, regression risk, and permission exposure together.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 2: Reasoning efficiency is becoming a first-class product metric</h3>
+            <p>What: multiple papers focus on cheaper or faster post-training and inference without giving up reasoning quality. Why now: async RL stabilization and length-aware optimization reflect real serving-cost pain, not academic curiosity. Signal: labs now treat latency and output length as core optimization targets. So what: teams building reasoning products should track answer length, wall-clock latency, and reward stability as part of model selection.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 3: Multimodal capability is moving closer to action and production use</h3>
+            <p>What: today&#x27;s set includes models and papers that connect visual understanding with acting in environments or handling richer enterprise content. Why now: multimodal research is no longer just captioning, it is about grounded action, document handling, and workflow integration. Signal: the boundary between VLM demo and deployable system is thinning. So what: image, video, and document workflows are becoming more realistic candidates for internal AI products.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 4: Open model and tooling ecosystems keep tightening the loop</h3>
+            <p>What: Hugging Face trending models and GitHub repos continue to amplify the same themes that appear in papers, especially agent infrastructure and specialized downstream models. Why now: release velocity is high enough that research, checkpoints, and developer tools reinforce one another within the same day. Signal: engineering adoption cycles are shortening. So what: teams can often validate a new direction with both a paper and runnable code almost immediately.</p>
+        </div>
+        <div class="trend-item">
+            <h3>🔥 Trend 5: Security and governance are now design inputs for AI agents</h3>
+            <p>What: today&#x27;s evidence includes permission-scoping and reliability work rather than only raw capability gains. Why now: as agents touch enterprise tools, over-privilege and silent regressions become operational risks. Signal: governance is moving upstream into architecture and evaluation. So what: production agent programs need least-privilege design and regression tracking from day one.</p>
+        </div></div>
+
+        <div class="footer">
+            <p>🤖 AI Daily Report | Generated 2026-07-30 at 8:00 AM Beijing Time</p>
+            <p style="margin-top: 10px;">Full blog: <a href="https://chenlijn.github.io/ai-daily/2026-07-30-08-00.html">https://chenlijn.github.io/ai-daily/2026-07-30-08-00.html</a></p>
+            <p style="margin-top: 10px;">© 2026 Charlie | AI Algorithm Engineer</p>
+        </div>
+    </div>
+</body>
+</html>
